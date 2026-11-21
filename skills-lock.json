@@ -1,0 +1,69 @@
+{
+  "version": 2,
+  "skills": {
+    "baoyu-article-illustrator": {
+      "source": "jimliu/baoyu-skills",
+      "commit": "bf1ff076e25f8da4a339eb1c8cf03361fea5ea4c",
+      "sourceType": "github",
+      "skillPath": "skills/baoyu-article-illustrator/SKILL.md",
+      "computedHash": "c4074f730816a79f0233e734e45ec8602f09551325f7f0272694d06c38241f2f",
+      "installMode": "copy"
+    },
+    "baoyu-compress-image": {
+      "source": "jimliu/baoyu-skills",
+      "commit": "bf1ff076e25f8da4a339eb1c8cf03361fea5ea4c",
+      "sourceType": "github",
+      "skillPath": "skills/baoyu-compress-image/SKILL.md",
+      "computedHash": "4a479c1d7209c5b01717e90fb3d7961293b5fa408f2c7b6988d16ad1d66c2a2a",
+      "installMode": "copy"
+    },
+    "baoyu-cover-image": {
+      "source": "jimliu/baoyu-skills",
+      "commit": "bf1ff076e25f8da4a339eb1c8cf03361fea5ea4c",
+      "sourceType": "github",
+      "skillPath": "skills/baoyu-cover-image/SKILL.md",
+      "computedHash": "e5808121a0484ad7c07ad5a61ed1bc3b5081ae0b55cee6f5a777840aa754e4d2",
+      "installMode": "copy"
+    },
+    "baoyu-infographic": {
+      "source": "jimliu/baoyu-skills",
+      "commit": "bf1ff076e25f8da4a339eb1c8cf03361fea5ea4c",
+      "sourceType": "github",
+      "skillPath": "skills/baoyu-infographic/SKILL.md",
+      "computedHash": "06e741635ae2f5db7133b69eeea0af1583436e2be364e6e6afc8b20dc9f74ce4",
+      "installMode": "copy"
+    },
+    "baoyu-xhs-images": {
+      "source": "jimliu/baoyu-skills",
+      "commit": "bf1ff076e25f8da4a339eb1c8cf03361fea5ea4c",
+      "sourceType": "github",
+      "skillPath": "skills/baoyu-xhs-images/SKILL.md",
+      "computedHash": "b066d173557ae62f90708c1898dd6c7e4a2b612e4dfbc91fae6d44b5dc3dd9ec",
+      "installMode": "copy"
+    },
+    "canvas-design": {
+      "source": "anthropics/skills",
+      "commit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+      "sourceType": "github",
+      "skillPath": "skills/canvas-design/SKILL.md",
+      "computedHash": "1866477474e694f562261008bb6a817e53f027b6347b062fbd1e2ee2eb83f20d",
+      "installMode": "copy"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "commit": "57217cf86ba38148a57af9e90d14a4c049558330",
+      "sourceType": "github",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "computedHash": "7bc223e2aafbdbf6e50ea243ba6ef67fe432bb069ab439fea0390795dac0bf7f",
+      "installMode": "copy"
+    },
+    "imagegen": {
+      "source": "openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "sourceType": "github",
+      "skillPath": "skills/.system/imagegen/SKILL.md",
+      "computedHash": "350968bf5dda3bf1261fe5c6af570ca79cf25252cbb3ddd0d5dfe91cd516885d",
+      "installMode": "copy"
+    }
+  }
+}
