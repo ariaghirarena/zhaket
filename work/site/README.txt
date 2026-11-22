@@ -1,19 +1,28 @@
-ARIAGH.AIWRITER - preview demo
-================================
+ARIAGH.AIWRITER — بستهٔ پیش‌نمایش و دمو (استاتیک، بدون نیاز به PHP یا دیتابیس)
+=====================================================================
 
-Upload the whole folder into a sub-directory of your site, for example:
+محتویات
+--------
+index.html                صفحهٔ معرفی محصول (لندینگ شیشه‌ای)
+demo/index.html           دموی تعاملی پیشخوان (۲۲ تب کلیک‌پذیر)
+assets/css/               base.css · site.css · admin.css
+assets/js/                site.js · admin.js
+assets/fonts/             Morabba + Peyda (woff2)
+assets/img/               favicon
+assets/3d/                ۲۴ رندر سه‌بعدی (WebP با آلفای واقعی)
+.htaccess                 چارست UTF-8 و کش استاتیک
 
-    /public_html/aiwriter/
+نصب روی هاست (cPanel)
+---------------------
+۱) فایل ZIP را در «مدیر فایل» آپلود کنید.
+۲) Extract را در پوشهٔ دلخواه بزنید؛ مثلاً:
+   public_html/aiwriter/        ← آدرس نهایی: yoursite.com/aiwriter/
+۳) تمام. هیچ تنظیم، دیتابیس یا افزونه‌ای لازم نیست.
 
-then open:
-
-    https://your-domain.com/aiwriter/          -> preview landing page
-    https://your-domain.com/aiwriter/demo/     -> interactive admin demo
-
-Notes
------
-* Fully static: no PHP, no database, no WordPress plugin required.
-* No external requests at all (fonts, CSS and JS are local), so it works
-  on any host and behind any filtering.
-* Uploading it next to a WordPress install is safe as long as you use a
-  sub-directory: index.html never overrides WordPress's index.php.
+نکته‌ها
+-------
+- همهٔ مسیرها نسبی‌اند؛ در هر زیرپوشه‌ای کار می‌کند.
+- اگر سایت اصلی وردپرس است، این پوشه با آن تداخل نمی‌کند.
+- دمو فقط برای نمایش است؛ داده‌ها نمونه‌اند و چیزی ذخیره نمی‌شود.
+- برای باز کردن روی سیستم خودتان هم کافی است index.html را باز کنید
+  (به‌جز بخش‌های JS که به سرور محلی نیاز دارند، بقیه آفلاین کار می‌کند).

@@ -1,395 +1,299 @@
-/* ARIAGH.AIWRITER — interactive admin demo (no backend, no external requests) */
+/* ARIAGH.AIWRITER — interactive admin demo (mock data, real behaviour) */
 (function () {
   'use strict';
 
   var FA = '۰۱۲۳۴۵۶۷۸۹';
-  function fa(n) { return String(n).replace(/\d/g, function (c) { return FA[+c]; }); }
-
-  var I = {
-    dash: 'M4 13h6V4H4zM14 20h6v-9h-6zM4 20h6v-4H4zM14 8h6V4h-6z',
-    pen: 'M4 20h4l10-10-4-4L4 16z',
-    list: 'M4 7h16M4 12h10M4 17h7',
-    check: 'M9 11l3 3 8-8M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h8',
-    clock: 'M12 7v5l3 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
-    hub: 'M12 3v6m0 6v6M3 12h6m6 0h6M12 12a2 2 0 100 4 2 2 0 000-4z',
-    cpu: 'M9 9h6v6H9zM4 9h2M4 15h2M18 9h2M18 15h2M9 4v2M15 4v2M9 18v2M15 18v2',
-    key: 'M14 7a4 4 0 11-3.5 1.9L4 15v3h3v-2h2v-2h2l2.5-2.5',
-    globe: 'M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9S14.5 18.5 12 21',
-    chat: 'M4 5h16v11H9l-5 4z',
-    layout: 'M4 5h16v14H4zM4 10h16M10 10v9',
-    chart: 'M4 19V9m5 10V5m5 14v-7m5 7V8',
-    link: 'M10 14a4 4 0 005.7 0l3-3a4 4 0 10-5.7-5.7L11 7M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 105.7 5.7L13 17',
-    image: 'M4 5h16v14H4zM4 16l5-4 4 3 3-2 4 3M9 9a1 1 0 100 2 1 1 0 000-2z',
-    send: 'M4 12l16-8-6 16-3-6z',
-    bell: 'M6 16V11a6 6 0 1112 0v5l2 3H4zM9 21h6',
-    cloud: 'M7 18a4 4 0 010-8 5.5 5.5 0 0110.6 1.4A3.5 3.5 0 0117 18z',
-    git: 'M12 3v6m0 6v6M6 12h12M9 6a3 3 0 100 6 3 3 0 000-6zm6 6a3 3 0 100 6 3 3 0 000-6z',
-    tool: 'M14 7a4 4 0 11-3.5 1.9L4 15v3h3v-2h2v-2h2l2.5-2.5',
-    report: 'M6 3h9l4 4v14H6zM9 12h6M9 16h4',
-    lock: 'M7 11V8a5 5 0 0110 0v3M5 11h14v10H5z',
-    gear: 'M12 15a3 3 0 100-6 3 3 0 000 6zM4 12h2m12 0h2M12 4v2m0 12v2',
-    db: 'M12 3c4 0 7 1.3 7 3s-3 3-7 3-7-1.3-7-3 3-3 7-3zM5 6v12c0 1.7 3 3 7 3s7-1.3 7-3V6',
-    help: 'M12 17h.01M9.5 9a2.5 2.5 0 114 2c-.9.7-1.5 1.2-1.5 2.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
-  };
-
-  var TABS = [
-    { id: 'dashboard', label: 'داشبورد', icon: I.dash },
-    { id: 'generate', label: 'تولید محتوا', icon: I.pen },
-    { id: 'topics', label: 'موضوعات', icon: I.list, cnt: '۴۴۶' },
-    { id: 'review', label: 'صف بازبینی', icon: I.check, cnt: '۱۴' },
-    { id: 'schedule', label: 'زمان‌بندی', icon: I.clock },
-    { id: 'providers', label: 'پرووایدرها', icon: I.hub, cnt: '۲۳' },
-    {
-      id: 'models', label: 'مدل‌ها', icon: I.cpu,
-      desc: 'برای هر پرووایدر، مدل پیش‌فرض و مدل جایگزین را انتخاب کنید؛ افزونه اگر مدل در دسترس نبود خودش به جایگزین سوییچ می‌کند.',
-      list: ['انتخاب مدل پیش‌فرض برای هر وظیفه', 'مدل ارزان برای پیش‌نویس، مدل قوی برای بازنویسی',
-        'کنترل حداکثر توکن و دما', 'تست پاسخ مدل بدون خروج از پیشخوان',
-        'نمایش مصرف توکن هر مدل', 'جایگزینی خودکار در قطعی سرویس']
-    },
-    {
-      id: 'keys', label: 'کلیدهای API', icon: I.key,
-      desc: 'کلیدها رمزنگاری‌شده در دیتابیس خودتان ذخیره می‌شوند و هیچ‌جا ارسال نمی‌شوند.',
-      list: ['ذخیرهٔ رمزنگاری‌شدهٔ کلید', 'چند کلید برای یک پرووایدر', 'تست اتصال تک‌کلیکی',
-        'مشخص‌کردن سهمیهٔ ماهانه', 'کلید جدا برای ورکر کلادفلر', 'حذف و بازتولید کلید']
-    },
-    {
-      id: 'tone', label: 'لحن و زبان', icon: I.globe,
-      desc: 'ده زبان خروجی و ده لحن آماده، به‌همراه امکان ساخت لحن اختصاصی برای برند شما.',
-      list: ['۱۰ زبان خروجی', '۱۰ لحن آماده', 'لحن اختصاصی با نمونهٔ متن',
-        'قواعد نگارش فارسی', 'کنترل اعداد فارسی/لاتین', 'سطح رسمی‌بودن متن']
-    },
-    {
-      id: 'prompts', label: 'پرامپت‌ها', icon: I.chat, cnt: '۱۵',
-      desc: 'پرامپت هر بخش قابل ویرایش است؛ متغیرها با داده‌های واقعی مقاله جایگزین می‌شوند.',
-      list: ['۱۵ متغیر آماده در پرامپت', 'ویرایش پرامپت هر بخش', 'بازگردانی به پیش‌فرض',
-        'پیش‌نمایش خروجی قبل از ذخیره', 'پرامپت جدا برای بازنویسی', 'پرامپت تصویر شاخص']
-    },
-    {
-      id: 'structure', label: 'ساختار مقاله', icon: I.layout, cnt: '۲۹',
-      desc: 'قالب مقاله را یک بار بسازید؛ همهٔ مقالات بعدی با همین ساختار نوشته می‌شوند.',
-      list: ['قالب هدینگ H1 تا H4', 'فهرست مطالب خودکار', 'جدول و لیست بولت',
-        'بخش سؤالات متداول', 'بخش جمع‌بندی', 'حداقل/حداکثر طول هر بخش', '۲۹ قابلیت ساختار']
-    },
-    {
-      id: 'seo', label: 'سئو', icon: I.chart, cnt: '۴۲',
-      desc: 'امتیاز سئو برای هر مقاله، با فهرست اصلاح‌های مشخص — نه عدد مبهم.',
-      list: ['تحلیل کلمهٔ کلیدی اصلی و فرعی', 'کنترل چگالی و تکرار', 'متا تایتل و توضیحات',
-        'اسکیمای Article و FAQ', 'بررسی طول عنوان و توضیحات', '۴۲ قابلیت سئو', 'پیشنهاد اصلاح تک‌کلیکی']
-    },
-    {
-      id: 'links', label: 'لینک داخلی', icon: I.link, cnt: '۱۲',
-      desc: 'مقالات مرتبط خودتان را پیدا می‌کند و لینک را در جای طبیعی متن می‌گذارد.',
-      list: ['یافتن خودکار مقالات مرتبط', 'حداکثر تعداد لینک در مقاله', 'کنترل کلمهٔ لنگر',
-        'بدون لینک به برگه‌های بی‌ربط', 'گزارش لینک‌های ساخته‌شده', '۱۲ قابلیت لینک']
-    },
-    {
-      id: 'image', label: 'تصویر شاخص', icon: I.image, cnt: '۱۶',
-      desc: 'برای هر مقاله یک تصویر شاخص ساخته می‌شود؛ بهینه، با متن جایگزین فارسی و در اندازهٔ درست.',
-      list: ['تولید تصویر اختصاصی هر مقاله', 'متن جایگزین فارسی خودکار', 'برش و تغییر اندازه',
-        'ذخیره در کتابخانهٔ رسانه', 'انتخاب تصویر پیش‌فرض', '۱۶ قابلیت تصویر']
-    },
-    {
-      id: 'publish', label: 'انتشار', icon: I.send, cnt: '۱۹',
-      desc: 'انتشار مستقیم، پیش‌نویس یا زمان‌بندی — با انتخاب دسته، برچسب و نویسنده.',
-      list: ['انتشار مستقیم یا پیش‌نویس', 'انتخاب دسته و برچسب', 'تعیین نویسنده',
-        'وضعیت دیدگاه', 'متای سئوی وردپرس', '۱۹ قابلیت انتشار']
-    },
-    {
-      id: 'notify', label: 'اعلان‌ها', icon: I.bell, cnt: '۱۲',
-      desc: 'از پایان تولید، خطای پرووایدر و انتشار موفق باخبر شوید.',
-      list: ['ایمیل پایان تولید', 'اعلان خطای پرووایدر', 'اعلان تلگرام اختیاری',
-        'خلاصهٔ روزانه', '۱۲ قابلیت اعلان']
-    },
-    {
-      id: 'cloudflare', label: 'کلادفلر', icon: I.cloud,
-      desc: 'اگر هاست محدودیت زمان اجرا دارد، ورکر کلادفلر کار تولید را انجام می‌دهد — پلن رایگان کافی است.',
-      list: ['راه‌اندازی ورکر با چند کلیک', 'تست اتصال ورکر', 'کلید جدا برای ورکر',
-        'نمایش وضعیت و آخرین اجرا', 'اجرا روی دامنهٔ اختصاصی']
-    },
-    {
-      id: 'actions', label: 'GitHub Actions', icon: I.git,
-      desc: 'تولید را به گیت‌هاب بسپارید؛ مناسب هاست‌هایی که اجازهٔ اجرای طولانی نمی‌دهند.',
-      list: ['اتصال ریپازیتوری خصوصی', 'زمان‌بندی با cron گیت‌هاب', 'دریافت نتیجه در وردپرس',
-        'لاگ آخرین اجرا', 'توکن دسترسی محدود']
-    },
-    {
-      id: 'tools', label: 'ابزارها', icon: I.tool, cnt: '۹',
-      desc: 'ابزارهای کوچک روزمره برای کار با محتوا.',
-      list: ['بازنویسی متن موجود', 'خلاصه‌سازی', 'ساخت عنوان جایگزین', 'تولید متا',
-        'بررسی تکراری‌بودن', '۹ ابزار']
-    },
-    {
-      id: 'reports', label: 'گزارش‌ها', icon: I.report, cnt: '۲۳',
-      desc: 'چه چیزی، با چه هزینه‌ای و با چه کیفیتی تولید شده است.',
-      list: ['مصرف توکن و هزینهٔ هر مقاله', 'میانگین امتیاز سئو', 'گزارش پرووایدرها',
-        'گزارش خطاها', 'خروجی CSV']
-    },
-    {
-      id: 'license', label: 'لایسنس', icon: I.lock,
-      desc: 'وضعیت فعال‌سازی، دامنه و به‌روزرسانی خودکار محصول.',
-      list: ['نمایش دامنهٔ فعال‌شده', 'بررسی وضعیت لایسنس', 'به‌روزرسانی خودکار',
-        'انتقال لایسنس بین دامنه']
-    },
-    {
-      id: 'settings', label: 'تنظیمات', icon: I.gear,
-      desc: 'تنظیمات عمومی افزونه: پیش‌فرض‌ها، دسترسی نقش‌ها و پاک‌سازی داده.',
-      list: ['دسترسی نقش‌های کاربری', 'پیش‌فرض دسته و نویسنده', 'پاک‌سازی داده هنگام حذف',
-        'حالت نمایش پیشخوان', 'پشتیبان‌گیری از تنظیمات']
-    },
-    {
-      id: 'backup', label: 'پشتیبان‌گیری', icon: I.db,
-      desc: 'از موضوعات، پرامپت‌ها و تنظیمات خروجی بگیرید و هر وقت خواستید برگردانید.',
-      list: ['خروجی JSON از تنظیمات', 'بازگردانی فایل پشتیبان', 'پشتیبان‌گیری خودکار هفتگی']
-    },
-    {
-      id: 'help', label: 'راهنما', icon: I.help,
-      desc: 'راهنمای فارسی داخل افزونه و لینک مستقیم به مستندات نصب.',
-      list: ['راهنمای گام‌به‌گام داخل افزونه', 'ویدئوی کوتاه هر بخش', 'درخواست پشتیبانی فارسی']
-    }
-  ];
-
-  var PROVIDERS = [
-    ['OpenAI', 'GPT · o-series', 1], ['Anthropic Claude', 'Claude 3.x / 4', 1], ['Google Gemini', 'Gemini Pro / Flash', 1],
-    ['OpenRouter', 'aggregator', 0], ['Groq', 'fast inference', 1], ['Mistral AI', 'Mistral / Codestral', 0],
-    ['DeepSeek', 'chat / reasoner', 1], ['xAI Grok', 'Grok', 0], ['Together AI', 'open models', 0],
-    ['Fireworks AI', 'open models', 0], ['Perplexity', 'search + answer', 0], ['Cohere', 'command', 0],
-    ['Cerebras', 'ultra fast', 0], ['DeepInfra', 'open models', 0], ['Moonshot Kimi', 'Kimi', 0],
-    ['Alibaba Qwen', 'Qwen', 0], ['Zhipu GLM', 'GLM', 0], ['AvalAI', 'Iran-friendly', 1],
-    ['GapGPT', 'Iran-friendly', 0], ['Cloudflare Workers AI', 'edge models', 1], ['Claude Pro', 'subscription', 0]
-  ];
-
-  var TOPICS = [
-    ['راهنمای سئو برای مبتدیان', 'سئو', 'seo for beginners', 'wait'],
-    ['۱۰ اشتباه رایج در تولید محتوا', 'تولید محتوا', 'content mistakes', 'done'],
-    ['چطور کلمهٔ کلیدی انتخاب کنیم؟', 'کلمات کلیدی', 'keyword research', 'done'],
-    ['ساختار مقالهٔ سئوشده', 'ساختار', 'article structure', 'run'],
-    ['لینک داخلی بدون آسیب به سئو', 'لینک‌سازی', 'internal linking', 'done'],
-    ['اسکیما چیست و چرا مهم است؟', 'سئوی فنی', 'schema markup', '—'],
-    ['تصویر شاخص و تاثیرش بر کلیک', 'تصویر', 'featured image', '—']
-  ];
-
-  var REVIEW = [
-    ['راهنمای سئو برای مبتدیان', 92, 'ساخته شد'],
-    ['۱۰ اشتباه رایج در تولید محتوا', 88, 'ساخته شد'],
-    ['ساختار مقالهٔ سئوشده', 84, 'در صف'],
-    ['لینک داخلی بدون آسیب به سئو', 90, 'ساخته شد']
-  ];
-
-  var $ = function (s, r) { return (r || document).querySelector(s); };
-  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-
-  /* ---------------- tabs ---------------- */
-  function renderTabs() {
-    var wrap = $('#tabs');
-    wrap.innerHTML = TABS.map(function (t) {
-      return '<button class="tab" type="button" data-tab="' + t.id + '">' +
-        '<svg viewBox="0 0 24 24"><path d="' + t.icon + '"/></svg>' + t.label +
-        (t.cnt ? ' <span class="cnt">' + t.cnt + '</span>' : '') + '</button>';
-    }).join('');
-    wrap.addEventListener('click', function (e) {
-      var b = e.target.closest('.tab');
-      if (b) go(b.dataset.tab);
-    });
-  }
-
-  function ensurePanel(id) {
-    var el = document.getElementById('p-' + id);
-    if (el) return el;
-    var spec = TABS.filter(function (t) { return t.id === id; })[0];
-    el = document.createElement('section');
-    el.className = 'panel';
-    el.id = 'p-' + id;
-    el.innerHTML =
-      '<div class="grid g2e">' +
-        '<div class="box"><h4>' + spec.label + '</h4>' +
-          '<p class="sub" style="font-size:13.5px;line-height:2;color:#3B4F76">' + (spec.desc || '') + '</p>' +
-          '<ul class="flist" style="margin-top:14px">' +
-            (spec.list || []).map(function (x) { return '<li>' + x + '</li>'; }).join('') +
-          '</ul>' +
-        '</div>' +
-        '<div class="box tint"><h4>در این دمو</h4>' +
-          '<p class="sub" style="font-size:13px;line-height:2">این تب در پیشخوان واقعی همین‌جا باز می‌شود. ' +
-          'دمو فقط بخش‌های اصلی را تعاملی نشان می‌دهد؛ بقیهٔ تب‌ها با همین چیدمان و همین داده‌ها کار می‌کنند.</p>' +
-          '<div class="kpi" style="margin-top:16px"><b>' + fa(TABS.length) + '</b><span>تب مدیریتی در افزونه</span></div>' +
-        '</div>' +
-      '</div>';
-    $('.panels').appendChild(el);
-    return el;
-  }
-
-  function go(id, silent) {
-    if (!id) id = 'dashboard';
-    if (!TABS.some(function (t) { return t.id === id; })) id = 'dashboard';
-    var panel = ensurePanel(id);
-    $$('.panel').forEach(function (p) { p.classList.remove('on'); });
-    panel.classList.add('on');
-    $$('.tab').forEach(function (b) { b.classList.toggle('on', b.dataset.tab === id); });
-    if (!silent) {
-      history.replaceState(null, '', '#' + id);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+  function fa(n) {
+    return String(n).replace(/[0-9]/g, function (d) { return FA[+d]; });
   }
 
   /* ---------------- toast ---------------- */
+  var toastEl = document.getElementById('toast');
+  var toastTimer;
   function toast(msg) {
-    var w = $('#toasts');
-    var t = document.createElement('div');
-    t.className = 'toast';
-    t.innerHTML = '<i class="dot"></i>' + msg;
-    w.appendChild(t);
-    setTimeout(function () { t.style.opacity = '0'; t.style.transform = 'translateY(8px)'; }, 2600);
-    setTimeout(function () { t.remove(); }, 3100);
+    if (!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 2600);
   }
 
-  /* ---------------- generate simulation ---------------- */
-  var running = false;
-  function runGeneration() {
-    if (running) return;
-    running = true;
-    var btn = $('#gRun');
-    btn.disabled = true;
-    btn.textContent = 'در حال تولید…';
-    $('#gOut').innerHTML = '';
-    var steps = $$('#gSteps .sl');
-    steps.forEach(function (s) { s.className = 'sl'; s.querySelector('.b').textContent = '✓'; });
+  /* ---------------- tabs ---------------- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('[data-tab]'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.panel'));
+  var ids = panels.map(function (p) { return p.id.replace('p-', ''); });
 
-    var i = 0;
-    (function next() {
-      if (i >= steps.length) {
-        finish();
-        return;
-      }
-      steps[i].classList.add('run');
-      setTimeout(function () {
-        steps[i].classList.remove('run');
-        steps[i].classList.add('done');
-        i++;
-        next();
-      }, 900 + Math.random() * 500);
-    })();
+  function show(id, push) {
+    if (ids.indexOf(id) === -1) id = 'dashboard';
+    panels.forEach(function (p) { p.classList.toggle('on', p.id === 'p-' + id); });
+    links.forEach(function (a) { a.classList.toggle('on', a.getAttribute('data-tab') === id); });
+    if (push !== false) {
+      try { history.replaceState(null, '', '#' + id); } catch (e) { /* file:// */ }
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  function finish() {
-    var topic = ($('#gTopic') && $('#gTopic').value) || 'راهنمای سئو برای مبتدیان';
-    var prov = ($('#gProv') && $('#gProv').value) || 'Anthropic Claude';
-    var out = $('#gOut');
-    out.innerHTML =
-      '<div class="box" style="padding:16px">' +
-        '<span class="tagline">پیش‌نمایش خروجی</span>' +
-        '<h4 style="margin-bottom:8px">' + topic + '</h4>' +
-        '<p class="sub" style="margin-bottom:10px">پرووایدر: ' + prov + ' · ۱٬۲۰۰ کلمه · لحن آموزشی</p>' +
-        '<div class="article">' +
-          '<p><strong>مقدمه:</strong> سئو مجموعه‌ای از کارهای فنی و محتوایی است که باعث می‌شود صفحهٔ شما ' +
-          'برای جست‌وجوی درست در جای درست دیده شود. در این راهنما از صفر شروع می‌کنیم…</p>' +
-          '<p><strong>گام ۱ — کلمهٔ کلیدی:</strong> پیش از نوشتن، نیت جست‌وجو را مشخص کنید…</p>' +
-        '</div>' +
-        '<div class="score" style="margin-top:14px">' +
-          ring(92) +
-          '<ul class="checks">' +
-            '<li><i>✓</i> عنوان و توضیحات متا نوشته شد</li>' +
-            '<li><i>✓</i> ساختار هدینگ کامل است</li>' +
-            '<li><i>✓</i> ۳ لینک داخلی مرتبط اضافه شد</li>' +
-            '<li><i>✓</i> اسکیما و تصویر شاخص ساخته شد</li>' +
-          '</ul>' +
-        '</div>' +
-        '<button class="btn-line" style="margin-top:14px" type="button" id="gSend">ارسال به صف بازبینی</button>' +
-      '</div>';
-    btn.textContent = 'تولید دوباره';
-    btn.disabled = false;
-    running = false;
-    toast('مقاله تولید شد — امتیاز سئو ۹۲');
-    var send = $('#gSend');
-    if (send) send.addEventListener('click', function () {
-      toast('به صف بازبینی اضافه شد');
-      send.disabled = true;
-      send.textContent = 'در صف بازبینی';
-    });
-  }
-
-  function ring(score) {
-    var r = 38, c = 2 * Math.PI * r, off = c - (score / 100) * c;
-    return '<div class="ring"><svg width="92" height="92" viewBox="0 0 92 92">' +
-      '<circle cx="46" cy="46" r="' + r + '" stroke="#E7EEFA" stroke-width="9" fill="none"/>' +
-      '<circle cx="46" cy="46" r="' + r + '" stroke="url(#gr)" stroke-width="9" fill="none" ' +
-      'stroke-linecap="round" stroke-dasharray="' + c + '" stroke-dashoffset="' + off + '"/>' +
-      '<defs><linearGradient id="gr" x1="0" y1="0" x2="1" y2="1">' +
-      '<stop offset="0" stop-color="#38BDF8"/><stop offset="1" stop-color="#1D4ED8"/></linearGradient></defs>' +
-      '</svg><div class="val">' + fa(score) + '</div></div>';
-  }
-
-  /* ---------------- data lists ---------------- */
-  function renderTopics() {
-    $('#topicRows').innerHTML = TOPICS.map(function (t) {
-      var st = t[3] === 'done' ? '<span class="badge ok">تولید شد</span>'
-        : t[3] === 'wait' ? '<span class="badge wait">در انتظار</span>'
-          : t[3] === 'run' ? '<span class="badge blue">در حال تولید</span>'
-            : '<span class="badge off">بدون تولید</span>';
-      return '<tr><td class="name">' + t[0] + '</td><td>' + t[1] + '</td><td>' + t[2] + '</td><td>' + st + '</td></tr>';
-    }).join('');
-  }
-
-  function renderReview() {
-    $('#reviewRows').innerHTML = REVIEW.map(function (r, i) {
-      return '<tr><td class="name">' + r[0] + '</td><td>' + fa(r[1]) + '</td>' +
-        '<td><span class="badge ' + (r[2] === 'ساخته شد' ? 'ok' : 'wait') + '">' + r[2] + '</span></td>' +
-        '<td><button class="btn-line" data-approve="' + i + '">تأیید و انتشار</button></td></tr>';
-    }).join('');
-  }
-
-  function renderProviders() {
-    $('#provGrid').innerHTML = PROVIDERS.map(function (p, i) {
-      return '<div class="prov' + (p[2] ? ' on' : '') + '" data-prov="' + i + '">' +
-        '<span class="av">' + p[0].charAt(0) + '</span>' +
-        '<span><b>' + p[0] + '</b><span>' + p[1] + '</span></span></div>';
-    }).join('');
-    var chips = PROVIDERS.filter(function (p) { return p[2]; })
-      .map(function (p) { return '<span class="opt on">' + p[0] + '</span>'; }).join('');
-    $('#provChips').innerHTML = chips + '<span class="opt">+ پرووایدر شخصی</span>';
-  }
-
-  /* ---------------- init ---------------- */
-  document.addEventListener('DOMContentLoaded', function () {
-    renderTabs();
-    renderTopics();
-    renderReview();
-    renderProviders();
-    go((location.hash || '#dashboard').slice(1), true);
-
-    document.addEventListener('click', function (e) {
-      var g = e.target.closest('[data-goto]');
-      if (g) { e.preventDefault(); go(g.dataset.goto); return; }
-
-      var ap = e.target.closest('[data-approve]');
-      if (ap) {
-        var row = ap.closest('tr');
-        row.cells[3].innerHTML = '<span class="badge ok">منتشر شد</span>';
-        toast('مقاله منتشر شد');
-        return;
-      }
-
-      var pr = e.target.closest('.prov');
-      if (pr) {
-        pr.classList.toggle('on');
-        var name = pr.querySelector('b').textContent;
-        toast(pr.classList.contains('on') ? name + ' فعال شد' : name + ' غیرفعال شد');
-      }
-    });
-
-    // option chips (tone / length / days)
-    document.addEventListener('click', function (e) {
-      var o = e.target.closest('.opt');
-      if (o && o.parentElement && o.parentElement.classList.contains('chipsrow') && o.parentElement.id !== 'provChips') {
-        o.parentElement.querySelectorAll('.opt').forEach(function (x) { x.classList.remove('on'); });
-        o.classList.add('on');
-      }
-    });
-
-    var run = $('#gRun');
-    if (run) run.addEventListener('click', runGeneration);
-
-    var save = $('#sSave');
-    if (save) save.addEventListener('click', function () { toast('زمان‌بندی ذخیره شد'); });
-
-    window.addEventListener('hashchange', function () { go(location.hash.slice(1), true); });
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-tab]');
+    if (!el) return;
+    e.preventDefault();
+    show(el.getAttribute('data-tab'));
   });
+
+  var start = (location.hash || '').replace('#', '') || 'dashboard';
+  show(start, false);
+
+  /* ---------------- switches ---------------- */
+  document.addEventListener('click', function (e) {
+    var sw = e.target.closest('.switch');
+    if (!sw) return;
+    var on = sw.getAttribute('aria-checked') === 'true';
+    sw.setAttribute('aria-checked', on ? 'false' : 'true');
+  });
+
+  /* ---------------- generic toast actions ---------------- */
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-toast]');
+    if (el) toast(el.getAttribute('data-toast'));
+  });
+
+  /* ---------------- provider test ---------------- */
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-test]');
+    if (!b) return;
+    var ms = 180 + Math.floor(Math.random() * 700);
+    b.textContent = 'در حال تست…';
+    b.disabled = true;
+    setTimeout(function () {
+      b.textContent = 'تست اتصال';
+      b.disabled = false;
+      toast('اتصال سالم — ' + fa(ms) + ' میلی‌ثانیه');
+    }, 900);
+  });
+
+  /* ---------------- topics: add + AI suggest ---------------- */
+  var tbody = document.querySelector('#topicTable tbody');
+  var cntQueue = document.getElementById('cntQueue');
+  var rows = tbody ? Array.prototype.slice.call(tbody.querySelectorAll('tr')) : [];
+
+  function renumber() {
+    if (!tbody) return;
+    Array.prototype.forEach.call(tbody.querySelectorAll('tr'), function (tr, i) {
+      tr.firstElementChild.textContent = fa(i + 1);
+    });
+    if (cntQueue) cntQueue.textContent = fa(tbody.querySelectorAll('tr').length + 19);
+  }
+
+  var addBtn = document.getElementById('addTopic');
+  if (addBtn) {
+    addBtn.addEventListener('click', function () {
+      var title = (document.getElementById('tTitle') || {}).value || '';
+      var key = (document.getElementById('tKey') || {}).value || '';
+      var prio = (document.getElementById('tPrio') || {}).value || 'عادی';
+      if (!title.trim()) { toast('عنوان موضوع را بنویس'); return; }
+      var prioTag = prio === 'فوری' ? '<span class="tag err">فوری</span>'
+        : prio === 'بالا' ? '<span class="tag wait">بالا</span>' : '<span class="tag">عادی</span>';
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>۰</td><td class="name">' + title.replace(/[<>]/g, '') +
+        '</td><td>' + (key || '—') + '</td><td>' + prioTag +
+        '</td><td><span class="tag">در صف</span></td>' +
+        '<td><button class="btn-a sm" data-generate>تولید فوری</button></td>';
+      tbody.insertBefore(tr, tbody.firstElementChild);
+      document.getElementById('tTitle').value = '';
+      document.getElementById('tKey').value = '';
+      renumber();
+      toast('موضوع به ابتدای صف اضافه شد');
+    });
+  }
+
+  var aiBtn = document.getElementById('aiSuggest');
+  if (aiBtn) {
+    aiBtn.addEventListener('click', function () {
+      aiBtn.textContent = 'در حال پیشنهاد…';
+      aiBtn.disabled = true;
+      var ideas = [
+        ['خواص دارچین برای سلامت', 'دارچین'],
+        ['راهنمای نگهداری زعفران', 'نگهداری زعفران'],
+        ['تفاوت پستهٔ اکبری و فندقی', 'پستهٔ اکبری']
+      ];
+      setTimeout(function () {
+        ideas.forEach(function (it) {
+          var tr = document.createElement('tr');
+          tr.innerHTML = '<td>۰</td><td class="name">' + it[0] + '</td><td>' + it[1] +
+            '</td><td><span class="tag">عادی</span></td><td><span class="tag">در صف</span></td>' +
+            '<td><button class="btn-a sm" data-generate>تولید فوری</button></td>';
+          tbody.appendChild(tr);
+        });
+        renumber();
+        aiBtn.textContent = 'پیشنهاد موضوع با AI';
+        aiBtn.disabled = false;
+        toast('۳ موضوع پیشنهادی اضافه شد');
+      }, 1100);
+    });
+  }
+
+  /* ---------------- generate instantly ---------------- */
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-generate]');
+    if (!b) return;
+    var tr = b.closest('tr');
+    var cell = tr.children[4];
+    if (cell) cell.innerHTML = '<span class="tag wait">در حال تولید</span>';
+    b.disabled = true;
+    b.textContent = 'صف…';
+    toast('تولید شروع شد — در «فعالیت زنده» ببین');
+    setTimeout(function () {
+      if (cell) cell.innerHTML = '<span class="tag ok">تولید شد</span>';
+      b.textContent = 'مشاهده';
+      b.disabled = false;
+      toast('پیش‌نویس ساخته شد و به صف بازبینی رفت');
+    }, 2200);
+  });
+
+  /* ---------------- review approve ---------------- */
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-approve]');
+    var s = e.target.closest('[data-schedule]');
+    if (!b && !s) return;
+    var tr = (b || s).closest('tr');
+    tr.classList.add('dim');
+    Array.prototype.forEach.call(tr.querySelectorAll('button'), function (x) { x.disabled = true; });
+    tr.children[0].innerHTML += ' <span class="tag ok">منتشر شد</span>';
+    var n1 = document.getElementById('kpiReview');
+    var n2 = document.getElementById('kpiReview2');
+    var cnt = document.getElementById('reviewCnt');
+    [n1, n2, cnt].forEach(function (el) {
+      if (!el) return;
+      var v = parseInt(el.textContent.replace(/[۰-۹]/g, function (d) { return FA.indexOf(d); }), 10);
+      if (!isNaN(v) && v > 0) el.textContent = fa(v - 1);
+    });
+    toast(b ? 'مقاله منتشر شد' : 'برای فردا ۰۹:۰۰ زمان‌بندی شد');
+  });
+
+  /* ---------------- strategy run ---------------- */
+  var runBtn = document.getElementById('runStrategy');
+  if (runBtn) {
+    runBtn.addEventListener('click', function () {
+      runBtn.disabled = true;
+      runBtn.textContent = 'در حال تحلیل…';
+      var steps = document.querySelectorAll('#strategySteps .sl');
+      var i = 0;
+      var t = setInterval(function () {
+        if (i < steps.length) {
+          steps[i].className = 'sl done';
+          steps[i].querySelector('.b').textContent = '✓';
+          i++;
+        } else {
+          clearInterval(t);
+          runBtn.disabled = false;
+          runBtn.textContent = 'شروع تحلیل';
+          toast('تحلیل تمام شد — ۲۴ موضوع اولویت‌دار آماده است');
+        }
+      }, 700);
+    });
+  }
+
+  /* ---------------- activity progress ---------------- */
+  var actProg = document.getElementById('actProg');
+  if (actProg) {
+    var w = 62;
+    setInterval(function () {
+      w = w >= 96 ? 62 : w + 1;
+      actProg.style.width = w + '%';
+    }, 1400);
+  }
+  var cancelJob = document.getElementById('cancelJob');
+  if (cancelJob) {
+    cancelJob.addEventListener('click', function () {
+      cancelJob.disabled = true;
+      cancelJob.textContent = 'لغو شد';
+      toast('اجرا لغو شد و موضوع به صف برگشت');
+    });
+  }
+
+  /* ---------------- subscription device code ---------------- */
+  var dBtn = document.getElementById('deviceBtn');
+  if (dBtn) {
+    dBtn.addEventListener('click', function () {
+      dBtn.disabled = true;
+      dBtn.textContent = 'در حال گرفتن کد…';
+      setTimeout(function () {
+        document.getElementById('deviceOut').style.display = 'block';
+        dBtn.textContent = 'کد گرفته شد';
+        toast('کد یک‌بارمصرف ساخته شد');
+      }, 900);
+    });
+  }
+
+  /* ---------------- cloudflare deploy ---------------- */
+  var deployBtn = document.getElementById('deployBtn');
+  if (deployBtn) {
+    deployBtn.addEventListener('click', function () {
+      deployBtn.disabled = true;
+      deployBtn.textContent = 'در حال استقرار…';
+      setTimeout(function () {
+        deployBtn.textContent = 'مستقر شد';
+        var st = document.getElementById('workerState');
+        if (st) { st.className = 'tag ok'; st.textContent = 'مستقر'; }
+        toast('ورکر، KV و Cron با موفقیت ساخته شد');
+      }, 1600);
+    });
+  }
+
+  /* ---------------- schedule interval ---------------- */
+  var interval = document.getElementById('interval');
+  if (interval) {
+    interval.addEventListener('change', function () {
+      var v = interval.value;
+      var cron = document.getElementById('cronNow');
+      if (cron) cron.textContent = '۰ */' + fa(v) + ' * * *';
+      toast('زمان‌بندی به هر ' + fa(v) + ' ساعت تغییر کرد');
+    });
+  }
+
+  /* ---------------- prompt variables ---------------- */
+  var box = document.getElementById('promptBox');
+  var preview = document.getElementById('promptPreview');
+  var chips = document.getElementById('varChips');
+  if (chips && box) {
+    chips.addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (!b) return;
+      var token = b.textContent.trim();
+      var s = box.selectionStart || box.value.length;
+      box.value = box.value.slice(0, s) + token + box.value.slice(box.selectionEnd || s);
+      box.focus();
+      box.selectionStart = box.selectionEnd = s + token.length;
+      toast(token + ' در محل نشانگر درج شد');
+    });
+  }
+  if (box && preview) {
+    var sample = {
+      '{site_name}': 'بن‌لی‌فود', '{niche}': 'فروشگاه مواد غذایی طبیعی',
+      '{audience}': 'خریدار خانگی', '{topic}': 'راهنمای خرید روغن زیتون اصل',
+      '{keywords}': 'روغن زیتون', '{tone}': 'آموزشی', '{language}': 'فارسی',
+      '{word_min}': '۱۲۰۰', '{word_max}': '۱۸۰۰', '{year}': '۱۴۰۵ / 2026'
+    };
+    function renderPreview() {
+      var out = box.value;
+      Object.keys(sample).forEach(function (k) {
+        out = out.split(k).join(sample[k]);
+      });
+      preview.textContent = out;
+    }
+    box.addEventListener('input', renderPreview);
+    renderPreview();
+  }
+
+  /* ---------------- features search ---------------- */
+  var fs = document.getElementById('featSearch');
+  if (fs) {
+    var blocks = Array.prototype.slice.call(document.querySelectorAll('#featGrid .note'));
+    fs.addEventListener('input', function () {
+      var q = fs.value.trim();
+      blocks.forEach(function (b) {
+        b.style.display = !q || b.textContent.indexOf(q) !== -1 ? '' : 'none';
+      });
+    });
+  }
 })();
