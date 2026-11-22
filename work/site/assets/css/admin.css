@@ -258,3 +258,12 @@ textarea.input { height: 92px; padding: 12px 14px; resize: vertical; line-height
   .demo-bar { font-size: 11.5px; padding: 8px 12px; }
   .row2 { grid-template-columns: 1fr; }
 }
+
+/* small 3D artwork inside KPI boxes (studio-white renders, multiply blend) */
+.kpi { position: relative; padding-inline-end: 52px; }
+.mini3 {
+  position: absolute; inset-inline-end: 0; top: 0;
+  width: 48px; height: 48px; object-fit: contain;
+  mix-blend-mode: multiply; opacity: .95;
+}
+@media (max-width: 620px) { .kpi { padding-inline-end: 0; } .mini3 { display: none; } }
