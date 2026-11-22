@@ -29,7 +29,7 @@ def build():
         d.text(val, 20, x + 50, 272, SKY, "xbold", align="center", lh=1.15)
         d.text(label, 11.5, x + 50, 297, (0.76, 0.84, 0.97), "medium", align="center", lh=1.15)
 
-    d.text("نسخه ۱.۹.۱", 11, 200, 344, (0.62, 0.72, 0.90), "semi", align="center", lh=1.2)
+    d.text("نسخه ۱.۹.۲", 11, 200, 344, (0.62, 0.72, 0.90), "semi", align="center", lh=1.2)
     return d.save(out_path("01-cover-400x400", "aria-aiwriter-cover-400x400.png"))
 
 

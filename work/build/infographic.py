@@ -194,7 +194,7 @@ def build():
     cta_y = y
     d.glass(90, y, W - 180, 132, 26, alpha=0.10, blur=18, border=0.22)
     d.text("ARIAGH.AIWRITER", 34, W / 2, y + 22, WHITE, "black", align="center", maxw=700, lh=1.2)
-    d.text("نسخه ۱.۹.۱  ·  GPLv2  ·  پشتیبانی فارسی  ·  نصب زیر ۵ دقیقه", 16,
+    d.text("نسخه ۱.۹.۲  ·  GPLv2  ·  پشتیبانی فارسی  ·  نصب زیر ۵ دقیقه", 16,
            W / 2, y + 74, (0.78, 0.86, 1.0), "medium", align="center", maxw=900, lh=1.4)
 
     d.crop_to(cta_y + 132 + 90)
@@ -236,6 +236,9 @@ def smart_slices(path, out_dir, min_h=900, max_h=1250):
         cuts.append(best)
         pos = best
     cuts.append(H)
+    # never emit a sliver as the last part
+    while len(cuts) > 2 and cuts[-1] - cuts[-2] < 260:
+        cuts.pop(-2)
     os.makedirs(out_dir, exist_ok=True)
     files = []
     for i in range(len(cuts) - 1):

@@ -355,7 +355,7 @@ def landing(groups):
   </section>
 
   <footer class="site">
-    <span>ARIAGH.AIWRITER — نسخه ۱.۹.۱ · GPLv2 · پشتیبانی فارسی</span>
+    <span>ARIAGH.AIWRITER — نسخه ۱.۹.۲ · GPLv2 · پشتیبانی فارسی</span>
     <span>این صفحه یک پیش‌نمایش استاتیک است؛ هیچ درخواستی به سرور ارسال نمی‌شود.</span>
   </footer>
 </div>
@@ -412,7 +412,7 @@ def demo_page(groups, total):
   <aside class="side">
     <div class="brand">
       <img src="../assets/img/logo-white.svg" alt="ARIAGH.AIWRITER">
-      <div><small>نسخه ۱.۹.۱</small></div>
+      <div><small>نسخه ۱.۹.۲</small></div>
     </div>
     <nav>{side}</nav>
   </aside>
