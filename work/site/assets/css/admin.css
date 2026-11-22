@@ -259,11 +259,11 @@ textarea.input { height: 92px; padding: 12px 14px; resize: vertical; line-height
   .row2 { grid-template-columns: 1fr; }
 }
 
-/* small 3D artwork inside KPI boxes (studio-white renders, multiply blend) */
+/* small 3D artwork inside KPI boxes (real alpha cutouts — no blend modes) */
 .kpi { position: relative; padding-inline-end: 52px; }
 .mini3 {
   position: absolute; inset-inline-end: 0; top: 0;
   width: 48px; height: 48px; object-fit: contain;
-  mix-blend-mode: multiply; opacity: .95;
+  filter: drop-shadow(0 8px 10px rgba(15, 37, 87, .22));
 }
 @media (max-width: 620px) { .kpi { padding-inline-end: 0; } .mini3 { display: none; } }
