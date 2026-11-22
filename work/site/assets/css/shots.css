@@ -1,0 +1,64 @@
+/* screenshot studio — renders one admin tab at a fixed 1440px for PNG export */
+body.shots {
+  background: #E7EEF9;
+  padding: 92px 0 48px;
+  overflow-x: auto;
+}
+body.shots::before { display: none; }
+body.shots .toast { display: none; }
+
+.shots .toolbar {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 72px;
+  padding: 0 20px;
+  background: linear-gradient(135deg, #0B1B3F, #1D4ED8);
+  color: #fff;
+  box-shadow: 0 18px 40px -30px rgba(11, 27, 63, .9);
+}
+.shots .toolbar b { font-family: 'Morabba', sans-serif; font-size: 15px; }
+.shots .toolbar .hint { font-size: 12px; opacity: .78; }
+.shots .toolbar .sp { flex: 1; }
+.shots .toolbar select,
+.shots .toolbar button {
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, .28);
+  background: rgba(255, 255, 255, .12);
+  color: #fff;
+  font-family: 'Peyda', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+.shots .toolbar select { background: rgba(255, 255, 255, .95); color: #0B1B3F; border-color: transparent; }
+.shots .toolbar button.primary { background: #fff; color: #0B1B3F; border-color: transparent; font-weight: 700; }
+.shots .toolbar .back {
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  border: 1px dashed rgba(255, 255, 255, .38);
+}
+.shots .toolbar .back:hover { background: rgba(255, 255, 255, .14); }
+.shots .toolbar button:disabled { opacity: .6; cursor: default; }
+
+#shotRoot {
+  width: 1440px;
+  margin: 0 auto;
+  background: #F4F7FC;
+  box-shadow: 0 40px 80px -50px rgba(15, 23, 42, .6);
+}
+#shotRoot .wpbar { width: 100%; }
+#shotRoot .shell { width: 1440px; }
+#shotRoot .wpmenu { height: auto; min-height: 900px; }
+.shots .status .pill-x { box-shadow: none; }
