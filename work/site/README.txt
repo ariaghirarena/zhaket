@@ -4,7 +4,7 @@ ARIAGH.AIWRITER — بستهٔ پیش‌نمایش و دموی زنده (است�
 محتویات
 --------
 index.html                صفحهٔ معرفی محصول (لندینگ شیشه‌ای) + پیش‌نمایش زندهٔ پیشخوان
-demo/index.html           دموی زندهٔ پیشخوان — همان رابط واقعی افزونه با هر ۲۲ بخش
+demo/index.html           دموی زندهٔ پیشخوان — ۲۴ تب واقعی در ۶ گروه، برگرفته از tabs() افزونه
 assets/css/               base.css · site.css · admin.css
 assets/js/                site.js · admin.js
 assets/fonts/             Morabba + Peyda (woff2)
@@ -16,6 +16,8 @@ assets/3d/                ۲۴ رندر سه‌بعدی (WebP با آلفای و
 ------------
 هر بخش آدرس مستقیم و قابل اشتراک دارد:
 
+  /aiwriter/demo/#/text_ai        هوش مصنوعی تولید محتوا (تب اصلی)
+  /aiwriter/demo/#/image_ai       هوش مصنوعی تولید تصویر (تب اصلی)
   /aiwriter/demo/#/dashboard      داشبورد
   /aiwriter/demo/#/review         صف بازبینی
   /aiwriter/demo/#/strategy       تحلیل هوشمند سایت

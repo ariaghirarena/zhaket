@@ -40,7 +40,7 @@
         try { history.pushState(null, '', target); } catch (e) { location.hash = target; }
       }
     }
-    var h1 = document.querySelector('.page-head h1, .head h1');
+    var h1 = document.querySelector('.panel.on .panel-title, .page-head h1, .head h1');
     if (h1) document.title = h1.textContent.trim() + ' — دموی ARIAGH.AIWRITER';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

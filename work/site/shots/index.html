@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>استودیوی اسکرین‌شات پیشخوان — ARIAGH.AIWRITER</title>
-<meta name="description" content="دموی تعاملی پیشخوان افزونهٔ ARIAGH.AIWRITER: ۲۲ تب واقعی، تولید مقاله، صف بازبینی، تحلیل هوشمند، سرچ کنسول و زمان‌بندی. داده‌ها نمونه است.">
+<meta name="description" content="دموی تعاملی پیشخوان افزونهٔ ARIAGH.AIWRITER: ۲۴ تب واقعی، تولید مقاله، صف بازبینی، تحلیل هوشمند، سرچ کنسول و زمان‌بندی. داده‌ها نمونه است.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/css/base.css">
@@ -34,41 +34,41 @@
   <span>سلام، مدیر</span>
 </div>
 
+<!-- SHELL:START -->
 <div class="shell">
 
   <!-- ======================= sidebar ======================= -->
-  <nav class="wpmenu">
+<nav class="wpmenu" aria-label="منوی افزونه">
+    <div class="brandline">اصلی</div>
+    <a href="#/text_ai" data-tab="text_ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>هوش مصنوعی تولید محتوا</a>
+    <a href="#/image_ai" data-tab="image_ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-6 6"/></svg>هوش مصنوعی تولید تصویر</a>
     <div class="brandline">نمای کلی</div>
-    <a href="#dashboard" data-tab="dashboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 13h6V4H4zM14 20h6v-9h-6zM4 20h6v-4H4zM14 8h6V4h-6z"/></svg>داشبورد</a>
-    <a href="#review" data-tab="review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h8"/></svg>صف بازبینی<span class="cnt" id="reviewCnt">۱۴</span></a>
-    <a href="#strategy" data-tab="strategy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2.2 5.6L20 10l-5.8 1.4L12 17l-2.2-5.6L4 10l5.8-1.4z"/></svg>تحلیل هوشمند سایت</a>
-    <a href="#timeline" data-tab="timeline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>خط زمانی</a>
-    <a href="#activity" data-tab="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>فعالیت زنده</a>
-
+    <a href="#/dashboard" data-tab="dashboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 13h6V4H4zM14 20h6v-9h-6zM4 20h6v-4H4zM14 8h6V4h-6z"/></svg>داشبورد</a>
+    <a href="#/review" data-tab="review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h8"/></svg>صف بازبینی<span class="cnt" id="reviewCnt">۱۴</span></a>
+    <a href="#/strategy" data-tab="strategy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2.2 5.6L20 10l-5.8 1.4L12 17l-2.2-5.6L4 10l5.8-1.4z"/></svg>تحلیل هوشمند سایت</a>
+    <a href="#/timeline" data-tab="timeline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>خط زمانی</a>
+    <a href="#/activity" data-tab="activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>فعالیت زنده</a>
     <div class="brandline">محتوا</div>
-    <a href="#topics" data-tab="topics"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h10M4 17h7"/></svg>موضوعات</a>
-    <a href="#prompt" data-tab="prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h4l10-10-4-4L4 16z"/><path d="M14 6l4 4"/></svg>پرامپت</a>
-    <a href="#content" data-tab="content"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>ساختار محتوا</a>
-    <a href="#seo" data-tab="seo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>سئو و انتشار</a>
-    <a href="#images" data-tab="images"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-6 6"/></svg>تنظیمات تصاویر</a>
-    <a href="#knowledge" data-tab="knowledge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h7v15H4zM13 5h7v15h-7z"/></svg>دانش سئو</a>
-    <a href="#gsc" data-tab="gsc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l5-6 4 4 5-8 4 5"/></svg>سرچ کنسول و ادغام</a>
-
+    <a href="#/topics" data-tab="topics"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h10M4 17h7"/></svg>موضوعات</a>
+    <a href="#/prompt" data-tab="prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h4l10-10-4-4L4 16z"/><path d="M14 6l4 4"/></svg>پرامپت</a>
+    <a href="#/content" data-tab="content"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>ساختار محتوا</a>
+    <a href="#/seo" data-tab="seo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>سئو و انتشار</a>
+    <a href="#/images" data-tab="images"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-6 6"/></svg>تنظیمات تصاویر</a>
+    <a href="#/knowledge" data-tab="knowledge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h7v15H4zM13 5h7v15h-7z"/></svg>دانش سئو</a>
+    <a href="#/gsc" data-tab="gsc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l5-6 4 4 5-8 4 5"/></svg>سرچ کنسول و ادغام مقالات</a>
     <div class="brandline">زیرساخت</div>
-    <a href="#ai" data-tab="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="12" r="3"/><path d="M14 12h7M17 9v6"/></svg>کلیدهای API و مدل‌ها</a>
-    <a href="#subscription" data-tab="subscription"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.6-3.4 4-5 7-5s5.4 1.6 7 5"/></svg>اکانت اشتراکی</a>
-    <a href="#engines" data-tab="engines"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg>موتور روی سرور</a>
-    <a href="#schedule" data-tab="schedule"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>زمان‌بندی</a>
-    <a href="#cloudflare" data-tab="cloudflare"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 18h10a4 4 0 000-8 6 6 0 00-11.6 2A3.5 3.5 0 007 18z"/></svg>کلادفلر</a>
-
+    <a href="#/ai" data-tab="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="12" r="3"/><path d="M14 12h7M17 9v6"/></svg>کلیدهای API و مدل‌ها</a>
+    <a href="#/subscription" data-tab="subscription"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.6-3.4 4-5 7-5s5.4 1.6 7 5"/></svg>اکانت اشتراکی</a>
+    <a href="#/engines" data-tab="engines"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg>موتور هوش مصنوعی روی سرور</a>
+    <a href="#/schedule" data-tab="schedule"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>زمان‌بندی</a>
+    <a href="#/cloudflare" data-tab="cloudflare"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 18h10a4 4 0 000-8 6 6 0 00-11.6 2A3.5 3.5 0 007 18z"/></svg>کلادفلر</a>
     <div class="brandline">سیستم</div>
-    <a href="#notify" data-tab="notify"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9a6 6 0 1112 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 20h4"/></svg>اعلان‌ها</a>
-    <a href="#logs" data-tab="logs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14v16H5z"/><path d="M8 9h8M8 13h8M8 17h4"/></svg>گزارش‌ها</a>
-    <a href="#tools" data-tab="tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 6l4 4-8 8H6v-4z"/><path d="M15 4l5 5"/></svg>ابزارها</a>
-    <a href="#features" data-tab="features"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4-8 4-8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 17l8 4 8-4"/></svg>قابلیت‌ها</a>
-
+    <a href="#/notify" data-tab="notify"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9a6 6 0 1112 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 20h4"/></svg>اعلان‌ها</a>
+    <a href="#/logs" data-tab="logs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14v16H5z"/><path d="M8 9h8M8 13h8M8 17h4"/></svg>گزارش‌ها</a>
+    <a href="#/tools" data-tab="tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 6l4 4-8 8H6v-4z"/><path d="M15 4l5 5"/></svg>ابزارها</a>
+    <a href="#/features" data-tab="features"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4-8 4-8-4z"/><path d="M4 12l8 4 8-4"/><path d="M4 17l8 4 8-4"/></svg>قابلیت‌ها</a>
     <div class="brandline">حساب کاربری</div>
-    <a href="#license" data-tab="license"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="12" r="4.5"/><path d="M13 12h8M18 12v4M21 12v3"/></svg>لایسنس و حساب</a>
+    <a href="#/license" data-tab="license"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="12" r="4.5"/><path d="M13 12h8M18 12v4M21 12v3"/></svg>لایسنس و حساب</a>
   </nav>
 
   <!-- ======================= app ======================= -->
@@ -84,866 +84,176 @@
       </div>
     </div>
 
-    <!-- ---------------------------------------------------- dashboard -->
-    <section class="panel on" id="p-dashboard">
+<section class="panel" id="p-text_ai">
+      <h1 class="panel-title">هوش مصنوعی تولید محتوا</h1>
+      <p class="panel-sub">هوش مصنوعی‌هایی که مقاله می‌نویسند و ترتیب استفاده از آن‌ها. اولی همیشه اول امتحان می‌شود؛ اگر خطا داد یا سهمیه‌اش تمام شد، بعدی.</p>
+
+<div class="grid2"><div><div class="card"><div class="card-h">اولویت هوش مصنوعی‌ها <span class="sub">بکشید و رها کنید تا ترتیب عوض شود؛ با کلید کنار هر مورد آن را روشن یا خاموش کنید</span></div><div class="card-b"><div class="prov"><span class="av" style="background:linear-gradient(140deg,#1D4ED8,#38BDF8)">۱</span><div><div class="nm">Claude Pro / Max</div><div class="ds">اشتراکی · اجرا روی GitHub Actions</div></div><div class="end"><span class="tag ok">آماده</span><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="prov"><span class="av" style="background:linear-gradient(140deg,#1D4ED8,#38BDF8)">۲</span><div><div class="nm">OpenAI GPT-5.1</div><div class="ds">API · کلید در Secrets کلادفلر</div></div><div class="end"><span class="tag ok">آماده</span><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="prov"><span class="av" style="background:linear-gradient(140deg,#1D4ED8,#38BDF8)">۳</span><div><div class="nm">Google Gemini 2.5 Pro</div><div class="ds">API · رایگان با سهمیهٔ روزانه</div></div><div class="end"><span class="tag ok">آماده</span><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="prov"><span class="av" style="background:linear-gradient(140deg,#1D4ED8,#38BDF8)">۴</span><div><div class="nm">Cloudflare Workers AI</div><div class="ds">رایگان · بدون کلید</div></div><div class="end"><span class="tag ok">آماده</span><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="prov"><span class="av" style="background:linear-gradient(140deg,#1D4ED8,#38BDF8)">۵</span><div><div class="nm">AvalAI</div><div class="ds">API · واسط ایران</div></div><div class="end"><span class="tag err">کلید ندارد</span><span class="switch" role="switch" aria-checked="false"></span></div></div><div class="row2" style="align-items:center;margin-top:10px"><small style="font-size:11.5px;color:#64748b">موارد خاموش هرگز استفاده نمی‌شوند. اکانت‌های اشتراکی از طریق GitHub Actions اجرا می‌شوند؛ بقیه روی ورکر کلادفلر.</small><div style="justify-self:end"><button class="btn-a" data-toast="ترتیب و روشن/خاموش ذخیره شد">ذخیره ترتیب</button></div></div></div></div></div><div><div class="card"><div class="card-h">اکانت‌های اشتراکی <span class="sub">Claude و ChatGPT بدون کلید API</span></div><div class="card-b"><div class="row2" style="align-items:center;padding:8px 0"><b style="font-size:13px">Claude Pro / Max</b><span style="justify-self:end"><span class="tag ok">محتوا: اولویت ۱</span></span></div><div class="row2" style="align-items:center;padding:8px 0"><b style="font-size:13px">ChatGPT Plus / Pro</b><span style="justify-self:end"><span class="tag mute">محتوا: خاموش</span> <span class="tag ok">تصویر: اولویت ۱</span></span></div><div class="note ">هر دو اکانت می‌توانند وصل بمانند. مثلاً Claude را فقط اینجا (محتوا) و ChatGPT را فقط در تب «هوش مصنوعی تولید تصویر» روشن کنید تا هر کدام فقط کار خودش را انجام دهد.</div><a class="btn-a ghost sm" style="margin-top:10px" href="#/subscription" data-tab="subscription">اتصال و راهنمای اکانت اشتراکی</a></div></div><div class="card"><div class="card-h">دیتابیس سایت در GitHub <span class="sub">هوش مصنوعی لینک محصولات، دسته‌ها و مقالات قبلی را از اینجا می‌بیند</span></div><div class="card-b"><div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">مقالات</span><b style="color:var(--navy);font-size:13px">۲۴۸</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">محصولات</span><b style="color:var(--navy);font-size:13px">۹۶</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">به‌روزرسانی</span><b style="color:var(--navy);font-size:13px">۲ ساعت پیش</b></div></div><a class="btn-a ghost sm" style="margin-top:10px" href="#/strategy" data-tab="strategy">تحلیل سایت</a></div></div></div></div>
+    </section>
+
+<section class="panel" id="p-image_ai">
+      <h1 class="panel-title">هوش مصنوعی تولید تصویر</h1>
+      <p class="panel-sub">موتورهایی که تصویر شاخص و تصاویر داخل مقاله را می‌سازند و ترتیب استفاده از آن‌ها. اگر اولی خطا بدهد، بعدی امتحان می‌شود.</p>
+
+<div class="grid2"><div><div class="card"><div class="card-h">اولویت موتورهای تصویر <span class="sub">بکشید و رها کنید؛ با کلید کنار هر مورد روشن یا خاموشش کنید</span></div><div class="card-b"><div class="prov"><span class="av" style="background:linear-gradient(140deg,#1D4ED8,#38BDF8)">۱</span><div><div class="nm">Cloudflare Workers AI (رایگان، پیش‌فرض)</div><div class="ds">بدون کلید · FLUX.1 schnell / SDXL</div></div><div class="end"><span class="tag ok">آماده</span><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="prov"><span class="av" style="background:linear-gradient(140deg,#1D4ED8,#38BDF8)">۲</span><div><div class="nm">OpenAI (gpt-image-1)</div><div class="ds">تا ۱۶ تصویر مرجع · همان کلید OpenAI</div></div><div class="end"><span class="tag ok">آماده</span><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="prov"><span class="av" style="background:linear-gradient(140deg,#1D4ED8,#38BDF8)">۳</span><div><div class="nm">Google Gemini Image (Nano Banana)</div><div class="ds">تا ۳ مرجع · کلید Gemini</div></div><div class="end"><span class="tag ok">آماده</span><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="prov"><span class="av" style="background:linear-gradient(140deg,#1D4ED8,#38BDF8)">۴</span><div><div class="nm">Higgsfield</div><div class="ds">تا ۱۶ مرجع · اعتبار جدا</div></div><div class="end"><span class="tag err">کلید ندارد</span><span class="switch" role="switch" aria-checked="false"></span></div></div><div class="prov"><span class="av" style="background:linear-gradient(140deg,#1D4ED8,#38BDF8)">۵</span><div><div class="nm">fal.ai</div><div class="ds">Nano Banana / FLUX · تا ۶ مرجع</div></div><div class="end"><span class="tag mute">خاموش</span><span class="switch" role="switch" aria-checked="false"></span></div></div><div class="prov"><span class="av" style="background:linear-gradient(140deg,#1D4ED8,#38BDF8)">۶</span><div><div class="nm">تصویر با اکانت ChatGPT</div><div class="ds">بدون API · اشتراکی</div></div><div class="end"><span class="tag mute">خاموش</span><span class="switch" role="switch" aria-checked="false"></span></div></div><div class="prov"><span class="av" style="background:linear-gradient(140deg,#1D4ED8,#38BDF8)">۷</span><div><div class="nm">موتور سفارشی</div><div class="ds">Base URL دلخواه</div></div><div class="end"><span class="tag mute">خاموش</span><span class="switch" role="switch" aria-checked="false"></span></div></div><div style="margin-top:10px"><button class="btn-a" data-toast="ترتیب موتورهای تصویر ذخیره شد">ذخیره ترتیب</button></div></div></div></div><div><div class="card"><div class="card-h">کلید موتورهای تصویر <span class="sub">مستقیم در Secrets کلادفلر ذخیره می‌شود</span></div><div class="card-b"><div class="field"><label>کلید OpenAI</label><input class="input" type="text" value="sk-proj-••••••••••••••••"></div><div class="field"><label>کلید Google AI Studio</label><input class="input" type="text" value="AIza••••••••••••••••"></div><div class="field"><label>Higgsfield (KEY_ID:KEY_SECRET)</label><input class="input" type="text" placeholder="در Secrets ذخیره می‌شود"></div><div class="note ">همهٔ کلیدها مستقیم در Secrets ورکر کلادفلر نوشته می‌شوند و در دیتابیس وردپرس ذخیره نمی‌شوند.</div><button class="btn-a ghost sm" data-toast="کلیدها در Secrets کلادفلر ذخیره شد">ذخیرهٔ کلیدها</button></div></div><div class="card"><div class="card-h">تصویر با اکانت ChatGPT (بدون API) <span class="sub">برای کسانی که ChatGPT Plus/Pro دارند</span></div><div class="card-b"><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">ساخت تصویر با اکانت ChatGPT</div><div style="font-size:11.5px;color:#64748b">مثل یک کاربر عادی، همراه عکس محصولات</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="note ">این موتور با همان اکانت اشتراکی تب «اکانت اشتراکی» کار می‌کند و کلید API نمی‌خواهد.</div><a class="btn-a ghost sm" href="#/subscription" data-tab="subscription">تنظیم اکانت اشتراکی</a></div></div></div></div>
+    </section>
+
+<section class="panel on" id="p-dashboard">
       <h1 class="panel-title">داشبورد</h1>
-      <p class="panel-sub">نمای کلی امروز؛ همه‌چیز از همین‌جا شروع می‌شود.</p>
+      <p class="panel-sub">وضعیت کلی تولید محتوای خودکار سایت شما</p>
 
-      <div class="grid4" style="margin-bottom:14px">
-        <div class="card"><div class="card-b">
-          <div class="kpi"><b>۱۲۸</b><span>مقالهٔ تولیدشده</span><span class="tr">↑ ۲۴ در ۷ روز گذشته</span></div>
-        </div></div>
-        <div class="card"><div class="card-b">
-          <div class="kpi"><b>۹۱</b><span>میانگین امتیاز سئو</span><span class="tr">↑ ۶ نسبت به ماه قبل</span></div>
-        </div></div>
-        <div class="card"><div class="card-b">
-          <div class="kpi"><b id="kpiReview">۱۴</b><span>در انتظار بازبینی</span><span class="tr" style="color:#b45309">نیاز به تأیید شما</span></div>
-        </div></div>
-        <div class="card"><div class="card-b">
-          <div class="kpi"><b>۸۶٪</b><span>نرخ موفقیت ۳۰ روزه</span><span class="tr">۴ خطا در ۳۰ روز</span></div>
-        </div></div>
-      </div>
-
-      <div class="grid2">
-        <div class="card">
-          <div class="card-h">فعالیت ۱۴ روز گذشته <span class="sub">موفق / خطا</span></div>
-          <div class="card-b">
-            <div class="bars">
-              <i style="height:38%"></i><i style="height:56%"></i><i style="height:44%"></i>
-              <i style="height:72%"></i><i style="height:60%"></i><i style="height:88%"></i>
-              <i style="height:52%"></i><i style="height:68%"></i><i style="height:80%"></i>
-              <i style="height:46%"></i><i style="height:74%"></i><i style="height:92%"></i>
-              <i style="height:64%"></i><i style="height:84%"></i>
-            </div>
-            <div class="note" style="margin-top:14px">
-              مجموع توکن: ۱۲۴٬۸۰۰ ورودی · ۳۱۸٬۲۰۰ خروجی — میانگین زمان تولید: ۳ دقیقه و ۲۴ ثانیه
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-h">چک‌لیست راه‌اندازی
-            <span class="sub">۴ از ۵</span>
-          </div>
-          <div class="card-b">
-            <div class="prog" style="margin-bottom:12px"><i style="width:80%"></i></div>
-            <div class="steps-live">
-              <div class="sl done"><span class="b">✓</span> اتصال کلادفلر و استقرار ورکر</div>
-              <div class="sl done"><span class="b">✓</span> انتخاب موتور و مدل پیش‌فرض</div>
-              <div class="sl done"><span class="b">✓</span> نوشتن موضوع سایت، مخاطب و برند</div>
-              <div class="sl done"><span class="b">✓</span> افزودن اولین موضوع‌ها</div>
-              <div class="sl run"><span class="b">…</span> اجرای اولین تولید آزمایشی</div>
-            </div>
-            <a class="btn-a" style="margin-top:14px" href="#topics" data-tab="topics">رفتن به موضوعات</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-h">آخرین پیش‌نویس‌ها
-          <a class="btn-a ghost sm" href="#review" data-tab="review">صف بازبینی</a>
-        </div>
-        <div class="card-b tight">
-          <table class="tbl">
-            <thead><tr><th>عنوان</th><th>موتور</th><th>کلمه</th><th>سئو</th><th>وضعیت</th></tr></thead>
-            <tbody>
-              <tr><td class="name">راهنمای کامل سئو برای مبتدیان</td><td>Claude Pro</td><td>۱٬۲۴۰</td><td>۹۲</td><td><span class="tag wait">در بازبینی</span></td></tr>
-              <tr><td class="name">۱۰ اشتباه رایج در تولید محتوا</td><td>Gemini</td><td>۱٬۰۸۰</td><td>۸۸</td><td><span class="tag ok">منتشر شد</span></td></tr>
-              <tr><td class="name">چطور کلمهٔ کلیدی انتخاب کنیم؟</td><td>OpenAI</td><td>۹۶۰</td><td>۹۵</td><td><span class="tag ok">منتشر شد</span></td></tr>
-              <tr><td class="name">ساختار مقالهٔ سئوشده</td><td>Workers AI</td><td>۱٬۳۱۰</td><td>۸۴</td><td><span class="tag">زمان‌بندی</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+<div class="grid4" style="margin-bottom:14px"><div class="card"><div class="card-b"><div class="kpi"><b id="kpiReview">۱۴</b><span>در انتظار تایید شما</span><span class="tr">۳ مقاله امروز آماده شد</span></div></div></div><div class="card"><div class="card-b"><div class="kpi"><b>۲۳</b><span>موضوعات در صف</span><span class="tr">۲ فوری</span></div></div></div><div class="card"><div class="card-b"><div class="kpi"><b>۱۲۸</b><span>مقالات تولیدشده</span><span class="tr">↑ ۲۴ در ۷ روز</span></div></div></div><div class="card"><div class="card-b"><div class="kpi"><b>۸۶٪</b><span>نرخ موفقیت ۳۰ روز</span><span class="tr down">۴ خطا</span></div></div></div></div><a class="note ok" style="text-decoration:none;margin-bottom:14px" href="#/strategy" data-tab="strategy"><b>تحلیل هوشمند سایت و ساخت برنامه محتوا</b> — مقالات، محصولات، دسته‌ها و رقبا بررسی می‌شوند و بهترین موضوعات جدید پیشنهاد می‌شود. <span class="tag">مشاهده / تحلیل دوباره</span></a><div class="grid2"><div class="card"><div class="card-h">فعالیت ۱۴ روز اخیر <span class="sub">تعداد مقالات موفق و خطاها در هر روز</span></div><div class="card-b"><div class="bars"><i style="height:38%"></i><i style="height:56%"></i><i style="height:44%"></i><i style="height:72%"></i><i style="height:60%"></i><i style="height:88%"></i><i style="height:52%"></i><i style="height:68%"></i><i style="height:80%"></i><i style="height:46%"></i><i style="height:74%"></i><i style="height:92%"></i><i style="height:64%"></i><i style="height:84%"></i></div><div class="note" style="margin-top:14px">مجموع توکن: ۱۲۴٬۸۰۰ ورودی · ۳۱۸٬۲۰۰ خروجی — میانگین زمان تولید: ۳ دقیقه و ۲۴ ثانیه</div></div></div><div><div class="card"><div class="card-h">خط زمانی <span class="sub">برنامهٔ پیش‌رو و آخرین مقالات تولیدشده</span></div><div class="card-b"><div class="steps-live"><div class="sl done"><span class="b">✓</span> راهنمای خرید روغن زیتون اصل — منتشر شد</div><div class="sl done"><span class="b">✓</span> خواص دارچین برای سلامت — پیش‌نویس</div><div class="sl run"><span class="b">…</span> نگهداری زعفران در خانه — در حال نگارش</div><div class="sl"><span class="b">۴</span> تفاوت پستهٔ اکبری و فندقی — امروز ۱۶:۰۰</div><div class="sl"><span class="b">۵</span> صبحانهٔ سالم برای کودکان — فردا ۰۹:۰۰</div></div></div></div><div class="card"><div class="card-h">اجرای بعدی</div><div class="card-b"><div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">اجرای بعدی</span><b style="color:var(--navy);font-size:13px">امروز ۱۶:۰۰</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">فاصله</span><b style="color:var(--navy);font-size:13px">هر ۶ ساعت</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">Cron</span><b style="color:var(--navy);font-size:13px">۰ */۶ * * *</b></div></div><div class="note ">موتور فعال: Cloudflare Workers AI — پاسخ ۴۱۲ میلی‌ثانیه</div></div></div><div class="card"><div class="card-h">موتور فعال</div><div class="card-b"><div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">موتور فعال</span><b style="color:var(--navy);font-size:13px">Cloudflare Workers AI</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">مدل</span><b style="color:var(--navy);font-size:13px">FLUX.1 schnell</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">مسیر اجرا</span><b style="color:var(--navy);font-size:13px">ورکر کلادفلر</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">پاسخ</span><b style="color:var(--navy);font-size:13px">۴۱۲ میلی‌ثانیه</b></div></div><div class="note ">ترتیب و روشن/خاموش کردن موتورها در تب «هوش مصنوعی تولید محتوا» است.</div></div></div><div class="card"><div class="card-h">راه‌اندازی <span class="sub">۴ از ۵</span></div><div class="card-b"><div class="prog" style="margin-bottom:12px"><i style="width:80%"></i></div><div class="steps-live"><div class="sl done"><span class="b">✓</span>اتصال به حساب کلادفلر</div><div class="sl done"><span class="b">✓</span>استقرار ورکر و فعال‌سازی Cron</div><div class="sl done"><span class="b">✓</span>ثبت کلید API هوش مصنوعی در Secrets</div><div class="sl done"><span class="b">✓</span>تعریف موضوع و حوزه سایت</div><div class="sl run"><span class="b">…</span>افزودن موضوعات یا فعال‌سازی ایده‌پردازی خودکار</div></div></div></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- review -->
-    <section class="panel" id="p-review">
+<section class="panel" id="p-review">
       <h1 class="panel-title">صف بازبینی</h1>
-      <p class="panel-sub">هر مقاله با تصویر، کلمات، کلمهٔ کلیدی و پیش‌نمایش گوگل — تأیید یا زمان‌بندی با یک کلیک.</p>
+      <p class="panel-sub">مقالات تولیدشده در پیش‌نویس منتظر تایید شما هستند؛ پیش‌نمایش، ویرایش، انتشار یا زمان‌بندی کنید.</p>
 
-      <div class="grid3" style="margin-bottom:14px">
-        <div class="card"><div class="card-b"><div class="kpi"><b id="kpiReview2">۱۴</b><span>در انتظار بررسی</span></div></div></div>
-        <div class="card"><div class="card-b"><div class="kpi"><b>۶</b><span>زمان‌بندی‌شده</span></div></div></div>
-        <div class="card"><div class="card-b"><div class="kpi"><b>۱۰۸</b><span>منتشرشده</span></div></div></div>
-      </div>
-
-      <div class="card">
-        <div class="card-h">در انتظار تأیید <span class="sub">نمونه</span></div>
-        <div class="card-b tight">
-          <table class="tbl" id="reviewTable">
-            <thead><tr><th>عنوان</th><th>کیورد</th><th>کلمه</th><th>مدل</th><th>عملیات</th></tr></thead>
-            <tbody>
-              <tr>
-                <td class="name">راهنمای کامل سئو برای مبتدیان</td>
-                <td>سئو برای مبتدیان</td><td>۱٬۲۴۰</td><td>Claude Pro</td>
-                <td><button class="btn-a sm" data-approve>تأیید و انتشار</button>
-                    <button class="btn-a ghost sm" data-schedule>زمان‌بندی</button></td>
-              </tr>
-              <tr>
-                <td class="name">آموزش لینک‌سازی داخلی بدون آسیب به سئو</td>
-                <td>لینک داخلی</td><td>۱٬۰۵۰</td><td>OpenAI</td>
-                <td><button class="btn-a sm" data-approve>تأیید و انتشار</button>
-                    <button class="btn-a ghost sm" data-schedule>زمان‌بندی</button></td>
-              </tr>
-              <tr>
-                <td class="name">چک‌لیست سئوی صفحات محصول ووکامرس</td>
-                <td>سئوی محصول</td><td>۱٬۴۱۰</td><td>Gemini</td>
-                <td><button class="btn-a sm" data-approve>تأیید و انتشار</button>
-                    <button class="btn-a ghost sm" data-schedule>زمان‌بندی</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-h">پیش‌نمایش نتیجهٔ گوگل</div>
-        <div class="card-b">
-          <div style="font-size:12px;color:#15803d">https://benlifood.ir › blog › seo-for-beginners</div>
-          <div style="font-size:17px;color:#1a0dab;margin:2px 0 3px">راهنمای کامل سئو برای مبتدیان | بن‌لی‌فود</div>
-          <div style="font-size:13px;color:#4d5156">در این راهنما گام‌به‌گام یاد می‌گیرید سئو را از کجا شروع کنید، چه اشتباه‌هایی نکنید و چطور نتیجه را اندازه بگیرید…</div>
-        </div>
-      </div>
+<div style="margin-bottom:12px"><span class="tag warn" id="kpiReview2">۳ مقاله در انتظار</span> <span class="tag mute">آخرین به‌روزرسانی: ۱۲ دقیقه پیش</span></div><div class="card"><div class="card-h">در انتظار تایید شما <span class="sub">پیش‌نویس، ویرایش، انتشار یا زمان‌بندی</span></div><div class="card-b"><table class="tbl"><thead><tr><th>عنوان</th><th>کلمهٔ کلیدی</th><th>امتیاز سئو</th><th>دسته</th><th>وضعیت</th><th>اقدام</th></tr></thead><tbody><tr><td>راهنمای خرید روغن زیتون اصل</td><td class="name">روغن زیتون</td><td>۹۴</td><td>زیتون طلایی</td><td><span class="tag wait">پیش‌نویس</span></td><td><button class="btn-a sm" data-approve>انتشار</button> <button class="btn-a ghost sm" data-schedule>زمان‌بندی</button> <button class="btn-a ghost sm" data-toast="پیش‌نمایش مقاله">پیش‌نمایش</button></td></tr><tr><td>تفاوت پستهٔ اکبری و فندقی</td><td class="name">پستهٔ اکبری</td><td>۹۱</td><td>آجیل سرا</td><td><span class="tag wait">پیش‌نویس</span></td><td><button class="btn-a sm" data-approve>انتشار</button> <button class="btn-a ghost sm" data-schedule>زمان‌بندی</button> <button class="btn-a ghost sm" data-toast="پیش‌نمایش مقاله">پیش‌نمایش</button></td></tr><tr><td>نگهداری زعفران در خانه</td><td class="name">نگهداری زعفران</td><td>۸۸</td><td>زعفران قائنات</td><td><span class="tag wait">پیش‌نویس</span></td><td><button class="btn-a sm" data-approve>انتشار</button> <button class="btn-a ghost sm" data-schedule>زمان‌بندی</button> <button class="btn-a ghost sm" data-toast="پیش‌نمایش مقاله">پیش‌نمایش</button></td></tr></tbody></table></div></div><div class="grid2" style="margin-top:14px"><div class="card"><div class="card-h">پیش‌نمایش نتیجهٔ گوگل <span class="sub">به‌روزرسانی خودکار</span></div><div class="card-b"><div style="border:1px solid rgba(37,99,235,.16);border-radius:12px;padding:12px"><div style="font-size:12px;color:#15803d">benlifood.ir › blog › olive-oil</div><div style="font-size:15px;color:#1a0dab;font-weight:600;margin:4px 0">راهنمای خرید روغن زیتون اصل</div><div style="font-size:12.5px;color:#4b5563">چطور روغن زیتون اصل را از تقلبی تشخیص دهیم؟ ۷ نشانه، آزمون خانگی و نکات نگهداری…</div></div></div></div><div class="card"><div class="card-h">چک‌لیست پیش از انتشار <span class="sub">خودکار</span></div><div class="card-b"><ul class="list-clean"><li>تصویر شاخص ساخته شده</li><li>Alt همهٔ تصاویر پر شده</li><li>اسکیما Article و FAQ ثبت می‌شود</li><li>لینک داخلی به ۳ مقالهٔ مرتبط</li><li>تراکم کلمهٔ کلیدی ۱.۲٪ — سالم</li></ul></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- strategy -->
-    <section class="panel" id="p-strategy">
+<section class="panel" id="p-strategy">
       <h1 class="panel-title">تحلیل هوشمند سایت</h1>
-      <p class="panel-sub">کل سایت و رقبا خوانده می‌شود و یک استراتژی محتوا با موضوعات اولویت‌دار می‌گیری.</p>
+      <p class="panel-sub">هوش مصنوعی کل سایت، محصولات، دسته‌ها و رقبا را بررسی می‌کند و یک برنامه محتوای کامل با بهترین موضوعات و کلمات کلیدی می‌سازد.</p>
 
-      <div class="grid2">
-        <div class="card">
-          <div class="card-h">اجرای تحلیل <span class="sub">آخرین اجرا: ۲ روز پیش</span></div>
-          <div class="card-b">
-            <div class="field"><label>آدرس رقبا (هر خط یکی)</label>
-              <textarea class="input" style="min-height:70px">example-competitor.ir
-shop-sample.ir</textarea>
-            </div>
-            <div class="chipsrow" style="margin-bottom:12px">
-              <button class="opt on" type="button">جستجوی زندهٔ وب</button>
-              <button class="opt" type="button">فقط دادهٔ سایت خودم</button>
-            </div>
-            <button class="btn-a" id="runStrategy">شروع تحلیل</button>
-            <div class="note" style="margin-top:12px">هاست فقط یک درخواست کوچک می‌فرستد؛ خواندن سایت و رقبا روی کلادفلر/GitHub انجام می‌شود.</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-h">خلاصهٔ استراتژی</div>
-          <div class="card-b">
-            <div class="steps-live" id="strategySteps">
-              <div class="sl done"><span class="b">✓</span> خواندن ۱۲۸ مقاله، ۲۴ برگه و ۳۸۰ محصول</div>
-              <div class="sl done"><span class="b">✓</span> بررسی صفحهٔ اصلی و سایت‌مپ ۲ رقیب</div>
-              <div class="sl done"><span class="b">✓</span> استخراج ستون‌های محتوایی و شکاف‌ها</div>
-              <div class="sl run"><span class="b">…</span> ساخت ۲۴ موضوع اولویت‌دار</div>
-            </div>
-            <div class="note ok" style="margin-top:12px">۳ ستون محتوایی پیشنهادی: آموزش خرید · مقایسهٔ محصول · سلامت و تغذیه</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-h">موضوعات پیشنهادی <a class="btn-a sm" href="#topics" data-tab="topics">افزودن همه به صف</a></div>
-        <div class="card-b tight">
-          <table class="tbl">
-            <thead><tr><th>موضوع</th><th>کلمهٔ کلیدی</th><th>نیت جستجو</th><th>اولویت</th></tr></thead>
-            <tbody>
-              <tr><td class="name">راهنمای خرید روغن زیتون اصل</td><td>خرید روغن زیتون</td><td>تجاری</td><td><span class="tag err">فوری</span></td></tr>
-              <tr><td class="name">تفاوت عسل طبیعی و تغذیه‌ای</td><td>عسل طبیعی</td><td>اطلاعاتی</td><td><span class="tag wait">بالا</span></td></tr>
-              <tr><td class="name">چطور برچسب تغذیهٔ محصول را بخوانیم؟</td><td>برچسب تغذیه</td><td>اطلاعاتی</td><td><span class="tag">عادی</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">شروع تحلیل جدید</div><div class="card-b"><div class="field"><label>سایت رقبا (اختیاری، حداکثر ۵ آدرس، هر خط یکی)</label><textarea class="input" rows="3" placeholder="example.com · shop.com"></textarea></div><div class="row2"><div class="field"><label>تعداد موضوع پیشنهادی</label><select class="input"><option>۲۴ موضوع</option><option>۱۲ موضوع</option><option>۵۰ موضوع</option></select></div><div class="field"><label>تمرکز ویژه (اختیاری)</label><input class="input" type="text" placeholder="مثلاً خواص مواد غذایی"></div></div><div id="strategySteps" style="margin:14px 0"><div class="steps-live"><div class="sl "><span class="b">۱</span>خواندن مقالات، محصولات و دسته‌ها</div><div class="sl "><span class="b">۲</span>بررسی رقبا و شکاف محتوایی</div><div class="sl "><span class="b">۳</span>ساخت کلمات کلیدی و نیت جستجو</div><div class="sl "><span class="b">۴</span>اولویت‌بندی و ساخت برنامه</div></div></div><button class="btn-a" id="runStrategy">شروع تحلیل</button></div></div></div><div><div class="card"><div class="card-h">نسخه پشتیبان سایت در GitHub <span class="sub">دیتابیس هوش مصنوعی برای لینک‌دهی و جلوگیری از مقاله تکراری</span></div><div class="card-b"><div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">آخرین نسخه</span><b style="color:var(--navy);font-size:13px">۲ ساعت پیش</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">مقالات</span><b style="color:var(--navy);font-size:13px">۲۴۸</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">محصولات</span><b style="color:var(--navy);font-size:13px">۹۶</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">دسته‌ها</span><b style="color:var(--navy);font-size:13px">۱۸</b></div></div><div class="note ">دیتابیس هوش مصنوعی برای لینک‌دهی و جلوگیری از مقالهٔ تکراری روی مخزن خصوصی GitHub نگه داشته می‌شود.</div><button class="btn-a ghost sm" data-toast="نسخهٔ پشتیبان تازه ساخته شد">ساخت نسخهٔ پشتیبان</button></div></div></div></div><div style="margin-top:14px"><div class="card"><div class="card-h">برنامهٔ پیشنهادی آخرین تحلیل <span class="sub">۲ روز پیش · ۲۴ موضوع</span></div><div class="card-b"><table class="tbl"><thead><tr><th>موضوع پیشنهادی</th><th>کلمهٔ کلیدی</th><th>نیت جستجو</th><th>اولویت</th></tr></thead><tbody><tr><td>خواص دارچین برای سلامت</td><td class="name">دارچین</td><td>آموزشی</td><td><span class="tag err">فوری</span></td></tr><tr><td>راهنمای نگهداری زعفران</td><td class="name">نگهداری زعفران</td><td>آموزشی</td><td><span class="tag wait">بالا</span></td></tr><tr><td>تفاوت پستهٔ اکبری و فندقی</td><td class="name">پستهٔ اکبری</td><td>خرید</td><td><span class="tag">عادی</span></td></tr></tbody></table></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- timeline -->
-    <section class="panel" id="p-timeline">
-      <h1 class="panel-title">خط زمانی</h1>
-      <p class="panel-sub">چه مقاله‌ای منتشر شده و چه موضوعی، چه روز و ساعتی منتشر می‌شود.</p>
+<section class="panel" id="p-timeline">
+      <h1 class="panel-title">خط زمانی تولید محتوا</h1>
+      <p class="panel-sub">ببینید هوش مصنوعی تا امروز چه مقالاتی نوشته، الان چه می‌کند و در آینده چه موضوعی را در چه زمانی خواهد نوشت.</p>
 
-      <div class="grid2">
-        <div class="card">
-          <div class="card-h">گذشته</div>
-          <div class="card-b tight">
-            <table class="tbl">
-              <tbody>
-                <tr><td>۱۸ آبان · ۰۹:۰۰</td><td class="name">چطور کلمهٔ کلیدی انتخاب کنیم؟</td><td><span class="tag ok">منتشر شد</span></td></tr>
-                <tr><td>۲۰ آبان · ۰۹:۰۰</td><td class="name">۱۰ اشتباه رایج در تولید محتوا</td><td><span class="tag ok">منتشر شد</span></td></tr>
-                <tr><td>۲۲ آبان · ۰۹:۰۰</td><td class="name">ساختار مقالهٔ سئوشده</td><td><span class="tag ok">منتشر شد</span></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-h">برنامهٔ آینده</div>
-          <div class="card-b tight">
-            <table class="tbl">
-              <tbody>
-                <tr><td>فردا · ۰۹:۰۰</td><td class="name">راهنمای کامل سئو برای مبتدیان</td><td><span class="tag">زمان‌بندی</span></td></tr>
-                <tr><td>۲ روز بعد · ۰۹:۰۰</td><td class="name">آموزش لینک‌سازی داخلی</td><td><span class="tag">زمان‌بندی</span></td></tr>
-                <tr><td>۳ روز بعد · ۰۹:۰۰</td><td class="name">چک‌لیست سئوی صفحهٔ محصول</td><td><span class="tag mute">در صف</span></td></tr>
-              </tbody>
-            </table>
-            <div class="note" style="margin-top:10px">بر اساس زمان‌بندی، ترتیب صف، سقف روزانه و ایده‌پردازی خودکار محاسبه می‌شود.</div>
-          </div>
-        </div>
-      </div>
+<div class="grid2"><div class="card"><div class="card-h">گذشته <span class="sub">۲۴ مقالهٔ منتشرشده</span></div><div class="card-b"><table class="tbl"><thead><tr><th>تاریخ</th><th>مقاله</th><th>موتور</th><th>وضعیت</th></tr></thead><tbody><tr><td>۱۴۰۵/۰۳/۰۱ ۰۹:۰۰</td><td class="name">راهنمای خرید روغن زیتون اصل</td><td>Claude Pro</td><td><span class="tag ok">منتشر شد</span></td></tr><tr><td>۱۴۰۵/۰۲/۳۱ ۱۶:۰۰</td><td class="name">خواص دارچین برای سلامت</td><td>Gemini 2.5</td><td><span class="tag ok">منتشر شد</span></td></tr><tr><td>۱۴۰۵/۰۲/۳۰ ۰۹:۰۰</td><td class="name">چای سبز و کاهش وزن</td><td>Workers AI</td><td><span class="tag ok">منتشر شد</span></td></tr></tbody></table></div></div><div class="card"><div class="card-h">برنامهٔ آینده <span class="sub">۶ اجرای بعدی</span></div><div class="card-b"><table class="tbl"><thead><tr><th>زمان</th><th>موضوع</th><th>اولویت</th></tr></thead><tbody><tr><td>امروز ۱۶:۰۰</td><td class="name">نگهداری زعفران در خانه</td><td>بالا</td></tr><tr><td>فردا ۰۹:۰۰</td><td class="name">تفاوت پستهٔ اکبری و فندقی</td><td>عادی</td></tr><tr><td>فردا ۱۶:۰۰</td><td class="name">صبحانهٔ سالم برای کودکان</td><td>عادی</td></tr></tbody></table></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- activity -->
-    <section class="panel" id="p-activity">
+<section class="panel" id="p-activity">
       <h1 class="panel-title">فعالیت زنده</h1>
-      <p class="panel-sub">همهٔ کارهای در حال اجرا، با مرحلهٔ فعلی و گزارش لحظه‌ای.</p>
+      <p class="panel-sub">هر کاری که افزونه و هوش مصنوعی انجام می‌دهند (تست اتصال، نوشتن مقاله، ساخت تصویر، تحلیل، اصلاح، یادگیری) همین‌جا با مرحله فعلی و زمان سپری‌شده نمایش داده می‌شود.</p>
 
-      <div class="card">
-        <div class="card-h">در حال اجرا <span class="sub">۱ کار</span></div>
-        <div class="card-b">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-            <span class="tag wait">در حال تولید</span>
-            <b>آموزش لینک‌سازی داخلی بدون آسیب به سئو</b>
-            <span style="margin-inline-start:auto;font-size:12px;color:#64748b">۲:۱۴ گذشته</span>
-          </div>
-          <div class="prog" style="margin-bottom:12px"><i style="width:62%" id="actProg"></i></div>
-          <div class="steps-live">
-            <div class="sl done"><span class="b">✓</span> انتخاب موضوع و قفل اتمیک آن</div>
-            <div class="sl done"><span class="b">✓</span> ساخت پرامپت با دانش سئو و محصولات سایت</div>
-            <div class="sl run"><span class="b">…</span> نگارش متن توسط موتور انتخابی</div>
-            <div class="sl"><span class="b">·</span> ویرایش فارسی، سئوی درون‌متنی و لینک داخلی</div>
-            <div class="sl"><span class="b">·</span> تصویر شاخص و ساخت پیش‌نویس</div>
-          </div>
-          <button class="btn-a danger" style="margin-top:14px" id="cancelJob">لغو اجرا</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-h">گزارش لحظه‌ای</div>
-        <div class="card-b tight">
-          <table class="tbl">
-            <tbody>
-              <tr><td style="color:#64748b;width:90px">۰۹:۱۴:۰۲</td><td>درخواست Outline به موتور Claude Pro ارسال شد</td></tr>
-              <tr><td style="color:#64748b">۰۹:۱۴:۰۹</td><td>Outline دریافت شد — ۸ هدینگ، نیت تجاری</td></tr>
-              <tr><td style="color:#64748b">۰۹:۱۴:۱۰</td><td>شروع نگارش مقاله (۱٬۲۰۰ کلمه)</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+<div class="grid2"><div class="card"><div class="card-h">در حال اجرا <span class="sub">۱ کار</span></div><div class="card-b"><div class="steps-live"><div class="sl done"><span class="b">✓</span>انتخاب موضوع از صف</div><div class="sl done"><span class="b">✓</span>ساخت پرامپت با دانش سئو</div><div class="sl run"><span class="b">…</span>نگارش مقاله با Claude Pro</div><div class="sl "><span class="b">۴</span>ویرایش فارسی و ساختار</div><div class="sl "><span class="b">۵</span>تصویر شاخص و پیش‌نویس</div></div><div class="prog" style="margin:12px 0"><i id="actProg" style="width:62%"></i></div><div class="row2" style="align-items:center"><small style="color:#64748b;font-size:12px">زمان سپری‌شده: ۰۱:۲۴ — توکن: ۸٬۴۰۰</small><div style="justify-self:end"><button class="btn-a danger sm" id="cancelJob">لغو اجرا</button></div></div></div></div><div class="card"><div class="card-h">گزارش لحظه‌ای <span class="sub">امروز</span></div><div class="card-b"><table class="tbl"><thead><tr><th>زمان</th><th>رویداد</th><th>مدل</th><th>مدت</th><th>وضعیت</th></tr></thead><tbody><tr><td>۱۲:۴۱</td><td class="name">تست اتصال</td><td>Workers AI</td><td>۰.۴s</td><td><span class="tag ok">موفق</span></td></tr><tr><td>۱۲:۳۰</td><td class="name">ساخت تصویر شاخص</td><td>Workers AI</td><td>۸s</td><td><span class="tag ok">موفق</span></td></tr><tr><td>۱۲:۲۴</td><td class="name">نگارش مقاله</td><td>Claude Pro</td><td>۳m ۲۴s</td><td><span class="tag ok">موفق</span></td></tr><tr><td>۱۱:۵۸</td><td class="name">تحلیل سایت</td><td>Gemini 2.5</td><td>۴۲s</td><td><span class="tag ok">موفق</span></td></tr><tr><td>۱۱:۰۲</td><td class="name">ادغام مقالات</td><td>Claude Pro</td><td>—</td><td><span class="tag err">خطا</span></td></tr></tbody></table></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- topics -->
-    <section class="panel" id="p-topics">
-      <h1 class="panel-title">موضوعات</h1>
-      <p class="panel-sub">صف موضوعات: تک، گروهی یا CSV؛ سه اولویت و شش وضعیت.</p>
+<section class="panel" id="p-topics">
+      <h1 class="panel-title">موضوعات مقالات</h1>
+      <p class="panel-sub">لیست موضوعات را بسازید، با کشیدن جابجا کنید؛ هر موضوعی که تولید شود تیک می‌خورد.</p>
 
-      <div class="grid4" style="margin-bottom:14px">
-        <div class="card"><div class="card-b"><div class="kpi"><b id="cntQueue">۲۳</b><span>در صف</span></div></div></div>
-        <div class="card"><div class="card-b"><div class="kpi"><b>۳۸</b><span>تولیدشده</span></div></div></div>
-        <div class="card"><div class="card-b"><div class="kpi"><b>۲</b><span>خطا</span></div></div></div>
-        <div class="card"><div class="card-b"><div class="kpi"><b>∞</b><span>بدون سقف موضوع</span></div></div></div>
-      </div>
-
-      <div class="card">
-        <div class="card-h">افزودن موضوع
-          <span class="sub">افزودن گروهی و CSV در همان صفحه</span>
-        </div>
-        <div class="card-b">
-          <div class="row3">
-            <div class="field"><label>عنوان</label><input class="input" id="tTitle" placeholder="مثلاً: راهنمای خرید عسل طبیعی"></div>
-            <div class="field"><label>کلمهٔ کلیدی</label><input class="input" id="tKey" placeholder="عسل طبیعی"></div>
-            <div class="field"><label>اولویت</label>
-              <select class="select" id="tPrio"><option>عادی</option><option>بالا</option><option>فوری</option></select>
-            </div>
-          </div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <button class="btn-a" id="addTopic">افزودن به صف</button>
-            <button class="btn-a ghost" id="aiSuggest">پیشنهاد موضوع با AI</button>
-            <button class="btn-a ghost" data-toast="در افزونهٔ اصلی: هر خط یک موضوع">ورود از CSV</button>
-            <button class="btn-a ghost" data-toast="خروجی CSV سازگار با اکسل ساخته شد">خروجی CSV</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-h">صف <span class="sub">کشیدن و رها کردن برای جابجایی</span></div>
-        <div class="card-b tight">
-          <table class="tbl" id="topicTable">
-            <thead><tr><th>#</th><th>موضوع</th><th>کیورد</th><th>اولویت</th><th>وضعیت</th><th></th></tr></thead>
-            <tbody>
-              <tr><td>۱</td><td class="name">راهنمای خرید روغن زیتون اصل</td><td>روغن زیتون</td><td><span class="tag err">فوری</span></td><td><span class="tag">در صف</span></td><td><button class="btn-a sm" data-generate>تولید فوری</button></td></tr>
-              <tr><td>۲</td><td class="name">تفاوت عسل طبیعی و تغذیه‌ای</td><td>عسل طبیعی</td><td><span class="tag wait">بالا</span></td><td><span class="tag">در صف</span></td><td><button class="btn-a sm" data-generate>تولید فوری</button></td></tr>
-              <tr><td>۳</td><td class="name">چطور برچسب تغذیه را بخوانیم؟</td><td>برچسب تغذیه</td><td><span class="tag">عادی</span></td><td><span class="tag">در صف</span></td><td><button class="btn-a sm" data-generate>تولید فوری</button></td></tr>
-              <tr><td>۴</td><td class="name">خواص زعفران در آشپزی</td><td>زعفران</td><td><span class="tag">عادی</span></td><td><span class="tag err">خطا</span></td><td><button class="btn-a ghost sm" data-toast="موضوع برای تلاش دوباره به صف برگشت">بازگشت به صف</button></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">افزودن موضوع <span class="sub">یک موضوع با جزئیات کامل</span></div><div class="card-b"><div class="grid2"><div class="field"><label>عنوان یا موضوع مقاله</label><input class="input" type="text" placeholder="مثلاً خواص دارچین برای سلامت" id="tTitle"></div><div class="field"><label>کلمات کلیدی (با کاما جدا کنید)</label><input class="input" type="text" placeholder="دارچین، خواص دارچین" id="tKey"></div></div><div class="row3"><div class="field"><label>دسته‌بندی</label><select class="input"><option>سلامت</option><option>آشپزی</option><option>خرید</option></select></div><div class="field"><label>تعداد کلمات</label><select class="input"><option>۱۲۰۰–۱۸۰۰</option><option>۸۰۰–۱۲۰۰</option></select></div><div class="field"><label>لحن</label><select class="input"><option>آموزشی</option><option>صمیمی</option><option>فروشگاهی</option></select></div></div><div class="row2"><div class="field"><label>اولویت</label><select class="input" id="tPrio"><option>عادی</option><option>بالا</option><option>فوری</option></select></div><div class="field"><label>توضیحات اختصاصی برای AI (اختیاری)</label><textarea class="input" rows="3" placeholder="نکته‌ای که فقط در این مقاله باشد"></textarea></div></div><button class="btn-a" id="addTopic">افزودن به صف</button> <button class="btn-a ghost" id="aiSuggest">پیشنهاد موضوع با AI</button></div></div></div><div><div class="card"><div class="card-h">افزودن گروهی <span class="sub">هر خط یک موضوع</span></div><div class="card-b"><div class="field"><label>هر خط یک موضوع · فرمت اختیاری: عنوان | کلمات کلیدی | دسته | تعداد کلمات</label><textarea class="input" rows="3" rows="6" placeholder="خواص دارچین | دارچین | سلامت | ۱۴۰۰"></textarea></div><button class="btn-a ghost" data-toast="۲ موضوع از متن خوانده و به صف اضافه شد">افزودن گروهی</button></div></div></div></div><div style="margin-top:14px"><div class="card"><div class="card-h">صف موضوعات <span class="sub"><span id="cntQueue">۲۳</span> موضوع</span></div><div class="card-b"><table class="tbl" id="topicTable"><thead><tr><th>#</th><th>موضوع</th><th>کلمهٔ کلیدی</th><th>اولویت</th><th>وضعیت</th><th>اقدام</th></tr></thead><tbody><tr><td>1</td><td class="name">راهنمای خرید روغن زیتون اصل</td><td>روغن زیتون</td><td><span class="tag err">فوری</span></td><td><span class="tag ok">تولید شد</span></td><td><button class="btn-a sm" data-generate>تولید فوری</button></td></tr><tr><td>2</td><td class="name">تفاوت پستهٔ اکبری و فندقی</td><td>پستهٔ اکبری</td><td><span class="tag wait">بالا</span></td><td><span class="tag">در صف</span></td><td><button class="btn-a sm" data-generate>تولید فوری</button></td></tr><tr><td>3</td><td class="name">نگهداری زعفران در خانه</td><td>نگهداری زعفران</td><td><span class="tag">عادی</span></td><td><span class="tag">در صف</span></td><td><button class="btn-a sm" data-generate>تولید فوری</button></td></tr></tbody></table></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- prompt -->
-    <section class="panel" id="p-prompt">
-      <h1 class="panel-title">پرامپت</h1>
-      <p class="panel-sub">شش قالب آماده، ۱۹ متغیر پویا و پیش‌نمایش پرامپت نهایی پیش از ذخیره.</p>
+<section class="panel" id="p-prompt">
+      <h1 class="panel-title">پرامپت هوش مصنوعی</h1>
+      <p class="panel-sub">دستورالعمل اصلی که در هر اجرا برای تولید محتوا به هوش مصنوعی داده می‌شود. قوانین سئو و ساختار به‌صورت خودکار به آن اضافه می‌شوند.</p>
 
-      <div class="grid2">
-        <div class="card">
-          <div class="card-h">قالب‌ها</div>
-          <div class="card-b">
-            <div class="chipsrow">
-              <button class="opt on" type="button">مقالهٔ حرفه‌ای سئو</button>
-              <button class="opt" type="button">راهنمای جامع Pillar</button>
-              <button class="opt" type="button">محتوای فروشگاهی</button>
-              <button class="opt" type="button">تحلیلی و خبری</button>
-              <button class="opt" type="button">آموزش گام‌به‌گام</button>
-              <button class="opt" type="button">لیستی</button>
-            </div>
-            <div class="field" style="margin-top:14px">
-              <label>پرامپت اصلی</label>
-              <textarea class="input" id="promptBox">تو یک نویسندهٔ حرفه‌ای سئو هستی. برای سایت {site_name} در حوزهٔ {niche} و مخاطب {audience} یک مقالهٔ کامل دربارهٔ «{topic}» بنویس.
-لحن: {tone} · زبان: {language} · طول: {word_min} تا {word_max} کلمه · سال: {year}
-کلمهٔ کلیدی اصلی: {keywords}
-ساختار: مقدمه با قلاب، باکس نکات کلیدی، فهرست مطالب، ۶ هدینگ H2، جدول مقایسه، FAQ و CTA.
-هیچ آمار جعلی نساز و هیچ نقل‌قول ساختگی به افراد نسبت نده.</textarea>
-            </div>
-            <div class="chipsrow" id="varChips">
-              <button class="opt" type="button">{site_name}</button>
-              <button class="opt" type="button">{niche}</button>
-              <button class="opt" type="button">{audience}</button>
-              <button class="opt" type="button">{topic}</button>
-              <button class="opt" type="button">{keywords}</button>
-              <button class="opt" type="button">{tone}</button>
-              <button class="opt" type="button">{year}</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-h">پیش‌نمایش پرامپت نهایی</div>
-          <div class="card-b">
-            <div class="note" style="white-space:pre-wrap;font-size:12px;line-height:1.9" id="promptPreview">تو یک نویسندهٔ حرفه‌ای سئو هستی. برای سایت بن‌لی‌فود در حوزهٔ فروشگاه مواد غذایی و مخاطب خریدار خانگی…</div>
-            <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
-              <button class="btn-a" data-toast="مقالهٔ آزمایشی ساخته شد — بدون ذخیره">تولید مقالهٔ آزمایشی</button>
-              <button class="btn-a ghost" data-toast="پرامپت ذخیره شد">ذخیره</button>
-              <button class="btn-a ghost" data-toast="به پرامپت پیش‌فرض برگشت">بازگشت به پیش‌فرض</button>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">پرامپت اصلی (Master Prompt) <span class="sub">از متغیرها برای شخصی‌سازی پویا استفاده کنید</span></div><div class="card-b"><div class="chipsrow" id="varChips" style="margin-bottom:10px"><button type="button" class="opt">{site_name}</button><button type="button" class="opt">{niche}</button><button type="button" class="opt">{audience}</button><button type="button" class="opt">{topic}</button><button type="button" class="opt">{keywords}</button><button type="button" class="opt">{tone}</button><button type="button" class="opt">{language}</button><button type="button" class="opt">{word_min}</button><button type="button" class="opt">{word_max}</button><button type="button" class="opt">{year}</button></div><div class="field"><label>پرامپت اصلی</label><textarea class="input" id="promptBox" rows="9">تو یک نویسندهٔ حرفه‌ای سئو هستی. برای سایت {site_name} در حوزهٔ {niche} و مخاطب {audience} یک مقالهٔ کامل دربارهٔ {topic} بنویس. کلمهٔ کلیدی اصلی {keywords} است. لحن {tone} و زبان {language}. طول مقاله بین {word_min} تا {word_max} کلمه باشد. ساختار هدینگ، جدول و FAQ را رعایت کن.</textarea></div></div></div></div><div><div class="card"><div class="card-h">متغیرها <span class="sub">برای درج در محل نشانگر کلیک کنید</span></div><div class="card-b"><ul class="list-clean"><li>{site_name} نام سایت · {niche} حوزهٔ فعالیت</li><li>{topic} موضوع مقاله · {keywords} کلمات کلیدی</li><li>{tone} لحن · {language} زبان · {year} سال جاری</li></ul></div></div><div class="card"><div class="card-h">دستورالعمل تکمیلی <span class="sub">قوانین سئو و ساختار خودکار اضافه می‌شوند</span></div><div class="card-b"><div class="field"><label></label><textarea class="input" rows="3" placeholder="مثلاً همیشه از مثال ایرانی استفاده کن و از کلمات تبلیغاتی پرهیز کن"></textarea></div></div></div></div></div><div style="margin-top:14px"><div class="card"><div class="card-h">پیش‌نمایش و تست <span class="sub">پرامپت نهایی را ببینید یا یک مقاله آزمایشی بسازید</span></div><div class="card-b"><div class="note" style="white-space:pre-wrap;font-size:12px;line-height:1.9" id="promptPreview"></div><div class="grid2" style="margin-top:12px"><div class="field"><label>موضوع آزمایشی</label><input class="input" type="text" placeholder="خواص دارچین برای سلامت"></div><div class="field"><label>کلمات کلیدی</label><input class="input" type="text" placeholder="دارچین"></div></div><button class="btn-a ghost" data-toast="مقالهٔ آزمایشی ساخته شد (ذخیره نشد)">ساخت مقالهٔ آزمایشی</button></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- content -->
-    <section class="panel" id="p-content">
-      <h1 class="panel-title">ساختار محتوا</h1>
-      <p class="panel-sub">شکل مقاله را تو تعیین می‌کنی؛ هوش مصنوعی همان را می‌سازد.</p>
+<section class="panel" id="p-content">
+      <h1 class="panel-title">ساختار و سبک محتوا</h1>
+      <p class="panel-sub">موضوع سایت، لحن، طول و اجزای مقالات را تعریف کنید.</p>
 
-      <div class="grid2">
-        <div class="card">
-          <div class="card-h">هویت سایت</div>
-          <div class="card-b">
-            <div class="field"><label>نام سایت</label><input class="input" value="بن‌لی‌فود"></div>
-            <div class="field"><label>حوزه و موضوع سایت</label><input class="input" value="فروشگاه مواد غذایی طبیعی و ارگانیک"></div>
-            <div class="field"><label>مخاطب هدف</label><input class="input" value="خریدار خانگی ۲۵ تا ۴۵ سال، حساس به کیفیت"></div>
-            <div class="field"><label>نام برند</label><input class="input" value="بن‌لی‌فود"></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-h">قواعد نگارش</div>
-          <div class="card-b">
-            <div class="row2">
-              <div class="field"><label>حداقل کلمات</label><input class="input" value="۱۲۰۰"></div>
-              <div class="field"><label>حداکثر کلمات</label><input class="input" value="۱۸۰۰"></div>
-            </div>
-            <div class="row2">
-              <div class="field"><label>تعداد H2</label><input class="input" value="۶"></div>
-              <div class="field"><label>حداکثر جمله در پاراگراف</label><input class="input" value="۳"></div>
-            </div>
-            <div class="chipsrow">
-              <button class="opt on" type="button">باکس نکات کلیدی</button>
-              <button class="opt on" type="button">فهرست مطالب</button>
-              <button class="opt on" type="button">جدول مقایسه</button>
-              <button class="opt on" type="button">FAQ</button>
-              <button class="opt" type="button">واژه‌نامه</button>
-            </div>
-            <div class="note" style="margin-top:12px">اصلاح خودکار فارسی (نیم‌فاصله، ی و ک عربی، ارقام فارسی، حذف ایموجی) همیشه روشن است.</div>
-          </div>
-        </div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">هویت سایت <span class="sub">هوش مصنوعی بر اساس این اطلاعات می‌نویسد</span></div><div class="card-b"><div class="field"><label>نام سایت</label><input class="input" type="text" value="بن‌لی‌فود"></div><div class="field"><label>حوزهٔ فعالیت</label><input class="input" type="text" value="فروشگاه مواد غذایی طبیعی"></div><div class="field"><label>مخاطب</label><input class="input" type="text" value="خریدار خانگی"></div><div class="field"><label>برند و نکات کلیدی</label><textarea class="input" rows="3" placeholder="بدون شعار تبلیغاتی؛ تأکید بر اصالت کالا"></textarea></div></div></div><div class="card"><div class="card-h">طول و ساختار</div><div class="card-b"><div class="row2"><div class="field"><label>حداقل کلمات</label><input class="input" type="text" value="۱۲۰۰"></div><div class="field"><label>حداکثر کلمات</label><input class="input" type="text" value="۱۸۰۰"></div></div><div class="row2"><div class="field"><label>تراکم کلمهٔ کلیدی</label><input class="input" type="text" value="۱.۲٪"></div><div class="field"><label>تعداد هدینگ H2</label><input class="input" type="text" value="۵"></div></div><div class="field"><label>ساختار</label><select class="input"><option>مقدمه · H2 · جدول · FAQ · جمع‌بندی</option></select></div></div></div></div><div><div class="card"><div class="card-h">لحن و سبک</div><div class="card-b"><div class="chipsrow"><button type="button" class="opt on">آموزشی</button><button type="button" class="opt">صمیمی</button><button type="button" class="opt">فروشگاهی</button><button type="button" class="opt">تخصصی</button><button type="button" class="opt">روایی</button></div><div style="margin-top:12px"><div class="field"><label>لحن دلخواه (اختیاری)</label><input class="input" type="text" placeholder="مثلاً آرام و مطمئن"></div></div></div></div><div class="card"><div class="card-h">ویرایش خودکار فارسی <span class="sub">پس‌پردازش متن پس از تولید</span></div><div class="card-b"><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">ویرایش خودکار فارسی</div><div style="font-size:11.5px;color:#64748b">نیم‌فاصله، اعداد فارسی، علائم نگارشی</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">حذف جمله‌های تبلیغاتی</div><div style="font-size:11.5px;color:#64748b">بدون «بهترین» و «بی‌نظیر»</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">تبدیل به فارسی روان</div><div style="font-size:11.5px;color:#64748b">اصطلاحات لاتین فقط در صورت نیاز</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="false"></span></div></div></div></div><div class="card"><div class="card-h">اجزای مقاله <span class="sub">بخش‌هایی که در هر مقاله گنجانده می‌شوند</span></div><div class="card-b"><div class="chipsrow"><button type="button" class="opt on">باکس نکات</button><button type="button" class="opt">جدول</button><button type="button" class="opt">FAQ</button><button type="button" class="opt">CTA</button><button type="button" class="opt">لیست مزایا</button><button type="button" class="opt">نتیجه‌گیری</button></div><div style="margin-top:12px"><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">فهرست مطالب خودکار</div><div style="font-size:11.5px;color:#64748b">برای مقاله‌های بلند</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div></div></div></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- seo -->
-    <section class="panel" id="p-seo">
+<section class="panel" id="p-seo">
       <h1 class="panel-title">سئو و انتشار</h1>
-      <p class="panel-sub">متا، اسکیما، نامک و وضعیت انتشار — با افزونهٔ سئویی که خودت داری.</p>
+      <p class="panel-sub">بهینه‌سازی خودکار برای موتورهای جستجو و نحوه ذخیره مقاله در وردپرس.</p>
 
-      <div class="grid2">
-        <div class="card">
-          <div class="card-h">افزونهٔ سئو <span class="sub">تشخیص خودکار</span></div>
-          <div class="card-b">
-            <div class="chipsrow" style="margin-bottom:12px">
-              <button class="opt on" type="button">Rank Math</button>
-              <button class="opt" type="button">Yoast SEO</button>
-              <button class="opt" type="button">AIOSEO</button>
-              <button class="opt" type="button">SEOPress</button>
-            </div>
-            <div class="field"><label>عنوان سئو — حداکثر ۶۰ کاراکتر</label><input class="input" value="راهنمای کامل سئو برای مبتدیان | بن‌لی‌فود"></div>
-            <div class="field"><label>توضیحات متا — حداکثر ۱۵۵ کاراکتر</label><textarea class="input" style="min-height:66px">در این راهنما گام‌به‌گام یاد می‌گیرید سئو را از کجا شروع کنید و چه اشتباه‌هایی نکنید.</textarea></div>
-            <div class="note ok">اسکیمای FAQPage و Article به‌صورت JSON-LD فقط در همین نوشته درج می‌شود.</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-h">انتشار</div>
-          <div class="card-b">
-            <div class="chipsrow" style="margin-bottom:12px">
-              <button class="opt on" type="button">پیش‌نویس</button>
-              <button class="opt" type="button">در انتظار بررسی</button>
-              <button class="opt" type="button">زمان‌بندی</button>
-              <button class="opt" type="button">انتشار مستقیم</button>
-            </div>
-            <div class="row2">
-              <div class="field"><label>دسته</label><select class="select"><option>آموزش</option><option>سلامت</option><option>خرید</option></select></div>
-              <div class="field"><label>نویسنده</label><select class="select"><option>مدیر سایت</option><option>تیم محتوا</option></select></div>
-            </div>
-            <div class="field"><label>حداکثر برچسب</label><input class="input" value="۵"></div>
-            <div class="note">کلمات کلیدی کانونی Yoast و Rank Math مقالات قدیمی برای انکر لینک داخلی خوانده می‌شود.</div>
-          </div>
-        </div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">افزونه سئو <span class="sub">افزونه شناسایی‌شده: Rank Math</span></div><div class="card-b"><div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">افزونه شناسایی‌شده</span><b style="color:var(--navy);font-size:13px">Rank Math SEO</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">نسخه</span><b style="color:var(--navy);font-size:13px">۱.۰.۲۲۰</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">وضعیت</span><b style="color:var(--navy);font-size:13px"><span class="tag ok">سازگار</span></b></div></div><div class="note ">Yoast، Rank Math، AIOSEO و SEOPress همه پشتیبانی می‌شوند؛ متا و اسکیما مستقیم در همین افزونه نوشته می‌شود.</div></div></div><div class="card"><div class="card-h">نامک (Slug)</div><div class="card-b"><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">نامک از کلمهٔ کلیدی</div><div style="font-size:11.5px;color:#64748b">کوتاه، لاتین یا فارسی بر اساس تنظیمات</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="field"><label>پیشوند نامک</label><input class="input" type="text" value="/blog/"></div></div></div><div class="card"><div class="card-h">لینک‌سازی</div><div class="card-b"><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">لینک داخلی خودکار</div><div style="font-size:11.5px;color:#64748b">به مقالات مرتبط موجود</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">لینک به محصولات</div><div style="font-size:11.5px;color:#64748b">مقالات فروش‌محور</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div></div></div><div class="card"><div class="card-h">فهرست مطالب و اسکیما</div><div class="card-b"><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">فهرست مطالب (TOC)</div><div style="font-size:11.5px;color:#64748b"></div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">اسکیما Article</div><div style="font-size:11.5px;color:#64748b"></div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">اسکیما FAQ</div><div style="font-size:11.5px;color:#64748b">از بخش پرسش‌های متداول مقاله</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">اسکیما Product</div><div style="font-size:11.5px;color:#64748b">وقتی محصولات در مقاله لینک شده‌اند</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="false"></span></div></div></div></div><div class="card"><div class="card-h">جلوگیری از تکرار</div><div class="card-b"><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">جلوگیری از مقالهٔ تکراری</div><div style="font-size:11.5px;color:#64748b">مقایسه با مقالات قبلی و صف</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="field"><label>آستانهٔ شباهت</label><input class="input" type="text" value="۷۵٪"></div></div></div></div><div><div class="card"><div class="card-h">ذخیره در وردپرس <span class="sub">مقالات به‌صورت پیش‌فرض پیش‌نویس می‌مانند تا شما تایید کنید</span></div><div class="card-b"><div class="field"><label>وضعیت پیش‌فرض</label><select class="input"><option>پیش‌نویس</option><option>منتشرشده</option><option>زمان‌بندی</option></select></div><div class="note ">مقالات به‌صورت پیش‌فرض پیش‌نویس می‌مانند تا شما تایید کنید.</div></div></div><div class="card"><div class="card-h">دسته و برچسب</div><div class="card-b"><div class="field"><label>دستهٔ پیش‌فرض</label><select class="input"><option>خواندنی</option><option>سلامت</option><option>آشپزی</option></select></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">برچسب خودکار</div><div style="font-size:11.5px;color:#64748b">سه برچسب مرتبط</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div></div></div><div class="card"><div class="card-h">تصاویر مقاله <span class="sub">تنظیمات کامل در تب «تصاویر»</span></div><div class="card-b"><div class="note ">موتور تصویر، عکس محصولات و تم سایت در تب «تنظیمات تصاویر» تنظیم می‌شود.</div></div></div><div class="card"><div class="card-h">لینک به محصولات فروشگاه <span class="sub">مقالات فروش‌محور با لینک واقعی به صفحه محصول</span></div><div class="card-b"><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">لینک به محصولات فروشگاه</div><div style="font-size:11.5px;color:#64748b">با نام و آدرس واقعی</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="field"><label>حداکثر محصول در هر مقاله</label><input class="input" type="text" value="۳"></div></div></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- images -->
-    <section class="panel" id="p-images">
+<section class="panel" id="p-images">
       <h1 class="panel-title">تنظیمات تصاویر</h1>
-      <p class="panel-sub">هفت موتور تصویر، سه ابعاد و مرجع محصول؛ اگر یکی نبود، بعدی می‌سازد.</p>
+      <p class="panel-sub">سبک، مرجع‌ها و تم تصویری. تصویر شاخص و تصاویر داخل متن، هماهنگ با تم سایت و با عکس واقعی محصولاتی که در مقاله آمده‌اند.</p>
 
-      <div class="card">
-        <div class="card-h">موتور تصویر</div>
-        <div class="card-b tight">
-          <div class="prov"><span class="av">CF</span><div><div class="nm">Cloudflare Workers AI</div><div class="ds">FLUX.1 schnell · SDXL · SDXL Lightning · DreamShaper 8 — رایگان</div></div><span class="end"><span class="tag ok">فعال</span></span></div>
-          <div class="prov"><span class="av">OA</span><div><div class="nm">OpenAI Images</div><div class="ds">gpt-image-1 · gpt-image-1-mini · DALL·E 3</div></div><span class="end"><span class="tag mute">آماده</span></span></div>
-          <div class="prov"><span class="av">GE</span><div><div class="nm">Google Gemini Image</div><div class="ds">Nano Banana · Imagen</div></div><span class="end"><span class="tag mute">آماده</span></span></div>
-          <div class="prov"><span class="av">HF</span><div><div class="nm">Higgsfield</div><div class="ds">Marketing Studio با مرجع محصول</div></div><span class="end"><span class="tag mute">آماده</span></span></div>
-        </div>
-      </div>
-
-      <div class="grid2">
-        <div class="card">
-          <div class="card-h">ابعاد و سبک</div>
-          <div class="card-b">
-            <div class="chipsrow" style="margin-bottom:12px">
-              <button class="opt on" type="button">افقی</button>
-              <button class="opt" type="button">مربع</button>
-              <button class="opt" type="button">عمودی</button>
-            </div>
-            <div class="field"><label>سبک تصویر</label><input class="input" value="عکاسی محصول، نور نرم استودیویی، پس‌زمینهٔ ساده"></div>
-            <div class="note">Alt شامل کلمهٔ کلیدی، نام فایل بر اساس نامک مقاله و ساخت اندازه‌های وردپرس خودکار انجام می‌شود.</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-h">عکس مرجع محصول</div>
-          <div class="card-b">
-            <div class="field"><label>انتخاب از کتابخانهٔ رسانه</label><input class="input" value="۳ تصویر انتخاب شده"></div>
-            <div class="field"><label>پیام تصویر (قابل ویرایش)</label><textarea class="input" style="min-height:80px">محصولات: {products} · عنوان: {title} · کلمهٔ کلیدی: {keyword}</textarea></div>
-          </div>
-        </div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">موتور ساخت تصویر <span class="sub">انتخاب و ترتیب موتورها در تب «هوش مصنوعی تولید تصویر»</span></div><div class="card-b"><div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">موتور پیش‌فرض</span><b style="color:var(--navy);font-size:13px">Cloudflare Workers AI (رایگان)</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">ابعاد</span><b style="color:var(--navy);font-size:13px">۱۲۰۰×۶۳۰ و ۱۰۲۴×۱۰۲۴</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">فرمت</span><b style="color:var(--navy);font-size:13px">WebP با کیفیت ۸۲</b></div></div><a class="btn-a ghost sm" href="#/image_ai" data-tab="image_ai">انتخاب و ترتیب موتورها</a></div></div><div class="card"><div class="card-h">مرجع‌ها: محصولات و تم سایت</div><div class="card-b"><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">عکس محصولات مقاله</div><div style="font-size:11.5px;color:#64748b">همان بسته‌بندی واقعی</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">نمونه تصاویر سایت</div><div style="font-size:11.5px;color:#64748b">تم رنگی و نور</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="field"><label>حداکثر تصویر مرجع</label><input class="input" type="text" value="۶"></div><div class="note ">تعداد و حجم مرجع‌ها خودکار با محدودیت هر موتور تنظیم می‌شود.</div></div></div><div class="card"><div class="card-h">تم تصویری سایت <span class="sub">یک‌بار یاد گرفته می‌شود و برای همه تصاویر استفاده می‌شود (صرفه‌جویی در توکن)</span></div><div class="card-b"><div class="field"><label>تم تصویری سایت</label><textarea class="input" rows="3" placeholder="روشن، مینیمال، پس‌زمینهٔ سفید و نور نرم"></textarea></div><button class="btn-a ghost sm" data-toast="تم از ۱۲ تصویر سایت یاد گرفته شد">یادگیری تم از تصاویر سایت</button></div></div></div><div><div class="card"><div class="card-h">پیام ساخت تصویر به ChatGPT <span class="sub">وقتی تصویر با اکانت ChatGPT ساخته می‌شود</span></div><div class="card-b"><div class="field"><label>پیام ساخت تصویر</label><textarea class="input" rows="3" placeholder="متغیرها: {title} {keyword} {description} {article} {products} {style} {refs}"></textarea></div><div class="chipsrow"><button class="opt">{title}</button><button class="opt">{keyword}</button><button class="opt">{description}</button><button class="opt">{products}</button><button class="opt">{style}</button><button class="opt">{refs}</button></div></div></div><div class="card"><div class="card-h">تست تصویر <span class="sub">با همان تنظیمات و مرجع‌های واقعی</span></div><div class="card-b"><div class="field"><label>عنوان آزمایشی</label><input class="input" type="text" value="راهنمای خرید روغن زیتون اصل"></div><button class="btn-a" id="imgTest" data-toast="تصویر آزمایشی ساخته شد و در رسانه ذخیره شد">ساخت تصویر</button></div></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- knowledge -->
-    <section class="panel" id="p-knowledge">
-      <h1 class="panel-title">دانش سئو</h1>
-      <p class="panel-sub">یک‌بار یاد می‌گیرد، بعد همهٔ مقاله‌ها از آن استفاده می‌کنند — با مصرف توکن کمتر.</p>
+<section class="panel" id="p-knowledge">
+      <h1 class="panel-title">دانش به‌روز سئو</h1>
+      <p class="panel-sub">هوش مصنوعی یک‌بار از راهنماهای رسمی گوگل و مقالات برتر ایرانی و بین‌المللی یاد می‌گیرد و همان دستورالعمل را برای همه مقالات استفاده می‌کند.</p>
 
-      <div class="grid2">
-        <div class="card">
-          <div class="card-h">وضعیت دانش</div>
-          <div class="card-b">
-            <div class="kpi" style="margin-bottom:12px"><b>۴۲</b><span>منبع یادگیری‌شده</span></div>
-            <div class="steps-live">
-              <div class="sl done"><span class="b">✓</span> راهنمای رسمی گوگل (Search Essentials)</div>
-              <div class="sl done"><span class="b">✓</span> مقالات برتر فارسی حوزهٔ غذا</div>
-              <div class="sl done"><span class="b">✓</span> مقالات بین‌المللی سئو</div>
-              <div class="sl run"><span class="b">…</span> به‌روزرسانی دوره‌ای بعدی: ۶ روز دیگر</div>
-            </div>
-            <button class="btn-a" style="margin-top:14px" data-toast="یادگیری جدید شروع شد">یادگیری مجدد</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-h">قواعد استخراج‌شده</div>
-          <div class="card-b">
-            <ul class="list-clean">
-              <li>هدف جستجو را قبل از هدینگ‌ها روشن کن</li>
-              <li>هر H2 یک سؤال واقعی کاربر را جواب بدهد</li>
-              <li>جدول مقایسه برای نیت تجاری</li>
-              <li>FAQ کوتاه و بدون تکرار متن</li>
-              <li>بدون آمار جعلی و بدون نقل‌قول ساختگی</li>
-            </ul>
-            <div class="note" style="margin-top:12px">دانش روی GitHub نگه‌داری می‌شود و با یک درخواست کوچک از سایت به‌روز می‌شود.</div>
-          </div>
-        </div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">وضعیت</div><div class="card-b"><div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">آخرین یادگیری</span><b style="color:var(--navy);font-size:13px">۳ روز پیش</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">منابع خوانده‌شده</span><b style="color:var(--navy);font-size:13px">۱۲ منبع</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">موتور</span><b style="color:var(--navy);font-size:13px">Gemini 2.5 Pro</b></div></div><button class="btn-a" data-toast="یادگیری شروع شد — از GitHub Actions اجرا می‌شود">یادگیری / به‌روزرسانی الان</button></div></div><div class="card"><div class="card-h">تنظیمات یادگیری</div><div class="card-b"><div class="field"><label>منابع</label><select class="input"><option>راهنمای رسمی گوگل + مقالات برتر فارسی و انگلیسی</option></select></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">جستجوی زندهٔ وب</div><div style="font-size:11.5px;color:#64748b">برای منابع تازه</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="field"><label>دورهٔ به‌روزرسانی</label><input class="input" type="text" value="هر ۳۰ روز"></div></div></div></div><div><div class="card"><div class="card-h">دستورالعمل فعلی <span class="sub">نسخه ۴ · ۲٬۱۴۰ توکن</span></div><div class="card-b"><div class="note ">دیتابیس سئو روی GitHub: پوشهٔ seo/ شاخهٔ aaw-data در مخزن خصوصی شما؛ نسخهٔ قبلی جایگزین می‌شود.</div><div class="note" style="white-space:pre-wrap;line-height:1.9;margin-top:10px">۱) عنوان‌ها کلمهٔ کلیدی را در ابتدا داشته باشند. ۲) هر H2 یک سؤال واقعی کاربر را پاسخ دهد. ۳) پاراگراف اول پاسخ مستقیم باشد. ۴) جدول مقایسه برای مقالات خرید. ۵) FAQ حداقل ۳ پرسش. ۶) لینک داخلی به ۲ مقالهٔ مرتبط…</div><button class="btn-a ghost sm" data-toast="دستورالعمل در پوشهٔ seo/ مخزن ذخیره شد">ذخیره در GitHub</button></div></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- gsc -->
-    <section class="panel" id="p-gsc">
+<section class="panel" id="p-gsc">
       <h1 class="panel-title">سرچ کنسول و ادغام مقالات</h1>
-      <p class="panel-sub">از دادهٔ واقعی گوگل موضوع بساز و مقاله‌های تکراری را با یک کلیک ادغام کن.</p>
+      <p class="panel-sub">کلمات و جستجوهای واقعی سایت از گوگل سرچ کنسول برای پیشنهاد بهترین مقاله‌ها، و پیدا کردن مقاله‌های تکراری/رقیب و ادغام خودکار آن‌ها با ریدایرکت ۳۰۱.</p>
 
-      <div class="grid3" style="margin-bottom:14px">
-        <div class="card"><div class="card-b"><div class="kpi"><b>۳۲</b><span>فرصت نزدیک صفحهٔ اول</span></div></div></div>
-        <div class="card"><div class="card-b"><div class="kpi"><b>۱۱</b><span>CTR پایین</span></div></div></div>
-        <div class="card"><div class="card-b"><div class="kpi"><b>۴</b><span>قابل ادغام</span></div></div></div>
-      </div>
-
-      <div class="card">
-        <div class="card-h">فرصت‌ها <span class="sub">جایگاه ۵ تا ۲۰</span></div>
-        <div class="card-b tight">
-          <table class="tbl">
-            <thead><tr><th>کلمهٔ کلیدی</th><th>کلیک</th><th>جایگاه</th><th>CTR</th><th></th></tr></thead>
-            <tbody>
-              <tr><td class="name">روغن زیتون اصل</td><td>۱۴۰</td><td>۸.۴</td><td>۲.۱٪</td><td><button class="btn-a sm" data-toast="موضوع به صف اضافه شد">افزودن به صف</button></td></tr>
-              <tr><td class="name">خواص عسل طبیعی</td><td>۹۶</td><td>۱۱.۲</td><td>۱.۴٪</td><td><button class="btn-a sm" data-toast="موضوع به صف اضافه شد">افزودن به صف</button></td></tr>
-              <tr><td class="name">زعفران قائنات</td><td>۵۴</td><td>۱۴.۸</td><td>۰.۹٪</td><td><button class="btn-a sm" data-toast="موضوع به صف اضافه شد">افزودن به صف</button></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-h">مقالات قابل ادغام</div>
-        <div class="card-b">
-          <div class="prov"><span class="av">۲</span><div><div class="nm">راهنمای خرید عسل — دو مقالهٔ تکراری</div><div class="ds">هم‌پوشانی ۸۴٪ · هر دو در جایگاه ۱۲ و ۱۹</div></div><span class="end"><button class="btn-a sm" data-toast="ادغام انجام شد: مقالهٔ قوی‌تر ماند، دومی پیش‌نویس و ریدایرکت ۳۰۱ ست شد">ادغام</button></span></div>
-          <div class="note ok">همه‌چیز قابل بازگردانی است: ریدایرکت‌ها، ادغام‌ها و مقالهٔ دوم.</div>
-        </div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">فرصت‌های سرچ کنسول <span class="sub">property: benlifood.ir</span></div><div class="card-b"><table class="tbl"><thead><tr><th>کوئری</th><th>کلیک</th><th>نمایش</th><th>CTR</th><th>جایگاه</th></tr></thead><tbody><tr><td>روغن زیتون اصل</td><td class="name">۱۲۴</td><td>۳٬۲۰۰</td><td>۳.۹٪</td><td>۸.۲</td></tr><tr><td>خواص دارچین</td><td class="name">۸۸</td><td>۲٬۱۰۰</td><td>۴.۲٪</td><td>۹.۱</td></tr><tr><td>زعفران قرمز</td><td class="name">۶۲</td><td>۱٬۹۰۰</td><td>۳.۳٪</td><td>۱۱.۴</td></tr></tbody></table></div></div><div style="margin-top:14px"><div class="card"><div class="card-h">ادغام‌های انجام‌شده و ریدایرکت‌ها</div><div class="card-b"><table class="tbl"><thead><tr><th>از</th><th>به</th><th>نوع</th><th>وضعیت</th></tr></thead><tbody><tr><td>/blog/olive-oil-guide-2</td><td class="name">/blog/olive-oil</td><td>۳۰۱</td><td><span class="tag ok">انجام شد</span></td></tr><tr><td>/blog/cinnamon-2</td><td class="name">/blog/cinnamon</td><td>۳۰۱</td><td><span class="tag ok">انجام شد</span></td></tr></tbody></table></div></div></div></div><div><div class="card"><div class="card-h">مقاله‌های تکراری و رقیب (همپوشانی) <span class="sub">مقاله‌هایی که برای یک جستجو با هم رقابت می‌کنند</span></div><div class="card-b"><table class="tbl"><thead><tr><th>مقاله ۱</th><th>مقاله ۲</th><th>شباهت</th><th>پیشنهاد</th></tr></thead><tbody><tr><td>راهنمای روغن زیتون</td><td class="name">روغن زیتون فرابکر چیست</td><td>۸۲٪</td><td><span class="tag wait">ادغام با ۳۰۱</span></td></tr><tr><td>خواص دارچین</td><td class="name">دارچین برای لاغری</td><td>۷۶٪</td><td><span class="tag">بازبینی دستی</span></td></tr></tbody></table></div></div><div style="margin-top:14px"><div class="card"><div class="card-h">اتصال به گوگل سرچ کنسول</div><div class="card-b"><div class="field"><label>Client ID</label><input class="input" type="text" value="••••.apps.googleusercontent.com"></div><div class="field"><label>Client secret</label><input class="input" type="text" value="GOCSPX-••••••••"></div><div class="field"><label>Property سرچ کنسول</label><input class="input" type="text" value="sc-domain:benlifood.ir"></div><div style="display:flex;gap:8px"><button class="btn-a" data-test>تست اتصال</button><button class="btn-a ghost" data-toast="کوئری‌های ۲۸ روز گذشته دریافت شد">دریافت داده</button></div></div></div></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- ai -->
-    <section class="panel" id="p-ai">
-      <h1 class="panel-title">کلیدهای API و مدل‌ها</h1>
-      <p class="panel-sub">۲۳ موتور آماده، زنجیرهٔ پشتیبان و پرووایدر دلخواه نامحدود.</p>
+<section class="panel" id="p-ai">
+      <h1 class="panel-title">کلیدهای API و تنظیمات مدل</h1>
+      <p class="panel-sub">کلیدها و تنظیمات فنی مدل‌های متنی. کلیدهای API مستقیماً در Secrets ورکر کلادفلر ذخیره می‌شوند و هرگز در دیتابیس وردپرس نگهداری نمی‌شوند.</p>
 
-      <div class="card">
-        <div class="card-h">زنجیرهٔ موتورها
-          <span class="sub">اگر اولی خطا داد، بعدی خودکار</span>
-        </div>
-        <div class="card-b tight" id="provList">
-          <div class="prov"><span class="av">CL</span><div><div class="nm">Claude Pro/Max (اکانت چت)</div><div class="ds">از سهمیهٔ اشتراک · sonnet</div></div><span class="end"><span class="tag ok">فعال</span><button class="btn-a ghost sm" data-test>تست اتصال</button></span></div>
-          <div class="prov"><span class="av">OA</span><div><div class="nm">OpenAI</div><div class="ds">gpt-4.1-mini · کلید در Secrets</div></div><span class="end"><span class="tag mute">پشتیبان ۱</span><button class="btn-a ghost sm" data-test>تست اتصال</button></span></div>
-          <div class="prov"><span class="av">GE</span><div><div class="nm">Google Gemini</div><div class="ds">gemini-2.5-flash</div></div><span class="end"><span class="tag mute">پشتیبان ۲</span><button class="btn-a ghost sm" data-test>تست اتصال</button></span></div>
-          <div class="prov"><span class="av">CF</span><div><div class="nm">Cloudflare Workers AI</div><div class="ds">بدون کلید · رایگان · llama-3.3-70b</div></div><span class="end"><span class="tag ok">رایگان</span><button class="btn-a ghost sm" data-test>تست اتصال</button></span></div>
-          <div class="prov"><span class="av">AV</span><div><div class="nm">AvalAI (اول‌ای‌آی)</div><div class="ds">ایرانی · پرداخت ریالی</div></div><span class="end"><span class="tag mute">آماده</span><button class="btn-a ghost sm" data-test>تست اتصال</button></span></div>
-        </div>
-      </div>
-
-      <div class="grid2">
-        <div class="card">
-          <div class="card-h">تنظیمات مدل</div>
-          <div class="card-b">
-            <div class="row2">
-              <div class="field"><label>Temperature</label><input class="input" value="۰.۷"></div>
-              <div class="field"><label>حداکثر توکن خروجی</label><input class="input" value="۴۰۰۰"></div>
-            </div>
-            <div class="field"><label>مهلت درخواست (ثانیه)</label><input class="input" value="۱۲۰"></div>
-            <div class="note">JSON ساخت‌یافته، تلاش مجدد نمایی و حذف خودکار پارامترهای ناسازگار مدل، خودکار انجام می‌شود.</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-h">پرووایدر دلخواه</div>
-          <div class="card-b">
-            <div class="field"><label>Base URL</label><input class="input" placeholder="https://api.example.com/v1"></div>
-            <div class="row2">
-              <div class="field"><label>فرمت</label><select class="select"><option>OpenAI-compatible</option><option>Anthropic Messages</option></select></div>
-              <div class="field"><label>احراز هویت</label><select class="select"><option>Bearer</option><option>x-api-key</option><option>api-key (Azure)</option></select></div>
-            </div>
-            <button class="btn-a" data-toast="پرووایدر ذخیره شد">ذخیرهٔ پرووایدر</button>
-          </div>
-        </div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">تنظیمات مدل‌های متنی <span class="sub">انتخاب و ترتیب هوش مصنوعی‌ها به تب اصلی «هوش مصنوعی تولید محتوا» منتقل شد</span></div><div class="card-b"><div class="grid2"><div class="field"><label>نام نمایشی</label><input class="input" type="text" value="OpenAI GPT-5.1"></div><div class="field"><label>فرمت API</label><select class="input"><option>openai</option><option>anthropic</option><option>gemini</option><option>custom</option></select></div></div><div class="grid2"><div class="field"><label>Base URL</label><input class="input" type="text" value="https://api.openai.com/v1"></div><div class="field"><label>مسیر Endpoint</label><input class="input" type="text" value="/chat/completions"></div></div><div class="grid2"><div class="field"><label>Query string (اختیاری)</label><input class="input" type="text" placeholder="api-version=2024-10"></div><div class="field"><label>مدل پیش‌فرض</label><input class="input" type="text" value="gpt-5.1"></div></div><div class="grid2"><div class="field"><label>نوع احراز هویت</label><select class="input"><option>Bearer</option><option>x-api-key</option><option>Query param</option></select></div><div class="field"><label>کلید API (در Secrets کلادفلر ذخیره می‌شود)</label><input class="input" type="text" value="sk-proj-••••••••••••"></div></div><div class="field"><label>هدرهای اضافه (هر خط Name: Value)</label><textarea class="input" rows="3" value="OpenAI-Beta: assistants=v2"></textarea></div><div style="display:flex;gap:8px"><button class="btn-a" data-toast="تنظیمات مدل ذخیره و در Secrets نوشته شد">ذخیره</button><button class="btn-a ghost" data-test>تست اتصال</button><button class="btn-a ghost" data-toast="۲۳ مدل از این کلید دریافت شد">دریافت لیست مدل‌ها</button></div></div></div></div><div><div class="card"><div class="card-h">انتخاب هوش مصنوعی <span class="sub">به تب اصلی منتقل شد</span></div><div class="card-b"><div class="note ">انتخاب و ترتیب هوش مصنوعی‌ها به تب اصلی «هوش مصنوعی تولید محتوا» منتقل شد.</div><a class="btn-a ghost sm" href="#/text_ai" data-tab="text_ai">هوش مصنوعی تولید محتوا</a></div></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- subscription -->
-    <section class="panel" id="p-subscription">
-      <h1 class="panel-title">اکانت اشتراکی</h1>
-      <p class="panel-sub">با همان اشتراک Claude یا ChatGPT، بدون کلید API و بدون هزینهٔ اضافه.</p>
+<section class="panel" id="p-subscription">
+      <h1 class="panel-title">اکانت اشتراکی (بدون API)</h1>
+      <p class="panel-sub">برای کسانی که اکانت چت هوش مصنوعی (Claude Pro/Max یا ChatGPT Plus/Pro) خریده‌اند ولی API پولی ندارند.</p>
 
-      <div class="grid2">
-        <div class="card">
-          <div class="card-h">Claude Pro/Max <span class="sub">GitHub Actions</span></div>
-          <div class="card-b">
-            <div class="note ok" style="margin-bottom:12px">متصل · توکن setup-token معتبر است</div>
-            <div class="steps-live">
-              <div class="sl done"><span class="b">✓</span> توکن GitHub ذخیره شد</div>
-              <div class="sl done"><span class="b">✓</span> مخزن خصوصی ساخته شد</div>
-              <div class="sl done"><span class="b">✓</span> توکن claude setup-token ثبت شد</div>
-            </div>
-            <div class="chipsrow" style="margin-top:12px">
-              <button class="opt on" type="button">هم محتوا هم تصویر</button>
-              <button class="opt" type="button">فقط محتوا</button>
-              <button class="opt" type="button">فقط تصویر</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-h">ChatGPT Plus/Pro <span class="sub">کد یک‌بارمصرف</span></div>
-          <div class="card-b">
-            <div class="note warn" style="margin-bottom:12px">متصل نیست — برای اتصال، کد یک‌بارمصرف بگیر.</div>
-            <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <button class="btn-a" id="deviceBtn">ورود با اکانت ChatGPT و دریافت کد</button>
-            </div>
-            <div id="deviceOut" style="display:none;margin-top:12px">
-              <div class="note" style="font-family:monospace;font-size:15px;letter-spacing:2px;justify-content:center">K7QM-2XPD</div>
-              <p style="font-size:12.5px;color:#64748b;margin-top:8px">این کد را در صفحهٔ رسمی OpenAI وارد کن؛ ورود در پنجرهٔ خودت انجام می‌شود.</p>
-            </div>
-            <div class="note" style="margin-top:12px">روش‌های ورود فقط رسمی‌اند: device code، auth.json یا setup-token. ورود با ایمیل و رمز پیاده نشده.</div>
-          </div>
-        </div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">پلن‌های اشتراک <span class="sub">وضعیت هر مسیر اجرا</span></div><div class="card-b"><table class="tbl"><thead><tr><th>وضعیت</th><th>نوع</th><th>مدت</th><th>نوشتن مقاله</th><th>GitHub Actions</th><th>کلادفلر</th><th>پیشنهاد</th><th>تمدید</th></tr></thead><tbody><tr><td><span class="tag ok">فعال</span></td><td class="name">Claude Pro</td><td>ماهانه</td><td>✓</td><td>✓</td><td>—</td><td>مناسب حجم بالا</td><td>۱۴۰۵/۰۴/۱۲</td></tr><tr><td><span class="tag wait">تست</span></td><td class="name">ChatGPT Plus</td><td>ماهانه</td><td>—</td><td>✓</td><td>—</td><td>برای تصویر</td><td>—</td></tr></tbody></table></div></div><div style="margin-top:14px"><div class="card"><div class="card-h">هزینه و محدودیت‌ها</div><div class="card-b"><div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">هزینهٔ API</span><b style="color:var(--navy);font-size:13px">صفر</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">محدودیت</span><b style="color:var(--navy);font-size:13px">سهمیهٔ پلن اشتراکی</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">سرعت</span><b style="color:var(--navy);font-size:13px">صف GitHub Actions</b></div></div><div class="note ">هزینه و محدودیت‌ها به پلن خودتان بستگی دارد؛ افزونه هزینهٔ اضافی ندارد.</div></div></div></div><div style="margin-top:14px"><div class="card"><div class="card-h">سؤالات متداول</div><div class="card-b"><ul class="list-clean"><li>آیا به کلید API نیاز دارم؟ نه، با اکانت اشتراکی هم کار می‌کند.</li><li>آیا اطلاعات حساب من جایی ذخیره می‌شود؟ رمزنگاری‌شده روی مخزن خصوصی خودتان.</li><li>GitHub رایگان است؟ برای این حجم، بله.</li></ul></div></div></div></div><div><div class="card"><div class="card-h">ورکر کلادفلر (زمان‌بند رایگان)</div><div class="card-b"><div class="field"><label>نام ورکر Runner</label><input class="input" type="text" value="aaw-runner"></div><div class="field"><label>مدل جایگزین</label><input class="input" type="text" value="gpt-5.1-mini"></div><button class="btn-a ghost sm" data-toast="ورکر Runner مستقر شد">استقرار</button></div></div><div class="card"><div class="card-h">اتصال GitHub (سرور رایگان اجرای کار)</div><div class="card-b"><div class="field"><label>توکن GitHub</label><input class="input" type="text" value="ghp_••••••••••••"></div><div class="field"><label>نام مخزن خصوصی</label><input class="input" type="text" value="aaw-data"></div><button class="btn-a ghost sm" data-toast="GitHub وصل شد">اتصال GitHub</button></div></div><div class="card"><div class="card-h">اتصال اکانت اشتراکی شما</div><div class="card-b"><div class="field"><label>توکن اشتراک Claude</label><input class="input" type="text" value="sk-ant-oat01-••••••••"></div><div class="field"><label>مدل</label><input class="input" type="text" placeholder="خالی = پیش‌فرض پلن شما"></div><button class="btn-a ghost sm" id="deviceBtn">گرفتن کد یک‌بارمصرف</button><div id="deviceOut" class="note ok" style="display:none;margin-top:10px">کد یک‌بارمصرف: XXXX-XXXX — در claude.ai وارد کنید.</div></div></div><div class="card"><div class="card-h">تست، فعال‌سازی و اجراها</div><div class="card-b"><div class="field"><label>محتوای کامل auth.json</label><textarea class="input" rows="3" placeholder="{"tokens": …}"></textarea></div><div class="field"><label>مدل</label><input class="input" type="text" placeholder="خالی = پیش‌فرض پلن شما"></div></div></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- engines -->
-    <section class="panel" id="p-engines">
+<section class="panel" id="p-engines">
       <h1 class="panel-title">موتور هوش مصنوعی روی سرور</h1>
-      <p class="panel-sub">اختیاری: CLI رسمی روی هاست خودت. برای VPS یا هاست‌های قدرتمند.</p>
+      <p class="panel-sub">نصب، ورود، تست و عیب‌یابی Claude Code و OpenAI Codex روی همین سرور. وقتی روش اجرای یک اکانت «مستقیم از همین سرور» باشد، افزونه مثل یک کاربر عادی برای همان هوش مصنوعی پیام (و برای ChatGPT عکس‌های مرجع) می‌فرستد و هیچ کاری به GitHub یا کلادفلر نمی‌رود.</p>
 
-      <div class="grid2">
-        <div class="card">
-          <div class="card-h">بررسی‌های سرور</div>
-          <div class="card-b">
-            <table class="tbl">
-              <tbody>
-                <tr><td>proc_open</td><td><span class="tag ok">فعال</span></td></tr>
-                <tr><td>Node.js</td><td><span class="tag ok">نصب است</span></td></tr>
-                <tr><td>سقف حافظهٔ حساب</td><td><span class="tag wait">۱.۵GB — محدود</span></td></tr>
-                <tr><td>پوشهٔ خصوصی</td><td><span class="tag ok">~/.aaw-ai-writer</span></td></tr>
-              </tbody>
-            </table>
-            <button class="btn-a" style="margin-top:12px" data-toast="نصب شروع شد — گزارش در همین صفحه می‌آید">نصب یک‌کلیکی</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-h">انتخاب روش اجرا</div>
-          <div class="card-b">
-            <div class="chipsrow" style="margin-bottom:12px">
-              <button class="opt" type="button">از طریق GitHub</button>
-              <button class="opt on" type="button">مستقیم از همین سرور</button>
-            </div>
-            <div class="note warn">اگر هاست اتصال بین‌المللی را قطع می‌کند یا حافظه کم است، مسیر GitHub یا کلادفلر انتخاب مطمئن‌تری است.</div>
-            <div class="note" style="margin-top:10px">در حالت مستقیم، هیچ کاری بی‌صدا به GitHub برنمی‌گردد.</div>
-          </div>
-        </div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">آخرین کارهای اجراشده روی سرور <span class="sub">مقاله، تصویر، اصلاح، تحلیل و تست</span></div><div class="card-b"><table class="tbl"><thead><tr><th>زمان</th><th>کار</th><th>برنامه</th><th>مدت</th><th>وضعیت</th></tr></thead><tbody><tr><td>۱۲:۲۴</td><td class="name">نگارش مقاله</td><td>Claude Code</td><td>۲m ۵۱s</td><td><span class="tag ok">موفق</span></td></tr><tr><td>۱۱:۰۸</td><td class="name">ساخت تصویر</td><td>Codex</td><td>۹s</td><td><span class="tag ok">موفق</span></td></tr><tr><td>۱۰:۴۰</td><td class="name">تست اتصال</td><td>Claude Code</td><td>۰.۹s</td><td><span class="tag ok">موفق</span></td></tr></tbody></table></div></div></div><div><div class="card"><div class="card-h">بررسی‌های سرور <span class="sub">از داخل خود PHP</span></div><div class="card-b"><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">Node.js</div><div style="font-size:11.5px;color:#64748b">v20.11.1 — مسیر /usr/bin/node</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">proc_open</div><div style="font-size:11.5px;color:#64748b">فعال</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">Claude Code</div><div style="font-size:11.5px;color:#64748b">نسخهٔ ۲.۰ نصب و لاگین</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">Codex CLI</div><div style="font-size:11.5px;color:#64748b">نصب نشده</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="false"></span></div></div></div></div><div class="card"><div class="card-h">این روش چطور کار می‌کند؟</div><div class="card-b"><div class="row3"><div class="field"><label>مسیر Node.js (خالی = خودکار)</label><input class="input" type="text" placeholder="/usr/bin/node"></div><div class="field"><label>مسیر برنامه Codex (خالی = خودکار)</label><input class="input" type="text" placeholder="/usr/local/bin/codex"></div><div class="field"><label>مسیر برنامه Claude Code (خالی = خودکار)</label><input class="input" type="text" placeholder="/usr/local/bin/claude"></div></div><div class="field"><label>حداکثر زمان هر درخواست (دقیقه)</label><input class="input" type="text" value="۲۰"></div><div class="note ">وقتی روش اجرای یک اکانت «مستقیم از همین سرور» باشد، هیچ کاری به GitHub یا کلادفلر نمی‌رود.</div><button class="btn-a" data-toast="مسیرها ذخیره شد">ذخیره</button></div></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- schedule -->
-    <section class="panel" id="p-schedule">
-      <h1 class="panel-title">زمان‌بندی</h1>
-      <p class="panel-sub">روی Cron ورکر کلادفلر؛ هاست درگیر نمی‌شود.</p>
+<section class="panel" id="p-schedule">
+      <h1 class="panel-title">زمان‌بندی اجرا</h1>
+      <p class="panel-sub">ورکر کلادفلر طبق این زمان‌بندی اجرا می‌شود. با ذخیره، Cron Trigger کلادفلر به‌صورت خودکار به‌روز می‌شود.</p>
 
-      <div class="grid2">
-        <div class="card">
-          <div class="card-h">تنظیم اجرا</div>
-          <div class="card-b">
-            <div class="field"><label>هر چند ساعت</label>
-              <select class="select" id="interval">
-                <option value="6">۶ ساعت</option>
-                <option value="12" selected>۱۲ ساعت</option>
-                <option value="24">۲۴ ساعت</option>
-                <option value="48">۴۸ ساعت</option>
-              </select>
-            </div>
-            <div class="row2">
-              <div class="field"><label>دقیقهٔ اجرا</label><input class="input" value="۰"></div>
-              <div class="field"><label>مقاله در هر اجرا</label><input class="input" value="۱"></div>
-            </div>
-            <div class="field"><label>سقف مقالهٔ روزانه</label><input class="input" value="۳"></div>
-            <div class="chipsrow" style="margin-bottom:10px">
-              <button class="opt on" type="button">فعال</button>
-              <button class="opt" type="button">توقف موقت</button>
-            </div>
-            <div class="note">Cron فعلی: <b id="cronNow">۰ */۱۲ * * *</b></div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-h">شش اجرای بعدی</div>
-          <div class="card-b tight">
-            <table class="tbl" id="nextRuns">
-              <tbody>
-                <tr><td>فردا ۰۹:۰۰</td><td class="name">راهنمای خرید روغن زیتون اصل</td></tr>
-                <tr><td>فردا ۲۱:۰۰</td><td class="name">تفاوت عسل طبیعی و تغذیه‌ای</td></tr>
-                <tr><td>پس‌فردا ۰۹:۰۰</td><td class="name">چطور برچسب تغذیه را بخوانیم؟</td></tr>
-                <tr><td>پس‌فردا ۲۱:۰۰</td><td class="name">خواص زعفران در آشپزی</td></tr>
-              </tbody>
-            </table>
-            <button class="btn-a ghost" style="margin:12px 16px" data-toast="زمان‌بندی روی کلادفلر اعمال شد">اعمال روی کلادفلر</button>
-          </div>
-        </div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">وضعیت</div><div class="card-b"><div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">وضعیت Cron</span><b style="color:var(--navy);font-size:13px"><span class="tag ok">فعال</span></b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">آخرین اجرا</span><b style="color:var(--navy);font-size:13px">۱۲:۰۰</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">اجرای بعدی</span><b style="color:var(--navy);font-size:13px">۱۶:۰۰</b></div></div><button class="btn-a ghost sm" data-toast="Cron دستی اجرا شد">اجرای دستی الان</button></div></div><div class="card"><div class="card-h">فاصله اجرا</div><div class="card-b"><div class="field"><label>هر چند ساعت یک‌بار</label><select class="input" id="interval"><option>۶</option><option>۱</option><option>۳</option><option>۱۲</option><option>۲۴</option></select></div><div class="note">عبارت Cron فعلی: <b id="cronNow">۰ */۶ * * *</b></div><div class="note ">زمان‌ها بر اساس UTC در کلادفلر ثبت می‌شوند.</div></div></div></div><div><div class="card"><div class="card-h">رفتار اجرا</div><div class="card-b"><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">ادامهٔ صف تا پایان</div><div style="font-size:11.5px;color:#64748b">تا وقتی موضوع هست اجرا می‌شود</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">توقف پس از خطا</div><div style="font-size:11.5px;color:#64748b">سه خطای پیاپی</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="field"><label>سقف روزانه</label><input class="input" type="text" value="۸ مقاله"></div></div></div><div class="card"><div class="card-h">اجراهای بعدی <span class="sub">به وقت سایت شما</span></div><div class="card-b"><table class="tbl"><thead><tr><th>زمان</th><th>موضوع</th><th>اولویت</th></tr></thead><tbody><tr><td>امروز ۱۶:۰۰</td><td class="name">نگهداری زعفران در خانه</td><td>بالا</td></tr><tr><td>فردا ۰۹:۰۰</td><td class="name">تفاوت پستهٔ اکبری و فندقی</td><td>عادی</td></tr><tr><td>فردا ۱۶:۰۰</td><td class="name">صبحانهٔ سالم برای کودکان</td><td>عادی</td></tr></tbody></table></div></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- cloudflare -->
-    <section class="panel" id="p-cloudflare">
-      <h1 class="panel-title">کلادفلر</h1>
-      <p class="panel-sub">یک توکن، یک کلیک؛ ورکر و KV و Cron خودکار ساخته می‌شوند.</p>
+<section class="panel" id="p-cloudflare">
+      <h1 class="panel-title">اتصال کلادفلر</h1>
+      <p class="panel-sub">ورکر، زمان‌بندی Cron، Secrets و فضای KV مستقیماً از همین صفحه روی حساب کلادفلر شما ساخته و مدیریت می‌شوند.</p>
 
-      <div class="grid2">
-        <div class="card">
-          <div class="card-h">اتصال</div>
-          <div class="card-b">
-            <div class="field"><label>API Token</label><input class="input" value="•••••••••••••••••••"></div>
-            <div class="field"><label>Account ID</label><input class="input" value="a1b2c3d4e5f6" readonly></div>
-            <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <button class="btn-a" id="deployBtn">استقرار ورکر</button>
-              <button class="btn-a ghost" data-toast="توکن سالم است — دسترسی‌ها کامل">بررسی توکن</button>
-            </div>
-            <div class="note" style="margin-top:12px">دسترسی‌های لازم: Workers Scripts:Edit · Workers KV Storage:Edit · Account Settings:Read</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-h">وضعیت</div>
-          <div class="card-b">
-            <table class="tbl">
-              <tbody>
-                <tr><td>ورکر</td><td><span class="tag ok" id="workerState">مستقر</span></td></tr>
-                <tr><td>KV</td><td><span class="tag ok">متصل</span></td></tr>
-                <tr><td>Secret امضا</td><td><span class="tag ok">ثبت شده</span></td></tr>
-                <tr><td>Cron</td><td><span class="tag ok">۰ */۱۲ * * *</span></td></tr>
-                <tr><td>آدرس</td><td style="font-size:12px">aiwriter.workers.dev</td></tr>
-              </tbody>
-            </table>
-            <div class="note ok" style="margin-top:12px">بک‌آپ تنظیمات و صف موضوعات در KV، روزانه و بعد از هر پیش‌نویس.</div>
-          </div>
-        </div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">اطلاعات حساب کلادفلر <span class="sub">توکن رمزنگاری‌شده (AES-256-GCM) ذخیره می‌شود</span></div><div class="card-b"><div class="field"><label>API Token</label><input class="input" type="text" value="••••••••••••••••"></div><div class="field"><label>Account ID</label><input class="input" type="text" value="1a2b3c4d5e6f7a8b9c0d"></div><div class="field"><label>نام ورکر</label><input class="input" type="text" value="aaw-worker"></div><div class="field"><label>کلید امضای مشترک (AAW_SHARED_SECRET)</label><input class="input" type="text" value="••••••••••••"></div><div class="note ">توکن رمزنگاری‌شده (AES-256-GCM) ذخیره می‌شود.</div><div style="display:flex;gap:8px"><button class="btn-a" data-test>تست اتصال</button><button class="btn-a ghost" data-toast="توکن ذخیره شد">ذخیره</button></div></div></div><div class="card"><div class="card-h">راهنمای ساخت توکن</div><div class="card-b"><ol class="list-clean"><li>داشبورد کلادفلر → My Profile → API Tokens</li><li>Create Token → قالب «Edit Cloudflare Workers»</li><li>توکن را اینجا بچسبانید؛ Account ID در ستون راست همان صفحه است.</li></ol></div></div><div class="card"><div class="card-h">استقرار دستی (اختیاری) <span class="sub">اگر ترجیح می‌دهید با Wrangler مستقر کنید</span></div><div class="card-b"><div class="field"><label>آدرس ورکر دستی</label><input class="input" type="text" value="https://aaw.example.workers.dev"></div><div class="note ">اگر ترجیح می‌دهید با Wrangler مستقر کنید، از این آدرس استفاده می‌شود.</div></div></div></div><div><div class="card"><div class="card-h">ورکر <span class="sub">مستقر شده در</span></div><div class="card-b"><div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">وضعیت</span><b style="color:var(--navy);font-size:13px"><span id="workerState" class="tag wait">مستقر نشده</span></b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">KV</span><b style="color:var(--navy);font-size:13px">aaw_kv · ساخته شده</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">Cron</span><b style="color:var(--navy);font-size:13px">۰ */۶ * * *</b></div></div><button class="btn-a" id="deployBtn">استقرار ورکر</button></div></div><div class="card"><div class="card-h">حالت اتصال <span class="sub">نحوه ارتباط ورکر کلادفلر با سایت</span></div><div class="card-b"><div class="chipsrow"><button type="button" class="opt on">ورکر کلادفلر</button><button type="button" class="opt">اجرا روی هاست</button><button type="button" class="opt">GitHub Actions</button></div></div></div><div class="card"><div class="card-h">عیب‌یابی اتصال ورکر ↔ وردپرس <span class="sub">اگر خطایی مثل error code: 1016 دیدید، اینجا علت دقیق را پیدا کنید</span></div><div class="card-b"><div class="note warn">اگر خطای <b>error code: 1016</b> دیدید، علت دقیق اینجاست.</div><div class="row2" style="padding:6px 0"><span>وردپرس → ورکر</span><span style="justify-self:end"><span class="tag ok">۲۰۰ OK</span></span></div><div class="row2" style="padding:6px 0"><span>ورکر → وردپرس</span><span style="justify-self:end"><span class="tag ok">۲۰۰ OK</span></span></div><button class="btn-a ghost sm" data-toast="عیب‌یابی اجرا شد — همه‌چیز سالم است">اجرای عیب‌یابی</button></div></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- notify -->
-    <section class="panel" id="p-notify">
+<section class="panel" id="p-notify">
       <h1 class="panel-title">اعلان‌ها</h1>
-      <p class="panel-sub">ایمیل، تلگرام و وب‌هوک — هر جا که تیمت هست.</p>
+      <p class="panel-sub">وقتی مقاله جدید آماده تایید شد یا خطایی رخ داد باخبر شوید.</p>
 
-      <div class="grid3">
-        <div class="card"><div class="card-b">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><b>ایمیل</b><button class="switch" aria-checked="true"></button></div>
-          <div class="field"><label>گیرنده</label><input class="input" value="content@benlifood.ir"></div>
-          <div class="chipsrow"><button class="opt on" type="button">پیش‌نویس جدید</button><button class="opt on" type="button">خطاها</button></div>
-        </div></div>
-        <div class="card"><div class="card-b">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><b>تلگرام</b><button class="switch" aria-checked="true"></button></div>
-          <div class="field"><label>Chat ID</label><input class="input" value="-1001234567890"></div>
-          <button class="btn-a ghost sm" data-toast="پیام آزمایشی به تلگرام رفت">ارسال آزمایشی</button>
-        </div></div>
-        <div class="card"><div class="card-b">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><b>وب‌هوک</b><button class="switch" aria-checked="false"></button></div>
-          <div class="field"><label>URL</label><input class="input" placeholder="https://hooks.slack.com/..."></div>
-          <div class="note" style="font-size:12px">رویدادها: draft.created · run.failed</div>
-        </div></div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">ایمیل</div><div class="card-b"><div class="field"><label>ایمیل مدیر</label><input class="input" type="text" value="admin@benlifood.ir"></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">مقالهٔ آمادهٔ تایید</div><div style="font-size:11.5px;color:#64748b"></div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">خطای اجرا</div><div style="font-size:11.5px;color:#64748b"></div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div></div></div><div class="card"><div class="card-h">وب‌هوک <span class="sub">ارسال رویدادها به Slack، Discord، n8n، Zapier و…</span></div><div class="card-b"><div class="field"><label>آدرس وب‌هوک</label><input class="input" type="text" value="https://hooks.slack.com/services/…"></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">رویداد: مقاله ساخته شد</div><div style="font-size:11.5px;color:#64748b"></div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">رویداد: خطا</div><div style="font-size:11.5px;color:#64748b"></div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div></div></div></div><div><div class="card"><div class="card-h">تلگرام <span class="sub">ارسال پیام از طریق ربات شخصی</span></div><div class="card-b"><div class="field"><label>توکن ربات</label><input class="input" type="text" value="123456:AA••••••••"></div><div class="field"><label>Chat ID</label><input class="input" type="text" value="123456789"></div><button class="btn-a ghost sm" data-toast="پیام تست به تلگرام ارسال شد">ارسال تست</button></div></div><div class="card"><div class="card-h">داخل وردپرس</div><div class="card-b"><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">ویجت پیشخوان</div><div style="font-size:11.5px;color:#64748b">کارت وضعیت در داشبورد وردپرس</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">حباب تعداد در منو</div><div style="font-size:11.5px;color:#64748b">مقالات در انتظار تایید</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div></div></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- logs -->
-    <section class="panel" id="p-logs">
+<section class="panel" id="p-logs">
       <h1 class="panel-title">گزارش‌ها</h1>
-      <p class="panel-sub">هر رویداد با مدل، مدت و توکن؛ قابل فیلتر و خروجی CSV.</p>
+      <p class="panel-sub">همه رویدادهای تولید، استقرار، خطاها و مصرف توکن.</p>
 
-      <div class="card">
-        <div class="card-h">آخرین رویدادها
-          <a class="btn-a ghost sm" data-toast="خروجی CSV ساخته شد">خروجی CSV</a>
-        </div>
-        <div class="card-b tight">
-          <table class="tbl">
-            <thead><tr><th>زمان</th><th>رویداد</th><th>مدل</th><th>مدت</th><th>توکن</th></tr></thead>
-            <tbody>
-              <tr><td>۰۹:۱۴</td><td class="name">تولید پیش‌نویس</td><td>Claude Pro</td><td>۳:۲۴</td><td>۲٬۸۴۰</td></tr>
-              <tr><td>۰۸:۰۲</td><td class="name">تصویر شاخص</td><td>Workers AI</td><td>۰:۱۸</td><td>—</td></tr>
-              <tr><td>دیروز</td><td>تحلیل هوشمند سایت</td><td>Gemini</td><td>۱:۱۲</td><td>۱۲٬۳۰۰</td></tr>
-              <tr><td>دیروز</td><td><span class="tag err">خطا</span> سهمیهٔ پرووایدر</td><td>OpenAI</td><td>۰:۰۴</td><td>—</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+<div class="card"><div class="card-h">همه رویدادها <span class="sub">تولید، استقرار، خطاها و مصرف توکن</span></div><div class="card-b"><table class="tbl"><thead><tr><th>زمان</th><th>وضعیت</th><th>رویداد</th><th>پیام</th><th>مدل</th><th>مدت</th><th>توکن</th></tr></thead><tbody><tr><td>۱۲:۴۱</td><td class="name"><span class="tag ok">موفق</span></td><td>تست اتصال</td><td>پاسخ ۲۰۰ از Workers AI</td><td>Workers AI</td><td>۰.۴s</td><td>۱٬۲۰۰</td></tr><tr><td>۱۲:۳۰</td><td class="name"><span class="tag ok">موفق</span></td><td>ساخت تصویر</td><td>تصویر شاخص ساخته شد</td><td>Workers AI</td><td>۸s</td><td>—</td></tr><tr><td>۱۲:۲۴</td><td class="name"><span class="tag ok">موفق</span></td><td>نگارش مقاله</td><td>پیش‌نویس ساخته شد</td><td>Claude Pro</td><td>۳m ۲۴s</td><td>۸٬۴۰۰</td></tr><tr><td>۱۱:۵۸</td><td class="name"><span class="tag ok">موفق</span></td><td>تحلیل سایت</td><td>۲۴ موضوع پیشنهاد شد</td><td>Gemini 2.5</td><td>۴۲s</td><td>۱۲٬۹۰۰</td></tr><tr><td>۱۱:۰۲</td><td class="name"><span class="tag err">خطا</span></td><td>ادغام مقالات</td><td>سهمیه تمام شد، موتور بعدی امتحان شد</td><td>Claude Pro</td><td>—</td><td>—</td></tr></tbody></table><div style="display:flex;gap:8px;margin-top:12px"><button class="btn-a ghost sm" data-toast="خروجی CSV ساخته شد">خروجی CSV</button><button class="btn-a ghost sm" data-toast="فیلترها بازنشانی شد">بازنشانی فیلتر</button></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- tools -->
-    <section class="panel" id="p-tools">
+<section class="panel" id="p-tools">
       <h1 class="panel-title">ابزارها</h1>
-      <p class="panel-sub">پشتیبان، ورود تنظیمات و اطلاعات سیستم.</p>
+      <p class="panel-sub">پشتیبان‌گیری، بازیابی، تنظیمات پیشرفته و اطلاعات سیستم.</p>
 
-      <div class="grid3">
-        <div class="card"><div class="card-b">
-          <b>خروجی تنظیمات</b>
-          <p style="font-size:12.5px;color:#64748b">یک فایل JSON از همهٔ تنظیمات، بدون هیچ کلید خام.</p>
-          <button class="btn-a ghost sm" data-toast="فایل تنظیمات ساخته شد">دانلود JSON</button>
-        </div></div>
-        <div class="card"><div class="card-b">
-          <b>ورود تنظیمات</b>
-          <p style="font-size:12.5px;color:#64748b">انتقال تنظیمات از سایت دیگر یا بازگردانی بک‌آپ.</p>
-          <button class="btn-a ghost sm" data-toast="فایل تنظیمات خوانده شد">انتخاب فایل</button>
-        </div></div>
-        <div class="card"><div class="card-b">
-          <b>اطلاعات سیستم</b>
-          <p style="font-size:12.5px;color:#64748b">وضعیت PHP، حافظه، proc_open و اتصال‌ها.</p>
-          <button class="btn-a ghost sm" data-toast="اطلاعات سیستم کپی شد">کپی اطلاعات</button>
-        </div></div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">پشتیبان تنظیمات <span class="sub">بدون کلیدها و اطلاعات محرمانه</span></div><div class="card-b"><div class="note ">بدون کلیدها و اطلاعات محرمانه.</div><div style="display:flex;gap:8px;margin-top:10px"><button class="btn-a ghost sm" data-toast="فایل پشتیبان ساخته شد">دریافت پشتیبان</button><button class="btn-a ghost sm" data-toast="فایل بارگذاری شد">بازیابی</button></div></div></div><div class="card"><div class="card-h">پیشرفته</div><div class="card-b"><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">حالت دیباگ</div><div style="font-size:11.5px;color:#64748b">لاگ کامل درخواست‌ها</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="false"></span></div></div><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">حذف تنظیمات هنگام حذف افزونه</div><div style="font-size:11.5px;color:#64748b"></div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="false"></span></div></div><div class="field"><label>نگهداری گزارش‌ها (روز)</label><input class="input" type="text" value="۳۰"></div></div></div></div><div><div class="card"><div class="card-h">اطلاعات سیستم</div><div class="card-b"><div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">وردپرس</span><b style="color:var(--navy);font-size:13px">6.7</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">PHP</span><b style="color:var(--navy);font-size:13px">8.2</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">حافظه</span><b style="color:var(--navy);font-size:13px">۵۱۲M</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">Cron</span><b style="color:var(--navy);font-size:13px">فعال</b></div></div></div></div><div class="card"><div class="card-h">میان‌برهای صفحه‌کلید</div><div class="card-b"><ul class="list-clean"><li><b>?</b> راهنمای میان‌برها</li><li><b>Ctrl+1…9</b> جابه‌جایی بین تب‌ها</li><li><b>Ctrl+S</b> ذخیرهٔ تنظیمات تب فعلی</li></ul></div></div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- features -->
-    <section class="panel" id="p-features">
+<section class="panel" id="p-features">
       <h1 class="panel-title">قابلیت‌ها</h1>
-      <p class="panel-sub">۵۰۰ قابلیت در ۱۷ گروه — جستجوپذیر، داخل خود افزونه.</p>
+      <p class="panel-sub">۵۰۰ قابلیت پیاده‌سازی‌شده در افزونه و ورکر</p>
 
-      <div class="card">
-        <div class="card-b">
-          <input class="input" id="featSearch" placeholder="جستجو در قابلیت‌ها… مثلاً: لینک داخلی" style="margin-bottom:12px">
-          <div class="grid2" id="featGrid">
-            <div class="note">پرووایدرها (۷۰) · کلادفلر (۴۹) · امنیت (۲۲) · پرامپت و تولید (۸۳)</div>
-            <div class="note">ساختار مقاله (۲۹) · ویرایش فارسی (۱۳) · سئو (۴۲) · لینک‌سازی (۱۲)</div>
-            <div class="note">تصویر شاخص (۱۶) · انتشار (۱۹) · موضوعات (۴۶) · صف بازبینی (۱۴)</div>
-            <div class="note">زمان‌بندی (۲۲) · اعلان‌ها (۱۲) · داشبورد (۲۳) · رابط کاربری (۱۹) · ابزارها (۹)</div>
-          </div>
-        </div>
-      </div>
+<div class="field"><label></label><input class="input" type="text" placeholder="جستجو در ۵۰۰ قابلیت…" id="featSearch"></div><div class="note ">فهرست کامل و جستجوپذیر داخل خود افزونه است؛ نیازی به سایت ما نیست.</div><div style="margin-top:12px"><div id="featGrid" class="grid2"><div class="note">۲۳ موتور متنی و ۷ موتور تصویری با زنجیرهٔ پشتیبان</div><div class="note">۵ جستجوگر تصویر و تولید تصویر شاخص خودکار</div><div class="note">۴ افزونهٔ سئو: Yoast، Rank Math، AIOSEO، SEOPress</div><div class="note">۲ یادگیری دانش سئو از منابع رسمی گوگل</div><div class="note">۳ روش اجرا: ورکر، هاست، GitHub Actions</div><div class="note">۲۲ تب مدیریتی با ۵۰۰ قابلیت قابل جستجو</div></div></div>
     </section>
 
-    <!-- ---------------------------------------------------- license -->
-    <section class="panel" id="p-license">
+<section class="panel" id="p-license">
       <h1 class="panel-title">لایسنس و حساب</h1>
-      <p class="panel-sub">فعال‌سازی، دامنه، انقضا و به‌روزرسانی خودکار.</p>
+      <p class="panel-sub">فعال‌سازی لایسنس رسمی، مشاهده وضعیت اشتراک، به‌روزرسانی خودکار و پشتیبانی.</p>
 
-      <div class="grid2">
-        <div class="card">
-          <div class="card-h">وضعیت لایسنس</div>
-          <div class="card-b">
-            <div class="kpi" style="margin-bottom:12px"><b>فعال</b><span>پلن حرفه‌ای · دامنهٔ نامحدود</span></div>
-            <table class="tbl">
-              <tbody>
-                <tr><td>دامنه</td><td>benlifood.ir</td></tr>
-                <tr><td>تعداد سایت</td><td>۲ از ۳</td></tr>
-                <tr><td>انقضا</td><td>۱۴۰۵/۰۸/۱۶</td></tr>
-                <tr><td>به‌روزرسانی خودکار</td><td><span class="tag ok">روشن</span></td></tr>
-              </tbody>
-            </table>
-            <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
-              <button class="btn-a ghost" data-toast="توکن تازه از سرور لایسنس گرفته شد">تمدید توکن</button>
-              <button class="btn-a danger" data-toast="لایسنس غیرفعال شد (دمو)">غیرفعال‌سازی</button>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-h">دورهٔ آزمایشی</div>
-          <div class="card-b">
-            <div class="note">۷ روز یا ۵ مقاله — پس از آن تولید مقاله متوقف می‌شود، ولی تنظیمات و محتوا دست‌نخورده می‌ماند.</div>
-            <div class="field" style="margin-top:12px"><label>کلید لایسنس</label><input class="input" placeholder="XXXX-XXXX-XXXX-XXXX"></div>
-            <button class="btn-a" data-toast="کلید بررسی شد و روی این دامنه فعال شد">فعال‌سازی</button>
-          </div>
-        </div>
-      </div>
+<div class="grid2"><div><div class="card"><div class="card-h">پلن‌ها <span class="sub">قیمت‌ها مستقیم از فروشگاه رسمی خوانده می‌شود</span></div><div class="card-b"><table class="tbl"><thead><tr><th>پلن</th><th>مدت</th><th>دامنه</th><th>قیمت</th></tr></thead><tbody><tr><td>شروع</td><td class="name">۱ ماه</td><td>نامحدود</td><td>۴۹۵٬۰۰۰ تومان</td></tr><tr><td>حرفه‌ای</td><td class="name">۶ ماه</td><td>نامحدود</td><td>۱٬۴۹۵٬۰۰۰ تومان</td></tr><tr><td>سالانه</td><td class="name">۱۲ ماه</td><td>نامحدود</td><td>۱٬۹۹۹٬۰۰۰ تومان</td></tr><tr><td>مادام‌العمر</td><td class="name">همیشگی</td><td>نامحدود</td><td>۴٬۴۹۵٬۰۰۰ تومان</td></tr></tbody></table></div></div></div><div><div class="card"><div class="card-h">فعال‌سازی لایسنس</div><div class="card-b"><div class="field"><label>کلید لایسنس</label><input class="input" type="text" value="XXXX-XXXX-XXXX-XXXX"></div><button class="btn-a" data-toast="کلید بررسی شد و روی این دامنه فعال شد">فعال‌سازی</button><div style="margin-top:12px"><div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">وضعیت</span><b style="color:var(--navy);font-size:13px"><span class="tag ok">فعال</span></b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">دامنه</span><b style="color:var(--navy);font-size:13px">benlifood.ir</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">انقضا</span><b style="color:var(--navy);font-size:13px">۱۴۰۶/۰۲/۱۲</b></div></div></div></div></div><div class="card"><div class="card-h">به‌روزرسانی خودکار <span class="sub">نسخه‌های جدید مثل افزونه‌های مخزن وردپرس در صفحه افزونه‌ها نمایش داده می‌شوند</span></div><div class="card-b"><div class="row2" style="align-items:center;padding:8px 0"><div><div style="font-size:13px;color:#334155;font-weight:600">به‌روزرسانی خودکار</div><div style="font-size:11.5px;color:#64748b">مثل افزونه‌های مخزن وردپرس</div></div><div style="justify-self:end"><span class="switch" role="switch" aria-checked="true"></span></div></div><div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">نسخهٔ نصب‌شده</span><b style="color:var(--navy);font-size:13px">1.9.1</b></div><div class="row2" style="padding:7px 0"><span class="sub" style="font-size:12px;color:#64748b">آخرین نسخه</span><b style="color:var(--navy);font-size:13px">1.9.1</b></div></div></div></div><div class="card"><div class="card-h">پشتیبانی و راهنما</div><div class="card-b"><ul class="list-clean"><li>راهنمای نصب و راه‌اندازی</li><li>پشتیبانی تیکت</li><li>مستندات ورکر و GitHub</li></ul></div></div></div></div>
     </section>
-
   </main>
 </div>
+<!-- SHELL:END -->
 
 </div>
 <!--/shotRoot-->

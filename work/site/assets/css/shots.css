@@ -60,5 +60,5 @@ body.shots .toast { display: none; }
 }
 #shotRoot .wpbar { width: 100%; }
 #shotRoot .shell { width: 1440px; }
-#shotRoot .wpmenu { height: auto; min-height: 900px; }
+#shotRoot .wpmenu { position: static; height: auto; min-height: 0; overflow: visible; }
 .shots .status .pill-x { box-shadow: none; }
