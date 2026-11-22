@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>راهنمای نصب ARIAGH.AIWRITER</title>
+<style>
+@font-face{{font-family:Vazirmatn;src:url("assets/fonts/Vazirmatn-Variable.woff2") format("woff2-variations");font-weight:100 900;font-display:swap}}
+:root{{--ink:#0B1B3F;--body:#324057;--soft:#6B7A90;--line:#DDE7F8;--royal:#1D4ED8;--sky:#38BDF8;--ice:#F1F6FF}}
+*{{box-sizing:border-box}}
+body{{margin:0;background:var(--ice);color:var(--body);font-family:Vazirmatn,Tahoma,'Segoe UI',sans-serif;
+  line-height:2;font-size:16px}}
+.page{{max-width:820px;margin:0 auto;background:#fff;padding:48px 56px 64px;
+  box-shadow:0 20px 60px -40px rgba(11,27,63,.45);border-radius:18px;margin-block:28px}}
+header{{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);
+  padding-bottom:18px;margin-bottom:28px}}
+header b{{font-size:1.05rem;color:var(--ink)}}
+header span{{font-size:.8rem;color:var(--soft)}}
+h1{{color:var(--ink);font-size:1.9rem;line-height:1.5;margin:0 0 6px}}
+h2{{color:var(--ink);font-size:1.18rem;margin:30px 0 8px;padding-inline-start:12px;
+  border-inline-start:4px solid var(--royal);line-height:1.6}}
+h3{{color:var(--ink);font-size:1rem;margin:20px 0 6px}}
+p{{margin:0 0 10px}}
+ul,ol{{margin:0 0 12px;padding-inline-start:1.4rem}}
+li{{margin-bottom:6px}}
+.lead{{color:var(--soft);font-size:1rem;margin-bottom:22px}}
+.step{{background:#F7FAFF;border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px}}
+.step b{{color:var(--ink);display:block;margin-bottom:2px}}
+code,.code{{direction:ltr;text-align:left;display:block;background:#101A2C;color:#CFE1FF;
+  border-radius:10px;padding:10px 14px;font-family:ui-monospace,Menlo,Consolas,monospace;
+  font-size:.86rem;margin:8px 0 12px;unicode-bidi:embed}}
+table{{width:100%;border-collapse:collapse;margin:10px 0 16px;font-size:.94rem}}
+th,td{{border-bottom:1px solid var(--line);padding:10px 8px;text-align:start}}
+th{{background:#F2F7FF;color:var(--ink);font-size:.86rem}}
+.note{{border-radius:12px;padding:12px 16px;margin:12px 0;font-size:.94rem;border-inline-start:5px solid}}
+.tip{{background:#EDFBF6;border-color:#2ECE9F}}
+.warn{{background:#FFF8E8;border-color:#E2A106}}
+.info{{background:#EFF7FF;border-color:#38BDF8}}
+footer{{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-size:.8rem;
+  color:var(--soft);display:flex;justify-content:space-between}}
+@media print{{body{{background:#fff}}.page{{box-shadow:none;margin:0;max-width:none;border-radius:0}}}}
+</style>
+</head>
+<body>
+<div class="page">
+<header><b>ARIAGH.AIWRITER</b><span>راهنمای نصب و راه‌اندازی · نسخه ۱.۹.۱</span></header>
+<h1>راهنمای نصب و راه‌اندازی</h1>
+<p class="lead">افزونه وردپرس ARIAGH.AIWRITER — نویسنده هوشمند سئو. این راهنما نصب از پیشخوان،
+نصب با FileZilla، به‌روزرسانی، دسترسی کاربران و راه‌اندازی اولیه را پوشش می‌دهد.</p>
+
+<h2>۱. پیش‌نیازها</h2>
+<table>
+<tr><th>مورد</th><th>حداقل لازم</th></tr>
+<tr><td>وردپرس</td><td>نسخه ۵.۸ یا بالاتر (تست‌شده تا ۶.۸)</td></tr>
+<tr><td>PHP</td><td>نسخه ۷.۴ یا بالاتر</td></tr>
+<tr><td>دسترسی مدیر</td><td>نقش Administrator در پیشخوان وردپرس</td></tr>
+<tr><td>توابع سرور</td><td>اجازه اتصال خروجی (Outbound) برای API پرووایدرها</td></tr>
+<tr><td>اختیاری</td><td>ووکامرس (تحلیل محصولات) و المنتور (ساخت صفحات)</td></tr>
+</table>
+<div class="note tip">اگر نمی‌دانید نسخه PHP هاست چند است، در پیشخوان به «ابزارها ← سلامت سایت ←
+اطلاعات ← سرور» بروید.</div>
+
+<h2>۲. نصب از پیشخوان وردپرس</h2>
+<div class="step"><b>ورود به پیشخوان</b>با نقش مدیر وارد شوید و به «افزونه‌ها ← افزودن افزونهٔ جدید» بروید.</div>
+<div class="step"><b>انتخاب بارگذاری</b>روی «بارگذاری افزونه» کلیک کنید.</div>
+<div class="step"><b>انتخاب فایل ZIP</b>فایل aria-aiwriter.zip را انتخاب کنید (آن را از حالت فشرده خارج نکنید).</div>
+<div class="step"><b>نصب</b>روی «هم‌اکنون نصب کن» بزنید و منتظر پایان نصب بمانید.</div>
+<div class="step"><b>فعال‌سازی</b>روی «فعال‌سازی افزونه» کلیک کنید.</div>
+<div class="step"><b>ورود به افزونه</b>از منوی پیشخوان گزینه «AIWRITER» را باز کنید.</div>
+<div class="note warn">اگر پیام «فایل بارگذاری‌شده از حداکثر اندازهٔ مجاز بیشتر است» دیدید،
+از روش FTP استفاده کنید.</div>
+
+<h2>۳. نصب با FileZilla (FTP)</h2>
+<div class="step"><b>اتصال</b>با میزبان، نام کاربری، رمز و پورت FTP (معمولاً ۲۱) وصل شوید.</div>
+<div class="step"><b>مسیر</b>به پوشه wp-content و سپس plugins بروید.</div>
+<div class="step"><b>بارگذاری</b>فایل ZIP را در پوشه plugins آپلود کنید.</div>
+<div class="step"><b>استخراج</b>روی فایل راست‌کلیک و Extract بزنید.</div>
+<div class="step"><b>بررسی مسیر</b>مطمئن شوید فایل اصلی در مسیر زیر است:</div>
+<div class="code">wp-content/plugins/aria-ai-writer/aria-ai-writer.php</div>
+<div class="step"><b>فعال‌سازی</b>در «افزونه‌ها» افزونه را فعال کنید.</div>
+<div class="note warn">اگر پوشه‌ای تودرتو ساخته شد، فایل اصلی در عمق اشتباهی است و افزونه دیده نمی‌شود.</div>
+
+<h2>۴. به‌روزرسانی افزونه</h2>
+<h3>روش اول — بارگذاری نسخه جدید (پیشنهادی)</h3>
+<p>از دیتابیس پشتیبان بگیرید، در «افزونه‌ها ← افزودن ← بارگذاری» فایل ZIP جدید را انتخاب کنید و
+روی «جایگزینی نسخهٔ فعلی» بزنید.</p>
+<h3>روش دوم — حذف و نصب مجدد از FTP</h3>
+<ul><li>افزونه را غیرفعال کنید.</li><li>پوشه aria-aiwriter را تغییر نام دهید (حذف نکنید).</li>
+<li>نسخه جدید را استخراج و افزونه را فعال کنید.</li></ul>
+<div class="note tip">تنظیمات در دیتابیس ذخیره می‌شود و با حذف پوشه از بین نمی‌رود؛ با این حال
+پشتیبان دیتابیس توصیه می‌شود.</div>
+<h3>روش سوم — به‌روزرسانی از داخل افزونه</h3>
+<p>اگر سایت به سرور به‌روزرسانی محصول متصل باشد، نسخه جدید در صفحه «افزونه‌ها» نمایش داده می‌شود.</p>
+
+<h2>۵. دسترسی کاربران</h2>
+<table>
+<tr><th>نقش</th><th>دسترسی</th></tr>
+<tr><td>مدیر سایت</td><td>دسترسی کامل به ۲۴ تب، تنظیمات، لایسنس و انتشار</td></tr>
+<tr><td>ویرایشگر</td><td>دسترسی به مقالات تولیدشده از مسیر «نوشته‌ها»</td></tr>
+<tr><td>نویسنده</td><td>مشاهده و ویرایش پیش‌نویس‌های خودش</td></tr>
+<tr><td>مشترک</td><td>بدون دسترسی به بخش هوش مصنوعی</td></tr>
+</table>
+<p>برای دادن دسترسی به کاربر دیگر، حسابی با نقش مدیر بسازید؛ یا با افزونه مدیریت نقش، مجوز
+<code style="direction:ltr;display:inline-block;padding:2px 6px">aaw_manage</code> را به نقش دلخواه بدهید.</p>
+
+<h2>۶. راه‌اندازی اولیه</h2>
+<div class="step"><b>لایسنس و حساب</b>وضعیت فعال‌سازی و دامنه را بررسی کنید.</div>
+<div class="step"><b>کلادفلر</b>API Token را وارد و «استقرار ورکر» را بزنید (پلن رایگان کافی است).</div>
+<div class="step"><b>موتور هوش مصنوعی</b>یک پرووایدر انتخاب و «تست اتصال» را بزنید.</div>
+<div class="step"><b>تحلیل هوشمند سایت</b>در داشبورد «تحلیل هوشمند سایت» را اجرا کنید.</div>
+<div class="step"><b>موضوعات و پرامپت</b>اولویت موضوعات، لحن، زبان و ساختار مقاله را تنظیم کنید.</div>
+<div class="step"><b>زمان‌بندی</b>تعداد مقاله در روز و ساعت اجرا را مشخص کنید.</div>
+<div class="step"><b>صف بازبینی</b>مقالات را تأیید و منتشر کنید.</div>
+
+<h2>۷. پرسش‌های متداول</h2>
+<h3>افزونه در فهرست افزونه‌ها دیده نمی‌شود</h3>
+<p>مسیر پوشه اشتباه است؛ فایل اصلی باید دقیقاً در wp-content/plugins/aria-ai-writer/ باشد.</p>
+<h3>بارگذاری ZIP با خطا متوقف می‌شود</h3>
+<p>محدودیت حجم یا مجوز فایل را بررسی کنید؛ از روش FTP استفاده کنید.</p>
+<h3>تولید مقاله اجرا نمی‌شود</h3>
+<ul><li>در تب پرووایدر «تست اتصال» را بزنید.</li><li>وضعیت ورکر و Cron را در تب «کلادفلر» بررسی کنید.</li>
+<li>در تب «گزارش‌ها» آخرین خطاها را ببینید.</li></ul>
+<h3>حافظه هاست کافی نیست</h3>
+<p>در حالت اجرای مستقیم، افزونه مقدار واقعی سقف حافظه را گزارش می‌کند؛ از هاست افزایش Memory Limit
+را بخواهید یا از روش کلادفلر استفاده کنید.</p>
+
+<footer><span>ARIAGH.AIWRITER · نسخه ۱.۹.۱</span><span>ariagh · پشتیبانی فارسی</span></footer>
+</div>
+</body>
+</html>

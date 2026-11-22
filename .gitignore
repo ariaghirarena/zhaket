@@ -1,0 +1,15 @@
+# build / tooling
+.venv/
+__pycache__/
+*.pyc
+
+# extracted & generated working trees (rebuild with work/build/*.py)
+work/aria-ai-writer/
+work/demo/
+work/fonts/
+work/tmp/
+
+# OS noise
+.DS_Store
+__MACOSX/
+Thumbs.db
