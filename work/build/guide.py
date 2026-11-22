@@ -36,7 +36,7 @@ class Page:
         d.text("راهنمای نصب و راه‌اندازی", 15, PW - MARGIN, 66, SOFT, "medium", align="right")
         # footer
         d.line(MARGIN, PH - 96, PW - MARGIN, PH - 96, 1.0, LINE)
-        d.text("ARIAGH.AIWRITER · نسخه ۱.۹.۲", 14, MARGIN, PH - 78, SOFT, "medium", align="left")
+        d.text("ARIAGH.AIWRITER", 14, MARGIN, PH - 78, SOFT, "medium", align="left")
         d.text("ariagh · پشتیبانی فارسی", 14, PW - MARGIN, PH - 78, SOFT, "medium", align="right")
         self.y = 190
 
@@ -283,8 +283,8 @@ def page2():
     p = Page(2, TOTAL)
     p.title("۱. پیش‌نیازها", "پیش از نصب، مطمئن شوید هاست شما شرایط زیر را دارد.")
     p.table([
-        ("وردپرس", "نسخه ۵.۸ یا بالاتر — تست‌شده تا ۶.۸"),
-        ("PHP", "نسخه ۷.۴ یا بالاتر"),
+        ("وردپرس", "نسخهٔ به‌روز و پشتیبانی‌شده"),
+        ("PHP", "نسخهٔ به‌روز — با «سلامت سایت» بررسی کنید"),
         ("دسترسی مدیر", "نقش Administrator در پیشخوان وردپرس"),
         ("توابع سرور", "اجازهٔ اتصال خروجی به اینترنت برای API پرووایدرها"),
         ("اختیاری", "ووکامرس برای تحلیل محصولات و المنتور برای ساخت صفحات"),
@@ -500,7 +500,7 @@ footer{{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-s
 </head>
 <body>
 <div class="page">
-<header><b>ARIAGH.AIWRITER</b><span>راهنمای نصب و راه‌اندازی · نسخه ۱.۹.۲</span></header>
+<header><b>ARIAGH.AIWRITER</b><span>راهنمای نصب و راه‌اندازی</span></header>
 <h1>راهنمای نصب و راه‌اندازی</h1>
 <p class="lead">افزونه وردپرس ARIAGH.AIWRITER — نویسنده هوشمند سئو. این راهنما نصب از پیشخوان،
 نصب با FileZilla، به‌روزرسانی، دسترسی کاربران و راه‌اندازی اولیه را پوشش می‌دهد.</p>
@@ -508,8 +508,8 @@ footer{{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-s
 <h2>۱. پیش‌نیازها</h2>
 <table>
 <tr><th>مورد</th><th>حداقل لازم</th></tr>
-<tr><td>وردپرس</td><td>نسخه ۵.۸ یا بالاتر (تست‌شده تا ۶.۸)</td></tr>
-<tr><td>PHP</td><td>نسخه ۷.۴ یا بالاتر</td></tr>
+<tr><td>وردپرس</td><td>نسخهٔ به‌روز و پشتیبانی‌شده</td></tr>
+<tr><td>PHP</td><td>نسخهٔ به‌روز (با «سلامت سایت» بررسی کنید)</td></tr>
 <tr><td>دسترسی مدیر</td><td>نقش Administrator در پیشخوان وردپرس</td></tr>
 <tr><td>توابع سرور</td><td>اجازه اتصال خروجی (Outbound) برای API پرووایدرها</td></tr>
 <tr><td>اختیاری</td><td>ووکامرس (تحلیل محصولات) و المنتور (ساخت صفحات)</td></tr>
@@ -581,7 +581,7 @@ footer{{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-s
 <p>در حالت اجرای مستقیم، افزونه مقدار واقعی سقف حافظه را گزارش می‌کند؛ از هاست افزایش Memory Limit
 را بخواهید یا از روش کلادفلر استفاده کنید.</p>
 
-<footer><span>ARIAGH.AIWRITER · نسخه ۱.۹.۲</span><span>ariagh · پشتیبانی فارسی</span></footer>
+<footer><span>ARIAGH.AIWRITER</span><span>ariagh · پشتیبانی فارسی</span></footer>
 </div>
 </body>
 </html>

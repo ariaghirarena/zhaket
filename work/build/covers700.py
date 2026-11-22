@@ -78,7 +78,7 @@ def cover_two():
 
     # footer band
     d.glass(46, 620, 608, 54, 18, alpha=0.09, blur=14, border=0.22)
-    d.text("۵۰۰ قابلیت  ·  ۲۴ تب مدیریتی  ·  وردپرس ۵.۸+  ·  PHP ۷.۴+", 14.5, 350, 637,
+    d.text("۵۰۰ قابلیت  ·  ۲۱ پرووایدر هوش مصنوعی  ·  پشتیبانی فارسی", 14.5, 350, 637,
            (0.88, 0.93, 1.0), "semi", align="center", lh=1.2)
     return d.save(out_path("02-cover-700", "aria-aiwriter-cover-700-2.png"))
 

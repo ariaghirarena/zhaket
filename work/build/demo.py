@@ -346,7 +346,7 @@ def landing(groups):
 
   <section>
     <h2>چه چیزی لازم دارید؟</h2>
-    <p class="sub">وردپرس ۵.۸ یا بالاتر و PHP ۷.۴ یا بالاتر. ووکامرس و المنتور اختیاری هستند.</p>
+    <p class="sub">روی هر قالبی که استانداردهای وردپرس را رعایت کند اجرا می‌شود.</p>
     <div class="grid3">
       <div class="tile"><h3>کلادفلر رایگان</h3><p>استقرار یک‌کلیکی ورکر و اجرای زمان‌بندی‌شده روی پلن رایگان کلادفلر.</p></div>
       <div class="tile"><h3>GitHub Actions</h3><p>اجرای کارها از طریق مخزن گیت‌هاب، بدون نیاز به سرور اختصاصی.</p></div>
@@ -355,7 +355,7 @@ def landing(groups):
   </section>
 
   <footer class="site">
-    <span>ARIAGH.AIWRITER — نسخه ۱.۹.۲ · GPLv2 · پشتیبانی فارسی</span>
+    <span>ARIAGH.AIWRITER · GPLv2 · پشتیبانی فارسی</span>
     <span>این صفحه یک پیش‌نمایش استاتیک است؛ هیچ درخواستی به سرور ارسال نمی‌شود.</span>
   </footer>
 </div>
@@ -412,7 +412,7 @@ def demo_page(groups, total):
   <aside class="side">
     <div class="brand">
       <img src="../assets/img/logo-white.svg" alt="ARIAGH.AIWRITER">
-      <div><small>نسخه ۱.۹.۲</small></div>
+      <div><small>پشتیبانی فارسی</small></div>
     </div>
     <nav>{side}</nav>
   </aside>

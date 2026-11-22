@@ -22,14 +22,14 @@ def build():
 
     d.line(160, 250, 240, 250, 1.1, SKY, 0.45)
 
-    chips = [("۵۰۰", "قابلیت"), ("۲۱", "پرووایدر"), ("۵.۸+", "وردپرس")]
+    chips = [("۵۰۰", "قابلیت"), ("۲۱", "پرووایدر"), ("۲۴", "تب مدیریتی")]
     for i, (val, label) in enumerate(chips):
         x = 44 + i * 108
         d.rrect(x, 264, 100, 58, 17, fill=WHITE, alpha=0.075, stroke=WHITE, sw=0.9)
         d.text(val, 20, x + 50, 272, SKY, "xbold", align="center", lh=1.15)
         d.text(label, 11.5, x + 50, 297, (0.76, 0.84, 0.97), "medium", align="center", lh=1.15)
 
-    d.text("نسخه ۱.۹.۲", 11, 200, 344, (0.62, 0.72, 0.90), "semi", align="center", lh=1.2)
+    d.text("پشتیبانی فارسی  ·  نصب زیر ۵ دقیقه", 11, 200, 344, (0.62, 0.72, 0.90), "semi", align="center", lh=1.2)
     return d.save(out_path("01-cover-400x400", "aria-aiwriter-cover-400x400.png"))
 
 
