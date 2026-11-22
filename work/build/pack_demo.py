@@ -20,6 +20,12 @@ SKIP_FILES = {
 }
 SKIP_EXT = {".map"}
 
+# only ship the 3D art the pages actually reference
+used3d = set()
+for page in SITE.rglob("*.html"):
+    used3d |= set(__import__("re").findall(r"assets/3d/([A-Za-z0-9._-]+\.webp)", page.read_text(encoding="utf-8")))
+print("referenced 3D assets:", len(used3d))
+
 sources = []
 for root, dirs, files in os.walk(SITE):
     dirs[:] = sorted(d for d in dirs if d not in SKIP_DIRS)
@@ -27,6 +33,8 @@ for root, dirs, files in os.walk(SITE):
         if f in SKIP_FILES or Path(f).suffix in SKIP_EXT:
             continue
         p = Path(root) / f
+        if p.parent.name == "3d" and f not in used3d:
+            continue
         sources.append(p)
 
 required = [

@@ -1,0 +1,450 @@
+[
+ {
+  "name": "03d-01-hero",
+  "w": 900,
+  "h": 889,
+  "coverage": 0.496,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 20.1,
+  "green_px": 19,
+  "white_px": 8323,
+  "white_frac": 0.021,
+  "fresh": true,
+  "flags": []
+ },
+ {
+  "name": "03d-02-panel",
+  "w": 778,
+  "h": 780,
+  "coverage": 0.676,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 16.3,
+  "green_px": 1490,
+  "white_px": 9318,
+  "white_frac": 0.023,
+  "fresh": true,
+  "flags": [
+   "green spill 1490px"
+  ]
+ },
+ {
+  "name": "03d-03-mascot",
+  "w": 755,
+  "h": 665,
+  "coverage": 0.703,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 18.5,
+  "green_px": 901,
+  "white_px": 6167,
+  "white_frac": 0.017,
+  "fresh": true,
+  "flags": [
+   "green spill 901px"
+  ]
+ },
+ {
+  "name": "03d-04-pen",
+  "w": 567,
+  "h": 889,
+  "coverage": 0.192,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 5.4,
+  "green_px": 381,
+  "white_px": 5454,
+  "white_frac": 0.056,
+  "fresh": true,
+  "flags": []
+ },
+ {
+  "name": "03d-05-orb-a",
+  "w": 834,
+  "h": 861,
+  "coverage": 0.401,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 10.4,
+  "green_px": 0,
+  "white_px": 17384,
+  "white_frac": 0.06,
+  "fresh": false,
+  "flags": []
+ },
+ {
+  "name": "03d-05-orb-b",
+  "w": 833,
+  "h": 842,
+  "coverage": 0.451,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 18.2,
+  "green_px": 3763,
+  "white_px": 27545,
+  "white_frac": 0.087,
+  "fresh": false,
+  "flags": [
+   "green spill 3763px"
+  ]
+ },
+ {
+  "name": "03d-07-frame",
+  "w": 814,
+  "h": 850,
+  "coverage": 0.683,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 39.7,
+  "green_px": 107,
+  "white_px": 3237,
+  "white_frac": 0.007,
+  "fresh": false,
+  "flags": []
+ },
+ {
+  "name": "03d-08-calendar-a",
+  "w": 900,
+  "h": 799,
+  "coverage": 0.626,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 58.5,
+  "green_px": 0,
+  "white_px": 12918,
+  "white_frac": 0.029,
+  "fresh": false,
+  "flags": []
+ },
+ {
+  "name": "03d-08-calendar-b",
+  "w": 900,
+  "h": 732,
+  "coverage": 0.601,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 74.9,
+  "green_px": 0,
+  "white_px": 1236,
+  "white_frac": 0.003,
+  "fresh": false,
+  "flags": []
+ },
+ {
+  "name": "03d-09-shield-chrome",
+  "w": 717,
+  "h": 900,
+  "coverage": 0.712,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 26.2,
+  "green_px": 0,
+  "white_px": 22773,
+  "white_frac": 0.05,
+  "fresh": false,
+  "flags": []
+ },
+ {
+  "name": "03d-09-shield-glass",
+  "w": 600,
+  "h": 760,
+  "coverage": 0.758,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 30.7,
+  "green_px": 718,
+  "white_px": 1324,
+  "white_frac": 0.004,
+  "fresh": true,
+  "flags": [
+   "green spill 718px"
+  ]
+ },
+ {
+  "name": "03d-12-globe",
+  "w": 567,
+  "h": 587,
+  "coverage": 0.523,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 8.4,
+  "green_px": 2,
+  "white_px": 428,
+  "white_frac": 0.002,
+  "fresh": false,
+  "flags": []
+ },
+ {
+  "name": "03d-13-equalizer",
+  "w": 881,
+  "h": 798,
+  "coverage": 0.581,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 17.3,
+  "green_px": 16,
+  "white_px": 2055,
+  "white_frac": 0.005,
+  "fresh": false,
+  "flags": []
+ },
+ {
+  "name": "03d-14-review",
+  "w": 900,
+  "h": 760,
+  "coverage": 0.422,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 53.6,
+  "green_px": 1427,
+  "white_px": 4821,
+  "white_frac": 0.017,
+  "fresh": false,
+  "flags": [
+   "green spill 1427px"
+  ]
+ },
+ {
+  "name": "03d-15-stack",
+  "w": 788,
+  "h": 688,
+  "coverage": 0.691,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 10.5,
+  "green_px": 720,
+  "white_px": 885,
+  "white_frac": 0.002,
+  "fresh": true,
+  "flags": [
+   "green spill 720px"
+  ]
+ },
+ {
+  "name": "03d-16-gauge",
+  "w": 667,
+  "h": 476,
+  "coverage": 0.771,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 11.1,
+  "green_px": 7,
+  "white_px": 650,
+  "white_frac": 0.003,
+  "fresh": false,
+  "flags": []
+ },
+ {
+  "name": "03d-17-bg-dark",
+  "w": 900,
+  "h": 506,
+  "coverage": 1.0,
+  "corners": [
+   255,
+   255,
+   255,
+   255
+  ],
+  "edge_alpha": 255.0,
+  "green_px": 0,
+  "white_px": 12,
+  "white_frac": 0.0,
+  "fresh": false,
+  "flags": [
+   "PLATE(corners opaque)"
+  ]
+ },
+ {
+  "name": "03d-18-bg-light",
+  "w": 900,
+  "h": 506,
+  "coverage": 1.0,
+  "corners": [
+   255,
+   255,
+   255,
+   255
+  ],
+  "edge_alpha": 255.0,
+  "green_px": 0,
+  "white_px": 13723,
+  "white_frac": 0.03,
+  "fresh": false,
+  "flags": [
+   "PLATE(corners opaque)"
+  ]
+ },
+ {
+  "name": "03d-19-ribbon",
+  "w": 900,
+  "h": 367,
+  "coverage": 0.501,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 78.4,
+  "green_px": 0,
+  "white_px": 2250,
+  "white_frac": 0.014,
+  "fresh": false,
+  "flags": []
+ },
+ {
+  "name": "03d-20-constellation",
+  "w": 675,
+  "h": 599,
+  "coverage": 0.532,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 4.5,
+  "green_px": 0,
+  "white_px": 368,
+  "white_frac": 0.002,
+  "fresh": false,
+  "flags": []
+ },
+ {
+  "name": "03d-21-doc",
+  "w": 495,
+  "h": 645,
+  "coverage": 0.928,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 75.7,
+  "green_px": 0,
+  "white_px": 959,
+  "white_frac": 0.003,
+  "fresh": false,
+  "flags": []
+ },
+ {
+  "name": "03d-22-key",
+  "w": 594,
+  "h": 512,
+  "coverage": 0.48,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 9.5,
+  "green_px": 4,
+  "white_px": 7431,
+  "white_frac": 0.051,
+  "fresh": false,
+  "flags": []
+ },
+ {
+  "name": "03d-23-bell",
+  "w": 497,
+  "h": 585,
+  "coverage": 0.563,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 5.9,
+  "green_px": 1,
+  "white_px": 2680,
+  "white_frac": 0.016,
+  "fresh": false,
+  "flags": []
+ },
+ {
+  "name": "03d-24-star",
+  "w": 900,
+  "h": 856,
+  "coverage": 0.438,
+  "corners": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "edge_alpha": 8.5,
+  "green_px": 0,
+  "white_px": 4337,
+  "white_frac": 0.013,
+  "fresh": true,
+  "flags": []
+ }
+]
