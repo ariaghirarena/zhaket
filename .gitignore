@@ -13,3 +13,6 @@ work/tmp/
 .DS_Store
 __MACOSX/
 Thumbs.db
+
+# owner backup zip (re-download from main)
+work/backup/

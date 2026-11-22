@@ -38,7 +38,7 @@
     { id: 'topics', label: 'موضوعات', icon: I.list, cnt: '۴۴۶' },
     { id: 'review', label: 'صف بازبینی', icon: I.check, cnt: '۱۴' },
     { id: 'schedule', label: 'زمان‌بندی', icon: I.clock },
-    { id: 'providers', label: 'پرووایدرها', icon: I.hub, cnt: '۲۱' },
+    { id: 'providers', label: 'پرووایدرها', icon: I.hub, cnt: '۲۳' },
     {
       id: 'models', label: 'مدل‌ها', icon: I.cpu,
       desc: 'برای هر پرووایدر، مدل پیش‌فرض و مدل جایگزین را انتخاب کنید؛ افزونه اگر مدل در دسترس نبود خودش به جایگزین سوییچ می‌کند.',
