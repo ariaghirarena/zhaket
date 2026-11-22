@@ -25,6 +25,26 @@ body.admin::before { display: none; }
   border-bottom: 1px solid rgba(37, 99, 235, .16);
   backdrop-filter: blur(14px);
 }
+.demo-bar .quick {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(37, 99, 235, .28);
+  background: rgba(255, 255, 255, .7);
+  color: #1D4ED8;
+  font-size: 12px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.demo-bar .quick:hover { background: #1D4ED8; color: #fff; border-color: #1D4ED8; }
+.demo-bar .back { font-size: 12px; color: #0F2557; text-decoration: none; white-space: nowrap; }
+.demo-bar .back:hover { color: #1D4ED8; }
+@media (max-width: 1100px) {
+  .demo-bar .tagline { display: none; }
+}
+
 .demo-bar .dot {
   width: 8px; height: 8px; border-radius: 50%;
   background: #22c55e;
@@ -441,6 +461,11 @@ textarea.input { height: auto; min-height: 120px; padding: 10px 12px; line-heigh
   background: var(--sky);
   flex: 0 0 auto;
 }
+
+/* embedded preview (landing page iframes) */
+body.embed .demo-bar { display: none; }
+body.embed .wpbar { border-radius: 0; }
+body.embed { padding-top: 0; }
 
 /* toast */
 .toast {

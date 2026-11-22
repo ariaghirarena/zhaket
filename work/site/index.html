@@ -43,12 +43,12 @@
         <a href="#modules"><span class="dot"></span> ۲۲ بخش افزونه</a>
         <a href="#modes"><span class="dot"></span> سه روش اجرا</a>
         <a href="#faq"><span class="dot"></span> پرسش‌های متداول</a>
-        <a href="demo/"><span class="dot"></span> ورود به دموی زندهٔ پیشخوان</a>
+        <a href="demo/#/dashboard"><span class="dot"></span> ورود به دموی زندهٔ پیشخوان</a>
       </div>
     </div>
 
     <div class="nav-actions">
-      <a class="btn btn-primary btn-sm" href="demo/">
+      <a class="btn btn-primary btn-sm" href="demo/#/dashboard">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 5l11 7-11 7z"/></svg>
         دموی زنده
       </a>
@@ -71,7 +71,7 @@
           <b>پیش‌نویس</b> تحویل می‌دهد تا با یک کلیک تأیید کنی.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="demo/">
+          <a class="btn btn-primary" href="demo/#/dashboard">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 5l11 7-11 7z"/></svg>
             تجربهٔ دموی زندهٔ پیشخوان
           </a>
@@ -142,145 +142,30 @@
 <section class="section" id="gallery">
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <span class="kicker">نمای پیشخوان</span>
-      <h2>همان چیزی که داخل وردپرس می‌بینی</h2>
-      <p class="sub">پنج نمای اصلی؛ برای دیدن هر ۲۲ بخش، دموی زنده را باز کن.</p>
+      <span class="kicker">پیش‌نمایش زندهٔ پیشخوان</span>
+      <h2>همین محیط واقعی، داخل همین صفحه</h2>
+      <p class="sub">هر تب را بزن؛ همان صفحهٔ افزونه بالا می‌آید — نه عکس، نه ماکت. برای کار کردن با فرم‌ها و دکمه‌ها، دموی زنده را باز کن.</p>
     </div>
 
     <div class="gallery" data-reveal>
-      <div class="g-tabs" role="tablist">
-        <button class="g-tab on" data-g="g1" role="tab">داشبورد</button>
-        <button class="g-tab" data-g="g2" role="tab">کلیدها و موتورها</button>
-        <button class="g-tab" data-g="g3" role="tab">صف بازبینی</button>
-        <button class="g-tab" data-g="g4" role="tab">تحلیل هوشمند</button>
-        <button class="g-tab" data-g="g5" role="tab">سرچ کنسول</button>
+      <div class="g-tabs" role="tablist" aria-label="بخش‌های پیشخوان">
+        <button class="g-tab on" data-live-tab="dashboard" role="tab" aria-selected="true">داشبورد</button>
+        <button class="g-tab" data-live-tab="review" role="tab" aria-selected="false">صف بازبینی</button>
+        <button class="g-tab" data-live-tab="ai" role="tab" aria-selected="false">کلیدها و مدل‌ها</button>
+        <button class="g-tab" data-live-tab="strategy" role="tab" aria-selected="false">تحلیل هوشمند</button>
+        <button class="g-tab" data-live-tab="gsc" role="tab" aria-selected="false">سرچ کنسول</button>
+        <button class="g-tab" data-live-tab="license" role="tab" aria-selected="false">لایسنس</button>
       </div>
 
-      <div class="g-panels">
-        <div class="g-panel on" id="g1">
-          <div class="mock">
-            <div class="mock-bar"><span class="dots"><i></i><i></i><i></i></span> AIWRITER · داشبورد</div>
-            <div class="mock-body">
-              <div class="mock-kpis">
-                <div class="mock-kpi"><b>۱۲۸</b><span>مقالهٔ تولیدشده</span></div>
-                <div class="mock-kpi"><b>۹۱</b><span>میانگین امتیاز سئو</span></div>
-                <div class="mock-kpi"><b>۱۴</b><span>در انتظار بازبینی</span></div>
-                <div class="mock-kpi"><b>۶</b><span>زمان‌بندی فعال</span></div>
-              </div>
-              <div class="mock-row">
-                <div class="mock-card">
-                  <h5>فعالیت ۱۴ روز گذشته</h5>
-                  <div class="mock-bars">
-                    <i style="height:38%"></i><i style="height:56%"></i><i style="height:44%"></i>
-                    <i style="height:72%"></i><i style="height:60%"></i><i style="height:88%"></i>
-                    <i style="height:52%"></i><i style="height:68%"></i><i style="height:80%"></i>
-                    <i style="height:46%"></i><i style="height:74%"></i><i style="height:92%"></i>
-                    <i style="height:64%"></i><i style="height:84%"></i>
-                  </div>
-                </div>
-                <div class="mock-card">
-                  <h5>اجرای بعدی</h5>
-                  <div class="mock-queue">
-                    <div class="done">انتخاب موضوع از صف</div>
-                    <div class="run">ساخت پرامپت با دانش سئو</div>
-                    <div>نگارش و ویرایش فارسی</div>
-                    <div>تصویر شاخص و پیش‌نویس</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="live-frame">
+        <div class="live-bar">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="crumb">aria-ai-writer &rsaquo; <b id="liveLabel">داشبورد</b></span>
+          <span class="spacer"></span>
+          <a class="live-open" id="liveOpen" href="demo/#/dashboard">باز کردن در دموی زنده ←</a>
         </div>
-
-        <div class="g-panel" id="g2">
-          <div class="mock">
-            <div class="mock-bar"><span class="dots"><i></i><i></i><i></i></span> AIWRITER · کلیدهای API و مدل‌ها</div>
-            <div class="mock-body">
-              <div class="mock-row">
-                <div class="mock-card">
-                  <h5>زنجیرهٔ موتورها</h5>
-                  <div class="mock-line m"></div><div class="mock-line s"></div>
-                  <div style="margin-top:10px">
-                    <span class="mock-pill ok">Claude Pro · فعال</span>
-                    <span class="mock-pill">OpenAI</span>
-                    <span class="mock-pill">Gemini</span>
-                    <span class="mock-pill">Workers AI · رایگان</span>
-                    <span class="mock-pill">AvalAI</span>
-                  </div>
-                </div>
-                <div class="mock-card">
-                  <h5>تست اتصال</h5>
-                  <div class="mock-line"></div><div class="mock-line s"></div>
-                  <div style="margin-top:8px"><span class="mock-pill ok">۴۱۲ms · سالم</span></div>
-                </div>
-              </div>
-              <div class="mock-card">
-                <h5>کلیدها کجا می‌مانند؟</h5>
-                <p style="font-size:12.5px;color:#475569;margin:0">کلید API به‌صورت Secret روی ورکر کلادفلر ذخیره می‌شود؛ در دیتابیس وردپرس هیچ کلید خامی نگه داشته نمی‌شود و فقط نمای ماسک‌شده دیده می‌شود.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="g-panel" id="g3">
-          <div class="mock">
-            <div class="mock-bar"><span class="dots"><i></i><i></i><i></i></span> AIWRITER · صف بازبینی</div>
-            <div class="mock-body">
-              <table class="mock-table">
-                <thead><tr><th>عنوان</th><th>کلمه</th><th>سئو</th><th>وضعیت</th></tr></thead>
-                <tbody>
-                  <tr><td>راهنمای کامل سئو برای مبتدیان</td><td>۱٬۲۴۰</td><td>۹۲</td><td><span class="mock-pill wait">در بازبینی</span></td></tr>
-                  <tr><td>۱۰ اشتباه رایج در تولید محتوا</td><td>۱٬۰۸۰</td><td>۸۸</td><td><span class="mock-pill ok">منتشر شد</span></td></tr>
-                  <tr><td>چطور کلمهٔ کلیدی انتخاب کنیم؟</td><td>۹۶۰</td><td>۹۵</td><td><span class="mock-pill ok">منتشر شد</span></td></tr>
-                  <tr><td>ساختار مقالهٔ سئوشده</td><td>۱٬۳۱۰</td><td>۸۴</td><td><span class="mock-pill">زمان‌بندی</span></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <div class="g-panel" id="g4">
-          <div class="mock">
-            <div class="mock-bar"><span class="dots"><i></i><i></i><i></i></span> AIWRITER · تحلیل هوشمند سایت</div>
-            <div class="mock-body">
-              <div class="mock-row">
-                <div class="mock-card">
-                  <h5>استراتژی محتوا</h5>
-                  <div class="mock-line"></div><div class="mock-line m"></div>
-                  <div class="mock-line s"></div><div class="mock-line"></div>
-                  <div class="mock-line s"></div>
-                </div>
-                <div class="mock-card">
-                  <h5>موضوعات پیشنهادی</h5>
-                  <div class="mock-queue">
-                    <div class="done">راهنمای خرید · نیت تجاری</div>
-                    <div class="done">مقایسهٔ محصولات · صفحهٔ دسته</div>
-                    <div class="run">آموزش گام‌به‌گام · نیت اطلاعاتی</div>
-                    <div>پرسش‌های متداول خریداران</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="g-panel" id="g5">
-          <div class="mock">
-            <div class="mock-bar"><span class="dots"><i></i><i></i><i></i></span> AIWRITER · سرچ کنسول و ادغام مقالات</div>
-            <div class="mock-body">
-              <div class="mock-kpis">
-                <div class="mock-kpi"><b>۳۲</b><span>فرصت نزدیک صفحهٔ اول</span></div>
-                <div class="mock-kpi"><b>۱۱</b><span>CTR پایین</span></div>
-                <div class="mock-kpi"><b>۷</b><span>هم‌پوشانی کیورد</span></div>
-                <div class="mock-kpi"><b>۴</b><span>قابل ادغام</span></div>
-              </div>
-              <div class="mock-card">
-                <h5>ادغام با یک کلیک</h5>
-                <div class="mock-line m"></div><div class="mock-line s"></div>
-                <div style="margin-top:8px"><span class="mock-pill">ادغام با AI</span><span class="mock-pill">ریدایرکت ۳۰۱</span><span class="mock-pill">قابل بازگردانی</span></div>
-              </div>
-            </div>
-          </div>
+        <div class="live" id="liveBox">
+          <iframe id="livePreview" src="demo/?embed=1#/dashboard" title="پیش‌نمایش زندهٔ پیشخوان ARIAGH.AIWRITER" loading="lazy" scrolling="no" tabindex="-1"></iframe>
         </div>
       </div>
     </div>
@@ -306,32 +191,32 @@
     </div>
 
     <div class="mod-grid" id="modGrid">
-      <article class="mod" data-g="overview"><span class="tag">۵ کارت آماری</span><h4>داشبورد</h4><p>آمار لحظه‌ای، نرخ موفقیت ۳۰ روزه، نمودار ۱۴ روزه، توکن مصرفی و چک‌لیست راه‌اندازی.</p></article>
-      <article class="mod" data-g="overview"><span class="tag">۱ کلیک</span><h4>صف بازبینی</h4><p>هر مقاله با تصویر، کلمات، کیورد و پیش‌نمایش گوگل؛ تأیید، زمان‌بندی یا تولید مجدد.</p></article>
-      <article class="mod" data-g="overview"><span class="tag">استراتژی</span><h4>تحلیل هوشمند سایت</h4><p>خواندن سایت و رقبا و ساختن استراتژی + ۵ تا ۵۰ موضوع اولویت‌دار با نیت جستجو.</p></article>
-      <article class="mod" data-g="overview"><span class="tag">برنامه</span><h4>خط زمانی</h4><p>چه مقاله‌ای منتشر شده و چه موضوعی، چه روز و ساعتی منتشر می‌شود.</p></article>
-      <article class="mod" data-g="overview"><span class="tag">لحظه‌ای</span><h4>فعالیت زنده</h4><p>مرحلهٔ فعلی هر کار در حال اجرا با گزارش لحظه‌ای و امکان لغو.</p></article>
+      <article class="mod" data-route="dashboard" data-g="overview"><span class="tag">۵ کارت آماری</span><h4>داشبورد</h4><p>آمار لحظه‌ای، نرخ موفقیت ۳۰ روزه، نمودار ۱۴ روزه، توکن مصرفی و چک‌لیست راه‌اندازی.</p><a class="mod-open" href="demo/#/dashboard">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="review" data-g="overview"><span class="tag">۱ کلیک</span><h4>صف بازبینی</h4><p>هر مقاله با تصویر، کلمات، کیورد و پیش‌نمایش گوگل؛ تأیید، زمان‌بندی یا تولید مجدد.</p><a class="mod-open" href="demo/#/review">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="strategy" data-g="overview"><span class="tag">استراتژی</span><h4>تحلیل هوشمند سایت</h4><p>خواندن سایت و رقبا و ساختن استراتژی + ۵ تا ۵۰ موضوع اولویت‌دار با نیت جستجو.</p><a class="mod-open" href="demo/#/strategy">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="timeline" data-g="overview"><span class="tag">برنامه</span><h4>خط زمانی</h4><p>چه مقاله‌ای منتشر شده و چه موضوعی، چه روز و ساعتی منتشر می‌شود.</p><a class="mod-open" href="demo/#/timeline">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="activity" data-g="overview"><span class="tag">لحظه‌ای</span><h4>فعالیت زنده</h4><p>مرحلهٔ فعلی هر کار در حال اجرا با گزارش لحظه‌ای و امکان لغو.</p><a class="mod-open" href="demo/#/activity">در دموی زنده ببین ←</a></article>
 
-      <article class="mod" data-g="content"><span class="tag">صف</span><h4>موضوعات</h4><p>افزودن تک، گروهی و CSV؛ سه اولویت، شش وضعیت، کشیدن و رها کردن و پیشنهاد موضوع با AI.</p></article>
-      <article class="mod" data-g="content"><span class="tag">۱۹ متغیر</span><h4>پرامپت</h4><p>شش قالب آماده، متغیرهای پویا، پیش‌نمایش پرامپت نهایی و مقالهٔ آزمایشی بدون ذخیره.</p></article>
-      <article class="mod" data-g="content"><span class="tag">معماری متن</span><h4>ساختار محتوا</h4><p>هدینگ، باکس نکات، جدول، FAQ، CTA، حداقل و حداکثر کلمات و تراکم کلمهٔ کلیدی.</p></article>
-      <article class="mod" data-g="content"><span class="tag">۴ افزونه</span><h4>سئو و انتشار</h4><p>اسکیما، نامک، چکیده، برچسب، وضعیت پیش‌نویس و سازگاری با Yoast، Rank Math، AIOSEO و SEOPress.</p></article>
-      <article class="mod" data-g="content"><span class="tag">۷ موتور</span><h4>تنظیمات تصاویر</h4><p>هفت موتور تصویر، سه ابعاد، عکس مرجع محصول، Alt و کپشن خودکار و بارگذاری در رسانه.</p></article>
-      <article class="mod" data-g="content"><span class="tag">یادگیری</span><h4>دانش سئو</h4><p>یادگیری یک‌باره از راهنماهای رسمی گوگل و مقالات برتر، با به‌روزرسانی دوره‌ای و کش پرامپت.</p></article>
-      <article class="mod" data-g="content"><span class="tag">Search Console</span><h4>سرچ کنسول و ادغام</h4><p>فرصت‌های نزدیک صفحهٔ اول، CTR پایین، هم‌پوشانی کلمات و ادغام مقالات با ریدایرکت ۳۰۱.</p></article>
+      <article class="mod" data-route="topics" data-g="content"><span class="tag">صف</span><h4>موضوعات</h4><p>افزودن تک، گروهی و CSV؛ سه اولویت، شش وضعیت، کشیدن و رها کردن و پیشنهاد موضوع با AI.</p><a class="mod-open" href="demo/#/topics">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="prompt" data-g="content"><span class="tag">۱۹ متغیر</span><h4>پرامپت</h4><p>شش قالب آماده، متغیرهای پویا، پیش‌نمایش پرامپت نهایی و مقالهٔ آزمایشی بدون ذخیره.</p><a class="mod-open" href="demo/#/prompt">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="content" data-g="content"><span class="tag">معماری متن</span><h4>ساختار محتوا</h4><p>هدینگ، باکس نکات، جدول، FAQ، CTA، حداقل و حداکثر کلمات و تراکم کلمهٔ کلیدی.</p><a class="mod-open" href="demo/#/content">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="seo" data-g="content"><span class="tag">۴ افزونه</span><h4>سئو و انتشار</h4><p>اسکیما، نامک، چکیده، برچسب، وضعیت پیش‌نویس و سازگاری با Yoast، Rank Math، AIOSEO و SEOPress.</p><a class="mod-open" href="demo/#/seo">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="images" data-g="content"><span class="tag">۷ موتور</span><h4>تنظیمات تصاویر</h4><p>هفت موتور تصویر، سه ابعاد، عکس مرجع محصول، Alt و کپشن خودکار و بارگذاری در رسانه.</p><a class="mod-open" href="demo/#/images">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="knowledge" data-g="content"><span class="tag">یادگیری</span><h4>دانش سئو</h4><p>یادگیری یک‌باره از راهنماهای رسمی گوگل و مقالات برتر، با به‌روزرسانی دوره‌ای و کش پرامپت.</p><a class="mod-open" href="demo/#/knowledge">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="gsc" data-g="content"><span class="tag">Search Console</span><h4>سرچ کنسول و ادغام</h4><p>فرصت‌های نزدیک صفحهٔ اول، CTR پایین، هم‌پوشانی کلمات و ادغام مقالات با ریدایرکت ۳۰۱.</p><a class="mod-open" href="demo/#/gsc">در دموی زنده ببین ←</a></article>
 
-      <article class="mod" data-g="infra"><span class="tag">۲۳ موتور</span><h4>کلیدهای API و مدل‌ها</h4><p>مدل پیش‌فرض و جایگزین، زنجیرهٔ پشتیبان، تست اتصال با زمان پاسخ و دریافت زندهٔ مدل‌ها.</p></article>
-      <article class="mod" data-g="infra"><span class="tag">بدون API</span><h4>اکانت اشتراکی</h4><p>Claude Pro یا ChatGPT Plus با ورود رسمی کد یک‌بارمصرف؛ از سهمیهٔ اشتراک خودت، بدون کلید API.</p></article>
-      <article class="mod" data-g="infra"><span class="tag">اختیاری</span><h4>موتور روی سرور</h4><p>نصب یک‌کلیکی CLI رسمی روی هاست خودت، اجرای جدا از PHP و بررسی proc_open، Node و حافظه.</p></article>
-      <article class="mod" data-g="infra"><span class="tag">Cron</span><h4>زمان‌بندی</h4><p>هر ۱ تا ۱۶۸ ساعت، عبارت Cron سفارشی، سقف روزانه و پیش‌نمایش شش اجرای بعدی.</p></article>
-      <article class="mod" data-g="infra"><span class="tag">رایگان</span><h4>کلادفلر</h4><p>استقرار یک‌کلیکی ورکر و KV، بک‌آپ تنظیمات و صف، قفل اجرا و به‌روزرسانی خودکار.</p></article>
+      <article class="mod" data-route="ai" data-g="infra"><span class="tag">۲۳ موتور</span><h4>کلیدهای API و مدل‌ها</h4><p>مدل پیش‌فرض و جایگزین، زنجیرهٔ پشتیبان، تست اتصال با زمان پاسخ و دریافت زندهٔ مدل‌ها.</p><a class="mod-open" href="demo/#/ai">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="subscription" data-g="infra"><span class="tag">بدون API</span><h4>اکانت اشتراکی</h4><p>Claude Pro یا ChatGPT Plus با ورود رسمی کد یک‌بارمصرف؛ از سهمیهٔ اشتراک خودت، بدون کلید API.</p><a class="mod-open" href="demo/#/subscription">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="engines" data-g="infra"><span class="tag">اختیاری</span><h4>موتور روی سرور</h4><p>نصب یک‌کلیکی CLI رسمی روی هاست خودت، اجرای جدا از PHP و بررسی proc_open، Node و حافظه.</p><a class="mod-open" href="demo/#/engines">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="schedule" data-g="infra"><span class="tag">Cron</span><h4>زمان‌بندی</h4><p>هر ۱ تا ۱۶۸ ساعت، عبارت Cron سفارشی، سقف روزانه و پیش‌نمایش شش اجرای بعدی.</p><a class="mod-open" href="demo/#/schedule">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="cloudflare" data-g="infra"><span class="tag">رایگان</span><h4>کلادفلر</h4><p>استقرار یک‌کلیکی ورکر و KV، بک‌آپ تنظیمات و صف، قفل اجرا و به‌روزرسانی خودکار.</p><a class="mod-open" href="demo/#/cloudflare">در دموی زنده ببین ←</a></article>
 
-      <article class="mod" data-g="system"><span class="tag">۳ کانال</span><h4>اعلان‌ها</h4><p>ایمیل، ربات تلگرام و وب‌هوک برای Slack، Discord، n8n و Zapier + ویجت پیشخوان.</p></article>
-      <article class="mod" data-g="system"><span class="tag">CSV</span><h4>گزارش‌ها</h4><p>هر رویداد با مدل، مدت و توکن؛ فیلتر بر اساس سطح و نوع، جستجو و خروجی CSV.</p></article>
-      <article class="mod" data-g="system"><span class="tag">نگهداری</span><h4>ابزارها</h4><p>خروجی و ورود تنظیمات، بازنشانی، اطلاعات سیستم و دو هوک برای توسعه‌دهنده.</p></article>
-      <article class="mod" data-g="system"><span class="tag">۵۰۰</span><h4>قابلیت‌ها</h4><p>فهرست جستجوپذیر همهٔ ۵۰۰ قابلیت، داخل خود افزونه — بدون نیاز به سایت ما.</p></article>
+      <article class="mod" data-route="notify" data-g="system"><span class="tag">۳ کانال</span><h4>اعلان‌ها</h4><p>ایمیل، ربات تلگرام و وب‌هوک برای Slack، Discord، n8n و Zapier + ویجت پیشخوان.</p><a class="mod-open" href="demo/#/notify">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="logs" data-g="system"><span class="tag">CSV</span><h4>گزارش‌ها</h4><p>هر رویداد با مدل، مدت و توکن؛ فیلتر بر اساس سطح و نوع، جستجو و خروجی CSV.</p><a class="mod-open" href="demo/#/logs">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="tools" data-g="system"><span class="tag">نگهداری</span><h4>ابزارها</h4><p>خروجی و ورود تنظیمات، بازنشانی، اطلاعات سیستم و دو هوک برای توسعه‌دهنده.</p><a class="mod-open" href="demo/#/tools">در دموی زنده ببین ←</a></article>
+      <article class="mod" data-route="features" data-g="system"><span class="tag">۵۰۰</span><h4>قابلیت‌ها</h4><p>فهرست جستجوپذیر همهٔ ۵۰۰ قابلیت، داخل خود افزونه — بدون نیاز به سایت ما.</p><a class="mod-open" href="demo/#/features">در دموی زنده ببین ←</a></article>
 
-      <article class="mod" data-g="account"><span class="tag">لایسنس</span><h4>لایسنس و حساب</h4><p>فعال‌سازی کلید، نمایش پلن و دامنه، تاریخ انقضا، انتقال به دامنهٔ دیگر و به‌روزرسانی.</p></article>
+      <article class="mod" data-route="license" data-g="account"><span class="tag">لایسنس</span><h4>لایسنس و حساب</h4><p>فعال‌سازی کلید، نمایش پلن و دامنه، تاریخ انقضا، انتقال به دامنهٔ دیگر و به‌روزرسانی.</p><a class="mod-open" href="demo/#/license">در دموی زنده ببین ←</a></article>
     </div>
   </div>
 </section>
@@ -424,7 +309,7 @@
         <p>هر ۲۲ تب کلیک‌پذیر است: موضوع اضافه کن، تولید را اجرا کن، در صف بازبینی تأیید کن. داده‌ها نمونه‌اند، ولی رفتار واقعی است.</p>
       </div>
       <div class="cta-actions">
-        <a class="btn btn-glass" href="demo/">
+        <a class="btn btn-glass" href="demo/#/dashboard">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 5l11 7-11 7z"/></svg>
           ورود به دمو
         </a>
@@ -445,7 +330,7 @@
       <a href="#value">چرا این افزونه</a>
       <a href="#modules">۲۲ بخش</a>
       <a href="#faq">پرسش‌ها</a>
-      <a href="demo/">دموی زنده</a>
+      <a href="demo/#/dashboard">دموی زنده</a>
     </nav>
   </div>
 </footer>

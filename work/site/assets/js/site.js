@@ -48,16 +48,63 @@
   window.addEventListener('scroll', spy, { passive: true });
   spy();
 
-  /* ---------- gallery tabs ---------- */
-  var gtabs = Array.prototype.slice.call(document.querySelectorAll('.g-tab'));
-  gtabs.forEach(function (tab) {
+  /* ---------- live admin preview (real demo page in an iframe) ---------- */
+  var liveTabs = Array.prototype.slice.call(document.querySelectorAll('[data-live-tab]'));
+  var liveFrame = document.getElementById('livePreview');
+  var liveBox = document.getElementById('liveBox');
+  var liveLabel = document.getElementById('liveLabel');
+  var liveOpen = document.getElementById('liveOpen');
+  var LIVE_W = 1440;
+  var LIVE_H = 980;
+
+  function scaleLive() {
+    if (!liveFrame || !liveBox) return;
+    var w = liveBox.clientWidth;
+    if (!w) return;
+    var s = w / LIVE_W;
+    liveFrame.style.transform = 'scale(' + s + ')';
+    liveBox.style.height = Math.round(LIVE_H * s) + 'px';
+  }
+
+  function setLive(id, label) {
+    if (!liveFrame) return;
+    liveFrame.src = 'demo/?embed=1#/' + id;
+    if (liveLabel) liveLabel.textContent = label;
+    if (liveOpen) liveOpen.href = 'demo/#/' + id;
+  }
+
+  liveTabs.forEach(function (tab) {
     tab.addEventListener('click', function () {
-      gtabs.forEach(function (t) { t.classList.remove('on'); });
-      tab.classList.add('on');
-      var id = tab.getAttribute('data-g');
-      Array.prototype.forEach.call(document.querySelectorAll('.g-panel'), function (p) {
-        p.classList.toggle('on', p.id === id);
+      liveTabs.forEach(function (t) {
+        t.classList.remove('on');
+        t.setAttribute('aria-selected', 'false');
       });
+      tab.classList.add('on');
+      tab.setAttribute('aria-selected', 'true');
+      setLive(tab.getAttribute('data-live-tab'), tab.textContent.trim());
+    });
+  });
+
+  if (liveFrame) {
+    scaleLive();
+    window.addEventListener('resize', scaleLive, { passive: true });
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { scaleLive(); }
+        });
+      }, { threshold: 0.1 });
+      io.observe(liveBox);
+    }
+  }
+
+  /* ---------- module cards open the matching demo route ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll('.mod'), function (card) {
+    var link = card.querySelector('.mod-open');
+    if (!link) return;
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;
+      link.click();
     });
   });
 

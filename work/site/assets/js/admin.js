@@ -23,14 +23,31 @@
   var panels = Array.prototype.slice.call(document.querySelectorAll('.panel'));
   var ids = panels.map(function (p) { return p.id.replace('p-', ''); });
 
+  function routeOf(id) { return '#/' + id; }
+
   function show(id, push) {
     if (ids.indexOf(id) === -1) id = 'dashboard';
     panels.forEach(function (p) { p.classList.toggle('on', p.id === 'p-' + id); });
-    links.forEach(function (a) { a.classList.toggle('on', a.getAttribute('data-tab') === id); });
+    links.forEach(function (a) {
+      var on = a.getAttribute('data-tab') === id;
+      a.classList.toggle('on', on);
+      if (on) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
     if (push !== false) {
-      try { history.replaceState(null, '', '#' + id); } catch (e) { /* file:// */ }
+      var target = routeOf(id);
+      if (location.hash !== target) {
+        try { history.pushState(null, '', target); } catch (e) { location.hash = target; }
+      }
     }
+    var h1 = document.querySelector('.page-head h1, .head h1');
+    if (h1) document.title = h1.textContent.trim() + ' — دموی ARIAGH.AIWRITER';
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function fromHash() {
+    var h = (location.hash || '').replace(/^#\/?/, '');
+    show(h || 'dashboard', false);
   }
 
   document.addEventListener('click', function (e) {
@@ -40,8 +57,16 @@
     show(el.getAttribute('data-tab'));
   });
 
-  var start = (location.hash || '').replace('#', '') || 'dashboard';
-  show(start, false);
+  fromHash();
+  window.addEventListener('popstate', fromHash);
+  window.addEventListener('hashchange', fromHash);
+
+  /* inside the landing previews: hide the demo bar */
+  try {
+    if (new URLSearchParams(location.search).get('embed') === '1') {
+      document.body.classList.add('embed');
+    }
+  } catch (e) { /* old browser */ }
 
   /* ---------------- switches ---------------- */
   document.addEventListener('click', function (e) {
