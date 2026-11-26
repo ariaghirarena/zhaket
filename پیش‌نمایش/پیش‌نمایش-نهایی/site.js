@@ -28,14 +28,16 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var g = document.querySelector('.hero-art .wheel .spin');
   if (g && !reduce) {
-    /* centre of rotation comes from the SVG viewBox, so the wheel never drifts */
+    /* centre comes from the SVG viewBox, so the disc can never drift out of its box */
     var svg = g.ownerSVGElement;
     var vb = (svg.getAttribute('viewBox') || '0 0 430 430').split(/\s+/).map(Number);
     var ccx = vb[0] + vb[2] / 2, ccy = vb[1] + vb[3] / 2;
-    var base = -14, cur = base, t0 = performance.now();
+    var BASE = -12;              /* resting angle */
+    var DEG_PER_MS = 9 / 1000;   /* 9°/s — a calm idle turn, one lap every 40s */
+    var cur = BASE, t0 = performance.now();
     (function loop(now) {
-      var target = base + (now - t0) * 0.0055;   /* ~0.31°/s: calm, not a slot machine */
-      cur += (target - cur) * 0.06;
+      var target = BASE + (now - t0) * DEG_PER_MS;
+      cur += (target - cur) * 0.08;      /* ease so it starts gently, never jumps */
       g.setAttribute('transform', 'rotate(' + cur.toFixed(2) + ' ' + ccx + ' ' + ccy + ')');
       requestAnimationFrame(loop);
     })(t0);

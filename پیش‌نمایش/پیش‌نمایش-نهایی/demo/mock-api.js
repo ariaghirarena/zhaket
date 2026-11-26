@@ -59,26 +59,8 @@
 		tz: 'Asia/Tehran',
 	};
 
-	var THEMES = [
-		{ key: 'classic', label: 'کلاسیک آبی', group: 'basic' },
-		{ key: 'neon', label: 'نئون شب', group: 'basic' },
-		{ key: 'pastel', label: 'پاستلی', group: 'basic' },
-		{ key: 'minimal', label: 'مینیمال سفید', group: 'basic' },
-		{ key: 'bgold', label: 'طلایی لوکس', group: 'premium' },
-		{ key: 'glass', label: 'شیشه‌ای', group: 'premium' },
-		{ key: 'casino', label: 'کازینو', group: 'premium' },
-		{ key: 'royal', label: 'سلطنتی', group: 'premium' },
-		{ key: 'forest', label: 'جنگل', group: 'nature' },
-		{ key: 'ocean', label: 'اقیانوس', group: 'nature' },
-		{ key: 'sunset', label: 'غروب', group: 'nature' },
-		{ key: 'candy', label: 'آب‌نبات', group: 'fun' },
-		{ key: 'retro', label: 'رترو ۸۰', group: 'fun' },
-		{ key: 'fire', label: 'آتشین', group: 'fun' },
-		{ key: 'nowruz', label: 'نوروز', group: 'iranian' },
-		{ key: 'yalda', label: 'شب یلدا', group: 'iranian' },
-		{ key: 'black_friday', label: 'بلک فرایدی', group: 'campaign' },
-		{ key: 'christmas', label: 'کریسمس', group: 'campaign' },
-	];
+	/* ۳۶ تم واقعی — از assets/data/themes.json نسخهٔ ۱.۸.۰ (themes-data.js) */
+	var THEMES = w.BCH_THEMES || [];
 
 	var TEMPLATES = [
 		{ key: 'welcome', title: 'خوش‌آمدگویی', desc: 'برای بازدیدکنندهٔ تازه', theme: 'classic' },
@@ -913,22 +895,63 @@
 
 	var WHEELS = [
 		{ id: 1, title: 'گردونهٔ خوش‌آمدگویی', status: 'active', priority: 10, ab_group: '', theme: 'classic',
-			mode: 'credits', display: 'popup', config: config(), spins: 8420, wins: 2610, redeemed: 1880, revenue: 39400000,
+			mode: 'credits', display: 'popup', config: applyTheme( config(), 'classic' ), spins: 8420, wins: 2610, redeemed: 1880, revenue: 39400000,
 			updated: '2026-11-24 18:20:00', open: true },
 		{ id: 2, title: 'کمپین شب یلدا', status: 'active', priority: 20, ab_group: 'A', theme: 'yalda',
-			mode: 'free', display: 'inline', config: config( { design: { theme: 'yalda' }, access: { mode: 'free', require_otp: false } } ),
+			mode: 'free', display: 'inline', config: applyTheme( config( { access: { mode: 'free', require_otp: false } } ), 'yalda' ),
 			spins: 3260, wins: 1402, redeemed: 980, revenue: 12800000, updated: '2026-11-22 09:05:00', open: true },
 		{ id: 3, title: 'پاداش مشتری ویژه', status: 'draft', priority: 5, ab_group: 'B', theme: 'bgold',
-			mode: 'credits', display: 'button', config: config( { design: { theme: 'bgold' } } ),
+			mode: 'credits', display: 'button', config: applyTheme( config(), 'bgold' ),
 			spins: 0, wins: 0, redeemed: 0, revenue: 0, updated: '2026-11-19 14:40:00', open: false },
 	];
+
+	/* Templates::apply_theme() in PHP — same merge, same order. */
+	function applyTheme( cfg, key ) {
+		var th = null;
+		THEMES.forEach( function ( t ) {
+			if ( t.key === key ) {
+				th = t;
+			}
+		} );
+		if ( ! th ) {
+			return cfg;
+		}
+		[ 'design', 'popup', 'form', 'display' ].forEach( function ( sec ) {
+			Object.keys( th[ sec ] || {} ).forEach( function ( k ) {
+				if ( Object.prototype.hasOwnProperty.call( cfg[ sec ] || {}, k ) ) {
+					cfg[ sec ][ k ] = clone( th[ sec ][ k ] );
+				}
+			} );
+		} );
+		cfg.design.theme = key;
+		return cfg;
+	}
+
+	/* What Frontend::public_config() hands to the front-end wheel engine. */
+	function publicConfig( cfg ) {
+		return {
+			design: cfg.design,
+			slices: cfg.slices,
+			form: cfg.form,
+			display: cfg.display,
+			messages: cfg.messages || {},
+			layout: cfg.layout || {},
+			responsive: cfg.responsive || {},
+			access: cfg.access,
+			coupon: cfg.coupon || {},
+		};
+	}
 
 	function wheelList() {
 		return WHEELS.map( function ( x ) {
 			return {
 				id: x.id, title: x.title, status: x.status, priority: x.priority, ab_group: x.ab_group,
 				theme: x.config.design.theme, mode: x.config.access.mode, display: x.config.display.mode,
-				slices: x.config.slices.length, preview: null, spins: x.spins, wins: x.wins,
+				slices: x.config.slices.length,
+				/* real REST sends Frontend::public_config($w) here; pages.js feeds it to
+				   new Becharkhoon.Wheel(thumb, preview) so every card shows its own live wheel */
+				preview: publicConfig( x.config ),
+				spins: x.spins, wins: x.wins,
 				redeemed: x.redeemed, revenue: x.revenue, updated: x.updated, open: x.open,
 			};
 		} );
