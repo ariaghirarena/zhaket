@@ -1,0 +1,1100 @@
+[
+ {
+  "key": "classic",
+  "fa": "کلاسیک آبی",
+  "en": "Classic blue",
+  "group": "basic",
+  "palette": [
+   "#1D4ED8",
+   "#F59E0B",
+   "#10B981",
+   "#EF4444",
+   "#8B5CF6",
+   "#0EA5E9",
+   "#EC4899",
+   "#F97316"
+  ],
+  "rim_style": "lights",
+  "center_style": "button",
+  "pointer_style": "arrow",
+  "win_effect": "confetti",
+  "rim_color": "#0B1B3F",
+  "center_color": "#ffffff",
+  "pointer_color": "#EF4444",
+  "popup_bg": [
+   "#ffffff",
+   "#eff6ff"
+  ],
+  "accent": "#1D4ED8",
+  "btn": [
+   "#1D4ED8",
+   "#7C3AED"
+  ]
+ },
+ {
+  "key": "neon",
+  "fa": "نئون شب",
+  "en": "Neon night",
+  "group": "basic",
+  "palette": [
+   "#FF2E88",
+   "#00E5FF",
+   "#B026FF",
+   "#39FF14",
+   "#FFE600",
+   "#FF6B00"
+  ],
+  "rim_style": "neon",
+  "center_style": "gem",
+  "pointer_style": "drop",
+  "win_effect": "fireworks",
+  "rim_color": "#0a0a1a",
+  "center_color": "#0a0a1a",
+  "pointer_color": "#00E5FF",
+  "popup_bg": [
+   "#0a0a1a",
+   "#1f1147"
+  ],
+  "accent": "#FF2E88",
+  "btn": [
+   "#FF2E88",
+   "#B026FF"
+  ]
+ },
+ {
+  "key": "gold",
+  "fa": "طلایی لوکس",
+  "en": "Luxury gold",
+  "group": "premium",
+  "palette": [
+   "#111111",
+   "#C9A227",
+   "#1c1c1c",
+   "#E5C76B",
+   "#0d0d0d",
+   "#B8860B"
+  ],
+  "rim_style": "metal",
+  "center_style": "star",
+  "pointer_style": "diamond",
+  "win_effect": "coins",
+  "rim_color": "#1a1a1a",
+  "center_color": "#C9A227",
+  "pointer_color": "#E5C76B",
+  "popup_bg": [
+   "#0d0d0d",
+   "#2a2410"
+  ],
+  "accent": "#C9A227",
+  "btn": [
+   "#C9A227",
+   "#8a6d12"
+  ]
+ },
+ {
+  "key": "candy",
+  "fa": "آب‌نبات",
+  "en": "Candy",
+  "group": "fun",
+  "palette": [
+   "#FF6FB5",
+   "#FFC2E2",
+   "#FF9EC4",
+   "#FFD6EC",
+   "#FF4DA6",
+   "#FFB3D9"
+  ],
+  "rim_style": "dots",
+  "center_style": "circle",
+  "pointer_style": "pin",
+  "win_effect": "hearts",
+  "rim_color": "#FF4DA6",
+  "center_color": "#ffffff",
+  "pointer_color": "#FF4DA6",
+  "popup_bg": [
+   "#FFF0F7",
+   "#FFE1F0"
+  ],
+  "accent": "#FF4DA6",
+  "btn": [
+   "#FF4DA6",
+   "#FF8CC6"
+  ]
+ },
+ {
+  "key": "pastel",
+  "fa": "پاستلی",
+  "en": "Pastel",
+  "group": "basic",
+  "palette": [
+   "#A5B4FC",
+   "#FBCFE8",
+   "#A7F3D0",
+   "#FDE68A",
+   "#BAE6FD",
+   "#DDD6FE",
+   "#FECACA",
+   "#C7D2FE"
+  ],
+  "rim_style": "solid",
+  "center_style": "circle",
+  "pointer_style": "triangle",
+  "win_effect": "confetti",
+  "rim_color": "#ffffff",
+  "center_color": "#ffffff",
+  "pointer_color": "#6366F1",
+  "popup_bg": [
+   "#ffffff",
+   "#F5F3FF"
+  ],
+  "accent": "#6366F1",
+  "btn": [
+   "#6366F1",
+   "#A855F7"
+  ]
+ },
+ {
+  "key": "minimal",
+  "fa": "مینیمال سفید",
+  "en": "Minimal white",
+  "group": "basic",
+  "palette": [
+   "#0f172a",
+   "#ffffff",
+   "#334155",
+   "#f1f5f9",
+   "#1e293b",
+   "#e2e8f0"
+  ],
+  "rim_style": "solid",
+  "center_style": "circle",
+  "pointer_style": "ticker",
+  "win_effect": "stars",
+  "rim_color": "#0f172a",
+  "center_color": "#0f172a",
+  "pointer_color": "#0f172a",
+  "popup_bg": [
+   "#ffffff",
+   "#eff6ff"
+  ],
+  "accent": "#0f172a",
+  "btn": [
+   "#0f172a",
+   "#334155"
+  ]
+ },
+ {
+  "key": "dark",
+  "fa": "دارک مود",
+  "en": "Dark mode",
+  "group": "basic",
+  "palette": [
+   "#3B82F6",
+   "#1e293b",
+   "#22C55E",
+   "#334155",
+   "#F59E0B",
+   "#0f172a",
+   "#EF4444",
+   "#1e293b"
+  ],
+  "rim_style": "lights",
+  "center_style": "button",
+  "pointer_style": "arrow",
+  "win_effect": "confetti",
+  "rim_color": "#020617",
+  "center_color": "#1e293b",
+  "pointer_color": "#3B82F6",
+  "popup_bg": [
+   "#0b1120",
+   "#111a2e"
+  ],
+  "accent": "#3B82F6",
+  "btn": [
+   "#3B82F6",
+   "#6366F1"
+  ]
+ },
+ {
+  "key": "glass",
+  "fa": "شیشه‌ای",
+  "en": "Glassmorphism",
+  "group": "premium",
+  "palette": [
+   "rgba(99,102,241,.85)",
+   "rgba(236,72,153,.85)",
+   "rgba(14,165,233,.85)",
+   "rgba(168,85,247,.85)",
+   "rgba(34,197,94,.85)",
+   "rgba(249,115,22,.85)"
+  ],
+  "rim_style": "solid",
+  "center_style": "gem",
+  "pointer_style": "drop",
+  "win_effect": "confetti",
+  "rim_color": "rgba(255,255,255,.35)",
+  "center_color": "rgba(255,255,255,.7)",
+  "pointer_color": "#ffffff",
+  "popup_bg": [
+   "rgba(255,255,255,.18)",
+   "rgba(255,255,255,.08)"
+  ],
+  "accent": "#a78bfa",
+  "btn": [
+   "#8B5CF6",
+   "#EC4899"
+  ]
+ },
+ {
+  "key": "casino",
+  "fa": "کازینو",
+  "en": "Casino",
+  "group": "premium",
+  "palette": [
+   "#B91C1C",
+   "#0f5132",
+   "#111111",
+   "#B91C1C",
+   "#0f5132",
+   "#111111",
+   "#B91C1C",
+   "#0f5132"
+  ],
+  "rim_style": "lights",
+  "center_style": "star",
+  "pointer_style": "arrow",
+  "win_effect": "coins",
+  "rim_color": "#3b0d0d",
+  "center_color": "#F59E0B",
+  "pointer_color": "#F59E0B",
+  "popup_bg": [
+   "#1a0505",
+   "#0f2a1d"
+  ],
+  "accent": "#F59E0B",
+  "btn": [
+   "#F59E0B",
+   "#B45309"
+  ]
+ },
+ {
+  "key": "retro",
+  "fa": "رترو ۸۰",
+  "en": "Retro 80s",
+  "group": "fun",
+  "palette": [
+   "#FF6B6B",
+   "#FFD93D",
+   "#6BCB77",
+   "#4D96FF",
+   "#FF6B6B",
+   "#FFD93D",
+   "#6BCB77",
+   "#4D96FF"
+  ],
+  "rim_style": "double",
+  "center_style": "circle",
+  "pointer_style": "triangle",
+  "win_effect": "confetti",
+  "rim_color": "#1b1b3a",
+  "center_color": "#FFD93D",
+  "pointer_color": "#1b1b3a",
+  "popup_bg": [
+   "#FFF8E7",
+   "#FFE8C7"
+  ],
+  "accent": "#FF6B6B",
+  "btn": [
+   "#FF6B6B",
+   "#FFD93D"
+  ]
+ },
+ {
+  "key": "ocean",
+  "fa": "اقیانوس",
+  "en": "Ocean",
+  "group": "nature",
+  "palette": [
+   "#0077B6",
+   "#00B4D8",
+   "#90E0EF",
+   "#023E8A",
+   "#48CAE4",
+   "#0096C7"
+  ],
+  "rim_style": "lights",
+  "center_style": "button",
+  "pointer_style": "drop",
+  "win_effect": "confetti",
+  "rim_color": "#03045E",
+  "center_color": "#ffffff",
+  "pointer_color": "#FFB703",
+  "popup_bg": [
+   "#E0F7FF",
+   "#CAF0F8"
+  ],
+  "accent": "#0077B6",
+  "btn": [
+   "#0077B6",
+   "#00B4D8"
+  ]
+ },
+ {
+  "key": "forest",
+  "fa": "جنگل",
+  "en": "Forest",
+  "group": "nature",
+  "palette": [
+   "#2D6A4F",
+   "#52B788",
+   "#1B4332",
+   "#95D5B2",
+   "#40916C",
+   "#74C69D"
+  ],
+  "rim_style": "solid",
+  "center_style": "circle",
+  "pointer_style": "pin",
+  "win_effect": "stars",
+  "rim_color": "#1B4332",
+  "center_color": "#D8F3DC",
+  "pointer_color": "#F4A261",
+  "popup_bg": [
+   "#F0FFF4",
+   "#D8F3DC"
+  ],
+  "accent": "#2D6A4F",
+  "btn": [
+   "#2D6A4F",
+   "#52B788"
+  ]
+ },
+ {
+  "key": "fire",
+  "fa": "آتشین",
+  "en": "Fire",
+  "group": "fun",
+  "palette": [
+   "#DC2F02",
+   "#F48C06",
+   "#E85D04",
+   "#FFBA08",
+   "#D00000",
+   "#FAA307"
+  ],
+  "rim_style": "lights",
+  "center_style": "star",
+  "pointer_style": "arrow",
+  "win_effect": "fireworks",
+  "rim_color": "#370617",
+  "center_color": "#FFBA08",
+  "pointer_color": "#FFBA08",
+  "popup_bg": [
+   "#1a0505",
+   "#370617"
+  ],
+  "accent": "#F48C06",
+  "btn": [
+   "#E85D04",
+   "#DC2F02"
+  ]
+ },
+ {
+  "key": "royal",
+  "fa": "سلطنتی",
+  "en": "Royal purple",
+  "group": "premium",
+  "palette": [
+   "#5B21B6",
+   "#7C3AED",
+   "#4C1D95",
+   "#A78BFA",
+   "#6D28D9",
+   "#C4B5FD"
+  ],
+  "rim_style": "metal",
+  "center_style": "gem",
+  "pointer_style": "diamond",
+  "win_effect": "stars",
+  "rim_color": "#2e1065",
+  "center_color": "#C9A227",
+  "pointer_color": "#C9A227",
+  "popup_bg": [
+   "#1e0b3d",
+   "#2e1065"
+  ],
+  "accent": "#C4B5FD",
+  "btn": [
+   "#7C3AED",
+   "#C026D3"
+  ]
+ },
+ {
+  "key": "sunset",
+  "fa": "غروب",
+  "en": "Sunset",
+  "group": "nature",
+  "palette": [
+   "#FF7B54",
+   "#FFB26B",
+   "#FFD56F",
+   "#939B62",
+   "#FF7B54",
+   "#E9446A"
+  ],
+  "rim_style": "lights",
+  "center_style": "button",
+  "pointer_style": "drop",
+  "win_effect": "confetti",
+  "rim_color": "#4a1942",
+  "center_color": "#FFE5B4",
+  "pointer_color": "#4a1942",
+  "popup_bg": [
+   "#FFF4E6",
+   "#FFE0E6"
+  ],
+  "accent": "#E9446A",
+  "btn": [
+   "#E9446A",
+   "#FF7B54"
+  ]
+ },
+ {
+  "key": "corporate",
+  "fa": "شرکتی",
+  "en": "Corporate",
+  "group": "basic",
+  "palette": [
+   "#0F4C81",
+   "#E2E8F0",
+   "#1E6091",
+   "#F1F5F9",
+   "#184E77",
+   "#CBD5E1"
+  ],
+  "rim_style": "solid",
+  "center_style": "logo",
+  "pointer_style": "ticker",
+  "win_effect": "stars",
+  "rim_color": "#0F2942",
+  "center_color": "#ffffff",
+  "pointer_color": "#0F4C81",
+  "popup_bg": [
+   "#ffffff",
+   "#eff6ff"
+  ],
+  "accent": "#0F4C81",
+  "btn": [
+   "#0F4C81",
+   "#1E6091"
+  ]
+ },
+ {
+  "key": "nowruz",
+  "fa": "نوروز",
+  "en": "Nowruz",
+  "group": "iranian",
+  "palette": [
+   "#2E7D32",
+   "#C62828",
+   "#F9A825",
+   "#66BB6A",
+   "#AD1457",
+   "#00897B",
+   "#FBC02D",
+   "#43A047"
+  ],
+  "rim_style": "lights",
+  "center_style": "star",
+  "pointer_style": "arrow",
+  "win_effect": "confetti",
+  "rim_color": "#1B5E20",
+  "center_color": "#F9A825",
+  "pointer_color": "#C62828",
+  "popup_bg": [
+   "#F1F8E9",
+   "#FFFDE7"
+  ],
+  "accent": "#2E7D32",
+  "btn": [
+   "#2E7D32",
+   "#C62828"
+  ]
+ },
+ {
+  "key": "yalda",
+  "fa": "شب یلدا",
+  "en": "Yalda night",
+  "group": "iranian",
+  "palette": [
+   "#7B1E3A",
+   "#B71C1C",
+   "#1a0f24",
+   "#D32F2F",
+   "#4A148C",
+   "#C2185B"
+  ],
+  "rim_style": "lights",
+  "center_style": "gem",
+  "pointer_style": "drop",
+  "win_effect": "emoji",
+  "rim_color": "#1a0f24",
+  "center_color": "#B71C1C",
+  "pointer_color": "#FFCDD2",
+  "popup_bg": [
+   "#12091c",
+   "#3a0d1f"
+  ],
+  "accent": "#E53935",
+  "btn": [
+   "#B71C1C",
+   "#7B1E3A"
+  ]
+ },
+ {
+  "key": "black_friday",
+  "fa": "بلک فرایدی",
+  "en": "Black Friday",
+  "group": "campaign",
+  "palette": [
+   "#111111",
+   "#FACC15",
+   "#1f1f1f",
+   "#FACC15",
+   "#111111",
+   "#FACC15",
+   "#1f1f1f",
+   "#FACC15"
+  ],
+  "rim_style": "lights",
+  "center_style": "button",
+  "pointer_style": "triangle",
+  "win_effect": "confetti",
+  "rim_color": "#000000",
+  "center_color": "#FACC15",
+  "pointer_color": "#FACC15",
+  "popup_bg": [
+   "#000000",
+   "#171717"
+  ],
+  "accent": "#FACC15",
+  "btn": [
+   "#FACC15",
+   "#EAB308"
+  ]
+ },
+ {
+  "key": "ramadan",
+  "fa": "رمضان",
+  "en": "Ramadan",
+  "group": "iranian",
+  "palette": [
+   "#0B3D91",
+   "#C9A227",
+   "#1E5BB8",
+   "#F2D57E",
+   "#0A2E6B",
+   "#E3B341"
+  ],
+  "rim_style": "metal",
+  "center_style": "star",
+  "pointer_style": "drop",
+  "win_effect": "stars",
+  "rim_color": "#071f4a",
+  "center_color": "#F2D57E",
+  "pointer_color": "#F2D57E",
+  "popup_bg": [
+   "#061a3f",
+   "#0B3D91"
+  ],
+  "accent": "#F2D57E",
+  "btn": [
+   "#C9A227",
+   "#E3B341"
+  ]
+ },
+ {
+  "key": "christmas",
+  "fa": "کریسمس",
+  "en": "Christmas",
+  "group": "campaign",
+  "palette": [
+   "#C1121F",
+   "#2A9D8F",
+   "#ffffff",
+   "#C1121F",
+   "#2A9D8F",
+   "#ffffff"
+  ],
+  "rim_style": "lights",
+  "center_style": "star",
+  "pointer_style": "arrow",
+  "win_effect": "snow",
+  "rim_color": "#14532d",
+  "center_color": "#FACC15",
+  "pointer_color": "#FACC15",
+  "popup_bg": [
+   "#FFF5F5",
+   "#ECFDF5"
+  ],
+  "accent": "#C1121F",
+  "btn": [
+   "#C1121F",
+   "#2A9D8F"
+  ]
+ },
+ {
+  "key": "halloween",
+  "fa": "هالووین",
+  "en": "Halloween",
+  "group": "campaign",
+  "palette": [
+   "#F97316",
+   "#1a1a1a",
+   "#7C3AED",
+   "#1a1a1a",
+   "#F97316",
+   "#22C55E"
+  ],
+  "rim_style": "lights",
+  "center_style": "circle",
+  "pointer_style": "drop",
+  "win_effect": "emoji",
+  "rim_color": "#0a0a0a",
+  "center_color": "#F97316",
+  "pointer_color": "#22C55E",
+  "popup_bg": [
+   "#0a0a0a",
+   "#2e1065"
+  ],
+  "accent": "#F97316",
+  "btn": [
+   "#F97316",
+   "#7C3AED"
+  ]
+ },
+ {
+  "key": "valentine",
+  "fa": "ولنتاین",
+  "en": "Valentine",
+  "group": "campaign",
+  "palette": [
+   "#E11D48",
+   "#FDA4AF",
+   "#BE123C",
+   "#FFE4E6",
+   "#F43F5E",
+   "#FB7185"
+  ],
+  "rim_style": "dots",
+  "center_style": "circle",
+  "pointer_style": "pin",
+  "win_effect": "hearts",
+  "rim_color": "#9F1239",
+  "center_color": "#ffffff",
+  "pointer_color": "#9F1239",
+  "popup_bg": [
+   "#FFF1F2",
+   "#FFE4E6"
+  ],
+  "accent": "#E11D48",
+  "btn": [
+   "#E11D48",
+   "#F43F5E"
+  ]
+ },
+ {
+  "key": "spring",
+  "fa": "بهار",
+  "en": "Spring",
+  "group": "nature",
+  "palette": [
+   "#84CC16",
+   "#F472B6",
+   "#FDE047",
+   "#4ADE80",
+   "#FB7185",
+   "#A3E635"
+  ],
+  "rim_style": "dots",
+  "center_style": "circle",
+  "pointer_style": "pin",
+  "win_effect": "emoji",
+  "rim_color": "#3F6212",
+  "center_color": "#ffffff",
+  "pointer_color": "#F472B6",
+  "popup_bg": [
+   "#F7FEE7",
+   "#FDF2F8"
+  ],
+  "accent": "#65A30D",
+  "btn": [
+   "#65A30D",
+   "#F472B6"
+  ]
+ },
+ {
+  "key": "summer",
+  "fa": "تابستان",
+  "en": "Summer",
+  "group": "nature",
+  "palette": [
+   "#FACC15",
+   "#06B6D4",
+   "#F97316",
+   "#22D3EE",
+   "#FDE047",
+   "#0EA5E9"
+  ],
+  "rim_style": "lights",
+  "center_style": "button",
+  "pointer_style": "drop",
+  "win_effect": "confetti",
+  "rim_color": "#0c4a6e",
+  "center_color": "#FACC15",
+  "pointer_color": "#F97316",
+  "popup_bg": [
+   "#ECFEFF",
+   "#FEFCE8"
+  ],
+  "accent": "#0284C7",
+  "btn": [
+   "#0284C7",
+   "#06B6D4"
+  ]
+ },
+ {
+  "key": "autumn",
+  "fa": "پاییز",
+  "en": "Autumn",
+  "group": "nature",
+  "palette": [
+   "#B45309",
+   "#D97706",
+   "#92400E",
+   "#F59E0B",
+   "#7C2D12",
+   "#EA580C"
+  ],
+  "rim_style": "solid",
+  "center_style": "circle",
+  "pointer_style": "pin",
+  "win_effect": "emoji",
+  "rim_color": "#451A03",
+  "center_color": "#FDE68A",
+  "pointer_color": "#7C2D12",
+  "popup_bg": [
+   "#FFFBEB",
+   "#FFEDD5"
+  ],
+  "accent": "#B45309",
+  "btn": [
+   "#B45309",
+   "#EA580C"
+  ]
+ },
+ {
+  "key": "winter",
+  "fa": "زمستان",
+  "en": "Winter",
+  "group": "nature",
+  "palette": [
+   "#60A5FA",
+   "#E0F2FE",
+   "#3B82F6",
+   "#BAE6FD",
+   "#1D4ED8",
+   "#DBEAFE"
+  ],
+  "rim_style": "lights",
+  "center_style": "star",
+  "pointer_style": "triangle",
+  "win_effect": "snow",
+  "rim_color": "#0c2d6b",
+  "center_color": "#ffffff",
+  "pointer_color": "#0c2d6b",
+  "popup_bg": [
+   "#F0F9FF",
+   "#E0F2FE"
+  ],
+  "accent": "#1D4ED8",
+  "btn": [
+   "#1D4ED8",
+   "#60A5FA"
+  ]
+ },
+ {
+  "key": "kids",
+  "fa": "کودکانه",
+  "en": "Kids",
+  "group": "fun",
+  "palette": [
+   "#F87171",
+   "#FBBF24",
+   "#34D399",
+   "#60A5FA",
+   "#A78BFA",
+   "#F472B6",
+   "#FB923C",
+   "#2DD4BF"
+  ],
+  "rim_style": "dots",
+  "center_style": "circle",
+  "pointer_style": "pin",
+  "win_effect": "balloons",
+  "rim_color": "#ffffff",
+  "center_color": "#ffffff",
+  "pointer_color": "#F87171",
+  "popup_bg": [
+   "#FFFBEB",
+   "#EFF6FF"
+  ],
+  "accent": "#F87171",
+  "btn": [
+   "#F87171",
+   "#FBBF24"
+  ]
+ },
+ {
+  "key": "sport",
+  "fa": "ورزشی",
+  "en": "Sport",
+  "group": "fun",
+  "palette": [
+   "#16A34A",
+   "#ffffff",
+   "#15803D",
+   "#ffffff",
+   "#16A34A",
+   "#ffffff"
+  ],
+  "rim_style": "double",
+  "center_style": "circle",
+  "pointer_style": "arrow",
+  "win_effect": "emoji",
+  "rim_color": "#052e16",
+  "center_color": "#ffffff",
+  "pointer_color": "#DC2626",
+  "popup_bg": [
+   "#F0FDF4",
+   "#DCFCE7"
+  ],
+  "accent": "#16A34A",
+  "btn": [
+   "#16A34A",
+   "#15803D"
+  ]
+ },
+ {
+  "key": "tech",
+  "fa": "تکنولوژی",
+  "en": "Tech",
+  "group": "premium",
+  "palette": [
+   "#06B6D4",
+   "#0f172a",
+   "#22D3EE",
+   "#1e293b",
+   "#0891B2",
+   "#0f172a"
+  ],
+  "rim_style": "neon",
+  "center_style": "gem",
+  "pointer_style": "ticker",
+  "win_effect": "stars",
+  "rim_color": "#020617",
+  "center_color": "#0f172a",
+  "pointer_color": "#06B6D4",
+  "popup_bg": [
+   "#020617",
+   "#0c1a2e"
+  ],
+  "accent": "#22D3EE",
+  "btn": [
+   "#06B6D4",
+   "#3B82F6"
+  ]
+ },
+ {
+  "key": "coffee",
+  "fa": "کافه",
+  "en": "Coffee house",
+  "group": "nature",
+  "palette": [
+   "#6F4E37",
+   "#C8A27A",
+   "#4B3621",
+   "#E6CCB2",
+   "#7F5539",
+   "#B08968"
+  ],
+  "rim_style": "solid",
+  "center_style": "circle",
+  "pointer_style": "drop",
+  "win_effect": "emoji",
+  "rim_color": "#3E2723",
+  "center_color": "#EDE0D4",
+  "pointer_color": "#3E2723",
+  "popup_bg": [
+   "#FAF3EB",
+   "#EDE0D4"
+  ],
+  "accent": "#6F4E37",
+  "btn": [
+   "#6F4E37",
+   "#B08968"
+  ]
+ },
+ {
+  "key": "rose_gold",
+  "fa": "رزگلد",
+  "en": "Rose gold",
+  "group": "premium",
+  "palette": [
+   "#B76E79",
+   "#F7CAC9",
+   "#9E4F5C",
+   "#FBE3E8",
+   "#C98A94",
+   "#EAC4C8"
+  ],
+  "rim_style": "metal",
+  "center_style": "gem",
+  "pointer_style": "diamond",
+  "win_effect": "stars",
+  "rim_color": "#7A3B46",
+  "center_color": "#F7CAC9",
+  "pointer_color": "#7A3B46",
+  "popup_bg": [
+   "#FFF7F7",
+   "#FBE3E8"
+  ],
+  "accent": "#B76E79",
+  "btn": [
+   "#B76E79",
+   "#E8B4B8"
+  ]
+ },
+ {
+  "key": "mono",
+  "fa": "تک‌رنگ",
+  "en": "Monochrome",
+  "group": "basic",
+  "palette": [
+   "#1D4ED8",
+   "#2563EB",
+   "#3B82F6",
+   "#60A5FA",
+   "#1E40AF",
+   "#93C5FD"
+  ],
+  "rim_style": "solid",
+  "center_style": "circle",
+  "pointer_style": "arrow",
+  "win_effect": "confetti",
+  "rim_color": "#1E3A8A",
+  "center_color": "#ffffff",
+  "pointer_color": "#1E3A8A",
+  "popup_bg": [
+   "#ffffff",
+   "#eff6ff"
+  ],
+  "accent": "#1D4ED8",
+  "btn": [
+   "#1D4ED8",
+   "#7C3AED"
+  ]
+ },
+ {
+  "key": "rainbow",
+  "fa": "رنگین‌کمان",
+  "en": "Rainbow",
+  "group": "fun",
+  "palette": [
+   "#EF4444",
+   "#F97316",
+   "#FACC15",
+   "#22C55E",
+   "#06B6D4",
+   "#3B82F6",
+   "#8B5CF6",
+   "#EC4899"
+  ],
+  "rim_style": "lights",
+  "center_style": "star",
+  "pointer_style": "arrow",
+  "win_effect": "balloons",
+  "rim_color": "#111827",
+  "center_color": "#ffffff",
+  "pointer_color": "#111827",
+  "popup_bg": [
+   "#ffffff",
+   "#FDF4FF"
+  ],
+  "accent": "#8B5CF6",
+  "btn": [
+   "#EC4899",
+   "#8B5CF6"
+  ]
+ },
+ {
+  "key": "chaharshanbe",
+  "fa": "چهارشنبه‌سوری",
+  "en": "Chaharshanbe Suri",
+  "group": "iranian",
+  "palette": [
+   "#F59E0B",
+   "#B91C1C",
+   "#FCD34D",
+   "#7F1D1D",
+   "#F97316",
+   "#991B1B"
+  ],
+  "rim_style": "lights",
+  "center_style": "star",
+  "pointer_style": "drop",
+  "win_effect": "fireworks",
+  "rim_color": "#1c0a00",
+  "center_color": "#F59E0B",
+  "pointer_color": "#FDE68A",
+  "popup_bg": [
+   "#140700",
+   "#3b0d0d"
+  ],
+  "accent": "#F59E0B",
+  "btn": [
+   "#F97316",
+   "#B91C1C"
+  ]
+ },
+ {
+  "key": "birthday",
+  "fa": "تولد فروشگاه",
+  "en": "Store birthday",
+  "group": "campaign",
+  "palette": [
+   "#8B5CF6",
+   "#F472B6",
+   "#FBBF24",
+   "#34D399",
+   "#60A5FA",
+   "#F87171"
+  ],
+  "rim_style": "lights",
+  "center_style": "circle",
+  "pointer_style": "pin",
+  "win_effect": "balloons",
+  "rim_color": "#4C1D95",
+  "center_color": "#ffffff",
+  "pointer_color": "#F472B6",
+  "popup_bg": [
+   "#FAF5FF",
+   "#FDF2F8"
+  ],
+  "accent": "#7C3AED",
+  "btn": [
+   "#7C3AED",
+   "#F472B6"
+  ]
+ }
+]

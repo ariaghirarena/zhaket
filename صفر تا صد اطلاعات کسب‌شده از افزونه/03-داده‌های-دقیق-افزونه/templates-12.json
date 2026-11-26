@@ -1,0 +1,62 @@
+[
+ {
+  "key": "welcome",
+  "fa_title": "گردونه خوش‌آمد (جذب شماره موبایل)",
+  "theme": "classic"
+ },
+ {
+  "key": "first_order",
+  "fa_title": "هدیه اولین خرید",
+  "theme": "gold"
+ },
+ {
+  "key": "big_order",
+  "fa_title": "خرید بالای ۲ میلیون تومان",
+  "theme": "royal"
+ },
+ {
+  "key": "every_amount",
+  "fa_title": "به ازای هر ۵۰۰ هزار تومان خرید",
+  "theme": "casino"
+ },
+ {
+  "key": "exit_intent",
+  "fa_title": "جلوگیری از خروج",
+  "theme": "gold"
+ },
+ {
+  "key": "daily_member",
+  "fa_title": "چرخش روزانه اعضا",
+  "theme": "tech"
+ },
+ {
+  "key": "vip",
+  "fa_title": "باشگاه VIP (مجموع خرید بالا)",
+  "theme": "rose_gold"
+ },
+ {
+  "key": "review",
+  "fa_title": "جایزه برای دیدگاه محصول",
+  "theme": "forest"
+ },
+ {
+  "key": "referral",
+  "fa_title": "دعوت از دوستان",
+  "theme": "kids"
+ },
+ {
+  "key": "yalda",
+  "fa_title": "کمپین شب یلدا",
+  "theme": "yalda"
+ },
+ {
+  "key": "nowruz",
+  "fa_title": "کمپین نوروز",
+  "theme": "nowruz"
+ },
+ {
+  "key": "black_friday",
+  "fa_title": "بلک فرایدی",
+  "theme": "black_friday"
+ }
+]

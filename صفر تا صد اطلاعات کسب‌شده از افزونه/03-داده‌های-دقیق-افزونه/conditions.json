@@ -1,0 +1,359 @@
+[
+ {
+  "type": "logged_in",
+  "group": "user",
+  "input": "bool",
+  "ops": "self::BOOL",
+  "context": "any"
+ },
+ {
+  "type": "user_role",
+  "group": "user",
+  "input": "roles",
+  "ops": "self::LIST",
+  "context": "any"
+ },
+ {
+  "type": "user_id",
+  "group": "user",
+  "input": "users",
+  "ops": "self::LIST",
+  "context": "any"
+ },
+ {
+  "type": "registered_days",
+  "group": "user",
+  "input": "number",
+  "ops": "self::NUM",
+  "context": "any"
+ },
+ {
+  "type": "order_count",
+  "group": "user",
+  "input": "number",
+  "ops": "self::NUM",
+  "context": "any"
+ },
+ {
+  "type": "total_spent",
+  "group": "user",
+  "input": "money",
+  "ops": "self::NUM",
+  "context": "any"
+ },
+ {
+  "type": "avg_order",
+  "group": "user",
+  "input": "money",
+  "ops": "self::NUM",
+  "context": "any"
+ },
+ {
+  "type": "last_order_days",
+  "group": "user",
+  "input": "number",
+  "ops": "self::NUM",
+  "context": "any"
+ },
+ {
+  "type": "bought_product",
+  "group": "user",
+  "input": "products",
+  "ops": "self::LIST",
+  "context": "any"
+ },
+ {
+  "type": "bought_category",
+  "group": "user",
+  "input": "cats",
+  "ops": "self::LIST",
+  "context": "any"
+ },
+ {
+  "type": "phone_verified",
+  "group": "user",
+  "input": "bool",
+  "ops": "self::BOOL",
+  "context": "any"
+ },
+ {
+  "type": "has_phone",
+  "group": "user",
+  "input": "bool",
+  "ops": "self::BOOL",
+  "context": "any"
+ },
+ {
+  "type": "user_meta",
+  "group": "user",
+  "input": "kv",
+  "ops": "self::TEXT",
+  "context": "any"
+ },
+ {
+  "type": "wheel_spins",
+  "group": "user",
+  "input": "number",
+  "ops": "self::NUM",
+  "context": "any"
+ },
+ {
+  "type": "wheel_wins",
+  "group": "user",
+  "input": "number",
+  "ops": "self::NUM",
+  "context": "any"
+ },
+ {
+  "type": "cart_total",
+  "group": "cart",
+  "input": "money",
+  "ops": "self::NUM",
+  "context": "any"
+ },
+ {
+  "type": "cart_subtotal",
+  "group": "cart",
+  "input": "money",
+  "ops": "self::NUM",
+  "context": "any"
+ },
+ {
+  "type": "cart_items",
+  "group": "cart",
+  "input": "number",
+  "ops": "self::NUM",
+  "context": "any"
+ },
+ {
+  "type": "cart_product",
+  "group": "cart",
+  "input": "products",
+  "ops": "self::LIST",
+  "context": "any"
+ },
+ {
+  "type": "cart_category",
+  "group": "cart",
+  "input": "cats",
+  "ops": "self::LIST",
+  "context": "any"
+ },
+ {
+  "type": "cart_has_coupon",
+  "group": "cart",
+  "input": "bool",
+  "ops": "self::BOOL",
+  "context": "any"
+ },
+ {
+  "type": "order_total",
+  "group": "order",
+  "input": "money",
+  "ops": "self::NUM",
+  "context": "order"
+ },
+ {
+  "type": "order_subtotal",
+  "group": "order",
+  "input": "money",
+  "ops": "self::NUM",
+  "context": "order"
+ },
+ {
+  "type": "order_items",
+  "group": "order",
+  "input": "number",
+  "ops": "self::NUM",
+  "context": "order"
+ },
+ {
+  "type": "order_number",
+  "group": "order",
+  "input": "number",
+  "ops": "self::NUM",
+  "context": "order"
+ },
+ {
+  "type": "order_product",
+  "group": "order",
+  "input": "products",
+  "ops": "self::LIST",
+  "context": "order"
+ },
+ {
+  "type": "order_category",
+  "group": "order",
+  "input": "cats",
+  "ops": "self::LIST",
+  "context": "order"
+ },
+ {
+  "type": "payment_method",
+  "group": "order",
+  "input": "payment",
+  "ops": "self::LIST",
+  "context": "order"
+ },
+ {
+  "type": "shipping_method",
+  "group": "order",
+  "input": "shipping",
+  "ops": "self::LIST",
+  "context": "order"
+ },
+ {
+  "type": "order_coupon",
+  "group": "order",
+  "input": "text",
+  "ops": "self::TEXT",
+  "context": "order"
+ },
+ {
+  "type": "billing_city",
+  "group": "order",
+  "input": "text",
+  "ops": "self::TEXT",
+  "context": "order"
+ },
+ {
+  "type": "billing_state",
+  "group": "order",
+  "input": "text",
+  "ops": "self::TEXT",
+  "context": "order"
+ },
+ {
+  "type": "created_via",
+  "group": "order",
+  "input": "text",
+  "ops": "self::TEXT",
+  "context": "order"
+ },
+ {
+  "type": "device",
+  "group": "visitor",
+  "input": "devices",
+  "ops": "self::LIST",
+  "context": "any"
+ },
+ {
+  "type": "page_type",
+  "group": "visitor",
+  "input": "page_types",
+  "ops": "self::LIST",
+  "context": "any"
+ },
+ {
+  "type": "url",
+  "group": "visitor",
+  "input": "text",
+  "ops": "self::TEXT",
+  "context": "any"
+ },
+ {
+  "type": "referrer",
+  "group": "visitor",
+  "input": "text",
+  "ops": "self::TEXT",
+  "context": "any"
+ },
+ {
+  "type": "utm_source",
+  "group": "visitor",
+  "input": "text",
+  "ops": "self::TEXT",
+  "context": "any"
+ },
+ {
+  "type": "utm_medium",
+  "group": "visitor",
+  "input": "text",
+  "ops": "self::TEXT",
+  "context": "any"
+ },
+ {
+  "type": "utm_campaign",
+  "group": "visitor",
+  "input": "text",
+  "ops": "self::TEXT",
+  "context": "any"
+ },
+ {
+  "type": "query_param",
+  "group": "visitor",
+  "input": "kv",
+  "ops": "self::TEXT",
+  "context": "any"
+ },
+ {
+  "type": "cookie",
+  "group": "visitor",
+  "input": "kv",
+  "ops": "self::TEXT",
+  "context": "any"
+ },
+ {
+  "type": "visit_count",
+  "group": "visitor",
+  "input": "number",
+  "ops": "self::NUM",
+  "context": "any"
+ },
+ {
+  "type": "new_visitor",
+  "group": "visitor",
+  "input": "bool",
+  "ops": "self::BOOL",
+  "context": "any"
+ },
+ {
+  "type": "country",
+  "group": "visitor",
+  "input": "countries",
+  "ops": "self::LIST",
+  "context": "any"
+ },
+ {
+  "type": "language",
+  "group": "visitor",
+  "input": "langs",
+  "ops": "self::LIST",
+  "context": "any"
+ },
+ {
+  "type": "browser",
+  "group": "visitor",
+  "input": "browsers",
+  "ops": "self::LIST",
+  "context": "any"
+ },
+ {
+  "type": "os",
+  "group": "visitor",
+  "input": "os",
+  "ops": "self::LIST",
+  "context": "any"
+ },
+ {
+  "type": "weekday",
+  "group": "time",
+  "input": "weekdays",
+  "ops": "self::LIST",
+  "context": "any"
+ },
+ {
+  "type": "hour",
+  "group": "time",
+  "input": "number",
+  "ops": "self::NUM",
+  "context": "any"
+ },
+ {
+  "type": "date",
+  "group": "time",
+  "input": "date",
+  "ops": "self::NUM",
+  "context": "any"
+ }
+]

@@ -1,0 +1,10 @@
+# محیط کار (بازسازی‌شدنی، داخل مخزن نگه داشته نمی‌شود)
+.cache/
+node_modules/
+__pycache__/
+*.pyc
+
+# فایل‌های سیستمی
+.DS_Store
+Thumbs.db
+desktop.ini

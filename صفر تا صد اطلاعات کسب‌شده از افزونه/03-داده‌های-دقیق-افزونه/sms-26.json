@@ -1,0 +1,236 @@
+[
+ {
+  "class": "Smsir",
+  "label": "SMS.ir (اس‌ام‌اس دات آی‌آر)",
+  "site": "https://sms.ir",
+  "family": "",
+  "brands": "",
+  "pattern": true,
+  "soap": false
+ },
+ {
+  "class": "IPPanel",
+  "label": "IPPanel / مدیانا و پنل‌های مبتنی بر IPPanel (API جدید Edge)",
+  "site": "https://ippanel.com",
+  "family": "",
+  "brands": "",
+  "pattern": true,
+  "soap": false
+ },
+ {
+  "class": "Faraz",
+  "label": "فراز اس‌ام‌اس / ایران پیامک (API جدید)",
+  "site": "https://farazsms.com",
+  "family": "",
+  "brands": "",
+  "pattern": true,
+  "soap": false
+ },
+ {
+  "class": "IPPanel_Legacy",
+  "label": "IPPanel / فراز (API قدیمی REST با AccessKey)",
+  "site": "",
+  "family": "reseller",
+  "brands": "",
+  "pattern": true,
+  "soap": false
+ },
+ {
+  "class": "Kavenegar",
+  "label": "کاوه‌نگار (Kavenegar)",
+  "site": "https://kavenegar.com",
+  "family": "",
+  "brands": "",
+  "pattern": true,
+  "soap": false
+ },
+ {
+  "class": "Melipayamak",
+  "label": "ملی پیامک، فراپیامک و پنل‌های payamak-panel (REST)",
+  "site": "https://www.melipayamak.com",
+  "family": "",
+  "brands": "",
+  "pattern": true,
+  "soap": false
+ },
+ {
+  "class": "Melipayamak_Console",
+  "label": "ملی پیامک (کنسول جدید — کلید API)",
+  "site": "https://console.melipayamak.com",
+  "family": "",
+  "brands": "",
+  "pattern": true,
+  "soap": false
+ },
+ {
+  "class": "Ghasedak",
+  "label": "قاصدک (Ghasedak)",
+  "site": "https://ghasedak.me",
+  "family": "",
+  "brands": "",
+  "pattern": true,
+  "soap": false
+ },
+ {
+  "class": "Magfa",
+  "label": "مگفا (Magfa)",
+  "site": "https://magfa.com",
+  "family": "",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "Trez",
+  "label": "ترز / رایگان اس‌ام‌اس (Trez)",
+  "site": "",
+  "family": "reseller",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "Sabanovin",
+  "label": "صبانوین (SabaNovin)",
+  "site": "",
+  "family": "reseller",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "Asanak",
+  "label": "آسانک (Asanak)",
+  "site": "",
+  "family": "reseller",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "Payamresan",
+  "label": "پیام‌رسان (payam-resan.com)",
+  "site": "",
+  "family": "reseller",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "Sms18",
+  "label": "18SMS",
+  "site": "",
+  "family": "reseller",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "Sunway",
+  "label": "سان‌وی (SunwaySMS)",
+  "site": "",
+  "family": "reseller",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "Isms",
+  "label": "iSMS (isms.ir)",
+  "site": "",
+  "family": "reseller",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "Logistic",
+  "label": "لجستیک اس‌ام‌اس (LogisticSMS)",
+  "site": "",
+  "family": "reseller",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "PayamakPanel_Soap",
+  "label": "نمایندگان payamak-panel با آدرس اختصاصی (SOAP post/send.asmx)",
+  "site": "",
+  "family": "soap",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "IPPanel_Soap",
+  "label": "نمایندگان IPPanel قدیمی (SOAP wssimple)",
+  "site": "",
+  "family": "soap",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "SendSmsAsmx",
+  "label": "خانواده API/SendSMS.asmx (جهان پیامک، اس‌ام‌اس بان، پرشین اس‌ام‌اس)",
+  "site": "",
+  "family": "soap",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "SmsServicePhp",
+  "label": "خانواده webservice/smsService.php (نوین ۱، SSMSS، تکست اس‌ام‌اس)",
+  "site": "",
+  "family": "soap",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "HiroSoap",
+  "label": "خانواده webservice/send.php (هیرو اس‌ام‌اس، ایده پیام)",
+  "site": "",
+  "family": "soap",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "ParsGreen",
+  "label": "پارس گرین (ParsGreen)",
+  "site": "",
+  "family": "soap",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "0098",
+  "label": "0098 اس‌ام‌اس (0098sms)",
+  "site": "",
+  "family": "soap",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "Candoo",
+  "label": "کندو اس‌ام‌اس (Candoo)",
+  "site": "",
+  "family": "soap",
+  "brands": "",
+  "pattern": false,
+  "soap": false
+ },
+ {
+  "class": "Generic",
+  "label": "سایر پنل‌ها — اتصال دستی وب‌سرویس (HTTP / REST)",
+  "site": "",
+  "family": "custom",
+  "brands": "",
+  "pattern": true,
+  "soap": false
+ }
+]

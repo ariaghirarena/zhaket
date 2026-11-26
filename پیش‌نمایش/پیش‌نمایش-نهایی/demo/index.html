@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>پنل مدیریت بچرخون — دمو</title>
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="side" id="side">
+    <div class="logo">
+      <span class="mk"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v8.5l7.4 4.2M12 12L5 16.6"/></svg></span>
+      <div><b>بچرخون</b><small>گردونهٔ شانس</small></div>
+    </div>
+    <a class="nav-i on" href="#dashboard" data-page="dashboard"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg><span>داشبورد</span></a><a class="nav-i" href="#wheels" data-page="wheels"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v8.5l7.4 4.2M12 12L5 16.6"/></svg><span>گردونه‌ها</span></a><a class="nav-i" href="#rules" data-page="rules"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h13"/><circle cx="18" cy="12" r="2"/></svg><span>قوانین و شرط‌ها</span></a><a class="nav-i" href="#prizes" data-page="prizes"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16v10H4zM4 10V6h16v4M12 6v14"/><path d="M12 10c0-3-2-5-4-4s0 4 4 4zM12 10c0-3 2-5 4-4s0 4-4 4z"/></svg><span>جایزه‌ها</span></a><a class="nav-i" href="#spins" data-page="spins"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 10-2.5 5.8"/><path d="M20 5v5h-5"/></svg><span>چرخش‌ها</span></a><a class="nav-i" href="#leads" data-page="leads"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 5.2a3.2 3.2 0 010 5.6M17.5 20c0-2.1-.7-4-1.9-5.4"/></svg><span>سرنخ‌ها</span></a><a class="nav-i" href="#credits" data-page="credits"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L4.3 9.4l6.1-.8z"/></svg><span>شانس کاربران</span></a><a class="nav-i" href="#campaigns" data-page="campaigns"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 5H3v11h4l4 4v-4h10z"/><path d="M7 10h6"/></svg><span>کمپین پیامکی</span></a><a class="nav-i" href="#reports" data-page="reports"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V6M4 20h16"/><path d="M8 16v-4M12 16V9M16 16v-7"/></svg><span>گزارش‌ها</span></a><a class="nav-i" href="#design" data-page="design"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg><span>ظاهر و تم</span></a><a class="nav-i" href="#tools" data-page="tools"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg><span>ابزارها</span></a><a class="nav-i" href="#guide" data-page="guide"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 016.5 3H20v16H6.5A2.5 2.5 0 004 21.5z"/><path d="M8 7h8M8 11h6"/></svg><span>راهنما</span></a>
+    <div class="badge-demo">این یک دموی استاتیک است.<br>هیچ درخواستی به سرور فرستاده نمی‌شود.</div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <button class="icon-btn mob-btn" id="mobBtn" aria-label="منو"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <div class="crumb">بچرخون <span style="color:#B9C4D6">/</span> <b id="crumb">داشبورد</b></div>
+      <div class="sp"></div>
+      <button class="icon-btn" aria-label="جستجو"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg></button>
+      <button class="icon-btn" aria-label="اعلان‌ها"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15V10a6 6 0 10-12 0v5l-2 3h16z"/><path d="M10 21h4"/></svg></button>
+      <div class="who"><div class="av">م</div><div><b>مدیر فروشگاه</b><span>دسترسی کامل</span></div></div>
+    </div>
+
+    <div class="page" id="page">
+      <section class="view" id="view-dashboard" hidden><div class="phead"><div><h1>داشبورد</h1><p>نمای کلی عملکرد گردونه در ۷ روز گذشته</p></div><div class="acts"><button class="btn btn-o">راهنما</button><button class="btn btn-p">ذخیرهٔ تغییرات</button></div></div><div class="ribbon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><b>حالت دمو:</b> داده‌ها نمونه‌اند و هیچ تغییری ذخیره نمی‌شود.</div>
+<div class="grid g4">
+  <div class="kpi"><div class="t"><span class="dot" style="background:#1D4ED8"></span>چرخش امروز</div><div class="v num">۱٬۲۴۸<small>بار</small></div><div class="d up">▲ ۱۲٪ نسبت به هفتهٔ قبل</div></div><div class="kpi"><div class="t"><span class="dot" style="background:#10B981"></span>برندگان</div><div class="v num">۳۸۶<small>نفر</small></div><div class="d up">▲ ۸٪ نسبت به هفتهٔ قبل</div></div><div class="kpi"><div class="t"><span class="dot" style="background:#F59E0B"></span>تخفیف صادرشده</div><div class="v num">۴٬۸۲۰٬۰۰۰<small>تومان</small></div><div class="d down">▼ ۵٪ نسبت به هفتهٔ قبل</div></div><div class="kpi"><div class="t"><span class="dot" style="background:#8B5CF6"></span>فروش منتسب</div><div class="v num">۳۹٬۴۰۰٬۰۰۰<small>تومان</small></div><div class="d up">▲ ۱۹٪ نسبت به هفتهٔ قبل</div></div>
+</div>
+<div class="grid g21">
+  <div class="card">
+    <div class="ch"><h2>روند چرخش و برد — ۷ روز گذشته</h2>
+      <div class="sp"><div class="seg"><button class="on">هفته</button><button>ماه</button><button>سال</button></div></div>
+    </div>
+    <div class="chart"><svg viewBox="0 0 640 180" preserveAspectRatio="none"><line x1="0" y1="180.0" x2="640" y2="180.0" stroke="#EDF1F8" stroke-width="1"/><line x1="0" y1="126.7" x2="640" y2="126.7" stroke="#EDF1F8" stroke-width="1"/><line x1="0" y1="73.3" x2="640" y2="73.3" stroke="#EDF1F8" stroke-width="1"/><line x1="0" y1="20.0" x2="640" y2="20.0" stroke="#EDF1F8" stroke-width="1"/><rect x="12.8" y="110.0" width="25.3" height="70.0" rx="3" fill="#1D4ED8" opacity=".95"/><rect x="104.2" y="83.3" width="25.3" height="96.7" rx="3" fill="#1D4ED8" opacity=".95"/><rect x="195.7" y="95.0" width="25.3" height="85.0" rx="3" fill="#1D4ED8" opacity=".95"/><rect x="287.1" y="56.7" width="25.3" height="123.3" rx="3" fill="#1D4ED8" opacity=".95"/><rect x="378.5" y="33.3" width="25.3" height="146.7" rx="3" fill="#1D4ED8" opacity=".95"/><rect x="469.9" y="20.0" width="25.3" height="160.0" rx="3" fill="#1D4ED8" opacity=".95"/><rect x="561.4" y="43.3" width="25.3" height="136.7" rx="3" fill="#1D4ED8" opacity=".95"/><rect x="41.1" y="150.0" width="25.3" height="30.0" rx="3" fill="#10B981" opacity=".62"/><rect x="132.6" y="140.0" width="25.3" height="40.0" rx="3" fill="#10B981" opacity=".62"/><rect x="224.0" y="143.3" width="25.3" height="36.7" rx="3" fill="#10B981" opacity=".62"/><rect x="315.4" y="125.0" width="25.3" height="55.0" rx="3" fill="#10B981" opacity=".62"/><rect x="406.9" y="111.7" width="25.3" height="68.3" rx="3" fill="#10B981" opacity=".62"/><rect x="498.3" y="103.3" width="25.3" height="76.7" rx="3" fill="#10B981" opacity=".62"/><rect x="589.7" y="116.7" width="25.3" height="63.3" rx="3" fill="#10B981" opacity=".62"/></svg></div>
+    <div class="legend"><span><i style="background:#1D4ED8"></i>چرخش</span><span><i style="background:#10B981"></i>برد</span></div>
+    <div class="cf"><span class="pill p-blue">نرخ برد: ۳۱٪</span><span class="pill p-grey">میانگین چرخش هر کاربر: ۱٫۸</span></div>
+  </div>
+  <div class="card">
+    <div class="ch"><h2>سهم جایزه‌ها</h2></div>
+    <div class="cb" style="display:flex;flex-direction:column;align-items:center;gap:12px">
+      <svg viewBox="0 0 170 170" style="width:170px;height:170px"><circle cx="85" cy="85" r="56" fill="none" stroke="#EFF3FA" stroke-width="17"/><circle cx="85" cy="85" r="56" fill="none" stroke="#10B981" stroke-width="17" stroke-dasharray="117.13 351.86" stroke-dashoffset="0.00" transform="rotate(-90 85 85)" stroke-linecap="round"/><circle cx="85" cy="85" r="56" fill="none" stroke="#0EA5E9" stroke-width="17" stroke-dasharray="74.91 351.86" stroke-dashoffset="-119.63" transform="rotate(-90 85 85)" stroke-linecap="round"/><circle cx="85" cy="85" r="56" fill="none" stroke="#F59E0B" stroke-width="17" stroke-dasharray="53.80 351.86" stroke-dashoffset="-197.04" transform="rotate(-90 85 85)" stroke-linecap="round"/><circle cx="85" cy="85" r="56" fill="none" stroke="#8B5CF6" stroke-width="17" stroke-dasharray="39.72 351.86" stroke-dashoffset="-253.34" transform="rotate(-90 85 85)" stroke-linecap="round"/><circle cx="85" cy="85" r="56" fill="none" stroke="#E2E8F0" stroke-width="17" stroke-dasharray="53.80 351.86" stroke-dashoffset="-295.56" transform="rotate(-90 85 85)" stroke-linecap="round"/></svg>
+      <div style="display:grid;gap:6px;font-size:12px;width:100%">
+        <div style="display:flex;justify-content:space-between"><span><i style="display:inline-block;width:8px;height:8px;border-radius:3px;background:#10B981;margin-inline-end:6px"></i>کوپن تخفیف</span><b class="num">۳۴٪</b></div>
+        <div style="display:flex;justify-content:space-between"><span><i style="display:inline-block;width:8px;height:8px;border-radius:3px;background:#0EA5E9;margin-inline-end:6px"></i>ارسال رایگان</span><b class="num">۲۲٪</b></div>
+        <div style="display:flex;justify-content:space-between"><span><i style="display:inline-block;width:8px;height:8px;border-radius:3px;background:#F59E0B;margin-inline-end:6px"></i>مبلغ ثابت</span><b class="num">۱۶٪</b></div>
+        <div style="display:flex;justify-content:space-between"><span><i style="display:inline-block;width:8px;height:8px;border-radius:3px;background:#E2E8F0;margin-inline-end:6px"></i>پوچ</span><b class="num">۱۶٪</b></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="ch"><h2>آخرین چرخش‌ها</h2><div class="sp"><button class="btn btn-o btn-s">همه</button></div></div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>کاربر</th><th>جایزه</th><th>شانس مصرفی</th><th>زمان</th><th>وضعیت</th></tr></thead>
+    <tbody><tr><td><div class="u"><div class="av">ن</div><div class="nm">نگار محمدی<span class="num">09121234567</span></div></div></td><td><span class="pill" style="background:#10B9811a;color:#10B981">کوپن ۱۵٪</span></td><td class="num">1</td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۵ - ۱۴:۲۲</td><td><span class="pill p-green">موفق</span></td></tr><tr><td><div class="u"><div class="av">س</div><div class="nm">سعید رضایی<span class="num">09351112233</span></div></div></td><td><span class="pill" style="background:#0EA5E91a;color:#0EA5E9">ارسال رایگان</span></td><td class="num">3</td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۵ - ۱۳:۵۸</td><td><span class="pill p-green">موفق</span></td></tr><tr><td><div class="u"><div class="av">م</div><div class="nm">مریم اکبری<span class="num">09195556677</span></div></div></td><td><span class="pill" style="background:#94A3B81a;color:#94A3B8">پوچ</span></td><td class="num">1</td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۵ - ۱۳:۴۰</td><td><span class="pill p-green">موفق</span></td></tr><tr><td><div class="u"><div class="av">ا</div><div class="nm">امیر کاظمی<span class="num">09124448899</span></div></div></td><td><span class="pill" style="background:#F59E0B1a;color:#F59E0B">۵۰٬۰۰۰ تومان</span></td><td class="num">2</td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۵ - ۱۲:۱۵</td><td><span class="pill p-green">موفق</span></td></tr><tr><td><div class="u"><div class="av">ز</div><div class="nm">زهرا نیک‌پور<span class="num">09367778811</span></div></div></td><td><span class="pill" style="background:#8B5CF61a;color:#8B5CF6">امتیاز باشگاه</span></td><td class="num">5</td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۵ - ۱۱:۰۲</td><td><span class="pill p-green">موفق</span></td></tr></tbody>
+  </table></div>
+</div></section><section class="view" id="view-wheels" hidden><div class="phead"><div><h1>گردونه‌ها</h1><p>ویرایش سگمنت‌ها با پیش‌نمایش زنده</p></div><div class="acts"><button class="btn btn-o">راهنما</button><button class="btn btn-p">ذخیرهٔ تغییرات</button></div></div><div class="ribbon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><b>حالت دمو:</b> داده‌ها نمونه‌اند و هیچ تغییری ذخیره نمی‌شود.</div>
+<div class="editor">
+  <div class="stage" id="stage">
+    <div class="pointer-cap"></div>
+    <div class="wheel-box"><svg viewBox="0 0 340 340"><defs><radialGradient id="hub" cx="35%" cy="28%" r="85%"><stop offset="0" stop-color="#FFF3BE"/><stop offset=".3" stop-color="#FFD75C"/><stop offset=".65" stop-color="#FFC517"/><stop offset="1" stop-color="#D79A00"/></radialGradient></defs><circle cx="170.0" cy="170.0" r="137.1" fill="#F2F0E6"/><g class="rot"><path d="M170.0 170.0 L170.0 47.6 A122.4 122.4 0 0 1 256.5 83.5 Z" fill="#10B981" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.4"/><text x="200.9" y="95.4" font-size="12.2" fill="#0A2E24" text-anchor="middle" font-family="Peyda,Tahoma" font-weight="700" transform="rotate(22.5 200.9 95.4)">کوپن ۱۵٪</text><path d="M170.0 170.0 L256.5 83.5 A122.4 122.4 0 0 1 292.4 170.0 Z" fill="#0EA5E9" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.4"/><text x="244.6" y="139.1" font-size="12.2" fill="#052A38" text-anchor="middle" font-family="Peyda,Tahoma" font-weight="700" transform="rotate(67.5 244.6 139.1)">ارسال رای</text><path d="M170.0 170.0 L292.4 170.0 A122.4 122.4 0 0 1 256.5 256.5 Z" fill="#F59E0B" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.4"/><text x="244.6" y="200.9" font-size="12.2" fill="#3B2400" text-anchor="middle" font-family="Peyda,Tahoma" font-weight="700" transform="rotate(112.5 244.6 200.9)">۵۰ هزار ت</text><path d="M170.0 170.0 L256.5 256.5 A122.4 122.4 0 0 1 170.0 292.4 Z" fill="#8B5CF6" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.4"/><text x="200.9" y="244.6" font-size="12.2" fill="#251041" text-anchor="middle" font-family="Peyda,Tahoma" font-weight="700" transform="rotate(157.5 200.9 244.6)">امتیاز با</text><path d="M170.0 170.0 L170.0 292.4 A122.4 122.4 0 0 1 83.5 256.5 Z" fill="#E2E8F0" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.4"/><text x="139.1" y="244.6" font-size="12.2" fill="#334155" text-anchor="middle" font-family="Peyda,Tahoma" font-weight="700" transform="rotate(202.5 139.1 244.6)">پوچ</text><path d="M170.0 170.0 L83.5 256.5 A122.4 122.4 0 0 1 47.6 170.0 Z" fill="#EC4899" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.4"/><text x="95.4" y="200.9" font-size="12.2" fill="#3B0A26" text-anchor="middle" font-family="Peyda,Tahoma" font-weight="700" transform="rotate(247.5 95.4 200.9)">محصول هدی</text><path d="M170.0 170.0 L47.6 170.0 A122.4 122.4 0 0 1 83.5 83.5 Z" fill="#3CC47E" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.4"/><text x="95.4" y="139.1" font-size="12.2" fill="#0A2E24" text-anchor="middle" font-family="Peyda,Tahoma" font-weight="700" transform="rotate(292.5 95.4 139.1)">کوپن ۱۰٪</text><path d="M170.0 170.0 L83.5 83.5 A122.4 122.4 0 0 1 170.0 47.6 Z" fill="#64748B" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.4"/><text x="139.1" y="95.4" font-size="12.2" fill="#1E293B" text-anchor="middle" font-family="Peyda,Tahoma" font-weight="700" transform="rotate(337.5 139.1 95.4)">چرخش مجدد</text></g><circle cx="170.0" cy="38.4" r="3.7" fill="#FFC517"/><circle cx="210.7" cy="44.9" r="3.7" fill="#FFC517"/><circle cx="247.3" cy="63.5" r="3.7" fill="#FFC517"/><circle cx="276.5" cy="92.7" r="3.7" fill="#FFC517"/><circle cx="295.1" cy="129.3" r="3.7" fill="#FFC517"/><circle cx="301.6" cy="170.0" r="3.7" fill="#FFC517"/><circle cx="295.1" cy="210.7" r="3.7" fill="#FFC517"/><circle cx="276.5" cy="247.3" r="3.7" fill="#FFC517"/><circle cx="247.3" cy="276.5" r="3.7" fill="#FFC517"/><circle cx="210.7" cy="295.1" r="3.7" fill="#FFC517"/><circle cx="170.0" cy="301.6" r="3.7" fill="#FFC517"/><circle cx="129.3" cy="295.1" r="3.7" fill="#FFC517"/><circle cx="92.7" cy="276.5" r="3.7" fill="#FFC517"/><circle cx="63.5" cy="247.3" r="3.7" fill="#FFC517"/><circle cx="44.9" cy="210.7" r="3.7" fill="#FFC517"/><circle cx="38.4" cy="170.0" r="3.7" fill="#FFC517"/><circle cx="44.9" cy="129.3" r="3.7" fill="#FFC517"/><circle cx="63.5" cy="92.7" r="3.7" fill="#FFC517"/><circle cx="92.7" cy="63.5" r="3.7" fill="#FFC517"/><circle cx="129.3" cy="44.9" r="3.7" fill="#FFC517"/><circle cx="170.0" cy="170.0" r="21.1" fill="url(#hub)"/></svg></div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div class="card">
+      <div class="ch"><h2>سگمنت‌ها</h2><div class="sp"><button class="btn btn-o btn-s"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>افزودن</button></div></div>
+      <div class="cb"><div class="seg-list" id="segList"><div class="seg-row"><span class="cl" style="background:#10B981"></span><input type="text" value="کوپن ۱۵٪" aria-label="نام سگمنت"><input type="number" value="12" min="0" max="100" aria-label="شانس"><button class="del" title="حذف">×</button></div><div class="seg-row"><span class="cl" style="background:#0EA5E9"></span><input type="text" value="ارسال رایگان" aria-label="نام سگمنت"><input type="number" value="13" min="0" max="100" aria-label="شانس"><button class="del" title="حذف">×</button></div><div class="seg-row"><span class="cl" style="background:#F59E0B"></span><input type="text" value="۵۰ هزار تومان" aria-label="نام سگمنت"><input type="number" value="14" min="0" max="100" aria-label="شانس"><button class="del" title="حذف">×</button></div><div class="seg-row"><span class="cl" style="background:#8B5CF6"></span><input type="text" value="امتیاز باشگاه" aria-label="نام سگمنت"><input type="number" value="15" min="0" max="100" aria-label="شانس"><button class="del" title="حذف">×</button></div><div class="seg-row"><span class="cl" style="background:#E2E8F0"></span><input type="text" value="پوچ" aria-label="نام سگمنت"><input type="number" value="16" min="0" max="100" aria-label="شانس"><button class="del" title="حذف">×</button></div><div class="seg-row"><span class="cl" style="background:#EC4899"></span><input type="text" value="محصول هدیه" aria-label="نام سگمنت"><input type="number" value="17" min="0" max="100" aria-label="شانس"><button class="del" title="حذف">×</button></div><div class="seg-row"><span class="cl" style="background:#3CC47E"></span><input type="text" value="کوپن ۱۰٪" aria-label="نام سگمنت"><input type="number" value="18" min="0" max="100" aria-label="شانس"><button class="del" title="حذف">×</button></div><div class="seg-row"><span class="cl" style="background:#64748B"></span><input type="text" value="چرخش مجدد" aria-label="نام سگمنت"><input type="number" value="19" min="0" max="100" aria-label="شانس"><button class="del" title="حذف">×</button></div></div>
+        <div class="total-note" style="margin-top:12px">جمع شانس‌ها: <b class="num">۱۰۰٪</b> — هر ردیف: نام · شانس</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch"><h2>آزمایش چرخش</h2></div>
+      <div class="cb" style="display:flex;flex-direction:column;gap:11px">
+        <button class="btn btn-p" id="spinBtn" style="justify-content:center">چرخاندن گردونه</button>
+        <div class="field"><label>سرعت چرخش</label><input type="range" min="1" max="10" value="6"></div>
+        <div class="switch"><input type="checkbox" id="sfx" checked><span class="tr"></span><span>صدای چرخش</span></div>
+        <div class="field"><label>حداکثر چرخش روزانه هر کاربر</label><input type="number" value="3"></div>
+      </div>
+    </div>
+  </div>
+</div></section><section class="view" id="view-rules" hidden><div class="phead"><div><h1>قوانین و شرط‌ها</h1><p>رویدادهای کسب شانس و شرط نمایش</p></div><div class="acts"><button class="btn btn-o">راهنما</button><button class="btn btn-p">ذخیرهٔ تغییرات</button></div></div><div class="ribbon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><b>حالت دمو:</b> داده‌ها نمونه‌اند و هیچ تغییری ذخیره نمی‌شود.</div>
+<div class="grid g2">
+  <div class="card">
+    <div class="ch"><h2>رویدادهای کسب شانس</h2><div class="sp"><span class="pill p-blue">۱۱ رویداد</span></div></div>
+    <div class="cb" style="display:flex;flex-direction:column;gap:9px">
+      <div class="cond-row" style="grid-template-columns:1fr 90px 32px">
+        <span style="font-size:13px">خرید از فروشگاه</span>
+        <input type="number" value="1" aria-label="تعداد شانس">
+        <button class="del">×</button>
+      </div>
+      <div class="cond-row" style="grid-template-columns:1fr 90px 32px">
+        <span style="font-size:13px">ثبت‌نام در سایت</span>
+        <input type="number" value="2" aria-label="تعداد شانس">
+        <button class="del">×</button>
+      </div>
+      <div class="cond-row" style="grid-template-columns:1fr 90px 32px">
+        <span style="font-size:13px">ثبت نظر روی محصول</span>
+        <input type="number" value="1" aria-label="تعداد شانس">
+        <button class="del">×</button>
+      </div>
+      <div class="cond-row" style="grid-template-columns:1fr 90px 32px">
+        <span style="font-size:13px">بازدید روزانه</span>
+        <input type="number" value="1" aria-label="تعداد شانس">
+        <button class="del">×</button>
+      </div>
+      <button class="btn btn-o" style="justify-content:center;margin-top:4px"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>افزودن رویداد</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ch"><h2>شرط نمایش گردونه</h2><div class="sp"><span class="pill p-violet">۵۱ شرط موجود</span></div></div>
+    <div class="cb" style="display:flex;flex-direction:column;gap:9px">
+      <div class="logic">همهٔ شرط‌ها برقرار باشند (AND)</div>
+      <div class="cond-row">
+        <select><option>سبد خرید</option><option>کاربر</option><option>بازدیدکننده</option></select>
+        <select><option>بیشتر از</option><option>کمتر از</option><option>مساوی</option></select>
+        <input type="text" value="۵۰۰٬۰۰۰ تومان">
+        <button class="del">×</button>
+      </div>
+      <div class="cond-row">
+        <select><option>نقش کاربر</option><option>تعداد سفارش</option><option>منبع ورود</option></select>
+        <select><option>یکی از</option><option>همه</option></select>
+        <input type="text" value="مشتری، مشتری ویژه">
+        <button class="del">×</button>
+      </div>
+      <div class="cond-row">
+        <select><option>زمان</option><option>روز هفته</option><option>تاریخ شمسی</option></select>
+        <select><option>در بازه</option><option>خارج از بازه</option></select>
+        <input type="text" value="۱۸:۰۰ تا ۲۳:۵۹">
+        <button class="del">×</button>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:4px">
+        <button class="btn btn-o btn-s"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>شرط جدید</button>
+        <button class="btn btn-o btn-s">یا (OR)</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="ch"><h2>سقف و محدودیت</h2></div>
+  <div class="cb grid g3">
+    <div class="field"><label>سقف کل جایزه در روز</label><input type="number" value="200"></div>
+    <div class="field"><label>حداکثر جایزهٔ یک کاربر در ماه</label><input type="number" value="4"></div>
+    <div class="field"><label>زمان انتظار بین دو چرخش (دقیقه)</label><input type="number" value="30"></div>
+  </div>
+</div></section><section class="view" id="view-prizes" hidden><div class="phead"><div><h1>جایزه‌ها</h1><p>چهارده نوع جایزه و سقف روزانه</p></div><div class="acts"><button class="btn btn-o">راهنما</button><button class="btn btn-p">ذخیرهٔ تغییرات</button></div></div><div class="ribbon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><b>حالت دمو:</b> داده‌ها نمونه‌اند و هیچ تغییری ذخیره نمی‌شود.</div>
+<div class="card">
+  <div class="ch"><h2>جایزه‌های این گردونه</h2><div class="sp"><span class="pill p-blue">۱۴ نوع جایزه</span>
+    <button class="btn btn-p btn-s"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>جایزه جدید</button></div></div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>سگمنت</th><th>نوع جایزه</th><th>مقدار</th><th>شانس</th><th>سقف روزانه</th><th>وضعیت</th></tr></thead>
+    <tbody>
+      <tr><td>کوپن ۱۵٪</td><td><span class="pill p-green">درصد تخفیف</span></td><td class="num">۱۵٪ (سقف ۲۰۰٬۰۰۰)</td><td class="num">۱۸٪</td><td class="num">۵۰</td><td><span class="pill p-green">فعال</span></td></tr>
+      <tr><td>ارسال رایگان</td><td><span class="pill p-blue">ارسال رایگان</span></td><td class="num">—</td><td class="num">۱۴٪</td><td class="num">۸۰</td><td><span class="pill p-green">فعال</span></td></tr>
+      <tr><td>۵۰ هزار تومان</td><td><span class="pill p-amber">مبلغ ثابت سبد</span></td><td class="num">۵۰٬۰۰۰</td><td class="num">۱۲٪</td><td class="num">۳۰</td><td><span class="pill p-green">فعال</span></td></tr>
+      <tr><td>امتیاز باشگاه</td><td><span class="pill p-violet">امتیاز</span></td><td class="num">۱۲۰ امتیاز</td><td class="num">۱۰٪</td><td class="num">۱۰۰</td><td><span class="pill p-green">فعال</span></td></tr>
+      <tr><td>محصول هدیه</td><td><span class="pill p-red">محصول رایگان</span></td><td class="num">جاکلیدی</td><td class="num">۶٪</td><td class="num">۱۵</td><td><span class="pill p-amber">سقف پر شده</span></td></tr>
+      <tr><td>پوچ</td><td><span class="pill p-grey">بدون جایزه</span></td><td class="num">—</td><td class="num">۴۰٪</td><td class="num">—</td><td><span class="pill p-green">فعال</span></td></tr>
+    </tbody>
+  </table></div>
+</div>
+<div class="grid g3">
+  <div class="card"><div class="cb"><h3 style="font-size:14px;color:var(--ink)">بانک کد</h3>
+    <p style="font-size:12.5px;color:var(--txt-2);margin:6px 0 10px">۱۲۴ کد باقی‌مانده از ۵۰۰ کد</p>
+    <div style="height:7px;border-radius:99px;background:#EFF3FA;overflow:hidden"><div style="width:25%;height:100%;background:#10B981"></div></div></div></div>
+  <div class="card"><div class="cb"><h3 style="font-size:14px;color:var(--ink)">صدور کوپن ووکامرس</h3>
+    <p style="font-size:12.5px;color:var(--txt-2);margin:6px 0 10px">پیشوند کد: BCH- · انقضا ۷ روز</p>
+    <span class="pill p-green">متصل به ووکامرس</span></div></div>
+  <div class="card"><div class="cb"><h3 style="font-size:14px;color:var(--ink)">جایزهٔ دلخواه</h3>
+    <p style="font-size:12.5px;color:var(--txt-2);margin:6px 0 10px">هر HTML یا لینک دلخواه به‌عنوان جایزه</p>
+    <span class="pill p-violet">۲ جایزهٔ سفارشی</span></div></div>
+</div></section><section class="view" id="view-spins" hidden><div class="phead"><div><h1>چرخش‌ها</h1><p>تاریخچهٔ کامل با فیلتر و خروجی</p></div><div class="acts"><button class="btn btn-o">راهنما</button><button class="btn btn-p">ذخیرهٔ تغییرات</button></div></div><div class="ribbon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><b>حالت دمو:</b> داده‌ها نمونه‌اند و هیچ تغییری ذخیره نمی‌شود.</div>
+<div class="card">
+  <div class="ch"><h2>تاریخچهٔ چرخش‌ها</h2>
+    <div class="sp"><div class="seg"><button class="on">امروز</button><button>۷ روز</button><button>ماه</button></div>
+    <button class="btn btn-o btn-s"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6"/><path d="M4 20h16"/></svg>خروجی اکسل</button></div></div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>کاربر</th><th>جایزه</th><th>شانس مصرفی</th><th>زمان</th><th>وضعیت</th></tr></thead>
+    <tbody><tr><td><div class="u"><div class="av">ن</div><div class="nm">نگار محمدی<span class="num">09121234567</span></div></div></td><td><span class="pill" style="background:#10B9811a;color:#10B981">کوپن ۱۵٪</span></td><td class="num">1</td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۵ - ۱۴:۲۲</td><td><span class="pill p-green">موفق</span></td></tr><tr><td><div class="u"><div class="av">س</div><div class="nm">سعید رضایی<span class="num">09351112233</span></div></div></td><td><span class="pill" style="background:#0EA5E91a;color:#0EA5E9">ارسال رایگان</span></td><td class="num">3</td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۵ - ۱۳:۵۸</td><td><span class="pill p-green">موفق</span></td></tr><tr><td><div class="u"><div class="av">م</div><div class="nm">مریم اکبری<span class="num">09195556677</span></div></div></td><td><span class="pill" style="background:#94A3B81a;color:#94A3B8">پوچ</span></td><td class="num">1</td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۵ - ۱۳:۴۰</td><td><span class="pill p-green">موفق</span></td></tr><tr><td><div class="u"><div class="av">ا</div><div class="nm">امیر کاظمی<span class="num">09124448899</span></div></div></td><td><span class="pill" style="background:#F59E0B1a;color:#F59E0B">۵۰٬۰۰۰ تومان</span></td><td class="num">2</td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۵ - ۱۲:۱۵</td><td><span class="pill p-green">موفق</span></td></tr><tr><td><div class="u"><div class="av">ز</div><div class="nm">زهرا نیک‌پور<span class="num">09367778811</span></div></div></td><td><span class="pill" style="background:#8B5CF61a;color:#8B5CF6">امتیاز باشگاه</span></td><td class="num">5</td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۵ - ۱۱:۰۲</td><td><span class="pill p-green">موفق</span></td></tr><tr><td><div class="u"><div class="av">ح</div><div class="nm">حسین مرادی<span class="num">09130002233</span></div></div></td><td><span class="pill" style="background:#EC48991a;color:#EC4899">محصول هدیه</span></td><td class="num">3</td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۴ - ۲۲:۴۸</td><td><span class="pill p-green">موفق</span></td></tr><tr><td><div class="u"><div class="av">ف</div><div class="nm">فاطمه سلطانی<span class="num">09192224455</span></div></div></td><td><span class="pill" style="background:#64748B1a;color:#64748B">چرخش مجدد</span></td><td class="num">1</td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۴ - ۲۱:۳۰</td><td><span class="pill p-green">موفق</span></td></tr></tbody>
+  </table></div>
+  <div class="cf"><span class="pill p-grey">۱٬۲۴۸ رکورد در این بازه</span>
+    <span style="margin-inline-start:auto;font-size:12px;color:var(--txt-3)">صفحهٔ ۱ از ۸۹</span></div>
+</div></section><section class="view" id="view-leads" hidden><div class="phead"><div><h1>سرنخ‌ها</h1><p>شماره‌های گرفته‌شده و نرخ تبدیل</p></div><div class="acts"><button class="btn btn-o">راهنما</button><button class="btn btn-p">ذخیرهٔ تغییرات</button></div></div><div class="ribbon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><b>حالت دمو:</b> داده‌ها نمونه‌اند و هیچ تغییری ذخیره نمی‌شود.</div>
+<div class="grid g4">
+  <div class="kpi"><div class="t"><span class="dot" style="background:#1D4ED8"></span>کل سرنخ‌ها</div><div class="v num">۳٬۴۱۲<small>نفر</small></div><div class="d up">▲ ۹٪ نسبت به هفتهٔ قبل</div></div><div class="kpi"><div class="t"><span class="dot" style="background:#10B981"></span>موبایل تاییدشده</div><div class="v num">۲٬۸۹۰<small>نفر</small></div><div class="d up">▲ ۶٪ نسبت به هفتهٔ قبل</div></div><div class="kpi"><div class="t"><span class="dot" style="background:#8B5CF6"></span>خریدار</div><div class="v num">۱٬۱۴۰<small>نفر</small></div><div class="d up">▲ ۴٪ نسبت به هفتهٔ قبل</div></div><div class="kpi"><div class="t"><span class="dot" style="background:#F59E0B"></span>نرخ تبدیل</div><div class="v num">۳۳٪<small></small></div><div class="d up">▲ ۲٪ نسبت به هفتهٔ قبل</div></div>
+</div>
+<div class="card">
+  <div class="ch"><h2>سرنخ‌ها</h2><div class="sp"><button class="btn btn-o btn-s"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg>جستجو</button></div></div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>کاربر</th><th>شانس</th><th>چرخش</th><th>وضعیت</th><th>تاریخ</th></tr></thead>
+    <tbody><tr><td><div class="u"><div class="av">ر</div><div class="nm">ریحانه فرهادی<span class="num">09121119988</span></div></div></td><td class="num">۳</td><td class="num">۱</td><td><span class="pill p-green">خرید موفق</span></td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۵</td></tr><tr><td><div class="u"><div class="av">م</div><div class="nm">محمد طاهری<span class="num">09350001122</span></div></div></td><td class="num">۰</td><td class="num">۰</td><td><span class="pill p-grey">فقط شماره</span></td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۵</td></tr><tr><td><div class="u"><div class="av">س</div><div class="nm">سارا احمدی<span class="num">09123334455</span></div></div></td><td class="num">۲</td><td class="num">۲</td><td><span class="pill p-green">خرید موفق</span></td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۴</td></tr><tr><td><div class="u"><div class="av">ع</div><div class="nm">علی شریفی<span class="num">09198887766</span></div></div></td><td class="num">۱</td><td class="num">۰</td><td><span class="pill p-amber">بدون خرید</span></td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۴</td></tr><tr><td><div class="u"><div class="av">ن</div><div class="nm">نازنین کریمی<span class="num">09362223344</span></div></div></td><td class="num">۴</td><td class="num">۳</td><td><span class="pill p-green">خرید موفق</span></td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۳</td></tr></tbody>
+  </table></div>
+</div></section><section class="view" id="view-credits" hidden><div class="phead"><div><h1>شانس کاربران</h1><p>دفتر شانس و منبع آن</p></div><div class="acts"><button class="btn btn-o">راهنما</button><button class="btn btn-p">ذخیرهٔ تغییرات</button></div></div><div class="ribbon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><b>حالت دمو:</b> داده‌ها نمونه‌اند و هیچ تغییری ذخیره نمی‌شود.</div>
+<div class="grid g3">
+  <div class="kpi"><div class="t"><span class="dot" style="background:#1D4ED8"></span>شانس فعال</div><div class="v num">۸٬۲۱۴<small>شانس</small></div><div class="d up">▲ ۱۴٪ نسبت به هفتهٔ قبل</div></div><div class="kpi"><div class="t"><span class="dot" style="background:#10B981"></span>شانس مصرف‌شده</div><div class="v num">۵٬۹۸۰<small>شانس</small></div><div class="d up">▲ ۱۱٪ نسبت به هفتهٔ قبل</div></div><div class="kpi"><div class="t"><span class="dot" style="background:#EF4444"></span>شانس منقضی</div><div class="v num">۳۱۲<small>شانس</small></div><div class="d down">▼ ۳٪ نسبت به هفتهٔ قبل</div></div>
+</div>
+<div class="card">
+  <div class="ch"><h2>دفتر شانس کاربران</h2><div class="sp"><span class="pill p-blue">۳ حالت: آزاد / با شانس / ترکیبی</span></div></div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>کاربر</th><th>شانس فعال</th><th>منبع</th><th>آخرین فعالیت</th><th>عملیات</th></tr></thead>
+    <tbody>
+      <tr><td><div class="u"><div class="av">ن</div><div class="nm">نگار محمدی<span class="num">09121234567</span></div></div></td><td class="num">۳</td><td><span class="pill p-green">خرید</span></td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۵</td><td><button class="btn btn-o btn-s">افزودن شانس</button></td></tr>
+      <tr><td><div class="u"><div class="av">س</div><div class="nm">سعید رضایی<span class="num">09351112233</span></div></div></td><td class="num">۱</td><td><span class="pill p-blue">ثبت‌نام</span></td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۵</td><td><button class="btn btn-o btn-s">افزودن شانس</button></td></tr>
+      <tr><td><div class="u"><div class="av">م</div><div class="nm">مریم اکبری<span class="num">09195556677</span></div></div></td><td class="num">۰</td><td><span class="pill p-grey">روزانه</span></td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۴</td><td><button class="btn btn-o btn-s">افزودن شانس</button></td></tr>
+      <tr><td><div class="u"><div class="av">ا</div><div class="nm">امیر کاظمی<span class="num">09124448899</span></div></div></td><td class="num">۵</td><td><span class="pill p-violet">معرفی دوست</span></td><td class="num" style="color:#8B9AB1">۱۴۰۴/۰۹/۰۳</td><td><button class="btn btn-o btn-s">افزودن شانس</button></td></tr>
+    </tbody>
+  </table></div>
+</div></section><section class="view" id="view-campaigns" hidden><div class="phead"><div><h1>کمپین پیامکی</h1><p>ارسال گروهی دسته‌ای با تلاش مجدد</p></div><div class="acts"><button class="btn btn-o">راهنما</button><button class="btn btn-p">ذخیرهٔ تغییرات</button></div></div><div class="ribbon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><b>حالت دمو:</b> داده‌ها نمونه‌اند و هیچ تغییری ذخیره نمی‌شود.</div>
+<div class="grid g21">
+  <div class="card">
+    <div class="ch"><h2>کمپین‌های پیامکی</h2><div class="sp"><button class="btn btn-p btn-s"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>کمپین جدید</button></div></div>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>عنوان</th><th>مخاطب</th><th>پنل</th><th>وضعیت</th><th>ارسال‌شده</th></tr></thead>
+      <tbody>
+        <tr><td>اطلاع برندگان هفته</td><td class="num">۳۸۶</td><td>کاوه‌نگار</td><td><span class="pill p-green">در حال ارسال</span></td><td class="num">۲۴۰ / ۳۸۶</td></tr>
+        <tr><td>یادآوری شانس مصرف‌نشده</td><td class="num">۱٬۲۰۴</td><td>SMS.ir</td><td><span class="pill p-blue">زمان‌بندی‌شده</span></td><td class="num">—</td></tr>
+        <tr><td>کد تایید موبایل</td><td class="num">۲٬۸۹۰</td><td>IPPANEL</td><td><span class="pill p-green">تمام‌شده</span></td><td class="num">۲٬۸۹۰</td></tr>
+        <tr><td>تبریک خرید اول</td><td class="num">۱۸</td><td>ملی‌پیامک</td><td><span class="pill p-amber">تلاش مجدد</span></td><td class="num">۶ / ۱۸</td></tr>
+      </tbody>
+    </table></div>
+    <div class="cf"><span class="pill p-grey">ارسال دسته‌ای: ۲۵ پیامک در هر درخواست</span>
+      <span class="pill p-grey">تلاش مجدد خودکار: ۳</span></div>
+  </div>
+  <div class="card">
+    <div class="ch"><h2>پیش‌نمایش پیام</h2></div>
+    <div class="cb">
+      <div class="phone-mini"><div class="scr">
+        <div class="ms"><b>بچرخون</b>تبریک {{نام}}! جایزهٔ شما: {{جایزه}}. تا ۴۸ ساعت قابل استفاده است.</div>
+        <div class="ms"><b>کد تایید</b>کد شما:<span class="code">۴۸۲۹۱۶</span></div>
+      </div></div>
+      <div class="field" style="margin-top:14px"><label>پنل پیامک</label>
+        <select><option>کاوه‌نگار</option><option>SMS.ir</option><option>IPPANEL</option><option>ملی‌پیامک</option></select></div>
+    </div>
+  </div>
+</div></section><section class="view" id="view-reports" hidden><div class="phead"><div><h1>گزارش‌ها</h1><p>تخفیف، فروش منتسب و بازگشت سرمایه</p></div><div class="acts"><button class="btn btn-o">راهنما</button><button class="btn btn-p">ذخیرهٔ تغییرات</button></div></div><div class="ribbon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><b>حالت دمو:</b> داده‌ها نمونه‌اند و هیچ تغییری ذخیره نمی‌شود.</div>
+<div class="grid g4">
+  <div class="kpi"><div class="t"><span class="dot" style="background:#F59E0B"></span>تخفیف صادرشده</div><div class="v num">۴٬۸۲۰٬۰۰۰<small>تومان</small></div><div class="d down">▼ ۵٪ نسبت به هفتهٔ قبل</div></div><div class="kpi"><div class="t"><span class="dot" style="background:#10B981"></span>سفارش منتسب</div><div class="v num">۵۱۲<small>سفارش</small></div><div class="d up">▲ ۱۶٪ نسبت به هفتهٔ قبل</div></div><div class="kpi"><div class="t"><span class="dot" style="background:#8B5CF6"></span>درآمد منتسب</div><div class="v num">۳۹٬۴۰۰٬۰۰۰<small>تومان</small></div><div class="d up">▲ ۱۹٪ نسبت به هفتهٔ قبل</div></div><div class="kpi"><div class="t"><span class="dot" style="background:#1D4ED8"></span>بازگشت سرمایه</div><div class="v num">۸٫۲<small>برابر</small></div><div class="d up">▲ ۷٪ نسبت به هفتهٔ قبل</div></div>
+</div>
+<div class="card">
+  <div class="ch"><h2>فروش منتسب به گردونه</h2>
+    <div class="sp"><div class="seg"><button class="on">۱۴ روز</button><button>۳۰ روز</button></div></div></div>
+  <div class="chart"><svg viewBox="0 0 640 180" preserveAspectRatio="none"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D4ED8" stop-opacity=".22"/><stop offset="1" stop-color="#1D4ED8" stop-opacity="0"/></linearGradient></defs><path d="M0,166 L0.0,132.3 L49.2,117.3 L98.5,124.8 L147.7,102.4 L196.9,109.8 L246.2,83.6 L295.4,93.0 L344.6,68.7 L393.8,76.2 L443.1,51.8 L492.3,59.3 L541.5,35.0 L590.8,42.5 L640.0,20.0 L640,166 Z" fill="url(#lg)"/><polyline points="0.0,132.3 49.2,117.3 98.5,124.8 147.7,102.4 196.9,109.8 246.2,83.6 295.4,93.0 344.6,68.7 393.8,76.2 443.1,51.8 492.3,59.3 541.5,35.0 590.8,42.5 640.0,20.0" fill="none" stroke="#1D4ED8" stroke-width="2.4" stroke-linejoin="round"/></svg></div>
+  <div class="legend"><span><i style="background:#1D4ED8"></i>فروش (میلیون تومان)</span></div>
+</div>
+<div class="card">
+  <div class="ch"><h2>عملکرد جایزه‌ها</h2></div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>جایزه</th><th>صادرشده</th><th>استفاده‌شده</th><th>نرخ استفاده</th><th>تخفیف</th></tr></thead>
+    <tbody>
+      <tr><td>کوپن ۱۵٪</td><td class="num">۴۱۲</td><td class="num">۲۹۸</td><td><span class="pill p-green">۷۲٪</span></td><td class="num">۲٬۱۴۰٬۰۰۰</td></tr>
+      <tr><td>ارسال رایگان</td><td class="num">۲۶۴</td><td class="num">۲۱۰</td><td><span class="pill p-green">۸۰٪</span></td><td class="num">۵۳۰٬۰۰۰</td></tr>
+      <tr><td>۵۰ هزار تومان</td><td class="num">۱۴۸</td><td class="num">۹۲</td><td><span class="pill p-amber">۶۲٪</span></td><td class="num">۴٬۶۰۰٬۰۰۰</td></tr>
+      <tr><td>امتیاز باشگاه</td><td class="num">۱۲۶</td><td class="num">۱۰۴</td><td><span class="pill p-green">۸۳٪</span></td><td class="num">—</td></tr>
+    </tbody>
+  </table></div>
+</div></section><section class="view" id="view-design" hidden><div class="phead"><div><h1>ظاهر و تم</h1><p>سی‌وشش تم آماده و تنظیمات ظاهر</p></div><div class="acts"><button class="btn btn-o">راهنما</button><button class="btn btn-p">ذخیرهٔ تغییرات</button></div></div><div class="ribbon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><b>حالت دمو:</b> داده‌ها نمونه‌اند و هیچ تغییری ذخیره نمی‌شود.</div>
+<div class="grid g21">
+  <div class="card">
+    <div class="ch"><h2>تم‌های آماده</h2><div class="sp"><span class="pill p-blue">۳۶ تم · ۶ خانواده</span></div></div>
+    <div class="cb"><div class="th-grid"><div class="th on" data-theme="classic"><div class="sw" style="background:conic-gradient(from -20deg,#1D4ED8 0 25%,#F59E0B 0 50%,#1D4ED8 0 75%,#F59E0B 0 100%)"></div><div class="nm">کلاسیک آبی</div><div class="gp">پایه</div></div><div class="th" data-theme="neon"><div class="sw" style="background:conic-gradient(from -20deg,#FF2E88 0 25%,#00E5FF 0 50%,#FF2E88 0 75%,#00E5FF 0 100%)"></div><div class="nm">نئون شب</div><div class="gp">پایه</div></div><div class="th" data-theme="gold"><div class="sw" style="background:conic-gradient(from -20deg,#111111 0 25%,#C9A227 0 50%,#111111 0 75%,#C9A227 0 100%)"></div><div class="nm">طلایی لوکس</div><div class="gp">لوکس</div></div><div class="th" data-theme="candy"><div class="sw" style="background:conic-gradient(from -20deg,#FF6FB5 0 25%,#FFC2E2 0 50%,#FF6FB5 0 75%,#FFC2E2 0 100%)"></div><div class="nm">آب‌نبات</div><div class="gp">سرگرمی</div></div><div class="th" data-theme="pastel"><div class="sw" style="background:conic-gradient(from -20deg,#A5B4FC 0 25%,#FBCFE8 0 50%,#A5B4FC 0 75%,#FBCFE8 0 100%)"></div><div class="nm">پاستلی</div><div class="gp">پایه</div></div><div class="th" data-theme="minimal"><div class="sw" style="background:conic-gradient(from -20deg,#0f172a 0 25%,#ffffff 0 50%,#0f172a 0 75%,#ffffff 0 100%)"></div><div class="nm">مینیمال سفید</div><div class="gp">پایه</div></div><div class="th" data-theme="dark"><div class="sw" style="background:conic-gradient(from -20deg,#3B82F6 0 25%,#1e293b 0 50%,#3B82F6 0 75%,#1e293b 0 100%)"></div><div class="nm">دارک مود</div><div class="gp">پایه</div></div><div class="th" data-theme="glass"><div class="sw" style="background:conic-gradient(from -20deg,rgba(99,102,241,.85) 0 25%,rgba(236,72,153,.85) 0 50%,rgba(99,102,241,.85) 0 75%,rgba(236,72,153,.85) 0 100%)"></div><div class="nm">شیشه‌ای</div><div class="gp">لوکس</div></div><div class="th" data-theme="casino"><div class="sw" style="background:conic-gradient(from -20deg,#B91C1C 0 25%,#0f5132 0 50%,#B91C1C 0 75%,#0f5132 0 100%)"></div><div class="nm">کازینو</div><div class="gp">لوکس</div></div><div class="th" data-theme="retro"><div class="sw" style="background:conic-gradient(from -20deg,#FF6B6B 0 25%,#FFD93D 0 50%,#FF6B6B 0 75%,#FFD93D 0 100%)"></div><div class="nm">رترو ۸۰</div><div class="gp">سرگرمی</div></div><div class="th" data-theme="ocean"><div class="sw" style="background:conic-gradient(from -20deg,#0077B6 0 25%,#00B4D8 0 50%,#0077B6 0 75%,#00B4D8 0 100%)"></div><div class="nm">اقیانوس</div><div class="gp">طبیعت</div></div><div class="th" data-theme="forest"><div class="sw" style="background:conic-gradient(from -20deg,#2D6A4F 0 25%,#52B788 0 50%,#2D6A4F 0 75%,#52B788 0 100%)"></div><div class="nm">جنگل</div><div class="gp">طبیعت</div></div><div class="th" data-theme="fire"><div class="sw" style="background:conic-gradient(from -20deg,#DC2F02 0 25%,#F48C06 0 50%,#DC2F02 0 75%,#F48C06 0 100%)"></div><div class="nm">آتشین</div><div class="gp">سرگرمی</div></div><div class="th" data-theme="royal"><div class="sw" style="background:conic-gradient(from -20deg,#5B21B6 0 25%,#7C3AED 0 50%,#5B21B6 0 75%,#7C3AED 0 100%)"></div><div class="nm">سلطنتی</div><div class="gp">لوکس</div></div><div class="th" data-theme="sunset"><div class="sw" style="background:conic-gradient(from -20deg,#FF7B54 0 25%,#FFB26B 0 50%,#FF7B54 0 75%,#FFB26B 0 100%)"></div><div class="nm">غروب</div><div class="gp">طبیعت</div></div><div class="th" data-theme="corporate"><div class="sw" style="background:conic-gradient(from -20deg,#0F4C81 0 25%,#E2E8F0 0 50%,#0F4C81 0 75%,#E2E8F0 0 100%)"></div><div class="nm">شرکتی</div><div class="gp">پایه</div></div><div class="th" data-theme="nowruz"><div class="sw" style="background:conic-gradient(from -20deg,#2E7D32 0 25%,#C62828 0 50%,#2E7D32 0 75%,#C62828 0 100%)"></div><div class="nm">نوروز</div><div class="gp">ایرانی</div></div><div class="th" data-theme="yalda"><div class="sw" style="background:conic-gradient(from -20deg,#7B1E3A 0 25%,#B71C1C 0 50%,#7B1E3A 0 75%,#B71C1C 0 100%)"></div><div class="nm">شب یلدا</div><div class="gp">ایرانی</div></div><div class="th" data-theme="black_friday"><div class="sw" style="background:conic-gradient(from -20deg,#111111 0 25%,#FACC15 0 50%,#111111 0 75%,#FACC15 0 100%)"></div><div class="nm">بلک فرایدی</div><div class="gp">مناسبتی</div></div><div class="th" data-theme="ramadan"><div class="sw" style="background:conic-gradient(from -20deg,#0B3D91 0 25%,#C9A227 0 50%,#0B3D91 0 75%,#C9A227 0 100%)"></div><div class="nm">رمضان</div><div class="gp">ایرانی</div></div><div class="th" data-theme="christmas"><div class="sw" style="background:conic-gradient(from -20deg,#C1121F 0 25%,#2A9D8F 0 50%,#C1121F 0 75%,#2A9D8F 0 100%)"></div><div class="nm">کریسمس</div><div class="gp">مناسبتی</div></div><div class="th" data-theme="halloween"><div class="sw" style="background:conic-gradient(from -20deg,#F97316 0 25%,#1a1a1a 0 50%,#F97316 0 75%,#1a1a1a 0 100%)"></div><div class="nm">هالووین</div><div class="gp">مناسبتی</div></div><div class="th" data-theme="valentine"><div class="sw" style="background:conic-gradient(from -20deg,#E11D48 0 25%,#FDA4AF 0 50%,#E11D48 0 75%,#FDA4AF 0 100%)"></div><div class="nm">ولنتاین</div><div class="gp">مناسبتی</div></div><div class="th" data-theme="spring"><div class="sw" style="background:conic-gradient(from -20deg,#84CC16 0 25%,#F472B6 0 50%,#84CC16 0 75%,#F472B6 0 100%)"></div><div class="nm">بهار</div><div class="gp">طبیعت</div></div><div class="th" data-theme="summer"><div class="sw" style="background:conic-gradient(from -20deg,#FACC15 0 25%,#06B6D4 0 50%,#FACC15 0 75%,#06B6D4 0 100%)"></div><div class="nm">تابستان</div><div class="gp">طبیعت</div></div><div class="th" data-theme="autumn"><div class="sw" style="background:conic-gradient(from -20deg,#B45309 0 25%,#D97706 0 50%,#B45309 0 75%,#D97706 0 100%)"></div><div class="nm">پاییز</div><div class="gp">طبیعت</div></div><div class="th" data-theme="winter"><div class="sw" style="background:conic-gradient(from -20deg,#60A5FA 0 25%,#E0F2FE 0 50%,#60A5FA 0 75%,#E0F2FE 0 100%)"></div><div class="nm">زمستان</div><div class="gp">طبیعت</div></div><div class="th" data-theme="kids"><div class="sw" style="background:conic-gradient(from -20deg,#F87171 0 25%,#FBBF24 0 50%,#F87171 0 75%,#FBBF24 0 100%)"></div><div class="nm">کودکانه</div><div class="gp">سرگرمی</div></div><div class="th" data-theme="sport"><div class="sw" style="background:conic-gradient(from -20deg,#16A34A 0 25%,#ffffff 0 50%,#16A34A 0 75%,#ffffff 0 100%)"></div><div class="nm">ورزشی</div><div class="gp">سرگرمی</div></div><div class="th" data-theme="tech"><div class="sw" style="background:conic-gradient(from -20deg,#06B6D4 0 25%,#0f172a 0 50%,#06B6D4 0 75%,#0f172a 0 100%)"></div><div class="nm">تکنولوژی</div><div class="gp">لوکس</div></div><div class="th" data-theme="coffee"><div class="sw" style="background:conic-gradient(from -20deg,#6F4E37 0 25%,#C8A27A 0 50%,#6F4E37 0 75%,#C8A27A 0 100%)"></div><div class="nm">کافه</div><div class="gp">طبیعت</div></div><div class="th" data-theme="rose_gold"><div class="sw" style="background:conic-gradient(from -20deg,#B76E79 0 25%,#F7CAC9 0 50%,#B76E79 0 75%,#F7CAC9 0 100%)"></div><div class="nm">رزگلد</div><div class="gp">لوکس</div></div><div class="th" data-theme="mono"><div class="sw" style="background:conic-gradient(from -20deg,#1D4ED8 0 25%,#2563EB 0 50%,#1D4ED8 0 75%,#2563EB 0 100%)"></div><div class="nm">تک‌رنگ</div><div class="gp">پایه</div></div><div class="th" data-theme="rainbow"><div class="sw" style="background:conic-gradient(from -20deg,#EF4444 0 25%,#F97316 0 50%,#EF4444 0 75%,#F97316 0 100%)"></div><div class="nm">رنگین‌کمان</div><div class="gp">سرگرمی</div></div><div class="th" data-theme="chaharshanbe"><div class="sw" style="background:conic-gradient(from -20deg,#F59E0B 0 25%,#B91C1C 0 50%,#F59E0B 0 75%,#B91C1C 0 100%)"></div><div class="nm">چهارشنبه‌سوری</div><div class="gp">ایرانی</div></div><div class="th" data-theme="birthday"><div class="sw" style="background:conic-gradient(from -20deg,#8B5CF6 0 25%,#F472B6 0 50%,#8B5CF6 0 75%,#F472B6 0 100%)"></div><div class="nm">تولد فروشگاه</div><div class="gp">مناسبتی</div></div></div></div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div class="card">
+      <div class="ch"><h2>ظاهر گردونه</h2></div>
+      <div class="cb" style="display:flex;flex-direction:column;gap:12px">
+        <div class="field"><label>لبهٔ گردونه</label><select><option>لامپ‌دار</option><option>ساده</option><option>دوبل</option><option>نقطه‌ای</option><option>فلزی</option><option>نئون</option><option>بدون</option></select></div>
+        <div class="field"><label>چیدمان متن</label><select><option>شعاعی</option><option>افقی</option><option>منحنی</option></select></div>
+        <div class="field"><label>مرکز گردونه</label><select><option>دکمه</option><option>دایره</option><option>ستاره</option><option>لوگو</option><option>جواهر</option></select></div>
+        <div class="switch"><input type="checkbox" checked><span class="tr"></span><span>افکت بردن (کانفتی)</span></div>
+        <div class="switch"><input type="checkbox" checked><span class="tr"></span><span>لرزش هنگام پوچ</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch"><h2>پاپ‌آپ</h2></div>
+      <div class="cb" style="display:flex;flex-direction:column;gap:12px">
+        <div class="field"><label>حالت نمایش</label><select><option>مودال</option><option>تمام‌صفحه</option><option>اسلاید</option><option>شیت پایین</option><option>نیم‌صفحه</option><option>سایدبار</option></select></div>
+        <div class="field"><label>تاخیر نمایش (ثانیه)</label><input type="number" value="6"></div>
+      </div>
+    </div>
+  </div>
+</div></section><section class="view" id="view-tools" hidden><div class="phead"><div><h1>ابزارها</h1><p>نگهداری، پاک‌سازی و سلامت سیستم</p></div><div class="acts"><button class="btn btn-o">راهنما</button><button class="btn btn-p">ذخیرهٔ تغییرات</button></div></div><div class="ribbon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><b>حالت دمو:</b> داده‌ها نمونه‌اند و هیچ تغییری ذخیره نمی‌شود.</div>
+<div class="grid g2">
+  <div class="card">
+    <div class="ch"><h2>ابزارهای نگهداری</h2></div>
+    <div class="cb" style="display:flex;flex-direction:column;gap:11px">
+      <div style="display:flex;align-items:center;gap:10px;justify-content:space-between;border-bottom:1px solid var(--line-2);padding-bottom:11px">
+        <div><b style="font-size:13.5px">پاک‌سازی چرخش‌های آزمایشی</b><div class="hint">فقط رکوردهای دمو حذف می‌شوند</div></div>
+        <button class="btn btn-o btn-s">اجرا</button></div>
+      <div style="display:flex;align-items:center;gap:10px;justify-content:space-between;border-bottom:1px solid var(--line-2);padding-bottom:11px">
+        <div><b style="font-size:13.5px">بازسازی آمار سفارش‌ها</b><div class="hint">جدول آینهٔ سفارش از نو ساخته می‌شود</div></div>
+        <button class="btn btn-o btn-s">اجرا</button></div>
+      <div style="display:flex;align-items:center;gap:10px;justify-content:space-between">
+        <div><b style="font-size:13.5px">بررسی سلامت دیتابیس</b><div class="hint">۱۲ جدول، نسخهٔ ساختار ۶</div></div>
+        <button class="btn btn-g btn-s">بررسی</button></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ch"><h2>وضعیت سیستم</h2></div>
+    <div class="cb" style="display:flex;flex-direction:column;gap:9px;font-size:13px">
+      <div style="display:flex;justify-content:space-between"><span>ساختار دیتابیس</span><span class="pill p-green">سالم</span></div>
+      <div style="display:flex;justify-content:space-between"><span>Cron ارسال پیامک</span><span class="pill p-green">فعال</span></div>
+      <div style="display:flex;justify-content:space-between"><span>پنل پیامک</span><span class="pill p-green">متصل</span></div>
+      <div style="display:flex;justify-content:space-between"><span>ووکامرس</span><span class="pill p-blue">شناسایی شد</span></div>
+      <div style="display:flex;justify-content:space-between"><span>حافظهٔ کش گردونه</span><span class="pill p-amber">۸۲٪</span></div>
+    </div>
+  </div>
+</div></section><section class="view" id="view-guide" hidden><div class="phead"><div><h1>راهنما</h1><p>شروع سریع و شورت‌کدها</p></div><div class="acts"><button class="btn btn-o">راهنما</button><button class="btn btn-p">ذخیرهٔ تغییرات</button></div></div><div class="ribbon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><b>حالت دمو:</b> داده‌ها نمونه‌اند و هیچ تغییری ذخیره نمی‌شود.</div>
+<div class="grid g2">
+  <div class="card">
+    <div class="ch"><h2>شروع سریع در پنج قدم</h2></div>
+    <div class="cb" style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;gap:12px"><span class="pill p-blue">۱</span><div><b style="font-size:13.5px">یک گردونه بساز</b><div class="hint">از صفحهٔ گردونه‌ها، «افزودن» را بزن و نام بگذار.</div></div></div>
+      <div style="display:flex;gap:12px"><span class="pill p-blue">۲</span><div><b style="font-size:13.5px">سگمنت‌ها و جایزه‌ها</b><div class="hint">حداقل دو جایزه و یک سگمنت پوچ بگذار.</div></div></div>
+      <div style="display:flex;gap:12px"><span class="pill p-blue">۳</span><div><b style="font-size:13.5px">شرط نمایش</b><div class="hint">مخاطب را با شرط‌ها محدود کن تا جایزه هدر نرود.</div></div></div>
+      <div style="display:flex;gap:12px"><span class="pill p-blue">۴</span><div><b style="font-size:13.5px">جای‌گذاری</b><div class="hint">با شورت‌کد یا ویجت، گردونه را در صفحه بگذار.</div></div></div>
+      <div style="display:flex;gap:12px"><span class="pill p-green">۵</span><div><b style="font-size:13.5px">گزارش</b><div class="hint">بعد از ۴۸ ساعت، نرخ برد و بازگشت سرمایه را ببین.</div></div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ch"><h2>میان‌بُرها و شورت‌کدها</h2></div>
+    <div class="cb" style="display:flex;flex-direction:column;gap:9px;font-size:12.5px">
+      <code style="background:#F1F4FA;border-radius:8px;padding:8px 10px;direction:ltr;display:block">[becharkhoon id="1"]</code>
+      <code style="background:#F1F4FA;border-radius:8px;padding:8px 10px;direction:ltr;display:block">[bch_button id="1" text="بچرخان"]</code>
+      <code style="background:#F1F4FA;border-radius:8px;padding:8px 10px;direction:ltr;display:block">[bch_bar]</code>
+      <div class="hint" style="margin-top:6px">همهٔ شورت‌کدها با شناسهٔ گردونه کار می‌کنند؛ بدون شناسه، گردونهٔ فعال نمایش داده می‌شود.</div>
+    </div>
+  </div>
+</div></section>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span>انجام شد (نمایشی)</span></div>
+<script src="views-bundle.js"></script>
+</body>
+</html>

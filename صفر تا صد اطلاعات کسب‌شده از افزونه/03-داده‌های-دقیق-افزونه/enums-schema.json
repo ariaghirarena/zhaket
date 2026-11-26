@@ -1,0 +1,293 @@
+{
+ "design.text_orientation": [
+  "radial",
+  "horizontal",
+  "curved"
+ ],
+ "design.rim_style": [
+  "lights",
+  "solid",
+  "double",
+  "dots",
+  "metal",
+  "neon",
+  "none"
+ ],
+ "design.light_animation": [
+  "chase",
+  "blink",
+  "alternate",
+  "pulse",
+  "none"
+ ],
+ "design.center_style": [
+  "button",
+  "circle",
+  "star",
+  "logo",
+  "gem",
+  "none"
+ ],
+ "design.pointer_style": [
+  "arrow",
+  "pin",
+  "triangle",
+  "drop",
+  "diamond",
+  "ticker",
+  "image"
+ ],
+ "design.pointer_position": [
+  "top",
+  "right",
+  "bottom",
+  "left"
+ ],
+ "design.spin_easing": [
+  "quint",
+  "cubic",
+  "expo",
+  "back",
+  "elastic",
+  "bounce"
+ ],
+ "design.win_effect": [
+  "confetti",
+  "fireworks",
+  "coins",
+  "stars",
+  "hearts",
+  "snow",
+  "emoji",
+  "balloons",
+  "none"
+ ],
+ "design.lose_effect": [
+  "shake",
+  "fade",
+  "none"
+ ],
+ "popup.mode": [
+  "modal",
+  "fullscreen",
+  "slidein",
+  "sheet",
+  "half",
+  "sidebar"
+ ],
+ "popup.layout": [
+  "split",
+  "stack",
+  "wheel-only",
+  "overlap"
+ ],
+ "popup.wheel_side": [
+  "start",
+  "end"
+ ],
+ "popup.bg_type": [
+  "color",
+  "gradient",
+  "image",
+  "glass"
+ ],
+ "popup.pattern": [
+  "none",
+  "dots",
+  "confetti",
+  "stars",
+  "grid",
+  "waves",
+  "diagonal",
+  "snow",
+  "hearts"
+ ],
+ "popup.shadow": [
+  "none",
+  "md",
+  "lg",
+  "xl",
+  "glow"
+ ],
+ "popup.anim_in": [
+  "zoom",
+  "fade",
+  "slide-up",
+  "slide-down",
+  "slide-side",
+  "bounce",
+  "flip",
+  "rotate",
+  "none"
+ ],
+ "popup.anim_out": [
+  "fade",
+  "zoom",
+  "slide-down",
+  "none"
+ ],
+ "popup.close_position": [
+  "end",
+  "start",
+  "outside"
+ ],
+ "popup.close_style": [
+  "circle",
+  "square",
+  "plain",
+  "text"
+ ],
+ "popup.countdown_mode": [
+  "evergreen",
+  "fixed"
+ ],
+ "popup.countdown_style": [
+  "boxes",
+  "inline"
+ ],
+ "popup.direction": [
+  "auto",
+  "rtl",
+  "ltr"
+ ],
+ "popup.mobile_mode": [
+  "sheet",
+  "modal",
+  "fullscreen"
+ ],
+ "form.button_size": [
+  "md",
+  "lg",
+  "xl"
+ ],
+ "form.button_animation": [
+  "shine",
+  "pulse",
+  "bounce",
+  "glow",
+  "none"
+ ],
+ "display.mode": [
+  "popup",
+  "inline",
+  "both"
+ ],
+ "display.frequency": [
+  "always",
+  "session",
+  "days",
+  "once"
+ ],
+ "display.launcher_position": [
+  "bottom-start",
+  "bottom-end",
+  "middle-start",
+  "middle-end",
+  "top-start",
+  "top-end"
+ ],
+ "display.launcher_style": [
+  "wheel",
+  "gift",
+  "image",
+  "pill",
+  "tab"
+ ],
+ "display.launcher_animation": [
+  "spin",
+  "pulse",
+  "shake",
+  "bounce",
+  "none"
+ ],
+ "display.coupon_bar_position": [
+  "top",
+  "bottom"
+ ],
+ "display.coupon_bar_layout": [
+  "full",
+  "floating",
+  "pill"
+ ],
+ "display.coupon_bar_style": [
+  "solid",
+  "gradient",
+  "glass",
+  "ticket"
+ ],
+ "display.coupon_bar_code_style": [
+  "chip",
+  "dashed",
+  "plain"
+ ],
+ "display.coupon_bar_shadow": [
+  "none",
+  "soft",
+  "strong"
+ ],
+ "display.coupon_bar_cd_style": [
+  "text",
+  "chip"
+ ],
+ "display.coupon_bar_anim": [
+  "slide",
+  "fade",
+  "bounce",
+  "none"
+ ],
+ "popup.code_style": [
+  "dashed",
+  "solid",
+  "ticket",
+  "glow",
+  "plain"
+ ],
+ "popup.share_style": [
+  "brand",
+  "mono",
+  "outline"
+ ],
+ "targeting.pages": [
+  "all",
+  "include",
+  "exclude"
+ ],
+ "access.mode": [
+  "free",
+  "credits",
+  "hybrid"
+ ],
+ "access.max_wins_period": [
+  "lifetime",
+  "day",
+  "week",
+  "month"
+ ],
+ "access.credit_scope": [
+  "any",
+  "this"
+ ],
+ "coupon.charset": [
+  "upper_num",
+  "upper",
+  "num",
+  "lower_num",
+  "mixed"
+ ],
+ "messages.apply_redirect": [
+  "cart",
+  "checkout",
+  "shop",
+  "stay",
+  "custom"
+ ],
+ "notify.sms_mode": [
+  "text",
+  "pattern"
+ ],
+ "notify.reminder_channel": [
+  "sms",
+  "email",
+  "both"
+ ]
+}
