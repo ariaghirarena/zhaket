@@ -1,0 +1,398 @@
+/* ==========================================================================
+   هیرو موشن‌دار — «شانس را بچرخان»
+   صحنهٔ تمام‌صفحه با چهار جایزه. هر جایزه یک رنگ پَس‌زمینهٔ کامل دارد،
+   یک واژهٔ غول‌آسا پشت گردونه، و جایزه‌ها (جام، جعبه، کوپن، سکه) که
+   در عمق‌های مختلف شناورند. تغییر جایزه = پردهٔ اندازه‌گیری‌شده.
+   همه‌چیز روی یک فریم طراحی ۱۴۴۰×۹۰۰ با واحد --u کشیده می‌شود.
+   ========================================================================== */
+
+.hero-stage{
+  --u: 1px;                     /* واحد طراحی، با JS ست می‌شود */
+  --n: 1px;                     /* واحد UI، مستقل از فریم */
+  position:relative; width:100%; height:100svh; min-height:600px;
+  overflow:hidden; user-select:none; -webkit-user-select:none;
+  touch-action:pan-y; background:#2A5125;
+  font-family:'Peyda', system-ui, sans-serif;
+  isolation:isolate;
+}
+@media (max-height:520px){ .hero-stage{ min-height:100svh } }
+
+/* ---------------------------------------------------------------- slides */
+.hs-slide{
+  position:absolute; inset:0; overflow:hidden;
+  background:var(--bg); will-change:clip-path;
+  display:block;
+}
+/* مهم: display:none نیست، وگرنه اندازه‌گیری واژه در اسلایدهای پنهان صفر می‌شود
+   و واژهٔ بعدی با اندازهٔ غلط ظاهر می‌شود. */
+.hs-slide.is-hidden{ visibility:hidden; pointer-events:none; z-index:0 }
+.hs-slide.is-under{ z-index:1 }
+.hs-slide.is-current{ z-index:2 }
+
+/* فریم طراحی، وسط‌چین */
+.hs-frame{
+  position:absolute;
+  width:calc(1440 * var(--u)); height:calc(900 * var(--u));
+  left:calc(50% - 720 * var(--u)); top:calc(50% - 450 * var(--u));
+}
+@media (max-width:820px), (orientation:portrait){
+  .hs-frame{ top:calc(50% - 450 * var(--u) + 8px) }
+}
+
+.hs-layer{ position:absolute; inset:0; will-change:transform }
+.hs-layer--word{ z-index:1 }
+.hs-layer--shadow{ z-index:2 }
+.hs-layer--wheel{ z-index:3 }
+.hs-layer--prize{ z-index:4 }
+.hs-layer--corner{ z-index:5 }
+
+/* ------------------------------------------------------- واژهٔ غول‌آسا */
+/* واژه فارسی است: راست‌به‌چپ، وسط فریم، سفید، پشت گردونه */
+.hs-word{
+  position:absolute; inset:0;
+  display:grid; place-items:center;
+  font-family:'Morabba','Peyda',system-ui,sans-serif;
+  font-weight:900; line-height:.82; letter-spacing:0;
+  color:#fff; opacity:.97;
+  pointer-events:none; will-change:transform;
+  /* سایه با em است، پس با اندازهٔ فونت خودش مقیاس می‌شود */
+  text-shadow:0 .015em .05em rgba(40,30,10,.14);
+}
+.hs-word span{
+  display:block; white-space:nowrap;
+  padding-inline:.04em;         /* جا برای دُم حروف فارسی */
+  /* اندازهٔ پایه؛ JS آن را دقیق می‌کند. بدون JS هم خوانا می‌ماند. */
+  font-size:clamp(56px, 30vw, 470px);
+}
+
+/* --------------------------------------------------------- سایه‌های کف */
+/* سایه‌های جداگانه حذف شدند؛ drop-shadow خود جایزه‌ها کافی و تمیزتر است. */
+.hs-sh{ display:none }
+
+/* ------------------------------------------------------------- گردونه */
+.hs-wheel{
+  position:absolute; left:0; top:0; width:100%; height:100%;
+  will-change:transform;
+}
+.hs-wheel img{
+  position:absolute; display:block;
+  /* گردونه دقیقاً وسطِ فریم، با اندازه‌ای که با ارتفاع صفحه هم می‌خواند */
+  left:calc(50% - 260 * var(--u)); top:calc(50% - 260 * var(--u));
+  width:calc(520 * var(--u)); height:calc(520 * var(--u));
+  filter:drop-shadow(0 calc(18 * var(--u)) calc(28 * var(--u)) rgba(35,22,5,.30));
+}
+.hs-slide.is-spinning .hs-wheel img{ animation:hs-wheel-spin .9s cubic-bezier(.2,.7,.15,1) }
+@keyframes hs-wheel-spin{
+  from{ transform:rotate(0deg) }
+  to  { transform:rotate(720deg) }
+}
+
+/* --------------------------------------------------------- جایزه‌ها */
+.hs-prize{
+  position:absolute; transform-origin:50% 50%;
+  filter:drop-shadow(0 calc(10 * var(--u)) calc(16 * var(--u)) rgba(40,26,8,.25));
+}
+.hs-prize img{ display:block; width:100%; height:auto; }
+.hs-prize--corner{
+  filter:blur(calc(10 * var(--u))); opacity:.9;
+}
+/* گوشه‌ها هرگز روی هدر یا CTA نمی‌افتند: هر دو در نیمهٔ پایین صحنه */
+.hs-layer--corner .hs-prize:nth-child(1){
+  left:calc(-96 * var(--u)) !important; top:calc(566 * var(--u)) !important;
+  width:calc(300 * var(--u)) !important;
+}
+.hs-layer--corner .hs-prize:nth-child(2){
+  left:calc(1236 * var(--u)) !important; top:calc(512 * var(--u)) !important;
+  width:calc(268 * var(--u)) !important;
+}
+@media (max-width:820px), (orientation:portrait){
+  .hs-prize--corner{ opacity:.75 }
+}
+
+/* بوب آرام: چرخش پایه داخل انیمیشن می‌نشیند تا با آینه‌شدن دعوا نکند */
+.hs-prize__bob{
+  display:block; transform-origin:50% 50%;
+  animation:hs-bob var(--dur,4s) ease-in-out var(--delay,0s) infinite alternate;
+}
+@keyframes hs-bob{
+  from{ transform:translateY(calc(-7 * var(--u))) rotate(var(--rot-from, -3deg)) }
+  to  { transform:translateY(calc( 7 * var(--u))) rotate(var(--rot-to,   3deg)) }
+}
+
+/* ------------------------------------------- ستاره‌های محو (حالِ خوب) */
+.hs-spark{
+  position:absolute; pointer-events:none; color:#fff; opacity:.55;
+  animation:hs-twinkle 3.6s ease-in-out infinite;
+}
+.hs-spark svg{ display:block; width:100%; height:100% }
+@keyframes hs-twinkle{
+  0%,100%{ opacity:.18; transform:scale(.86) rotate(0deg) }
+  50%    { opacity:.72; transform:scale(1.12) rotate(18deg) }
+}
+
+/* ------------------------------------------------------- UI روی صحنه */
+.hs-ui{
+  position:absolute; inset:0; z-index:20; pointer-events:none;
+  font-family:'Peyda', system-ui, sans-serif;
+}
+.hs-ui a,.hs-ui button{ pointer-events:auto; background:none; border:0; padding:0; cursor:pointer;
+  color:#fff; font:inherit; text-decoration:none;
+  text-shadow:0 1px 6px rgba(20,12,0,.28) }
+
+/* ردیف هدر */
+.hs-head{
+  position:absolute; left:calc(50 * var(--n)); right:calc(50 * var(--n)); top:calc(26 * var(--n));
+  z-index:2;
+  height:calc(50 * var(--n)); display:flex; align-items:center; gap:calc(18 * var(--n));
+}
+.hs-logo{
+  font-family:'Morabba','Peyda',sans-serif; font-weight:900;
+  font-size:calc(38 * var(--n)); letter-spacing:-.01em; line-height:1;
+  display:flex; align-items:center; gap:calc(8 * var(--n)); white-space:nowrap;
+}
+.hs-logo .hs-mark{
+  width:calc(30 * var(--n)); height:calc(30 * var(--n)); flex:0 0 auto;
+  display:grid; place-items:center;
+  border-radius:50%; background:rgba(255,255,255,.18);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.45);
+}
+.hs-logo svg{ width:62%; height:62%; display:block }
+
+/* تب‌های جایزه، وسط هدر */
+.hs-tabs{
+  position:absolute; left:50%; transform:translateX(-50%);
+  display:flex; gap:calc(44 * var(--n)); align-items:center;
+}
+.hs-tab{
+  font-size:calc(19 * var(--n)); font-weight:700; white-space:nowrap;
+  padding:calc(6 * var(--n)) 0; opacity:.8; transition:opacity .25s;
+}
+.hs-tab[aria-current="true"]{ opacity:1 }
+.hs-tab:hover{ opacity:1 }
+.hs-underline{
+  position:absolute; height:2px; border-radius:2px; background:#fff;
+  bottom:calc(-2 * var(--n)); left:0; width:0;
+  transition:transform .6s cubic-bezier(.65,0,.35,1), width .6s cubic-bezier(.65,0,.35,1);
+  box-shadow:0 1px 4px rgba(0,0,0,.2);
+}
+
+/* سمت راست هدر */
+.hs-links{
+  margin-inline-start:auto; display:flex; align-items:center; gap:calc(14 * var(--n));
+  font-size:calc(19 * var(--n)); font-weight:700 !important; white-space:nowrap;
+}
+.hs-links .sep{ opacity:.55 }
+
+/* پایین صحنه */
+.hs-cta{
+  position:absolute; left:50%; transform:translateX(-50%); bottom:calc(30 * var(--n));
+  font-size:calc(20 * var(--n)); font-weight:800; letter-spacing:.04em;
+  padding:calc(10 * var(--n)) calc(20 * var(--n));
+  border-radius:calc(999 * var(--n));
+  background:rgba(255,255,255,.16) !important;
+  box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55), 0 10px 26px rgba(20,10,0,.16);
+  backdrop-filter:blur(6px);
+  display:inline-flex; align-items:center; gap:calc(9 * var(--n));
+  transition:background .22s, transform .22s;
+}
+.hs-cta:hover{ background:rgba(255,255,255,.26) !important; transform:translateX(-50%) translateY(-2px) }
+.hs-cta svg{ width:calc(16 * var(--n)); height:calc(16 * var(--n)); display:block }
+
+.hs-arrow{
+  position:absolute; bottom:calc(28 * var(--n));
+  width:calc(52 * var(--n)); height:calc(52 * var(--n));
+  display:grid; place-items:center; border-radius:50%;
+  background:rgba(255,255,255,.13) !important;
+  box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45);
+  transition:background .22s, transform .22s;
+}
+.hs-arrow:hover{ background:rgba(255,255,255,.24) !important; transform:translateY(-2px) }
+.hs-arrow--prev{ left:calc(36 * var(--n)) }
+.hs-arrow--next{ right:calc(36 * var(--n)) }
+.hs-arrow svg{ width:calc(24 * var(--n)); height:calc(24 * var(--n)); display:block; stroke:#fff }
+
+/* شمارهٔ اسلاید، گوشهٔ پایین‌راست */
+.hs-count{
+  position:absolute; bottom:calc(34 * var(--n)); right:calc(104 * var(--n));
+  font-size:calc(14 * var(--n)); font-weight:700; opacity:.75; letter-spacing:.1em;
+  font-variant-numeric:tabular-nums;
+}
+
+/* نوار پیشرفت جوایز (سکه‌های خوشحالی) */
+.hs-dots{
+  position:absolute; left:50%; transform:translateX(-50%); bottom:calc(84 * var(--n));
+  display:flex; gap:calc(8 * var(--n));
+}
+.hs-dot{ width:calc(26 * var(--n)); height:calc(4 * var(--n)); border-radius:99px;
+  background:rgba(255,255,255,.34); overflow:hidden }
+.hs-dot i{ display:block; height:100%; width:0; background:#fff; border-radius:99px }
+.hs-dot.is-on i{ width:100% }
+.hs-dot.is-past i{ width:100%; opacity:.6 }
+
+/* ------------------------------------------------------- ورود UI */
+/* توالی باز شدن: هر عنصر با تأخیر کمی دیرتر بالا می‌آید */
+.hs-rise{ opacity:0; translate:0 14px; }
+.hs-stage-ready .hs-rise{ animation:hs-rise 1s cubic-bezier(.22,.8,.3,1) forwards }
+.hs-stage-ready .hs-head .hs-logo{ animation-delay:.02s }
+.hs-stage-ready .hs-tabs{ animation-delay:.13s }
+.hs-stage-ready .hs-links{ animation-delay:.21s }
+.hs-stage-ready .hs-cta{ animation-delay:.29s }
+.hs-stage-ready .hs-arrow--prev{ animation-delay:.37s }
+.hs-stage-ready .hs-arrow--next{ animation-delay:.45s }
+.hs-stage-ready .hs-dots{ animation-delay:.53s }
+@keyframes hs-rise{
+  from{ opacity:0; translate:0 14px }
+  to  { opacity:1; translate:0 0 }
+}
+
+/* ---------- کاهش حرکت ---------- */
+@media (prefers-reduced-motion: reduce){
+  .hs-prize__bob{ animation:none }
+  .hs-spark{ animation:none; opacity:.4 }
+  .hs-underline{ transition:none }
+  .hs-slide.is-spinning .hs-wheel img{ animation:none }
+  .hs-rise{ opacity:1; translate:none }
+  .hs-stage-ready .hs-rise{ animation:none }
+}
+
+/* ------------------------------------------------------- موبایل */
+/* روی موبایل، فریم طراحی رها می‌شود و صحنه با واحد ویوپورت چیده می‌شود:
+   گردونه بزرگ وسط، دو جایزهٔ شناور بالا، یکی پایین، واژه پشت همه. */
+@media (max-width:820px), (orientation:portrait){
+  .hs-frame{
+    left:0; top:0; width:100%; height:100%;
+  }
+
+  /* واژه کمی بالاتر می‌نشیند تا از پشت گردونه بیرون بزند */
+  .hs-layer--word{ transform:translateY(-15vh) }
+  .hs-word{ opacity:.95 }
+
+  /* گردونه بزرگ، کمی پایین‌تر از مرکز */
+  .hs-wheel img{
+    left:50%; top:58%;
+    width:min(78vw, 44vh); height:auto;
+    translate:-50% -50%;
+    filter:drop-shadow(0 10px 18px rgba(35,22,5,.28));
+  }
+
+  /* جوایز شناور: چیدمان پرتره */
+  .hs-layer--prize .hs-prize:nth-child(1){ left:4vw  !important; top:20vh !important; width:24vw !important }
+  .hs-layer--prize .hs-prize:nth-child(2){ left:68vw !important; top:23vh !important; width:22vw !important }
+  .hs-layer--prize .hs-prize:nth-child(3){ left:6vw  !important; top:auto !important; bottom:26vh !important; width:20vw !important }
+  .hs-layer--prize .hs-prize:nth-child(4){ display:none }
+
+  /* سایه‌های کف را حذف کن؛ در پرتره فقط شلوغی می‌سازند */
+  .hs-layer--shadow{ display:none }
+
+  /* یک تکهٔ محو در گوشه، نه بیشتر */
+  .hs-layer--corner .hs-prize:nth-child(1){ left:-16vw !important; top:auto !important; bottom:-8vh !important; width:42vw !important; opacity:.55 }
+  .hs-layer--corner .hs-prize:nth-child(2){ display:none }
+
+  .hs-head{ left:18px; right:18px; top:14px; height:38px; gap:10px }
+  .hs-logo{ font-size:31px }
+  .hs-logo .hs-mark{ width:24px; height:24px }
+  .hs-links{ font-size:14px; gap:9px }
+  .hs-tabs{ top:48px; gap:20px; left:50% }
+  .hs-tab{ font-size:14px; padding:4px 0 }
+  .hs-underline{ height:2px; bottom:-3px }
+
+  .hs-cta{ font-size:15px; bottom:18px; padding:9px 17px }
+  .hs-arrow{ width:46px; height:46px; bottom:10px }
+  .hs-arrow--prev{ left:6px } .hs-arrow--next{ right:6px }
+  .hs-arrow svg{ width:22px; height:22px }
+  .hs-count{ display:none }
+  .hs-dots{ bottom:66px; gap:6px }
+  .hs-dot{ width:20px; height:3px }
+
+  .hs-spark:nth-child(1){ left:8vw !important;  top:14vh !important }
+  .hs-spark:nth-child(2){ left:84vw !important; top:16vh !important }
+  .hs-spark:nth-child(3){ left:14vw !important; top:76vh !important }
+  .hs-spark:nth-child(4){ display:none }
+  .hs-spark:nth-child(5){ left:88vw !important; top:70vh !important }
+  .hs-spark:nth-child(6){ left:50vw !important; top:8vh !important }
+}
+
+/* گوشی خوابیده: چیدمان افقی فشرده */
+@media (orientation:landscape) and (max-height:560px){
+  .hs-head{ top:8px; height:32px; left:20px; right:20px }
+  .hs-logo{ font-size:25px }
+  .hs-logo .hs-mark{ width:22px; height:22px }
+  .hs-links,.hs-tab{ font-size:12.5px }
+  .hs-tabs{ top:-4px; gap:26px }
+  .hs-cta{ bottom:6px; font-size:12.5px; padding:6px 12px }
+  .hs-cta svg{ width:13px; height:13px }
+  .hs-dots{ bottom:56px; gap:5px }
+  .hs-dot{ width:18px; height:3px }
+  .hs-arrow{ width:34px; height:34px; bottom:6px }
+  .hs-arrow--prev{ left:10px } .hs-arrow--next{ right:10px }
+  .hs-arrow svg{ width:17px; height:17px }
+  .hs-count{ display:none }
+  /* در افقیِ کوتاه، تکه‌های گوشه فقط شلوغی‌اند */
+  .hs-layer--corner .hs-prize:nth-child(1){ width:calc(190 * var(--u)) !important; opacity:.5 }
+  .hs-layer--corner .hs-prize:nth-child(2){ width:calc(170 * var(--u)) !important; opacity:.5 }
+  .hs-spark{ opacity:.35 }
+}
+
+/* ------------------------------------------------------- فالبک بدون JS */
+.hs-noscript{
+  position:absolute; inset:auto 0 0 0; z-index:30; padding:14px 18px;
+  background:#1E381B; color:#F2F0E6; font-size:13px; text-align:center;
+}
+
+/* ==========================================================================
+   نوار ناوبری چسبان — بعد از هیرو ظاهر می‌شود
+   ========================================================================== */
+.snav{
+  position:fixed; inset:0 0 auto 0; z-index:60;
+  transform:translateY(-102%); opacity:0; pointer-events:none;
+  transition:transform .42s cubic-bezier(.3,.9,.3,1), opacity .32s ease;
+  background:rgba(20,38,20,.86);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border-bottom:1px solid rgba(242,240,230,.12);
+  box-shadow:0 14px 40px rgba(6,16,6,.3);
+}
+.snav.is-in{ transform:none; opacity:1; pointer-events:auto }
+.snav-in{
+  max-width:1200px; margin:0 auto; padding:0 22px; height:64px;
+  display:flex; align-items:center; gap:26px;
+}
+.snav-brand{
+  display:flex; align-items:center; gap:9px; text-decoration:none;
+  font-family:'Morabba','Peyda',sans-serif; font-weight:900; font-size:23px;
+  color:#F2F0E6; white-space:nowrap; line-height:1;
+}
+.snav-mark{
+  width:26px; height:26px; flex:0 0 auto; display:grid; place-items:center;
+  border-radius:50%; background:var(--gold); color:#17281A;
+}
+.snav-mark svg{ width:17px; height:17px }
+.snav-links{
+  display:flex; align-items:center; gap:4px; margin-inline-start:auto;
+  overflow:hidden;
+}
+.snav-links a{
+  font-size:15px; font-weight:700; color:rgba(242,240,230,.72);
+  text-decoration:none; padding:8px 11px; border-radius:9px;
+  white-space:nowrap; transition:color .18s, background .18s;
+}
+.snav-links a:hover{ color:#fff; background:rgba(242,240,230,.08) }
+.snav-links a[aria-current="true"]{ color:#fff; background:rgba(242,240,230,.12) }
+.snav-cta{
+  flex:0 0 auto; display:inline-flex; align-items:center; gap:6px;
+  background:var(--gold); color:#17281A; text-decoration:none;
+  font-size:14.5px; font-weight:800; padding:10px 17px; border-radius:999px;
+  white-space:nowrap; box-shadow:0 8px 22px rgba(255,197,23,.24);
+  transition:transform .18s, box-shadow .18s;
+}
+.snav-cta:hover{ transform:translateY(-1px); box-shadow:0 12px 28px rgba(255,197,23,.34) }
+
+@media (max-width:900px){
+  .snav-links{ display:none }
+  .snav-in{ height:58px; padding:0 16px; gap:12px }
+  .snav-brand{ font-size:21px }
+  .snav-cta{ margin-inline-start:auto; font-size:13.5px; padding:9px 14px }
+}
+@media (prefers-reduced-motion: reduce){
+  .snav{ transition:none }
+}

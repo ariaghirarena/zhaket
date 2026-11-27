@@ -43,18 +43,25 @@
     })(t0);
   }
 
-  /* ---------- nav: mark the active section ---------- */
-  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));
+  /* ---------- nav: mark the active section + show the bar after the hero ---------- */
+  var snav = document.getElementById('snav');
+  var links = Array.prototype.slice.call(document.querySelectorAll('.snav-links a[href^="#"]'));
   var targets = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  var hero = document.getElementById('hero');
+
   function onScroll() {
-    var y = window.scrollY + 120, active = -1;
+    var y = window.scrollY + 150, active = -1;
     targets.forEach(function (t, i) {
       if (t && t.offsetTop <= y) active = i;
     });
     links.forEach(function (a, i) {
-      a.style.background = i === active ? 'rgba(242,240,230,.09)' : '';
-      a.style.color = i === active ? '#fff' : '';
+      if (i === active) { a.setAttribute('aria-current', 'true'); }
+      else { a.removeAttribute('aria-current'); }
     });
+    if (snav && hero) {
+      var past = window.scrollY > hero.offsetHeight - 120;
+      snav.classList.toggle('is-in', past);
+    }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -68,7 +75,7 @@
     var t = document.querySelector(id);
     if (!t) return;
     e.preventDefault();
-    var top = t.getBoundingClientRect().top + window.scrollY - 86;
+    var top = t.getBoundingClientRect().top + window.scrollY - 74;
     window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
   });
 
