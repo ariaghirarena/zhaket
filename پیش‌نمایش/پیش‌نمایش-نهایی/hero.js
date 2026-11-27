@@ -25,6 +25,75 @@
   function faNum(n) { return String(n).replace(/\d/g, function (d) { return FA[+d]; }); }
 
   var cur = 0, busy = false, lastUser = 0, autoplayTimer = null;
+
+  /* ------------------------------------------------------------------
+     حرکت تزئینی: بوب جایزه‌ها و سوسوی ستاره‌ها
+     قبلاً با @keyframes بی‌پایان اجرا می‌شد؛ همان چیزی که باعث می‌شد بعد از
+     اسکرول، هر فریم کل صحنه نقاشی شود و گذار پرده به ۲-۳ فریم بیفتد.
+     حالا فقط یک transform/opacity با transition جابه‌جا می‌شود: کامپوزیتوری،
+     بدون نقاشی مجدد. یک تایمر یکی‌درمیان وضعیت را عوض می‌کند و در گذار
+     متوقف می‌شود.
+     ------------------------------------------------------------------ */
+  var bobs = Array.prototype.slice.call(stage.querySelectorAll('.hs-prize__bob'));
+  var sparks = Array.prototype.slice.call(stage.querySelectorAll('.hs-spark'));
+  var decorOn = true, decorTimer = null;
+
+  bobs.forEach(function (el, i) {
+    var half = 1.6 + ((i * 0.37) % 1.5);
+    el.style.setProperty('--half', half.toFixed(2) + 's');
+    el.dataset.phase = '0';
+  });
+  sparks.forEach(function (el, i) {
+    el.style.setProperty('--half', (1.5 + ((i * 0.29) % 1.2)).toFixed(2) + 's');
+  });
+
+  function decorStep() {
+    if (!decorOn) { return; }
+    bobs.forEach(function (el) {
+      var up = el.dataset.phase === '1';
+      el.dataset.phase = up ? '0' : '1';
+      var r0 = el.style.getPropertyValue('--rot-from') || '-3deg';
+      var r1 = el.style.getPropertyValue('--rot-to') || '3deg';
+      el.style.transform = up
+        ? 'translateY(calc(-7 * var(--u))) rotate(' + r0 + ')'
+        : 'translateY(calc(7 * var(--u))) rotate(' + r1 + ')';
+    });
+    sparks.forEach(function (el) { el.classList.toggle('on'); });
+    decorTimer = setTimeout(decorStep, 1900);
+  }
+
+  function stopDecor() { decorOn = false; clearTimeout(decorTimer); }
+  function startDecor() { if (!reduce && !decorOn) { decorOn = true; decorStep(); } }
+
+  if (!reduce) { decorStep(); }
+  else { bobs.forEach(function (el) { el.style.transform = 'none'; }); }
+  /* هر گذار یک شناسه دارد. اگر گذار تازه‌ای شروع شود، حلقهٔ قبلی با
+     شناسهٔ کهنه خودش را متوقف می‌کند و نمی‌تواند مقدار کهنه بنویسد. */
+  var gen = 0;
+  /* گذارِ در جریان، برای این‌که شود فوراً بسته‌اش کرد */
+  var inflight = null;
+
+  /* بستن فوری یک گذار بدون انیمیشن */
+  function snapFinish(from, to, idx) {
+    [from, to].forEach(function (s) {
+      s.style.transition = 'none';
+      s.style.clipPath = '';
+      s.style.clipPath = 'inset(0 0% 0 0)';
+      LAYERS.forEach(function (n) {
+        var el = layer(s, n);
+        if (el) { el.style.transition = 'none'; el.style.transform = ''; }
+      });
+    });
+    from.classList.remove('is-current', 'is-spinning');
+    from.classList.add('is-hidden');
+    from.setAttribute('aria-hidden', 'true');
+    to.classList.remove('is-under');
+    to.classList.add('is-current');
+    to.classList.remove('is-spinning');
+    cur = idx; busy = false; inflight = null;
+    gen++;
+    syncUI();
+  }
   /* اگر کاربر وسط گذار کلید بزند، درخواستش دور ریخته نمی‌شود؛ صف می‌شود. */
   var pending = null;
 
@@ -110,17 +179,38 @@
 
   /* ------------------------------------------------------------- تعویض */
   function show(i, dir) {
-    if (busy || i === cur) { return; }
+    if (i === cur) { return; }
+
+    /* اگر گذاری در جریان است، اول همان را فوراً تمام کن. وگرنه دو گذار
+       روی هم می‌افتند و پرده یک‌باره می‌پرد (همان چیزی که با پخش خودکار
+       دیده می‌شد). */
+    if (busy && inflight) {
+      clearTimeout(inflight.timer);
+      var f0 = slides[inflight.from], t0s = slides[inflight.to];
+      snapFinish(f0, t0s, inflight.to);
+    }
+
     var from = slides[cur], to = slides[i];
     var W = window.innerWidth;
     var DUR = reduce ? 0 : 1080;
 
     hideOthers(i, cur);
+    /* حالت را از صفر بچین. اگر گذار قبلی نیمه‌کاره مانده باشد (تب عوض شده،
+       مرورگر فریم را متوقف کرده) استایل کهنه‌اش اینجا پاک می‌شود. */
+    slides.forEach(function (s) {
+      s.style.clipPath = '';
+      s.style.zIndex = '';
+      s.classList.remove('is-spinning');
+    });
     to.classList.remove('is-hidden');
     to.classList.add('is-under');
     to.removeAttribute('aria-hidden');
+    /* هیچ z-index اینلاین نوشته نمی‌شود. اگر اینجا استایل اینلاین بنویسیم،
+       پاک نمی‌شود و بعد از چند تعویض هر دو اسلاید z-index=2 می‌گیرند؛ آن‌وقت
+       ترتیب DOM تصمیم می‌گیرد و به‌جای پرده، یک «برش فوری» دیده می‌شود.
+       کلاس‌های .is-current و .is-under خودشان لایه‌بندی را تعیین می‌کنند. */
+    from.classList.remove('is-under');
     from.classList.add('is-current');
-    from.style.zIndex = 2;
 
     /* چرخ کوتاه گردونه، به‌عنوان طعمِ شانس */
     from.classList.add('is-spinning');
@@ -132,47 +222,81 @@
     }
 
     busy = true;
-    var t0 = performance.now();
+    stopDecor();
+    var myGen = ++gen;
+    var DUR = 1080;
 
-    function step(now) {
-      var t = (now - t0) / DUR;
-      var c = cover(Math.min(t, 1));
-      var pct = c * 100;
+    /* ------------------------------------------------------------------
+       گذار با ساعتِ خود مرورگر
+       قبلاً این حلقه با requestAnimationFrame اجرا می‌شد؛ ولی بعد از
+       اسکرول، مرورگر rAF را تا ~۱۰ بار در ثانیه کم می‌کند و پرده ۲-۳ فریم
+       درمی‌آید. حالا مقدار شروع و پایان یک‌بار ست می‌شود و مرورگر خودش
+       در ۱۰۸۰ms درونه‌یابی می‌کند؛ این مسیر کامپوزیتوری است و به rAF
+       وابسته نیست.
+       ------------------------------------------------------------------ */
+    var shift = dir > 0 ? 1 : -1;
 
-      /* ۳) پوشاندن اسلاید فعلی */
-      from.style.clipPath = dir > 0
-        ? 'inset(0 ' + pct.toFixed(2) + '% 0 0)'
-        : 'inset(0 0 0 ' + pct.toFixed(2) + '%)';
-
-      /* ۴) drift اسلاید فعلی */
-      var drift = -dir * c * 0.14 * W;
-      LAYERS.forEach(function (n) {
-        var el = layer(from, n);
-        if (el) { el.style.transform = 'translate3d(' + drift.toFixed(1) + 'px,0,0)'; }
-      });
-
-      /* ۵) ورود اسلاید بعدی با پارالاکس */
-      var k = easeOutQuad(Math.max(0, Math.min(1, (t - 0.5) / 0.42)));
-      var remain = 1 - k;
-      LAYERS.forEach(function (n) {
-        var el = layer(to, n);
-        if (el) {
-          el.style.transform = 'translate3d(' + (dir * remain * FACTOR[n] * W).toFixed(1) + 'px,0,0)';
-        }
-      });
-
-      if (t < 1.62) {
-        requestAnimationFrame(step);
-      } else {
-        finish(from, to, i);
+    /* ۱) مقدار شروع: پوشش صفر + پارالاکس اسلاید ورودی */
+    from.style.transition = 'none';
+    from.style.clipPath = 'inset(0 0% 0 0)';
+    LAYERS.forEach(function (n) {
+      var a = layer(from, n), b = layer(to, n);
+      if (a) { a.style.transition = 'none'; a.style.transform = 'translate3d(0,0,0)'; }
+      if (b) {
+        b.style.transition = 'none';
+        b.style.transform = 'translate3d(' + (shift * FACTOR[n] * 100).toFixed(2) + '%,0,0)';
       }
+    });
+
+    /* ۲) مرورگر باید مقدار شروع را ثبت کند، بعد پایان را بدهیم */
+    void from.offsetWidth;
+    void to.offsetWidth;
+
+    /* ۳) مقدار پایان + transition */
+    var EASE = 'cubic-bezier(.45,.06,.25,1)';
+    from.style.transition = 'clip-path ' + DUR + 'ms ' + EASE;
+    from.style.clipPath = dir > 0 ? 'inset(0 100% 0 0)' : 'inset(0 0 0 100%)';
+    LAYERS.forEach(function (n) {
+      var b = layer(to, n);
+      if (b) {
+        b.style.transition = 'transform ' + DUR + 'ms cubic-bezier(.22,.8,.3,1)';
+        b.style.transform = 'translate3d(0,0,0)';
+      }
+    });
+
+    var fallback = setTimeout(function () {
+      if (myGen === gen && busy) { finish(from, to, i, myGen); }
+    }, DUR + 300);
+    inflight = { from: cur, to: i, timer: fallback };
+
+    function onEnd(e) {
+      if (e.target !== from) { return; }
+      if (e.propertyName !== 'clip-path') { return; }
+      from.removeEventListener('transitionend', onEnd);
+      clearTimeout(fallback);
+      finish(from, to, i, myGen);
     }
-    requestAnimationFrame(step);
+    from.addEventListener('transitionend', onEnd);
   }
 
-  function finish(from, to, i) {
-    from.style.clipPath = '';
-    from.classList.remove('is-current', 'is-spinning');
+  function finish(from, to, i, myGen) {
+    if (myGen !== undefined && myGen !== gen) { return; }
+    /* پاک‌سازی کامل: هر استایل اینلاینی که در گذار ست کرده‌ایم برمی‌گردد،
+       وگرنه بعد از چند دور، اسلایدها استایل کهنه با خودشان حمل می‌کنند. */
+    [from, to].forEach(function (s) {
+      s.style.clipPath = '';
+      s.style.zIndex = '';
+      s.style.transform = '';
+      s.style.opacity = '';
+      s.style.transition = '';
+      LAYERS.forEach(function (n) {
+        var el = layer(s, n);
+        if (el) { el.style.transform = ''; el.style.transition = ''; }
+      });
+    });
+    from.classList.remove('is-current', 'is-spinning',
+                          'is-wiping-r', 'is-wiping-l', 'is-animating');
+    to.classList.remove('is-incoming-r', 'is-incoming-l', 'is-animating');
     from.classList.add('is-hidden');
     from.setAttribute('aria-hidden', 'true');
     LAYERS.forEach(function (n) {
@@ -185,6 +309,9 @@
     to.classList.remove('is-spinning');
     cur = i;
     busy = false;
+    inflight = null;
+    decorOn = true;
+    decorStep();
     syncUI();
     flushPending();
   }
@@ -215,6 +342,9 @@
     /* پخش خودکار نباید خودش را «تعامل کاربر» حساب کند، وگرنه هر بار
        ۶ ثانیه مکث می‌خورد و اسلایدر می‌خوابد. */
     if (!auto) { pauseAuto(); }
+    /* اگر گذاری در جریان است، درخواست را نگه می‌داریم و بلافاصله بعد از
+       تمام شدنش اجرا می‌کنیم؛ این‌طور نه کلید گم می‌شود و نه دو گذار روی
+       هم می‌افتند. */
     if (busy) { pending = { i: i, d: d }; return; }
     show(i, d);
   }
@@ -258,6 +388,8 @@
   });
 
   /* ------------------------------------------------------------ پخش */
+  /* هر تعامل کاربر: گذارِ خودکارِ در جریان فوراً بسته می‌شود تا کلید/کلیک
+     کاربر روی یک گذار نیمه‌کاره نیفتد و پرده نپرد. */
   function pauseAuto() { lastUser = Date.now(); }
 
   function startAuto() {
@@ -265,6 +397,8 @@
     autoplayTimer = setInterval(function () {
       if (document.hidden) { return; }
       if (Date.now() - lastUser < 6000) { return; }
+      if (busy) { return; }
+      if (document.querySelector('.hs-slide.is-under')) { return; }
       goTo(cur + 1, 1, true);
     }, 2600);
   }
@@ -281,6 +415,16 @@
       stage.classList.add('hs-stage-ready');
       stage.querySelectorAll('.hs-rise').forEach(function (el) { el.style.opacity = '1'; });
     }, 3000);
+  }
+
+  /* وقتی هیرو از دید خارج شد، حرکت تزئینی هم متوقف می‌شود */
+  if (window.IntersectionObserver) {
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) { startDecor(); }
+        else { stopDecor(); }
+      });
+    }, { threshold: 0.02 }).observe(stage);
   }
 
   /* ------------------------------------------------------------ اجرا */

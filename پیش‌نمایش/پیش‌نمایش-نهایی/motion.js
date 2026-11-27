@@ -23,9 +23,6 @@
   doc.body.appendChild(bar);
   var barFill = bar.firstChild;
 
-  /* ----------------------------------- پارالاکس آرام لایه‌های هیرو */
-  var heroInner = stage.querySelectorAll('.hs-slide');
-
   var ticking = false;
   function onScroll() {
     if (ticking) { return; }
@@ -34,21 +31,22 @@
       var h = doc.documentElement.scrollHeight - window.innerHeight;
       barFill.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, window.scrollY / h) : 0) + ')';
 
-      /* وقتی از هیرو رد شدی، صحنه کمی عقب می‌ماند تا حس عمق بدهد */
+      /* وقتی از هیرو رد شدی، محتوای هیرو کمی پایین‌تر می‌نشیند.
+         مهم: اینجا هیچ transform/opacity روی خودِ .hs-slide نمی‌گذاریم.
+         scale کردن اسلایدها آن‌ها را به لایهٔ کامپوزیتور جدا می‌برد و بعد از
+         برگشتن به بالا مرورگر آن لایه را رها نمی‌کند؛ نتیجه افت نرخ فریم به
+         حدود ۱۵ و «پرده با موشن نمی‌آید». به‌جایش یک متغیر CSS می‌دهیم و
+         CSS با کلاس is-exiting فقط UI را کمی جابه‌جا می‌کند. */
       var y = window.scrollY;
       var heroH = stage.offsetHeight;
-      if (!reduce && y < heroH) {
-        var k = y / heroH;
-        stage.style.setProperty('--hero-exit', k.toFixed(3));
-        heroInner.forEach(function (s) {
-          var sc = 1 - k * 0.06;
-          var op = 1 - k * 0.55;
-          s.style.transform = 'scale(' + sc.toFixed(4) + ')';
-          s.style.opacity = op.toFixed(3);
-        });
-      } else if (!reduce && y >= heroH) {
-        stage.style.setProperty('--hero-exit', '1');
+      if (reduce) {
+        ticking = false;
+        return;
       }
+      var k = Math.max(0, Math.min(1, y / heroH));
+      stage.style.setProperty('--hero-exit', k.toFixed(3));
+      stage.classList.toggle('is-exiting', k > 0.02);
+
       ticking = false;
     });
   }
