@@ -164,9 +164,15 @@
   position:absolute; inset:0; z-index:20; pointer-events:none;
   font-family:'Peyda', system-ui, sans-serif;
 }
-.hs-ui a,.hs-ui button{ pointer-events:auto; background:none; border:0; padding:0; cursor:pointer;
-  color:#fff; font:inherit; text-decoration:none;
-  text-shadow:0 1px 6px rgba(20,12,0,.28) }
+.hs-ui a,.hs-ui button{
+  pointer-events:auto; background:none; border:0; cursor:pointer;
+  color:#fff; text-decoration:none;
+  font-family:inherit;
+  text-shadow:0 1px 6px rgba(20,12,0,.28);
+  /* توجه: اینجا padding و font-size ست نمی‌شود. وقتی این ریست `padding:0`
+     داشت، به‌خاطر ترتیب فایل از .hs-demo و .hs-cta جلو می‌زد و دکمه‌ها
+     بدون فاصلهٔ داخلی می‌ماندند. */
+}
 
 /* ردیف هدر */
 .hs-head{
@@ -174,18 +180,49 @@
   z-index:2;
   height:calc(50 * var(--n)); display:flex; align-items:center; gap:calc(18 * var(--n));
 }
-.hs-logo{
-  font-family:'Morabba','Peyda',sans-serif; font-weight:900;
-  font-size:calc(38 * var(--n)); letter-spacing:-.01em; line-height:1;
-  display:flex; align-items:center; gap:calc(8 * var(--n)); white-space:nowrap;
-}
-.hs-logo .hs-mark{
-  width:calc(30 * var(--n)); height:calc(30 * var(--n)); flex:0 0 auto;
+.hs-logo{ display:flex; align-items:center; line-height:1; white-space:nowrap }
+
+/* آیکون ۸۰×۸۰: گردونهٔ کارتونی + واژهٔ «بچرخون» داخل همان قاب */
+.hs-badge{
+  position:relative; flex:0 0 auto;
+  width:calc(80 * var(--n)); height:calc(80 * var(--n));
   display:grid; place-items:center;
-  border-radius:50%; background:rgba(255,255,255,.18);
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.45);
+  border-radius:calc(24 * var(--n));
+  background:rgba(255,255,255,.16);
+  box-shadow:
+    inset 0 0 0 1.5px rgba(255,255,255,.42),
+    0 calc(8 * var(--n)) calc(20 * var(--n)) rgba(20,10,0,.18);
+  backdrop-filter:blur(7px);
+  overflow:hidden;
 }
-.hs-logo svg{ width:62%; height:62%; display:block }
+.hs-badge-wheel{
+  position:absolute; display:block;
+  width:calc(58 * var(--n)); height:calc(58 * var(--n));
+  top:calc(5 * var(--n));
+  filter:drop-shadow(0 calc(3 * var(--n)) calc(6 * var(--n)) rgba(30,16,0,.30));
+  animation:hs-badge-spin 14s linear infinite;
+  pointer-events:none;
+}
+@keyframes hs-badge-spin{
+  from{ transform:rotate(0deg) }
+  to  { transform:rotate(360deg) }
+}
+/* واژه زیر گردونه، با فونت خود صفحه — پس فارسی درست بسته می‌شود */
+.hs-badge-word{
+  position:absolute; inset:auto 0 calc(7 * var(--n)) 0;
+  text-align:center;
+  font-family:'Morabba','Peyda',sans-serif; font-weight:900;
+  font-size:calc(14 * var(--n)); line-height:1; color:#fff;
+  letter-spacing:-.01em;
+  text-shadow:0 calc(1 * var(--n)) calc(4 * var(--n)) rgba(20,10,0,.45);
+}
+/* نوار تیرهٔ زیر واژه تا روی رنگ‌های روشن گردونه خوانا بماند */
+.hs-badge-word::before{
+  content:''; position:absolute; inset:auto -6% -18% -6%;
+  height:calc(26 * var(--n)); border-radius:50%;
+  background:radial-gradient(ellipse at 50% 60%, rgba(24,14,4,.55), rgba(24,14,0,0) 72%);
+  z-index:-1;
+}
 
 /* سمت راست هدر: پیوند قابلیت‌ها + دکمهٔ پنل دمو (تب‌های چهارگانه حذف شدند) */
 .hs-links{
@@ -199,15 +236,29 @@
 .hs-link-ghost:hover{ opacity:1 }
 
 .hs-demo{
-  display:inline-flex; align-items:center; gap:calc(9 * var(--n));
-  font-size:calc(16 * var(--n)); font-weight:800;
-  padding:calc(9 * var(--n)) calc(9 * var(--n)) calc(9 * var(--n)) calc(18 * var(--n));
+  display:inline-flex; align-items:center;
+  gap:calc(11 * var(--n));
+  /* متن سمت راست (شروع) ۲۰px جا دارد؛ آیکون سمت چپ (پایان) ۵px */
+  padding-block:calc(5 * var(--n));
+  padding-inline-start:calc(19 * var(--n));
+  padding-inline-end:calc(9 * var(--n));
   border-radius:calc(999 * var(--n));
-  background:rgba(255,255,255,.16) !important;
-  box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5);
+  background:rgba(255,255,255,.17) !important;
+  box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55), 0 calc(6 * var(--n)) calc(18 * var(--n)) rgba(20,10,0,.14);
   backdrop-filter:blur(6px);
+  font-size:calc(16 * var(--n)); font-weight:800; line-height:1;
   transition:background .22s, transform .22s, box-shadow .22s;
 }
+.hs-demo-txt{ padding-inline:calc(2 * var(--n)); white-space:nowrap }
+.hs-demo-ico{
+  flex:0 0 auto; display:grid; place-items:center;
+  width:calc(38 * var(--n)); height:calc(38 * var(--n));
+  border-radius:50%; background:rgba(255,255,255,.26);
+  transition:background .22s, transform .24s ease;
+}
+.hs-demo-ico svg{ width:calc(18 * var(--n)); height:calc(18 * var(--n)); display:block }
+.hs-demo:hover .hs-demo-ico{ background:rgba(255,255,255,.4) }
+.hs-demo:hover .hs-demo-ico svg{ transform:translateX(calc(-2 * var(--n))) }
 .hs-demo:hover{
   background:rgba(255,255,255,.26) !important;
   transform:translateY(-1px);
@@ -223,15 +274,32 @@
 /* پایین صحنه */
 .hs-cta{
   position:absolute; left:50%; transform:translateX(-50%); bottom:calc(30 * var(--n));
-  font-size:calc(20 * var(--n)); font-weight:800; letter-spacing:.04em;
-  padding:calc(10 * var(--n)) calc(20 * var(--n));
+  display:inline-flex; align-items:center;
+  gap:calc(11 * var(--n));
+  /* خواص منطقی، نه فیزیکی: در RTL متن سمت «پایان» است و باید ۲۲px جا
+     داشته باشد؛ آیکون سمت «شروع» است و فقط ۶px لازم دارد. */
+  padding-block:calc(6 * var(--n));
+  padding-inline-start:calc(9 * var(--n));
+  padding-inline-end:calc(21 * var(--n));
   border-radius:calc(999 * var(--n));
-  background:rgba(255,255,255,.16) !important;
-  box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55), 0 10px 26px rgba(20,10,0,.16);
+  background:rgba(255,255,255,.17) !important;
+  box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.58), 0 calc(10 * var(--n)) calc(26 * var(--n)) rgba(20,10,0,.16);
   backdrop-filter:blur(6px);
-  display:inline-flex; align-items:center; gap:calc(9 * var(--n));
+  font-size:calc(19 * var(--n)); font-weight:800;
+  letter-spacing:.01em; line-height:1;
   transition:background .22s, transform .22s;
 }
+.hs-cta-txt{ white-space:nowrap; padding-inline:calc(1 * var(--n)) }
+.hs-cta-ico{
+  flex:0 0 auto; display:grid; place-items:center;
+  width:calc(38 * var(--n)); height:calc(38 * var(--n));
+  border-radius:50%; background:rgba(255,255,255,.26);
+  order:-1;
+  transition:background .22s, transform .24s ease;
+}
+.hs-cta-ico svg{ width:calc(18 * var(--n)); height:calc(18 * var(--n)); display:block }
+.hs-cta:hover .hs-cta-ico{ background:rgba(255,255,255,.42) }
+.hs-cta:hover .hs-cta-ico svg{ transform:translateX(calc(-2 * var(--n))) }
 .hs-cta:hover{ background:rgba(255,255,255,.26) !important; transform:translateX(-50%) translateY(-2px) }
 .hs-cta svg{ width:calc(16 * var(--n)); height:calc(16 * var(--n)); display:block }
 
@@ -326,12 +394,17 @@
 
   .hs-head{ left:18px; right:18px; top:14px; height:38px; gap:10px }
   .hs-links{ gap:12px }
-  .hs-demo{ font-size:13px; padding:7px 7px 7px 14px }
-  .hs-demo svg{ width:22px; height:22px; padding:4px }
-  .hs-logo{ font-size:31px }
-  .hs-logo .hs-mark{ width:24px; height:24px }
+  .hs-demo{ font-size:13px; padding-block:4px; padding-inline:14px 4px; gap:8px }
+  .hs-demo-ico{ width:30px; height:30px }
+  .hs-demo-ico svg{ width:15px; height:15px }
+  /* آیکون ۸۰px روی موبایل کمی جمع‌تر می‌شود تا با هدر جا شود */
+  .hs-badge{ width:58px; height:58px; border-radius:18px }
+  .hs-badge-wheel{ width:42px; height:42px; top:3px }
+  .hs-badge-word{ font-size:11px; inset:auto 0 4px 0 }
 
-  .hs-cta{ font-size:15px; bottom:18px; padding:9px 17px }
+  .hs-cta{ font-size:15px; bottom:18px; padding-block:5px; padding-inline:6px 16px; gap:9px }
+  .hs-cta-ico{ width:32px; height:32px }
+  .hs-cta-ico svg{ width:15px; height:15px }
   .hs-arrow{ width:46px; height:46px; bottom:10px }
   .hs-arrow--prev{ left:6px } .hs-arrow--next{ right:6px }
   .hs-arrow svg{ width:22px; height:22px }
@@ -350,10 +423,16 @@
 /* گوشی خوابیده: چیدمان افقی فشرده */
 @media (orientation:landscape) and (max-height:560px){
   .hs-head{ top:8px; height:32px; left:20px; right:20px }
-  .hs-logo{ font-size:25px }
-  .hs-logo .hs-mark{ width:22px; height:22px }
+  .hs-badge{ width:50px; height:50px; border-radius:16px }
+  .hs-badge-wheel{ width:36px; height:36px; top:2px }
+  .hs-badge-word{ font-size:10px; inset:auto 0 3px 0 }
   .hs-link-ghost{ font-size:12.5px }
-  .hs-cta{ bottom:6px; font-size:12.5px; padding:6px 12px }
+  .hs-cta{ bottom:6px; font-size:12.5px; padding-block:4px; padding-inline:5px 13px; gap:7px }
+  .hs-cta-ico{ width:26px; height:26px }
+  .hs-cta-ico svg{ width:13px; height:13px }
+  .hs-demo{ font-size:12.5px; padding-block:3px; padding-inline:12px 3px }
+  .hs-demo-ico{ width:26px; height:26px }
+  .hs-demo-ico svg{ width:13px; height:13px }
   .hs-cta svg{ width:13px; height:13px }
   .hs-dots{ bottom:56px; gap:5px }
   .hs-dot{ width:18px; height:3px }
