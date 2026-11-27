@@ -382,14 +382,8 @@ a{ color:inherit; text-decoration:none }
 .cta > *{ position:relative }
 footer{ padding:56px 0 40px; border-top:1px solid rgba(242,240,230,.10); margin-top:78px; position:relative; z-index:2 }
 .foot{ display:flex; flex-direction:column; align-items:center; gap:18px; text-align:center }
-.zhaket-badge{
-  display:inline-flex; align-items:center;
-  padding:26px 30px; border-radius:24px;
-  background:#FBF9F2;
-  border:1px solid rgba(242,240,230,.55);
-  box-shadow:0 22px 52px rgba(0,0,0,.34);
-}
-.zhaket-badge img{ height:118px; width:auto; display:block }
+.zhaket-badge{ display:inline-flex; align-items:center }
+.zhaket-badge img{ height:64px; width:auto; display:block; opacity:.92 }
 .foot .note{ font-size:13.5px; color:#8FA585; line-height:1.9 }
 
 /* reveal on scroll */
@@ -461,6 +455,5 @@ footer{ padding:56px 0 40px; border-top:1px solid rgba(242,240,230,.10); margin-
 
 /* --------------------------------------------------------------- footer brand */
 @media (max-width:640px){
-  .zhaket-badge{ padding:20px 22px; border-radius:20px }
-  .zhaket-badge img{ height:82px }
+  .zhaket-badge img{ height:52px }
 }
