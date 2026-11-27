@@ -11,8 +11,6 @@
   if (!stage) { return; }
 
   var slides = Array.prototype.slice.call(stage.querySelectorAll('.hs-slide'));
-  var tabs = Array.prototype.slice.call(stage.querySelectorAll('.hs-tab'));
-  var underline = stage.querySelector('.hs-underline');
   var arrows = stage.querySelectorAll('.hs-arrow');
   var dots = Array.prototype.slice.call(stage.querySelectorAll('.hs-dot'));
   var counter = stage.querySelector('.hs-count');
@@ -21,7 +19,7 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var LAYERS = ['word', 'shadow', 'wheel', 'prize', 'corner'];
   /* پارالاکس: میوه/جایزه بیشتر از واژه سفر می‌کند */
-  var FACTOR = { word: 0.40, shadow: 0.30, wheel: 0.15, prize: 0.55, corner: 0.75 };
+  var FACTOR = { word: 0.42, shadow: 0.32, wheel: 0.16, prize: 0.60, corner: 0.82 };
 
   var FA = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
   function faNum(n) { return String(n).replace(/\d/g, function (d) { return FA[+d]; }); }
@@ -83,9 +81,13 @@
     });
   }
 
-  /* ---------------------------------------------- پردهٔ اندازه‌گیری‌شده */
-  var COVER_T = [0, 0.031, 0.134, 0.206, 0.278, 0.34, 0.412, 0.485, 0.546, 0.583, 0.62, 0.69, 0.79, 0.85, 0.93, 1];
-  var COVER_C = [0, 0.006, 0.012, 0.023, 0.047, 0.07, 0.105, 0.158, 0.246, 0.55, 0.825, 0.9, 0.94, 0.956, 0.975, 1];
+  /* ------------------------------------------------ پردهٔ گذار (منحنی) */
+  /* جدول قبلی دو «مکث» و یک پرش ۱۳px/ms داشت؛ همان چیزی که به چشم
+     «پرده آرام نمی‌آید» دیده می‌شد. حالا یک منحنی یکنوا و بی‌مکث است:
+     شروعِ نرم، شتاب گرفتن در میانه، نشستنِ نرم. سرعت هیچ‌جا صفر نمی‌شود
+     و هیچ‌جا هم نمی‌پرد. جدول را با عدد واقعی نگه داشته‌ام تا قابل تنظیم باشد. */
+  var COVER_T = [0, .06, .14, .22, .30, .38, .46, .54, .62, .70, .78, .86, .93, 1];
+  var COVER_C = [0, .004, .017, .043, .081, .133, .199, .279, .372, .477, .593, .718, .848, 1];
 
   function smooth(k) { return k * k * (3 - 2 * k); }
 
@@ -111,7 +113,7 @@
     if (busy || i === cur) { return; }
     var from = slides[cur], to = slides[i];
     var W = window.innerWidth;
-    var DUR = reduce ? 0 : 970;
+    var DUR = reduce ? 0 : 1080;
 
     hideOthers(i, cur);
     to.classList.remove('is-hidden');
@@ -198,23 +200,11 @@
 
   /* --------------------------------------------------------------- UI */
   function syncUI() {
-    tabs.forEach(function (t, i) {
-      if (i === cur) { t.setAttribute('aria-current', 'true'); }
-      else { t.removeAttribute('aria-current'); }
-    });
     dots.forEach(function (d, i) {
       d.classList.toggle('is-on', i === cur);
       d.classList.toggle('is-past', i < cur);
     });
     if (counter) { counter.textContent = faNum(cur + 1) + ' / ' + faNum(slides.length); }
-    moveUnderline();
-  }
-
-  function moveUnderline() {
-    var t = tabs[cur];
-    if (!t || !underline) { return; }
-    underline.style.width = t.offsetWidth + 'px';
-    underline.style.transform = 'translateX(' + t.offsetLeft + 'px)';
   }
 
   function goTo(i, dir, auto) {
@@ -236,15 +226,6 @@
   }
 
   /* --------------------------------------------------------- کنترل‌ها */
-  tabs.forEach(function (t, i) {
-    t.addEventListener('click', function () {
-      var dir = i > cur ? 1 : -1;
-      if (i === 0 && cur === slides.length - 1) { dir = 1; }
-      if (i === slides.length - 1 && cur === 0) { dir = -1; }
-      goTo(i, dir);
-    });
-  });
-
   arrows.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var fwd = btn.classList.contains('hs-arrow--next');
@@ -299,17 +280,16 @@
     setTimeout(function () {
       stage.classList.add('hs-stage-ready');
       stage.querySelectorAll('.hs-rise').forEach(function (el) { el.style.opacity = '1'; });
-      moveUnderline();
     }, 3000);
   }
 
   /* ------------------------------------------------------------ اجرا */
   setUnits();
   if (window.ResizeObserver) {
-    var ro = new ResizeObserver(function () { setUnits(); moveUnderline(); });
+    var ro = new ResizeObserver(function () { setUnits(); });
     ro.observe(stage);
   }
-  window.addEventListener('resize', function () { setUnits(); moveUnderline(); });
+  window.addEventListener('resize', setUnits);
 
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(function () {

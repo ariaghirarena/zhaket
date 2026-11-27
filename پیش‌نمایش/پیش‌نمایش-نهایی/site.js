@@ -5,24 +5,7 @@
 (function () {
   'use strict';
 
-  /* ---------- reveal on scroll ---------- */
-  var items = document.querySelectorAll('.rv');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.classList.add('in');
-          io.unobserve(e.target);
-        }
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    items.forEach(function (el, i) {
-      el.style.transitionDelay = (Math.min(i % 6, 5) * 45) + 'ms';
-      io.observe(el);
-    });
-  } else {
-    items.forEach(function (el) { el.classList.add('in'); });
-  }
+  /* ---------- reveal on scroll: در motion.js انجام می‌شود ---------- */
 
   /* ---------- soft hero wheel rotation (respects reduced motion) ---------- */
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
