@@ -383,7 +383,7 @@ a{ color:inherit; text-decoration:none }
 footer{ padding:56px 0 40px; border-top:1px solid rgba(242,240,230,.10); margin-top:78px; position:relative; z-index:2 }
 .foot{ display:flex; flex-direction:column; align-items:center; gap:18px; text-align:center }
 .zhaket-badge{ display:inline-flex; align-items:center }
-.zhaket-badge img{ height:64px; width:auto; display:block; opacity:.92 }
+.zhaket-badge img{ height:52px; width:auto; display:block }
 .foot .note{ font-size:13.5px; color:#8FA585; line-height:1.9 }
 
 /* reveal on scroll */
@@ -455,5 +455,5 @@ footer{ padding:56px 0 40px; border-top:1px solid rgba(242,240,230,.10); margin-
 
 /* --------------------------------------------------------------- footer brand */
 @media (max-width:640px){
-  .zhaket-badge img{ height:52px }
+  .zhaket-badge img{ height:42px }
 }
