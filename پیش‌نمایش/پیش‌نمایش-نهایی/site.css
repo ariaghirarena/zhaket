@@ -383,10 +383,13 @@ a{ color:inherit; text-decoration:none }
 footer{ padding:56px 0 40px; border-top:1px solid rgba(242,240,230,.10); margin-top:78px; position:relative; z-index:2 }
 .foot{ display:flex; flex-direction:column; align-items:center; gap:18px; text-align:center }
 .zhaket-badge{
-  background:#fff; border-radius:14px; padding:14px 26px; display:inline-flex; align-items:center;
-  box-shadow:0 14px 34px rgba(0,0,0,.35);
+  display:inline-flex; align-items:center;
+  padding:26px 30px; border-radius:24px;
+  background:#FBF9F2;
+  border:1px solid rgba(242,240,230,.55);
+  box-shadow:0 22px 52px rgba(0,0,0,.34);
 }
-.zhaket-badge svg{ height:34px; width:auto; display:block }
+.zhaket-badge img{ height:118px; width:auto; display:block }
 .foot .note{ font-size:13.5px; color:#8FA585; line-height:1.9 }
 
 /* reveal on scroll */
@@ -454,4 +457,10 @@ footer{ padding:56px 0 40px; border-top:1px solid rgba(242,240,230,.10); margin-
   .mobile-band{ grid-template-columns:1fr; gap:22px; padding:20px; text-align:center }
   .mb-text h3{ font-size:21px }
   .mb-text .lead, .mb-text .feat-list{ text-align:right }
+}
+
+/* --------------------------------------------------------------- footer brand */
+@media (max-width:640px){
+  .zhaket-badge{ padding:20px 22px; border-radius:20px }
+  .zhaket-badge img{ height:82px }
 }
